@@ -186,3 +186,24 @@ section{
     object-fit:cover;
     border-radius:10px;
 }
+.contact{
+    padding:20px;
+    text-align:center;
+    background:#f8f8f8;
+}
+
+.contact h2{
+    color:#0b5d2a;
+}
+
+.contact p{
+    margin:8px 0;
+}
+
+footer{
+    background:#0b5d2a;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
