@@ -276,3 +276,34 @@ footer{
     color:#0b5d2a;
     font-weight:bold;
 }
+.committee{
+    padding:20px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.committee h2{
+    color:#0b5d2a;
+    margin-bottom:20px;
+}
+
+.member{
+    background:#fff;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.member img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #0b5d2a;
+}
+
+.member h3{
+    margin:10px 0 5px;
+    color:#0b5d2a;
+}
