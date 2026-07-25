@@ -2,13 +2,16 @@ alert("JavaScript Working");
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.getElementById("menu");
 
-menuBtn.onclick = function () {
-    if (menu.style.left === "0px") {
-        menu.style.left = "-250px";
-    } else {
-        menu.style.left = "0px";
+menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+});
+
+document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove("active");
     }
-};
+});
 const slides = [
   "images/slider1.jpg",
   "images/slider2.jpg",
