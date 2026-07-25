@@ -327,3 +327,28 @@ footer{
     text-decoration:none;
     border-radius:8px;
 }
+.notice{
+    padding:20px;
+    background:#f8f8f8;
+}
+
+.notice h2{
+    text-align:center;
+    color:#0b5d2a;
+    margin-bottom:15px;
+}
+
+.notice-box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.notice-box ul{
+    padding-left:20px;
+}
+
+.notice-box li{
+    margin:10px 0;
+}
