@@ -163,3 +163,26 @@ section{
     margin:0 0 10px;
     color:#0b5d2a;
 }
+.gallery{
+    padding:20px;
+    background:#ffffff;
+}
+
+.gallery h2{
+    text-align:center;
+    color:#0b5d2a;
+    margin-bottom:20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+}
