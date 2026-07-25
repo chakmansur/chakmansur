@@ -444,3 +444,29 @@ background:#f8f8f8;
 .visitor img{
 max-width:180px;
 }
+.useful-links{
+padding:20px;
+background:#ffffff;
+}
+
+.useful-links h2{
+text-align:center;
+color:#0b5d2a;
+margin-bottom:15px;
+}
+
+.useful-links a{
+display:block;
+background:#0b5d2a;
+color:#fff;
+text-decoration:none;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+text-align:center;
+font-weight:bold;
+}
+
+.useful-links a:hover{
+background:#15803d;
+}
