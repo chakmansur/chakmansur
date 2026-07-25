@@ -11,3 +11,15 @@ menuBtn.addEventListener("click", function () {
     }
     isOpen = !isOpen;
 });
+const slides = [
+  "images/slider1.jpg",
+  "images/slider2.jpg",
+  "images/slider3.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  document.getElementById("slide").src = slides[current];
+}, 3000);
