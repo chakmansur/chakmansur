@@ -32,7 +32,12 @@ section{
 }
 .header{
     background:#0b5d2a;
-    .map{
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.map{
     padding:20px;
     background:#fff;
 }
@@ -42,11 +47,6 @@ section{
     color:#0b5d2a;
     margin-bottom:15px;
 }
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
 .menu-btn{
     float:left;
     font-size:28px;
