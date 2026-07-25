@@ -43,3 +43,14 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("show");
+      section.classList.add("fade-up");
+    }
+  });
+});
