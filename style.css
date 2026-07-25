@@ -352,3 +352,19 @@ footer{
 .notice-box li{
     margin:10px 0;
 }
+.about{
+    padding:20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.about h2{
+    color:#0b5d2a;
+    margin-bottom:15px;
+}
+
+.about p{
+    line-height:1.8;
+    font-size:16px;
+    color:#333;
+}
