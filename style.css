@@ -470,3 +470,6 @@ font-weight:bold;
 .useful-links a:hover{
 background:#15803d;
 }
+.side-menu.active{
+    left:0 !important;
+}
