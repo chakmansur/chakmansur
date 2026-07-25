@@ -71,3 +71,25 @@ section{
     width:100%;
     display:block;
 }
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-250px;
+    width:250px;
+    height:100%;
+    background:#0b5d2a;
+    padding-top:60px;
+    transition:0.3s;
+}
+
+.side-menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    font-size:18px;
+}
+
+.side-menu a:hover{
+    background:#15803d;
+}
