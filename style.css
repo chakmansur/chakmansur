@@ -386,3 +386,24 @@ footer{
     font-size:16px;
     font-weight:bold;
 }
+.student-corner{
+    padding:20px;
+    text-align:center;
+    background:#f8fff5;
+}
+
+.student-btn{
+    display:block;
+    background:#0b5d2a;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.student-btn:hover{
+    background:#15803d;
+}
