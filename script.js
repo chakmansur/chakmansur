@@ -23,3 +23,23 @@ setInterval(() => {
   current = (current + 1) % slides.length;
   document.getElementById("slide").src = slides[current];
 }, 3000);
+
+function updateDateTime() {
+    const now = new Date();
+
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+
+    const date = now.toLocaleDateString("bn-BD", options);
+    const time = now.toLocaleTimeString("bn-BD");
+
+    document.getElementById("datetime").innerHTML =
+        date + " | " + time;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
