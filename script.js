@@ -1,16 +1,13 @@
-const menu = document.getElementById("menu");
 const menuBtn = document.querySelector(".menu-btn");
+const menu = document.getElementById("menu");
 
-let isOpen = false;
-
-menuBtn.addEventListener("click", function () {
-    if (isOpen) {
+menuBtn.onclick = function () {
+    if (menu.style.left === "0px") {
         menu.style.left = "-250px";
     } else {
-        menu.style.left = "0";
+        menu.style.left = "0px";
     }
-    isOpen = !isOpen;
-});
+};
 const slides = [
   "images/slider1.jpg",
   "images/slider2.jpg",
