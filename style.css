@@ -32,6 +32,16 @@ section{
 }
 .header{
     background:#0b5d2a;
+    .map{
+    padding:20px;
+    background:#fff;
+}
+
+.map h2{
+    text-align:center;
+    color:#0b5d2a;
+    margin-bottom:15px;
+}
     color:white;
     text-align:center;
     padding:15px;
