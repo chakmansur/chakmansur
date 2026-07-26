@@ -1,7 +1,7 @@
-/* ===================================
+/* =========================
    CHAKMANSUR BANISHREE SANGHA
-   Mobile First Design
-=================================== */
+   Mobile First CSS
+========================= */
 
 *{
     margin:0;
@@ -14,14 +14,12 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f5f5f5;
     color:#222;
 }
 
-/* =======================
-   BANNER
-======================= */
+/* Banner */
 
 .banner{
     width:100%;
@@ -29,24 +27,20 @@ body{
 
 .banner img{
     width:100%;
-    height:auto;
     display:block;
 }
 
-/* =======================
-   NAVBAR
-======================= */
+/* Navbar */
 
 .navbar{
     position:sticky;
     top:0;
-    background:#0b5d2a;
+    z-index:999;
+    background:#006633;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:10px 15px;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
 #menuBtn{
@@ -59,22 +53,15 @@ body{
 
 .social{
     display:flex;
-    gap:12px;
+    gap:10px;
 }
 
 .social img{
-    width:32px;
-    height:32px;
-    transition:.3s;
+    width:30px;
+    height:30px;
 }
 
-.social img:hover{
-    transform:scale(1.1);
-}
-
-/* =======================
-   SIDE MENU
-======================= */
+/* Side Menu */
 
 .side-menu{
     position:fixed;
@@ -82,9 +69,9 @@ body{
     left:-260px;
     width:250px;
     height:100%;
-    background:#0b5d2a;
-    padding-top:70px;
+    background:#006633;
     transition:.3s;
+    padding-top:70px;
     z-index:1000;
 }
 
@@ -96,356 +83,3 @@ body{
     display:block;
     color:#fff;
     text-decoration:none;
-    padding:15px 20px;
-    border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.side-menu a:hover{
-    background:#15803d;
-}
-
-/* =======================
-   BREAKING NEWS
-======================= */
-
-.breaking-news{
-    display:flex;
-    align-items:center;
-    background:#fff;
-    border-top:3px solid #0b5d2a;
-    border-bottom:3px solid #0b5d2a;
-}
-
-.breaking-news span{
-    background:#0b5d2a;
-    color:#fff;
-    padding:12px;
-    font-weight:bold;
-}
-
-.breaking-news marquee{
-    padding:12px;
-    color:#0b5d2a;
-    font-weight:bold;
-}
-
-/* =======================
-   IMAGE SLIDER
-======================= */
-
-.slider{
-    padding:15px;
-    background:#fff;
-}
-
-.slider-box{
-    position:relative;
-}
-
-.slider img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-}
-
-.prev,
-.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    background:rgba(0,0,0,.5);
-    color:#fff;
-    border:none;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    cursor:pointer;
-}
-
-.prev{
-    left:10px;
-}
-
-.next{
-    right:10px;
-}
-
-.dots{
-    text-align:center;
-    margin-top:10px;
-}
-
-.dot{
-    display:inline-block;
-    width:10px;
-    height:10px;
-    margin:4px;
-    border-radius:50%;
-    background:#ccc;
-}
-
-.dot.active{
-    background:#0b5d2a;
-}
-/* =======================
-   COMMON SECTION
-======================= */
-
-section{
-    padding:20px 15px;
-}
-
-section h2{
-    text-align:center;
-    color:#0b5d2a;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-/* =======================
-   DURGA PUJA HIGHLIGHT
-======================= */
-
-.highlight{
-    background:#fff;
-    text-align:center;
-}
-
-.highlight img{
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-.highlight p{
-    margin:15px 0;
-    line-height:1.7;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#0b5d2a;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#15803d;
-}
-
-/* =======================
-   COMMITTEE
-======================= */
-
-.committee{
-    background:#f9fff9;
-}
-
-.member{
-    background:#fff;
-    padding:15px;
-    margin-bottom:15px;
-    border-left:5px solid #0b5d2a;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-
-.member h3{
-    color:#0b5d2a;
-    margin-bottom:8px;
-}
-
-.member p{
-    margin:5px 0;
-}
-
-/* =======================
-   NOTICE BOARD
-======================= */
-
-.notice{
-    background:#fff;
-}
-
-.notice ul{
-    padding-left:20px;
-}
-
-.notice li{
-    margin:10px 0;
-    line-height:1.6;
-}
-
-/* =======================
-   STUDENT CORNER
-======================= */
-
-.student{
-    background:#f5fff8;
-}
-
-.student a{
-    display:block;
-    text-decoration:none;
-    background:#0b5d2a;
-    color:#fff;
-    padding:14px;
-    margin:10px 0;
-    border-radius:10px;
-    text-align:center;
-    font-weight:bold;
-}
-
-.student a:hover{
-    background:#15803d;
-}
-
-/* =======================
-   NEWSPAPER
-======================= */
-
-.newspaper{
-    background:#fff;
-}
-
-.newspaper a{
-    display:block;
-    text-decoration:none;
-    background:#f2f2f2;
-    color:#0b5d2a;
-    padding:14px;
-    margin:10px 0;
-    border-radius:10px;
-    text-align:center;
-    font-weight:bold;
-}
-
-.newspaper a:hover{
-    background:#0b5d2a;
-    color:#fff;
-}
-
-/* =======================
-   EVENT CALENDAR
-======================= */
-
-.calendar{
-    background:#f9f9f9;
-}
-
-.event{
-    background:#fff;
-    padding:15px;
-    margin-bottom:12px;
-    border-left:5px solid #0b5d2a;
-    border-radius:10px;
-}
-/* =======================
-   GALLERY
-======================= */
-
-.gallery{
-    background:#ffffff;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-}
-
-.gallery-grid img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:10px;
-    transition:.3s;
-    cursor:pointer;
-}
-
-.gallery-grid img:hover{
-    transform:scale(1.05);
-}
-
-/* =======================
-   ABOUT
-======================= */
-
-.about{
-    background:#f8f8f8;
-    text-align:center;
-}
-
-.about p{
-    line-height:1.8;
-    color:#444;
-}
-
-/* =======================
-   MAP
-======================= */
-
-.map iframe{
-    width:100%;
-    height:300px;
-    border:none;
-    border-radius:10px;
-}
-
-/* =======================
-   CONTACT
-======================= */
-
-.contact{
-    background:#ffffff;
-    text-align:center;
-}
-
-.contact p{
-    margin:10px 0;
-}
-
-/* =======================
-   VISITOR
-======================= */
-
-.visitor{
-    text-align:center;
-}
-
-.visitor img{
-    max-width:180px;
-}
-
-/* =======================
-   FOOTER
-======================= */
-
-footer{
-    background:#0b5d2a;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-}
-
-footer p{
-    margin:5px 0;
-}
-
-/* =======================
-   SCROLL ANIMATION
-======================= */
-
-section{
-    opacity:0;
-    transform:translateY(30px);
-    transition:.6s;
-}
-
-section.show{
-    opacity:1;
-    transform:
