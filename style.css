@@ -263,3 +263,54 @@ section h2{
 
 .student a{
     display:block;
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery{
+    background:#fff;
+}
+
+.gallery h2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.gallery-icon{
+    width:40px;
+    height:40px;
+}
+
+.gallery-tabs{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    margin:15px 0;
+    padding-bottom:8px;
+}
+
+.gallery-tabs::-webkit-scrollbar{
+    display:none;
+}
+
+.tab-btn{
+    border:none;
+    background:#e8e8e8;
+    color:#333;
+    padding:10px 16px;
+    border-radius:25px;
+    cursor:pointer;
+    white-space:nowrap;
+    font-weight:600;
+}
+
+.tab-btn.active{
+    background:#0b6b2f;
+    color:#fff;
+}
+
+.gallery-content{
+    display:none;
+    grid
