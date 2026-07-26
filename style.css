@@ -403,3 +403,11 @@ body{
 }
 
 }
+.quick-access{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    justify-items:center;
+    align-items:center;
+    margin:20px auto;
+}
