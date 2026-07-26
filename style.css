@@ -83,3 +83,110 @@ body{
     display:block;
     color:#fff;
     text-decoration:none;
+/* =========================
+   COMMON SECTION
+========================= */
+
+section{
+    padding:18px;
+}
+
+section h2{
+    text-align:center;
+    color:#006633;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+/* =========================
+   DURGA PUJA HIGHLIGHT
+========================= */
+
+.highlight{
+    background:#fff;
+    text-align:center;
+}
+
+.highlight img{
+    width:100%;
+    border-radius:12px;
+}
+
+.highlight p{
+    margin:15px 0;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    background:#006633;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* =========================
+   COMMITTEE
+========================= */
+
+.committee{
+    background:#f8fff8;
+}
+
+.member{
+    background:#fff;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:10px;
+    border-left:5px solid #006633;
+}
+
+.member h3{
+    color:#006633;
+    margin-bottom:8px;
+}
+
+.member p{
+    margin:5px 0;
+}
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice{
+    background:#fff;
+}
+
+.notice ul{
+    padding-left:20px;
+}
+
+.notice li{
+    margin:10px 0;
+}
+
+/* =========================
+   STUDENT CORNER
+========================= */
+
+.student{
+    background:#f7fff7;
+}
+
+.student a{
+    display:block;
+    text-decoration:none;
+    background:#006633;
+    color:#fff;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* =========================
+   NEWSPAPER
