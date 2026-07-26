@@ -1,85 +1,109 @@
-/* ==========================
-   SIDE MENU
-========================== */
+/* =========================
+   MENU
+========================= */
 
 const menuBtn = document.getElementById("menuBtn");
-const sideMenu = document.getElementById("sideMenu");
+const sidebar = document.getElementById("sidebar");
 
 menuBtn.addEventListener("click", () => {
-    sideMenu.classList.toggle("active");
+    sidebar.classList.toggle("active");
 });
 
 document.addEventListener("click", (e) => {
-    if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        sideMenu.classList.remove("active");
+    if (
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+        sidebar.classList.remove("active");
     }
 });
 
-/* ==========================
-   IMAGE SLIDER
-========================== */
+/* =========================
+   SLIDER
+========================= */
 
 const slides = [
     "images/slider1.jpg",
     "images/slider2.jpg",
     "images/slider3.jpg"
-    // পরে এখানে slider4.jpg থেকে slider15.jpg যোগ করবেন
 ];
 
 let current = 0;
 
 const slide = document.getElementById("slide");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 const dots = document.querySelectorAll(".dot");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
 
 function showSlide(index){
 
-    if(index >= slides.length) current = 0;
-    if(index < 0) current = slides.length - 1;
+    if(index >= slides.length){
+        current = 0;
+    }else if(index < 0){
+        current = slides.length - 1;
+    }else{
+        current = index;
+    }
 
     slide.src = slides[current];
 
-    dots.forEach(dot => dot.classList.remove("active"));
+    dots.forEach((dot,i)=>{
+        dot.classList.toggle("active", i === current);
+    });
 
-    if(dots[current]){
-        dots[current].classList.add("active");
-    }
 }
 
-next.addEventListener("click", () => {
-    current++;
-    showSlide(current);
+next.addEventListener("click",()=>{
+    showSlide(current + 1);
 });
 
-prev.addEventListener("click", () => {
-    current--;
-    showSlide(current);
+prev.addEventListener("click",()=>{
+    showSlide(current - 1);
 });
 
-setInterval(() => {
-    current++;
-    showSlide(current);
-}, 3000);
+setInterval(()=>{
+    showSlide(current + 1);
+},3000);
 
-/* ==========================
-   SCROLL ANIMATION
-========================== */
+/* =========================
+   GALLERY TAB
+========================= */
 
-const sections = document.querySelectorAll("section");
+const tabs=document.querySelectorAll(".tab-btn");
+const contents=document.querySelectorAll(".gallery-content");
 
-window.addEventListener("scroll", () => {
+tabs.forEach(tab=>{
 
-    sections.forEach(section => {
+    tab.addEventListener("click",()=>{
 
-        if(section.getBoundingClientRect().top < window.innerHeight - 100){
+        tabs.forEach(btn=>btn.classList.remove("active"));
 
-            section.classList.add("show");
+        contents.forEach(box=>box.classList.remove("active"));
 
-        }
+        tab.classList.add("active");
+
+        document
+        .getElementById(tab.dataset.tab)
+        .classList.add("active");
 
     });
 
 });
 
-window.dispatchEvent(new Event("scroll"));
+/* প্রথম Gallery খুলে দেখাও */
+
+document.getElementById("durga").classList.add("active");
+
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
+
+document.querySelectorAll(".gallery-content img").forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        window.open(img.src,"_blank");
+
+    });
+
+});
