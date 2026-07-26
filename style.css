@@ -299,3 +299,8 @@ footer{
 footer p{
     margin:5px 0;
 }
+.quick-card.active{
+    transform:scale(1.05);
+    border:2px solid #0b6b2f;
+    background:#e9f8ec;
+}
