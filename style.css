@@ -1,7 +1,7 @@
-/* =========================
+/* ==========================================
    CHAKMANSUR BANISHREE SANGHA
-   Mobile First CSS
-========================= */
+   FINAL STYLE.CSS - PART 1
+========================================== */
 
 *{
     margin:0;
@@ -14,38 +14,34 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:"Noto Sans Bengali",sans-serif;
     background:#f5f5f5;
     color:#222;
+    line-height:1.6;
 }
 
-/* Banner */
+/* ===== Banner ===== */
 
-.banner{
-    width:100%;
-}
-
-.banner img{
+.header img{
     width:100%;
     display:block;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 
 .navbar{
     position:sticky;
     top:0;
     z-index:999;
-    background:#006633;
+    background:#0b6b2f;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 15px;
+    padding:12px 15px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-#menuBtn{
-    background:none;
-    border:none;
+.menu-btn{
     color:#fff;
     font-size:30px;
     cursor:pointer;
@@ -57,257 +53,128 @@ body{
 }
 
 .social img{
-    width:30px;
-    height:30px;
+    width:34px;
+    height:34px;
+    transition:.3s;
 }
 
-/* Side Menu */
+.social img:hover{
+    transform:scale(1.1);
+}
 
-.side-menu{
+/* ===== Sidebar ===== */
+
+.sidebar{
     position:fixed;
     top:0;
     left:-260px;
     width:250px;
     height:100%;
-    background:#006633;
+    background:#0b6b2f;
     transition:.3s;
     padding-top:70px;
     z-index:1000;
 }
 
-.side-menu.active{
+.sidebar.active{
     left:0;
 }
 
-.side-menu a{
+.sidebar a{
     display:block;
     color:#fff;
     text-decoration:none;
-/* =========================
-   COMMON SECTION
-========================= */
-
-section{
-    padding:18px;
+    padding:15px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-section h2{
-    text-align:center;
-    color:#006633;
-    margin-bottom:15px;
-    font-size:22px;
+.sidebar a:hover{
+    background:#0f8a3c;
 }
 
-/* =========================
-   DURGA PUJA HIGHLIGHT
-========================= */
+/* ===== Breaking News ===== */
 
-.highlight{
+.breaking{
+    display:flex;
+    align-items:center;
     background:#fff;
-    text-align:center;
+    border-top:3px solid #0b6b2f;
+    border-bottom:3px solid #0b6b2f;
 }
 
-.highlight img{
-    width:100%;
-    border-radius:12px;
-}
-
-.highlight p{
-    margin:15px 0;
-    line-height:1.7;
-}
-
-.btn{
-    display:inline-block;
-    background:#006633;
+.breaking-title{
+    background:#0b6b2f;
     color:#fff;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:8px;
+    padding:12px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.breaking-text{
+    flex:1;
+}
+
+.breaking marquee{
+    padding:12px;
+    color:#0b6b2f;
     font-weight:bold;
 }
 
-/* =========================
-   COMMITTEE
-========================= */
+/* ===== Slider ===== */
 
-.committee{
-    background:#f8fff8;
-}
-
-.member{
+.slider{
     background:#fff;
-    margin-bottom:15px;
     padding:15px;
-    border-radius:10px;
-    border-left:5px solid #006633;
 }
 
-.member h3{
-    color:#006633;
-    margin-bottom:8px;
-}
-
-.member p{
-    margin:5px 0;
-}
-
-/* =========================
-   NOTICE
-========================= */
-
-.notice{
-    background:#fff;
-}
-
-.notice ul{
-    padding-left:20px;
-}
-
-.notice li{
-    margin:10px 0;
-}
-
-/* =========================
-   STUDENT CORNER
-========================= */
-
-.student{
-    background:#f7fff7;
-}
-
-.student a{
-    display:block;
-    text-decoration:none;
-    background:#006633;
-    color:#fff;
-    padding:14px;
-    margin-bottom:10px;
-    border-radius:8px;
-    text-align:center;
-    font-weight:bold;
-}
-
-/* =========================
-   NEWSPAPER
-/* =========================
-   EVENT CALENDAR
-========================= */
-
-.calendar{
-    background:#f8f8f8;
-}
-
-.event{
-    background:#fff;
-    margin-bottom:12px;
-    padding:15px;
-    border-radius:10px;
-    border-left:5px solid #006633;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery{
-    background:#fff;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.gallery-grid img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:#f5f5f5;
-    text-align:center;
-}
-
-.about p{
-    line-height:1.8;
-}
-
-/* =========================
-   MAP
-========================= */
-
-.map iframe{
-    width:100%;
-    height:280px;
-    border:0;
-    border-radius:10px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#fff;
-    text-align:center;
-}
-
-.contact p{
-    margin:8px 0;
-}
-
-/* =========================
-   VISITOR
-========================= */
-
-.visitor{
-    text-align:center;
-}
-
-.visitor img{
-    max-width:180px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#006633;
-    color:#fff;
-    text-align:center;
-    padding:20px 15px;
-}
-
-footer p{
-    margin:5px 0;
-}
-
-/* =========================
-   TABLET & DESKTOP
-========================= */
-
-@media (min-width:768px){
-
-.banner img{
-    max-height:500px;
-    object-fit:cover;
+.slider-box{
+    position:relative;
 }
 
 .slider img{
-    height:420px;
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:12px;
 }
 
-.gallery-grid{
-    grid-template-columns:repeat(4,1fr);
+#prev,
+#next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
 }
 
-.social
+#prev{
+    left:10px;
+}
+
+#next{
+    right:10px;
+}
+
+.dots{
+    text-align:center;
+    margin-top:12px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    background:#ccc;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 4px;
+}
+
+.dot.active{
+    background:#0b6b2f;
+}
