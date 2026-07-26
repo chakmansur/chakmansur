@@ -286,3 +286,120 @@ body{
 }
 
 .commit
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#0b6b2f;
+    color:#fff;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:20px;
+}
+
+.footer-content h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.footer-content p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+/* =========================
+   TOUCH EFFECT
+========================= */
+
+.quick-card,
+.highlight-link,
+.btn{
+    -webkit-tap-highlight-color:transparent;
+}
+
+.quick-card:active,
+.highlight-link:active,
+.btn:active{
+    transform:scale(.96);
+}
+
+/* =========================
+   SMOOTH ANIMATION
+========================= */
+
+.quick-card,
+.highlight-link,
+.btn,
+.member,
+.slider img{
+    transition:.3s ease;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:480px){
+
+.slider img{
+    height:320px;
+}
+
+.highlight-link{
+    flex-direction:column;
+    text-align:center;
+}
+
+.highlight-link img{
+    width:125px;
+    height:80px;
+}
+
+.quick-card img{
+    width:80px;
+    height:80px;
+}
+
+.quick-card span{
+    font-size:14px;
+}
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width:768px){
+
+.quick-access{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.slider img{
+    height:420px;
+}
+
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width:1024px){
+
+body{
+    max-width:1200px;
+    margin:auto;
+}
+
+.slider img{
+    height:500px;
+}
+
+.quick-access{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
