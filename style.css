@@ -188,3 +188,159 @@ body{
 .dot.active{
     background:#0b5d2a;
 }
+/* =======================
+   COMMON SECTION
+======================= */
+
+section{
+    padding:20px 15px;
+}
+
+section h2{
+    text-align:center;
+    color:#0b5d2a;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+/* =======================
+   DURGA PUJA HIGHLIGHT
+======================= */
+
+.highlight{
+    background:#fff;
+    text-align:center;
+}
+
+.highlight img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.highlight p{
+    margin:15px 0;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#0b5d2a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#15803d;
+}
+
+/* =======================
+   COMMITTEE
+======================= */
+
+.committee{
+    background:#f9fff9;
+}
+
+.member{
+    background:#fff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:5px solid #0b5d2a;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.member h3{
+    color:#0b5d2a;
+    margin-bottom:8px;
+}
+
+.member p{
+    margin:5px 0;
+}
+
+/* =======================
+   NOTICE BOARD
+======================= */
+
+.notice{
+    background:#fff;
+}
+
+.notice ul{
+    padding-left:20px;
+}
+
+.notice li{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+/* =======================
+   STUDENT CORNER
+======================= */
+
+.student{
+    background:#f5fff8;
+}
+
+.student a{
+    display:block;
+    text-decoration:none;
+    background:#0b5d2a;
+    color:#fff;
+    padding:14px;
+    margin:10px 0;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.student a:hover{
+    background:#15803d;
+}
+
+/* =======================
+   NEWSPAPER
+======================= */
+
+.newspaper{
+    background:#fff;
+}
+
+.newspaper a{
+    display:block;
+    text-decoration:none;
+    background:#f2f2f2;
+    color:#0b5d2a;
+    padding:14px;
+    margin:10px 0;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.newspaper a:hover{
+    background:#0b5d2a;
+    color:#fff;
+}
+
+/* =======================
+   EVENT CALENDAR
+======================= */
+
+.calendar{
+    background:#f9f9f9;
+}
+
+.event{
+    background:#fff;
+    padding:15px;
+    margin-bottom:12px;
+    border-left:5px solid #0b5d2a;
+    border-radius:10px;
+}
