@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,330 +8,135 @@
 
 <title>চকমনসুর বানিশ্রী সংঘ</title>
 
+<link rel="icon" href="images/favicon.png">
+
 <link rel="stylesheet" href="style.css">
 
-<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- =======================
-     HEADER BANNER
-======================== -->
+<!-- ================= HEADER ================= -->
 
-<header class="banner">
+<header class="header">
 
-<img src="images/banner.png" alt="চকমনসুর বানিশ্রী সংঘ">
+<img src="images/banner.png"
+alt="Chakmansur Banishree Sangha">
 
 </header>
 
-<!-- =======================
-     MENU BAR
-======================== -->
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
-<button id="menuBtn">☰</button>
+<div class="menu-btn" id="menuBtn">
+
+☰
+
+</div>
 
 <div class="social">
 
-<a href="https://facebook.com" target="_blank">
-<img src="images/facebook.png" alt="Facebook">
+<a href="#">
+<img src="images/facebook.png" alt="">
 </a>
 
-<a href="https://youtube.com" target="_blank">
-<img src="images/youtube.png" alt="YouTube">
+<a href="#">
+<img src="images/youtube.png" alt="">
 </a>
 
-<a href="https://instagram.com" target="_blank">
-<img src="images/instagram.png" alt="Instagram">
+<a href="#">
+<img src="images/instagram.png" alt="">
 </a>
 
 </div>
 
 </nav>
 
-<!-- =======================
-     SIDE MENU
-======================== -->
+<!-- ================= SIDE MENU ================= -->
 
-<div id="sideMenu" class="side-menu">
+<div class="sidebar" id="sidebar">
 
 <a href="#">🏠 Home</a>
 
+<a href="#about">🏛 আমাদের সম্পর্কে</a>
+
 <a href="#committee">👥 পরিচালনা কমিটি</a>
 
-<a href="#notice">📢 নোটিশ</a>
+<a href="#notice">📢 Notice</a>
 
 <a href="#student">🎓 Student Corner</a>
 
-<a href="#gallery">🖼️ Gallery</a>
+<a href="#gallery">🖼 Gallery</a>
 
-<a href="#about">🏛️ আমাদের সম্পর্কে</a>
-
-<a href="#contact">📞 যোগাযোগ</a>
+<a href="#contact">📞 Contact</a>
 
 </div>
 
-<!-- =======================
-     BREAKING NEWS
-======================== -->
+<!-- ================= BREAKING NEWS ================= -->
 
-<section class="breaking-news">
+<section class="breaking">
 
-<span class="label">📢 সর্বশেষ</span>
+<div class="breaking-title">
+
+📢 Breaking News
+
+</div>
+
+<div class="breaking-text">
 
 <marquee>
 
-চকমনসুর বানিশ্রী সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম • দুর্গাপূজা ২০২৬-এর প্রস্তুতি চলছে • সকলকে আন্তরিক শুভেচ্ছা।
+চকমনসুর বানিশ্রী সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম • দুর্গাপূজা ২০২৬ উপলক্ষে সকলকে আন্তরিক শুভেচ্ছা।
 
 </marquee>
 
+</div>
+
 </section>
 
-<!-- =======================
-     IMAGE SLIDER
-======================== -->
+<!-- ================= SLIDER ================= -->
 
 <section class="slider">
 
 <div class="slider-box">
 
-<button class="prev">&#10094;</button>
+<button id="prev">
 
-<img id="slide"
+❮
+
+</button>
+
+<img
+id="slide"
 src="images/slider1.jpg"
 alt="Slider">
 
-<button class="next">&#10095;</button>
+<button id="next">
+
+❯
+
+</button>
 
 </div>
 
 <div class="dots">
 
 <span class="dot active"></span>
+
 <span class="dot"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
 <span class="dot"></span>
 
 </div>
 
 </section>
-<!-- =======================
-     DURGA PUJA HIGHLIGHT
-======================== -->
-
-<section class="highlight">
-
-<h2>🌺 দুর্গাপূজা ২০২৬</h2>
-
-<img src="images/poster2026.jpg" alt="Durga Puja Poster">
-
-<p>
-দুর্গাপূজা ২০২৬-এর সম্পূর্ণ অনুষ্ঠান সূচি দেখতে নিচের বাটনে ক্লিক করুন।
-</p>
-
-<a href="#" class="btn">পোস্টার বড় করে দেখুন</a>
-
-</section>
-
-<!-- =======================
-     COMMITTEE
-======================== -->
-
-<section id="committee" class="committee">
-
-<h2>👥 পরিচালনা কমিটি</h2>
-
-<div class="member">
-<h3>সভাপতি</h3>
-<p>নাম : __________________</p>
-<p>📞 +91 XXXXXXXXXX</p>
-</div>
-
-<div class="member">
-<h3>সম্পাদক</h3>
-<p>নাম : __________________</p>
-<p>📞 +91 XXXXXXXXXX</p>
-</div>
-
-<div class="member">
-<h3>কোষাধ্যক্ষ</h3>
-<p>নাম : __________________</p>
-<p>📞 +91 XXXXXXXXXX</p>
-</div>
-
-</section>
-
-<!-- =======================
-     NOTICE BOARD
-======================== -->
-
-<section id="notice" class="notice">
-
-<h2>📢 নোটিশ বোর্ড</h2>
-
-<ul>
-
-<li>🌺 দুর্গাপূজা ২০২৬-এর প্রস্তুতি চলছে।</li>
-
-<li>📅 রবিবার সাধারণ সভা অনুষ্ঠিত হবে।</li>
-
-<li>🙏 সকল সদস্যকে উপস্থিত থাকার অনুরোধ করা হচ্ছে।</li>
-
-</ul>
-
-</section>
-
-<!-- =======================
-     STUDENT CORNER
-======================== -->
-
-<section id="student" class="student">
-
-<h2>🎓 Student Corner</h2>
-
-<a href="https://wbresults.nic.in" target="_blank">📊 WB Results</a>
-
-<a href="https://wbbse.wb.gov.in" target="_blank">📚 WBBSE</a>
-
-<a href="https://wbchse.wb.gov.in" target="_blank">🎓 WBCHSE</a>
-
-<a href="https://ssc.gov.in" target="_blank">📝 SSC</a>
-
-<a href="https://psc.wb.gov.in" target="_blank">🏛 WBPSC</a>
-
-<a href="https://www.ncs.gov.in" target="_blank">💼 Job Vacancy</a>
-
-</section>
-<!-- =======================
-     BANGLA NEWSPAPER
-======================== -->
-
-<section class="newspaper">
-
-<h2>📰 বাংলা সংবাদপত্র</h2>
-
-<a href="https://www.anandabazar.com" target="_blank">আনন্দবাজার</a>
-
-<a href="https://bartamanpatrika.com" target="_blank">বর্তমান</a>
-
-<a href="https://eisamay.com" target="_blank">এই সময়</a>
-
-<a href="https://www.sangbadpratidin.in" target="_blank">সংবাদ প্রতিদিন</a>
-
-</section>
-
-<!-- =======================
-     EVENT CALENDAR
-======================== -->
-
-<section class="calendar">
-
-<h2>📅 Event Calendar</h2>
-
-<div class="event">
-<h3>🌺 দুর্গাপূজা ২০২৬</h3>
-<p>তারিখ পরে ঘোষণা করা হবে</p>
-</div>
-
-<div class="event">
-<h3>🙏 কালীপূজা</h3>
-<p>তারিখ পরে ঘোষণা করা হবে</p>
-</div>
-
-<div class="event">
-<h3>📚 সরস্বতী পূজা</h3>
-<p>তারিখ পরে ঘোষণা করা হবে</p>
-</div>
-
-</section>
-
-<!-- =======================
-     GALLERY
-======================== -->
-
-<section id="gallery" class="gallery">
-
-<h2>🖼️ Photo Gallery</h2>
-
-<div class="gallery-grid">
-
-<img src="images/gallery1.jpg" alt="Gallery">
-
-<img src="images/gallery2.jpg" alt="Gallery">
-
-</div>
-
-</section>
-
-<!-- =======================
-     ABOUT
-======================== -->
-
-<section id="about" class="about">
-
-<h2>🏛️ আমাদের সম্পর্কে</h2>
-
-<p>
-চকমনসুর বানিশ্রী সংঘ একটি সামাজিক, সাংস্কৃতিক ও সেবামূলক প্রতিষ্ঠান।
-প্রতিষ্ঠিত ১৯৬৫ সালে।
-</p>
-
-</section>
-
-<!-- =======================
-     GOOGLE MAP
-======================== -->
-
-<section class="map">
-
-<h2>📍 আমাদের অবস্থান</h2>
-
-<iframe
-src="YOUR_GOOGLE_MAP_LINK"
-loading="lazy">
-</iframe>
-
-</section>
-
-<!-- =======================
-     CONTACT
-======================== -->
-
-<section id="contact" class="contact">
-
-<h2>📞 যোগাযোগ</h2>
-
-<p>📍 চকমনসুর, পশ্চিমবঙ্গ</p>
-
-<p>📞 +91 XXXXXXXXXX</p>
-
-<p>✉️ your@email.com</p>
-
-</section>
-
-<!-- =======================
-     VISITOR
-======================== -->
-
-<section class="visitor">
-
-<h2>👥 Visitors</h2>
-
-<img src="https://hitwebcounter.com/counter/counter.php?page=YOUR-ID&style=0006&nbdigits=6&type=page&initCount=0">
-
-</section>
-
-<footer>
-
-<p>© ২০২৬ চকমনসুর বানিশ্রী সংঘ</p>
-
-<p>Designed & Developed by DEBU</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
