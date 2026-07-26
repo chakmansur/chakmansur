@@ -1,109 +1,98 @@
-/* =========================
-   MENU
-========================= */
+/* ===========================
+   SIDE MENU
+=========================== */
 
 const menuBtn = document.getElementById("menuBtn");
-const sidebar = document.getElementById("sidebar");
+const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-});
+if(menuBtn && sideMenu){
 
-document.addEventListener("click", (e) => {
-    if (
-        !sidebar.contains(e.target) &&
-        !menuBtn.contains(e.target)
-    ) {
-        sidebar.classList.remove("active");
-    }
-});
+    menuBtn.addEventListener("click",()=>{
+        sideMenu.classList.toggle("active");
+    });
 
-/* =========================
-   SLIDER
-========================= */
+    document.addEventListener("click",(e)=>{
 
-const slides = [
-    "images/slider1.jpg",
-    "images/slider2.jpg",
-    "images/slider3.jpg"
-];
+        if(
+            !sideMenu.contains(e.target) &&
+            !menuBtn.contains(e.target)
+        ){
+            sideMenu.classList.remove("active");
+        }
 
-let current = 0;
-
-const slide = document.getElementById("slide");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(index){
-
-    if(index >= slides.length){
-        current = 0;
-    }else if(index < 0){
-        current = slides.length - 1;
-    }else{
-        current = index;
-    }
-
-    slide.src = slides[current];
-
-    dots.forEach((dot,i)=>{
-        dot.classList.toggle("active", i === current);
     });
 
 }
 
-next.addEventListener("click",()=>{
-    showSlide(current + 1);
-});
+/* ===========================
+   IMAGE SLIDER
+=========================== */
 
-prev.addEventListener("click",()=>{
-    showSlide(current - 1);
+const slides=[
+"images/image slider/slider1.jpg",
+"images/image slider/slider2.jpg",
+"images/image slider/slider3.jpg"
+];
+
+let current=0;
+
+const slide=document.getElementById("slide");
+const prev=document.getElementById("prev");
+const next=document.getElementById("next");
+const dots=document.querySelectorAll(".dot");
+
+function showSlide(index){
+
+    if(!slide) return;
+
+    if(index>=slides.length){
+        current=0;
+    }else if(index<0){
+        current=slides.length-1;
+    }else{
+        current=index;
+    }
+
+    slide.src=slides[current];
+
+    dots.forEach((dot,i)=>{
+        dot.classList.toggle("active",i===current);
+    });
+
+}
+
+showSlide(0);
+
+if(next){
+next.addEventListener("click",()=>{
+showSlide(current+1);
 });
+}
+
+if(prev){
+prev.addEventListener("click",()=>{
+showSlide(current-1);
+});
+}
 
 setInterval(()=>{
-    showSlide(current + 1);
+showSlide(current+1);
 },3000);
 
-/* =========================
-   GALLERY TAB
-========================= */
+/* ===========================
+   ICON TOUCH EFFECT
+=========================== */
 
-const tabs=document.querySelectorAll(".tab-btn");
-const contents=document.querySelectorAll(".gallery-content");
+document.querySelectorAll(".quick-card").forEach(card=>{
 
-tabs.forEach(tab=>{
-
-    tab.addEventListener("click",()=>{
-
-        tabs.forEach(btn=>btn.classList.remove("active"));
-
-        contents.forEach(box=>box.classList.remove("active"));
-
-        tab.classList.add("active");
-
-        document
-        .getElementById(tab.dataset.tab)
-        .classList.add("active");
-
-    });
-
+card.addEventListener("touchstart",()=>{
+card.classList.add("active");
 });
 
-/* প্রথম Gallery খুলে দেখাও */
-
-document.getElementById("durga").classList.add("active");
-
-/* =========================
-   IMAGE LIGHTBOX
-========================= */
-
-document.querySelectorAll(".gallery-content img").forEach(img=>{
-
-    img.addEventListener("click",()=>{
-
-        window.open(img.src,"_blank");
-
-    });
+card.addEventListener("touchend",()=>{
+setTimeout(()=>{
+card.classList.remove("active");
+},150);
+});
 
 });
