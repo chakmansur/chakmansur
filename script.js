@@ -2,8 +2,8 @@
    SIDE MENU
 ========================== */
 
-const menuBtn = document.getElementById("menu-btn");
-const sideMenu = document.getElementById("side-menu");
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
 
 menuBtn.addEventListener("click", () => {
     sideMenu.classList.toggle("active");
@@ -16,53 +16,51 @@ document.addEventListener("click", (e) => {
 });
 
 /* ==========================
-   AUTO SLIDER
+   IMAGE SLIDER
 ========================== */
 
 const slides = [
     "images/slider1.jpg",
     "images/slider2.jpg",
     "images/slider3.jpg"
+    // পরে এখানে slider4.jpg থেকে slider15.jpg যোগ করবেন
 ];
 
-let currentSlide = 0;
+let current = 0;
 
-setInterval(() => {
+const slide = document.getElementById("slide");
+const dots = document.querySelectorAll(".dot");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
-    currentSlide++;
+function showSlide(index){
 
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
+    if(index >= slides.length) current = 0;
+    if(index < 0) current = slides.length - 1;
+
+    slide.src = slides[current];
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    if(dots[current]){
+        dots[current].classList.add("active");
     }
-
-    document.getElementById("slide").src = slides[currentSlide];
-
-}, 3000);
-
-/* ==========================
-   DATE & TIME
-========================== */
-
-function updateDateTime() {
-
-    const now = new Date();
-
-    const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    };
-
-    document.getElementById("datetime").innerHTML =
-        now.toLocaleDateString("bn-BD", options) +
-        " | " +
-        now.toLocaleTimeString("bn-BD");
-
 }
 
-setInterval(updateDateTime, 1000);
-updateDateTime();
+next.addEventListener("click", () => {
+    current++;
+    showSlide(current);
+});
+
+prev.addEventListener("click", () => {
+    current--;
+    showSlide(current);
+});
+
+setInterval(() => {
+    current++;
+    showSlide(current);
+}, 3000);
 
 /* ==========================
    SCROLL ANIMATION
@@ -74,9 +72,7 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
 
-        const top = section.getBoundingClientRect().top;
-
-        if (top < window.innerHeight - 100) {
+        if(section.getBoundingClientRect().top < window.innerHeight - 100){
 
             section.classList.add("show");
 
@@ -86,16 +82,4 @@ window.addEventListener("scroll", () => {
 
 });
 
-/* ==========================
-   SMOOTH ACTIVE MENU
-========================== */
-
-document.querySelectorAll(".side-menu a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        sideMenu.classList.remove("active");
-
-    });
-
-});
+window.dispatchEvent(new Event("scroll"));
