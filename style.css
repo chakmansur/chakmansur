@@ -166,3 +166,136 @@ body{
 .dot.active{
     background:#0b6b2f;
 }
+/* ===========================
+   DURGA PUJA HIGHLIGHT
+=========================== */
+
+.highlight-card{
+    padding:15px;
+}
+
+.highlight-link{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#fff8e8;
+    border:2px solid #f4b400;
+    border-radius:15px;
+    padding:12px;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.highlight-link:hover,
+.highlight-link:active{
+    transform:scale(1.02);
+}
+
+.highlight-link img{
+    width:125px;
+    height:80px;
+    object-fit:contain;
+}
+
+.highlight-text h2{
+    color:#b22222;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.highlight-text p{
+    font-size:14px;
+    color:#555;
+}
+
+/* ===========================
+   QUICK ACCESS
+=========================== */
+
+.quick-access{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:15px;
+}
+
+.quick-card{
+    background:#fff;
+    border-radius:15px;
+    padding:15px 10px;
+    text-align:center;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+    transition:.25s;
+}
+
+.quick-card img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.quick-card span{
+    display:block;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.quick-card:hover,
+.quick-card:active{
+    transform:scale(1.05);
+    border:2px solid #0b6b2f;
+    background:#f3fff5;
+}
+
+/* ===========================
+   COMMON SECTION
+=========================== */
+
+.committee,
+.about,
+.contact{
+    background:#fff;
+    margin:15px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.committee h2,
+.about h2,
+.contact h2{
+    color:#0b6b2f;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#0b6b2f;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#0b6b2f;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+footer p{
+    margin:5px 0;
+}
