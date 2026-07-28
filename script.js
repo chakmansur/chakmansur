@@ -1,88 +1,93 @@
-/* ==========================================
-   CHAKMANSUR BANISHREE SANGHA
-   FINAL SCRIPT.JS
-========================================== */
+/*==========================================
+  CHAKMANSUR BANISHREE SANGHA
+  FINAL SCRIPT
+==========================================*/
 
-/* ==========================
-   MENU
-========================== */
+/*==============================
+ MENU
+==============================*/
 
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.addEventListener("click", function () {
+menuBtn.onclick = function () {
     sideMenu.classList.toggle("active");
-});
+};
 
-document.addEventListener("click", function (e) {
+document.addEventListener("click", function(e){
 
-    if (
+    if(
         !sideMenu.contains(e.target) &&
-        !menuBtn.contains(e.target)
-    ) {
+        e.target !== menuBtn
+    ){
         sideMenu.classList.remove("active");
     }
 
 });
 
-/* ==========================
-   LIVE TIME & GREETING
-========================== */
+/*==============================
+ LIVE TIME
+==============================*/
 
-function updateClock() {
+function liveClock(){
 
-    const now = new Date();
+const now = new Date();
 
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    let second = now.getSeconds();
+let h = now.getHours();
+let m = now.getMinutes();
+let s = now.getSeconds();
 
-    let greeting = "";
+let wish = "";
 
-    if (hour < 12) {
-        greeting = "🌅 শুভ সকাল";
-    }
-    else if (hour < 16) {
-        greeting = "☀️ শুভ দুপুর";
-    }
-    else if (hour < 19) {
-        greeting = "🌇 শুভ সন্ধ্যা";
-    }
-    else {
-        greeting = "🌙 শুভ রাত্রি";
-    }
+if(h < 12){
 
-    let ampm = hour >= 12 ? "PM" : "AM";
+wish="🌅 শুভ সকাল";
 
-    hour = hour % 12;
+}else if(h < 16){
 
-    if (hour == 0) {
-        hour = 12;
-    }
+wish="☀️ শুভ দুপুর";
 
-    hour = String(hour).padStart(2, "0");
-    minute = String(minute).padStart(2, "0");
-    second = String(second).padStart(2, "0");
+}else if(h < 19){
 
-    document.getElementById("greeting").innerHTML = greeting;
+wish="🌇 শুভ সন্ধ্যা";
 
-    document.getElementById("clock").innerHTML =
-        hour + ":" +
-        minute + ":" +
-        second + " " +
-        ampm;
+}else{
+
+wish="🌙 শুভ রাত্রি";
 
 }
 
-updateClock();
+let ampm = h >= 12 ? "PM":"AM";
 
-setInterval(updateClock, 1000);
+h = h % 12;
 
-/* ==========================
-   HERO IMAGE SLIDER
-========================== */
+if(h==0){
 
-const heroImages = [
+h=12;
+
+}
+
+h=String(h).padStart(2,"0");
+m=String(m).padStart(2,"0");
+s=String(s).padStart(2,"0");
+
+document.getElementById("greeting").innerHTML=wish;
+
+document.getElementById("clock").innerHTML=
+
+h+":"+m+":"+s+" "+ampm;
+
+}
+
+liveClock();
+
+setInterval(liveClock,1000);
+
+/*==============================
+ HERO IMAGE SLIDER
+==============================*/
+
+const heroImages=[
 
 "images/image slider/slider1.jpg",
 
@@ -92,166 +97,186 @@ const heroImages = [
 
 ];
 
-let heroIndex = 0;
+let hero=0;
 
-const heroSlide = document.getElementById("heroSlide");
+const heroSlide=document.getElementById("heroSlide");
 
 function heroSlider(){
 
-    heroIndex++;
+hero++;
 
-    if(heroIndex >= heroImages.length){
+if(hero>=heroImages.length){
 
-        heroIndex = 0;
+hero=0;
 
-    }
+}
 
-    heroSlide.style.opacity = 0;
+heroSlide.style.opacity="0";
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        heroSlide.src = heroImages[heroIndex];
+heroSlide.src=heroImages[hero];
 
-        heroSlide.style.opacity = 1;
+heroSlide.style.opacity="1";
 
-    },300);
+},350);
 
 }
 
 setInterval(heroSlider,4000);
-/* ==========================
-   ADVERTISEMENT SLIDER
-========================== */
+/*==========================================
+  UNIQUE ADVERTISEMENT SLIDER
+==========================================*/
 
 const adImages = [
     "images/advertisement/ad1.png",
     "images/advertisement/ad2.png"
+    // পরে ad3.png, ad4.png যোগ করতে পারবেন
 ];
 
 let adIndex = 0;
 
 const adSlide = document.getElementById("adSlide");
 
-function changeAd() {
+function changeAd(){
 
     adSlide.style.opacity = "0";
+    adSlide.style.transform = "scale(1.10)";
 
-    setTimeout(function () {
+    setTimeout(function(){
 
         adIndex++;
 
-        if (adIndex >= adImages.length) {
+        if(adIndex >= adImages.length){
             adIndex = 0;
         }
 
         adSlide.src = adImages[adIndex];
 
         adSlide.style.opacity = "1";
+        adSlide.style.transform = "scale(1)";
 
-    }, 500);
+    },600);
 
 }
 
-/* Hero Slider থেকে আলাদা সময় */
-setInterval(changeAd, 6000);
+/* Hero Slider থেকে আলাদা */
+setInterval(changeAd,6000);
 
-/* ==========================
-   HERO SLIDER BUTTON
-========================== */
+/*==========================================
+  PREVIOUS / NEXT BUTTON
+==========================================*/
 
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+const leftBtn = document.querySelector(".left");
+const rightBtn = document.querySelector(".right");
 
-function showHero(index){
+function showHero(i){
 
-    if(index >= heroImages.length){
-        heroIndex = 0;
-    }else if(index < 0){
-        heroIndex = heroImages.length - 1;
+    if(i >= heroImages.length){
+
+        hero = 0;
+
+    }else if(i < 0){
+
+        hero = heroImages.length - 1;
+
     }else{
-        heroIndex = index;
+
+        hero = i;
+
     }
 
-    heroSlide.src = heroImages[heroIndex];
-}
-
-if(prevBtn){
-
-prevBtn.addEventListener("click",function(){
-
-    showHero(heroIndex-1);
-
-});
+    heroSlide.src = heroImages[hero];
 
 }
 
-if(nextBtn){
+leftBtn.onclick = function(){
 
-nextBtn.addEventListener("click",function(){
-
-    showHero(heroIndex+1);
-
-});
+    showHero(hero-1);
 
 }
 
-/* ==========================
-   TOUCH SWIPE
-========================== */
+rightBtn.onclick = function(){
 
-let startX = 0;
+    showHero(hero+1);
+
+}
+
+/*==========================================
+  MOBILE SWIPE
+==========================================*/
+
+let touchStart = 0;
 
 heroSlide.addEventListener("touchstart",function(e){
 
-    startX = e.touches[0].clientX;
+    touchStart = e.touches[0].clientX;
 
 });
 
 heroSlide.addEventListener("touchend",function(e){
 
-    let endX = e.changedTouches[0].clientX;
+    let touchEnd = e.changedTouches[0].clientX;
 
-    if(startX-endX>60){
+    if(touchStart-touchEnd>60){
 
-        showHero(heroIndex+1);
+        showHero(hero+1);
 
     }
 
-    if(endX-startX>60){
+    if(touchEnd-touchStart>60){
 
-        showHero(heroIndex-1);
+        showHero(hero-1);
 
     }
 
 });
-/* ==========================================
-   VISITOR COUNTER (DISPLAY)
-========================================== */
-
-/* পরে Real Visitor Counter ব্যবহার করলে
-   এই অংশ পরিবর্তন করা হবে */
+/*==========================================
+  VISITOR COUNTER
+==========================================*/
 
 const visitorCount = document.getElementById("visitorCount");
 
 if (visitorCount) {
-    visitorCount.innerHTML = "000001";
+    let total = localStorage.getItem("cbs_total_visitor");
+
+    if (!total) {
+        total = 1;
+    } else {
+        total = Number(total) + 1;
+    }
+
+    localStorage.setItem("cbs_total_visitor", total);
+
+    visitorCount.innerHTML = total.toLocaleString("en-IN");
 }
 
-/* ==========================================
-   IMAGE FADE EFFECT
-========================================== */
+/*==========================================
+  PRELOAD IMAGES
+==========================================*/
 
-if (heroSlide) {
-    heroSlide.style.transition = "opacity .5s ease";
-}
+heroImages.forEach(function(img){
+    const image = new Image();
+    image.src = img;
+});
 
-if (adSlide) {
-    adSlide.style.transition = "opacity .8s ease";
-}
+adImages.forEach(function(img){
+    const image = new Image();
+    image.src = img;
+});
 
-/* ==========================================
-   QUICK ACCESS TOUCH EFFECT
-========================================== */
+/*==========================================
+  SMOOTH IMAGE FADE
+==========================================*/
+
+heroSlide.style.transition = "opacity .5s ease";
+
+adSlide.style.transition =
+"opacity .6s ease, transform 6s linear";
+
+/*==========================================
+  QUICK ACCESS TOUCH EFFECT
+==========================================*/
 
 document.querySelectorAll(".quick-card").forEach(function(card){
 
@@ -267,34 +292,18 @@ document.querySelectorAll(".quick-card").forEach(function(card){
 
             card.style.transform="scale(1)";
 
-        },150);
+        },120);
 
     });
 
 });
 
-/* ==========================================
-   PRELOAD IMAGES
-========================================== */
+/*==========================================
+  PAGE LOADED
+==========================================*/
 
-heroImages.forEach(function(img){
+window.onload=function(){
 
-    const image = new Image();
+console.log("CBS Website Loaded Successfully");
 
-    image.src = img;
-
-});
-
-adImages.forEach(function(img){
-
-    const image = new Image();
-
-    image.src = img;
-
-});
-
-/* ==========================================
-   START MESSAGE
-========================================== */
-
-console.log("Chakmansur Banishree Sangha Website Loaded Successfully");
+};
