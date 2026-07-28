@@ -1,6 +1,7 @@
-/* ===========================
-   RESET
-=========================== */
+/*==================================
+CHAKMANSUR BANISHREE SANGHA
+STYLE.CSS
+==================================*/
 
 *{
 margin:0;
@@ -8,36 +9,41 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-background:#f5f5f5;
-font-family:Arial,sans-serif;
-overflow-x:hidden;
+html{
+scroll-behavior:smooth;
 }
 
-/* ===========================
-   BANNER
-=========================== */
+body{
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:#f2f5f7;
+
+overflow-x:hidden;
+
+}
+
+/*==========================
+BANNER
+==========================*/
 
 .banner{
-width:100%;
-background:#fff;
-}
 
-.banner img{
 width:100%;
+
 display:block;
-height:auto;
+
 }
 
-/* ===========================
-   TOP BAR
-=========================== */
+/*==========================
+TOP BAR
+==========================*/
 
 .topbar{
 
-height:60px;
+background:#0b7a32;
 
-background:#006400;
+height:60px;
 
 display:flex;
 
@@ -45,13 +51,15 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:0 10px;
+padding:0 12px;
 
 position:sticky;
 
 top:0;
 
 z-index:999;
+
+box-shadow:0 3px 10px rgba(0,0,0,.25);
 
 }
 
@@ -61,9 +69,9 @@ background:none;
 
 border:none;
 
-color:#fff;
-
 font-size:30px;
+
+color:#fff;
 
 cursor:pointer;
 
@@ -71,15 +79,15 @@ cursor:pointer;
 
 .livebox{
 
+flex:1;
+
 text-align:center;
 
 color:#fff;
 
-flex:1;
-
 }
 
-#greeting{
+#wish{
 
 font-size:15px;
 
@@ -121,15 +129,15 @@ transform:scale(1.15);
 
 }
 
-/* ===========================
-   SIDE MENU
-=========================== */
+/*==========================
+SIDE MENU
+==========================*/
 
 .menu{
 
 position:fixed;
 
-left:-270px;
+left:-280px;
 
 top:0;
 
@@ -145,7 +153,7 @@ z-index:9999;
 
 padding-top:70px;
 
-box-shadow:3px 0 15px rgba(0,0,0,.2);
+box-shadow:3px 0 15px rgba(0,0,0,.30);
 
 }
 
@@ -159,7 +167,7 @@ left:0;
 
 display:block;
 
-padding:15px 20px;
+padding:16px 20px;
 
 text-decoration:none;
 
@@ -173,17 +181,39 @@ font-size:16px;
 
 .menu a:hover{
 
-background:#006400;
+background:#0b7a32;
 
 color:#fff;
 
 }
 
-/* ===========================
-   HERO SLIDER
-=========================== */
+/*==========================
+BREAKING NEWS
+==========================*/
 
-.hero{
+.breaking{
+
+background:#c40000;
+
+padding:8px;
+
+color:#fff;
+
+font-weight:bold;
+
+}
+
+.breaking marquee{
+
+font-size:15px;
+
+}
+
+/*==========================
+IMAGE SLIDER
+==========================*/
+
+.slider{
 
 position:relative;
 
@@ -195,32 +225,43 @@ background:#000;
 
 }
 
-.hero img{
+.slide{
+
+display:none;
+
+}
+
+.slide img{
 
 width:100%;
 
-height:430px;
+height:320px;
 
 object-fit:cover;
 
 display:block;
 
-transition:1s;
+border-radius:0 0 10px 10px;
 
 }
 
-.overlay{
+.fade{
 
-position:absolute;
-
-inset:0;
-
-background:linear-gradient(transparent,rgba(0,0,0,.25));
+animation:fade 1s;
 
 }
 
-.left,
-.right{
+@keyframes fade{
+
+from{opacity:.3;}
+
+to{opacity:1;}
+
+}
+
+.prev,
+
+.next{
 
 position:absolute;
 
@@ -228,283 +269,364 @@ top:50%;
 
 transform:translateY(-50%);
 
-width:45px;
+width:42px;
 
-height:45px;
-
-border:none;
+height:42px;
 
 background:rgba(255,255,255,.35);
 
 border-radius:50%;
 
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 font-size:22px;
 
 cursor:pointer;
 
-}
-
-.left{
-
-left:12px;
+user-select:none;
 
 }
 
-.right{
+.prev{
 
-right:12px;
+left:10px;
 
 }
-/* ===========================
-   BREAKING NEWS
-=========================== */
 
-.breaking{
-    background:#b30000;
-    color:#fff;
-    padding:10px 0;
-    font-weight:bold;
-    overflow:hidden;
+.next{
+
+right:10px;
+
 }
+/*==========================
+ADVERTISEMENT
+==========================*/
 
-.breaking marquee{
-    font-size:15px;
-}
+.advertisement{
 
-/* ===========================
-   ADVERTISEMENT
-=========================== */
+padding:12px;
 
-.ads{
-    width:100%;
-    padding:12px;
-    background:#fff;
-}
+background:#fff;
 
-.ads a{
-    display:block;
 }
 
 #adSlide{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:15px;
-    box-shadow:0 6px 18px rgba(0,0,0,.20);
-    animation:adZoom 6s infinite;
-}
 
-@keyframes adZoom{
+width:100%;
 
-0%{
-opacity:0;
-transform:scale(.96);
-}
+height:190px;
 
-20%{
-opacity:1;
-transform:scale(1);
-}
+object-fit:cover;
 
-80%{
-opacity:1;
-transform:scale(1.08);
-}
+border-radius:15px;
 
-100%{
-opacity:0;
-transform:scale(1.12);
-}
+box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+transition:opacity .8s ease,transform 6s linear;
 
 }
 
-/* ===========================
-   DURGA PUJA
-=========================== */
+/*==========================
+QUICK MENU
+==========================*/
 
-.durga-highlight{
-    padding:15px;
-    text-align:center;
+.quick-menu{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:14px;
+
+padding:15px;
+
+background:#f7f7f7;
+
 }
 
-.durga-highlight img{
-    width:125px;
-    height:80px;
-    object-fit:contain;
+.menu-card{
+
+background:#fff;
+
+border-radius:14px;
+
+padding:12px 8px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:#222;
+
+box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+transition:.3s;
+
 }
 
-/* ===========================
-   QUICK ACCESS
-=========================== */
+.menu-card:hover,
+.menu-card:active{
 
-.quick-access{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    padding:15px;
+transform:translateY(-5px) scale(1.03);
+
+background:#eef9f0;
+
 }
 
-.quick-card{
-    background:#fff;
-    border-radius:15px;
-    text-align:center;
-    text-decoration:none;
-    color:#222;
-    padding:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-    transition:.3s;
+.menu-card img{
+
+width:72px;
+
+height:72px;
+
+object-fit:contain;
+
+margin-bottom:8px;
+
 }
 
-.quick-card img{
-    width:100px;
-    height:100px;
-    object-fit:contain;
+.menu-card span{
+
+display:block;
+
+font-size:13px;
+
+font-weight:bold;
+
+line-height:18px;
+
 }
 
-.quick-card span{
-    display:block;
-    margin-top:8px;
-    font-weight:bold;
-    font-size:15px;
+/*==========================
+HOME CARD
+==========================*/
+
+.home-card{
+
+background:#fff;
+
+margin:15px;
+
+padding:18px;
+
+border-radius:15px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.10);
+
 }
 
-.quick-card:hover,
-.quick-card:active{
-    transform:translateY(-5px);
-    background:#eaf7ee;
-    border:2px solid #0b6b2f;
-}
-/* ===========================
-   COMMITTEE
-=========================== */
+.home-card h2{
 
-.committee-home,
-.about-home,
-.contact-home{
-    background:#fff;
-    margin:15px;
-    padding:18px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.12);
+font-size:22px;
+
+color:#0b7a32;
+
+margin-bottom:10px;
+
+border-left:5px solid #0b7a32;
+
+padding-left:10px;
+
 }
 
-.committee-home h2,
-.about-home h2,
-.contact-home h2{
-    color:#006400;
-    font-size:22px;
-    margin-bottom:12px;
-    border-left:5px solid #006400;
-    padding-left:10px;
-}
+.home-card p{
 
-.committee-home p,
-.about-home p,
-.contact-home p{
-    font-size:15px;
-    line-height:1.8;
-}
+font-size:15px;
 
-/* ===========================
-   BUTTON
-=========================== */
+line-height:1.8;
+
+color:#444;
+
+}
 
 .btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 24px;
-    background:#006400;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 22px;
+
+background:#0b7a32;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:.3s;
+
 }
 
 .btn:hover{
-    background:#008a2e;
+
+background:#095b25;
+
+}
+/*==========================
+FOOTER
+==========================*/
+
+.footer{
+
+background:#0b7a32;
+
+color:#fff;
+
+text-align:center;
+
+padding:25px 15px;
+
+margin-top:25px;
+
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+.footer h3{
 
-footer{
-    margin-top:25px;
-    background:#006400;
-    color:#fff;
-    text-align:center;
-    padding:25px 15px;
+font-size:22px;
+
+margin-bottom:8px;
+
 }
 
-.footer-logo{
-    font-size:22px;
-    font-weight:bold;
+.footer p{
+
+font-size:14px;
+
+margin:4px 0;
+
 }
 
-.footer-copy{
-    margin-top:8px;
-    font-size:14px;
+.developer{
+
+font-size:12px;
+
+color:#e5e5e5;
+
+margin-top:10px;
+
+font-style:italic;
+
 }
 
-/* ===========================
-   VISITOR
-=========================== */
+/*==========================
+VISITOR COUNTER
+==========================*/
 
-.visitor{
-    margin-top:18px;
-    font-size:17px;
+.visitor-box{
+
+margin-top:18px;
+
+padding:12px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:10px;
+
+display:inline-block;
+
+min-width:220px;
+
 }
 
 #visitorCount{
-    font-size:30px;
-    font-weight:bold;
-    color:#ffd700;
-    margin-top:8px;
-    letter-spacing:3px;
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#ffd700;
+
+margin-top:8px;
+
+letter-spacing:2px;
+
 }
 
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
+/*==========================
+MOBILE RESPONSIVE
+==========================*/
 
 @media(max-width:768px){
 
-.hero img{
-height:420px;
+.banner{
+width:100%;
+}
+
+.slide img{
+height:300px;
 }
 
 #adSlide{
-height:190px;
+height:180px;
 }
 
-.quick-card img{
-width:90px;
-height:90px;
+.quick-menu{
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+padding:10px;
+}
+
+.menu-card img{
+width:60px;
+height:60px;
+}
+
+.menu-card span{
+font-size:12px;
+}
+
+.home-card{
+margin:10px;
+padding:15px;
 }
 
 }
+
+/*==========================
+TABLET & DESKTOP
+==========================*/
 
 @media(min-width:769px){
 
-.hero img{
-height:550px;
+.slide img{
+height:500px;
 }
 
 #adSlide{
 height:260px;
 }
 
-.quick-access{
+.quick-menu{
 grid-template-columns:repeat(4,1fr);
 }
 
+.menu-card img{
+width:80px;
+height:80px;
 }
 
-/* ===========================
-   SMOOTH SCROLL
-=========================== */
+}
 
-html{
-scroll-behavior:smooth;
+/*==========================
+ANIMATION
+==========================*/
+
+.menu-card img{
+transition:transform .3s ease;
+}
+
+.menu-card:hover img{
+transform:scale(1.12) rotate(3deg);
+}
+
+#adSlide:hover{
+transform:scale(1.03);
 }
