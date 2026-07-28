@@ -1,356 +1,510 @@
-/* ==========================================
-   CHAKMANSUR BANISHREE SANGHA
-   FINAL STYLE.CSS
-========================================== */
+/* ===========================
+   RESET
+=========================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f6f8;
-    color:#222;
-    overflow-x:hidden;
+background:#f5f5f5;
+font-family:Arial,sans-serif;
+overflow-x:hidden;
 }
 
-/* ==========================
+/* ===========================
    BANNER
-========================== */
+=========================== */
+
+.banner{
+width:100%;
+background:#fff;
+}
 
 .banner img{
-    width:100%;
-    display:block;
+width:100%;
+display:block;
+height:auto;
 }
 
-/* ==========================
+/* ===========================
    TOP BAR
-========================== */
+=========================== */
 
 .topbar{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:#0b6b2f;
-    height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.25);
+
+height:60px;
+
+background:#006400;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 10px;
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
 }
 
-/* MENU */
+#menuBtn{
 
-.menu-btn{
-    border:none;
-    background:none;
-    color:#fff;
-    font-size:32px;
-    cursor:pointer;
+background:none;
+
+border:none;
+
+color:#fff;
+
+font-size:30px;
+
+cursor:pointer;
+
 }
 
-/* LIVE TIME */
+.livebox{
 
-.live-info{
-    flex:1;
-    text-align:center;
-    color:#fff;
+text-align:center;
+
+color:#fff;
+
+flex:1;
+
 }
 
 #greeting{
-    display:block;
-    font-size:14px;
-    font-weight:bold;
+
+font-size:15px;
+
+font-weight:bold;
+
 }
 
 #clock{
-    display:block;
-    font-size:13px;
-    margin-top:2px;
+
+font-size:13px;
+
+margin-top:2px;
+
 }
 
-/* SOCIAL */
-
 .social{
-    display:flex;
-    gap:8px;
+
+display:flex;
+
+gap:8px;
+
 }
 
 .social img{
-    width:32px;
-    height:32px;
-    transition:.3s;
+
+width:30px;
+
+height:30px;
+
+border-radius:50%;
+
+transition:.3s;
+
 }
 
 .social img:hover{
-    transform:scale(1.1);
+
+transform:scale(1.15);
+
 }
 
-/* ==========================
+/* ===========================
    SIDE MENU
-========================== */
+=========================== */
 
-.side-menu{
+.menu{
 
 position:fixed;
 
-left:-280
-   /* ==========================================
-   ADVERTISEMENT SLIDER
-========================================== */
+left:-270px;
 
-.ad-slider{
-    width:100%;
-    padding:12px;
+top:0;
+
+width:260px;
+
+height:100%;
+
+background:#fff;
+
+transition:.35s;
+
+z-index:9999;
+
+padding-top:70px;
+
+box-shadow:3px 0 15px rgba(0,0,0,.2);
+
 }
 
-.ad-slider a{
+.menu.active{
+
+left:0;
+
+}
+
+.menu a{
+
+display:block;
+
+padding:15px 20px;
+
+text-decoration:none;
+
+color:#222;
+
+border-bottom:1px solid #eee;
+
+font-size:16px;
+
+}
+
+.menu a:hover{
+
+background:#006400;
+
+color:#fff;
+
+}
+
+/* ===========================
+   HERO SLIDER
+=========================== */
+
+.hero{
+
+position:relative;
+
+width:100%;
+
+overflow:hidden;
+
+background:#000;
+
+}
+
+.hero img{
+
+width:100%;
+
+height:430px;
+
+object-fit:cover;
+
+display:block;
+
+transition:1s;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(transparent,rgba(0,0,0,.25));
+
+}
+
+.left,
+.right{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+background:rgba(255,255,255,.35);
+
+border-radius:50%;
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+.left{
+
+left:12px;
+
+}
+
+.right{
+
+right:12px;
+
+}
+/* ===========================
+   BREAKING NEWS
+=========================== */
+
+.breaking{
+    background:#b30000;
+    color:#fff;
+    padding:10px 0;
+    font-weight:bold;
+    overflow:hidden;
+}
+
+.breaking marquee{
+    font-size:15px;
+}
+
+/* ===========================
+   ADVERTISEMENT
+=========================== */
+
+.ads{
+    width:100%;
+    padding:12px;
+    background:#fff;
+}
+
+.ads a{
     display:block;
 }
 
 #adSlide{
     width:100%;
-    height:180px;
+    height:200px;
     object-fit:cover;
-    border-radius:12px;
-    display:block;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    transition:opacity .8s ease-in-out;
+    border-radius:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,.20);
+    animation:adZoom 6s infinite;
 }
 
-/* ==========================================
+@keyframes adZoom{
+
+0%{
+opacity:0;
+transform:scale(.96);
+}
+
+20%{
+opacity:1;
+transform:scale(1);
+}
+
+80%{
+opacity:1;
+transform:scale(1.08);
+}
+
+100%{
+opacity:0;
+transform:scale(1.12);
+}
+
+}
+
+/* ===========================
+   DURGA PUJA
+=========================== */
+
+.durga-highlight{
+    padding:15px;
+    text-align:center;
+}
+
+.durga-highlight img{
+    width:125px;
+    height:80px;
+    object-fit:contain;
+}
+
+/* ===========================
    QUICK ACCESS
-========================================== */
+=========================== */
 
 .quick-access{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:16px;
-    padding:16px;
+    gap:15px;
+    padding:15px;
 }
 
 .quick-card{
     background:#fff;
-    border-radius:14px;
+    border-radius:15px;
+    text-align:center;
     text-decoration:none;
     color:#222;
-    text-align:center;
-    padding:15px 10px;
-    box-shadow:0 3px 10px rgba(0,0,0,.12);
-    transition:.25s;
+    padding:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    transition:.3s;
 }
 
 .quick-card img{
     width:100px;
     height:100px;
     object-fit:contain;
-    margin-bottom:10px;
 }
 
 .quick-card span{
     display:block;
+    margin-top:8px;
+    font-weight:bold;
     font-size:15px;
-    font-weight:600;
 }
 
 .quick-card:hover,
 .quick-card:active{
-    transform:translateY(-4px);
-    background:#eaf8ee;
+    transform:translateY(-5px);
+    background:#eaf7ee;
     border:2px solid #0b6b2f;
 }
+/* ===========================
+   COMMITTEE
+=========================== */
 
-/* ==========================================
-   DURGA PUJA HIGHLIGHT
-========================================== */
-
-.quick-card.highlight{
-    border:2px solid #f39c12;
-    background:#fff8e8;
+.committee-home,
+.about-home,
+.contact-home{
+    background:#fff;
+    margin:15px;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
-.quick-card.highlight span{
-    color:#b22222;
-    font-weight:700;
+.committee-home h2,
+.about-home h2,
+.contact-home h2{
+    color:#006400;
+    font-size:22px;
+    margin-bottom:12px;
+    border-left:5px solid #006400;
+    padding-left:10px;
 }
 
-/* ==========================================
+.committee-home p,
+.about-home p,
+.contact-home p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* ===========================
    BUTTON
-========================================== */
+=========================== */
 
 .btn{
     display:inline-block;
     margin-top:15px;
-    padding:12px 22px;
-    border-radius:30px;
-    background:#0b6b2f;
+    padding:12px 24px;
+    background:#006400;
     color:#fff;
     text-decoration:none;
+    border-radius:30px;
     font-weight:bold;
     transition:.3s;
 }
 
 .btn:hover{
-    background:#14853d;
+    background:#008a2e;
 }
 
-.btn:active{
-    transform:scale(.96);
-}
-/* ==========================================
-   COMMITTEE / ABOUT / CONTACT
-========================================== */
-
-.committee,
-.about,
-.contact{
-    margin:16px;
-    padding:18px;
-    background:#fff;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-}
-
-.committee h2,
-.about h2,
-.contact h2{
-    color:#0b6b2f;
-    font-size:22px;
-    margin-bottom:12px;
-    border-left:5px solid #0b6b2f;
-    padding-left:10px;
-}
-
-.committee p,
-.about p,
-.contact p{
-    line-height:1.8;
-    font-size:15px;
-}
-
-/* ==========================================
+/* ===========================
    FOOTER
-========================================== */
+=========================== */
 
-.footer{
+footer{
     margin-top:25px;
-    background:#0b6b2f;
+    background:#006400;
     color:#fff;
     text-align:center;
     padding:25px 15px;
 }
 
-.footer h3{
-    margin-bottom:8px;
-}
-
-.footer p{
-    margin:5px 0;
-}
-
-/* ==========================================
-   VISITOR COUNTER
-========================================== */
-
-.visitor{
-    background:#ffffff;
-    text-align:center;
-    padding:20px;
-    border-top:2px solid #ddd;
-}
-
-.visitor p{
-    font-size:18px;
+.footer-logo{
+    font-size:22px;
     font-weight:bold;
-    color:#0b6b2f;
 }
 
-#visitorCount{
-    margin-top:10px;
-    font-size:28px;
-    font-weight:bold;
-    color:#d32f2f;
-    letter-spacing:3px;
-}
-
-/* ==========================================
-   MOBILE RESPONSIVE
-========================================== */
-
-@media(max-width:480px){
-
-.hero-slider img{
-    height:380px;
-}
-
-#adSlide{
-    height:160px;
-}
-
-.quick-card img{
-    width:90px;
-    height:90px;
-}
-
-.quick-card span{
+.footer-copy{
+    margin-top:8px;
     font-size:14px;
 }
 
+/* ===========================
+   VISITOR
+=========================== */
+
+.visitor{
+    margin-top:18px;
+    font-size:17px;
 }
 
-@media(min-width:768px){
-
-.quick-access{
-    grid-template-columns:repeat(3,1fr);
+#visitorCount{
+    font-size:30px;
+    font-weight:bold;
+    color:#ffd700;
+    margin-top:8px;
+    letter-spacing:3px;
 }
 
-.hero-slider img{
-    height:500px;
-}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
 
-#adSlide{
-    height:220px;
-}
+@media(max-width:768px){
 
-}
-
-@media(min-width:1024px){
-
-body{
-    max-width:1200px;
-    margin:auto;
-}
-
-.quick-access{
-    grid-template-columns:repeat(4,1fr);
-}
-
-.hero-slider img{
-    height:600px;
+.hero img{
+height:420px;
 }
 
 #adSlide{
-    height:260px;
+height:190px;
+}
+
+.quick-card img{
+width:90px;
+height:90px;
 }
 
 }
 
-/* ==========================================
-   SMOOTH EFFECT
-========================================== */
+@media(min-width:769px){
 
-*{
-    transition:.25s ease;
+.hero img{
+height:550px;
 }
 
-img{
-    user-select:none;
-    -webkit-user-drag:none;
+#adSlide{
+height:260px;
+}
+
+.quick-access{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+/* ===========================
+   SMOOTH SCROLL
+=========================== */
+
+html{
+scroll-behavior:smooth;
 }
