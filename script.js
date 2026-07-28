@@ -224,3 +224,77 @@ heroSlide.addEventListener("touchend",function(e){
     }
 
 });
+/* ==========================================
+   VISITOR COUNTER (DISPLAY)
+========================================== */
+
+/* পরে Real Visitor Counter ব্যবহার করলে
+   এই অংশ পরিবর্তন করা হবে */
+
+const visitorCount = document.getElementById("visitorCount");
+
+if (visitorCount) {
+    visitorCount.innerHTML = "000001";
+}
+
+/* ==========================================
+   IMAGE FADE EFFECT
+========================================== */
+
+if (heroSlide) {
+    heroSlide.style.transition = "opacity .5s ease";
+}
+
+if (adSlide) {
+    adSlide.style.transition = "opacity .8s ease";
+}
+
+/* ==========================================
+   QUICK ACCESS TOUCH EFFECT
+========================================== */
+
+document.querySelectorAll(".quick-card").forEach(function(card){
+
+    card.addEventListener("touchstart",function(){
+
+        card.style.transform="scale(.96)";
+
+    });
+
+    card.addEventListener("touchend",function(){
+
+        setTimeout(function(){
+
+            card.style.transform="scale(1)";
+
+        },150);
+
+    });
+
+});
+
+/* ==========================================
+   PRELOAD IMAGES
+========================================== */
+
+heroImages.forEach(function(img){
+
+    const image = new Image();
+
+    image.src = img;
+
+});
+
+adImages.forEach(function(img){
+
+    const image = new Image();
+
+    image.src = img;
+
+});
+
+/* ==========================================
+   START MESSAGE
+========================================== */
+
+console.log("Chakmansur Banishree Sangha Website Loaded Successfully");
