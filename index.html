@@ -4,68 +4,82 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>চকমনসুর বানীশ্রী সংঘ</title>
 
 <link rel="icon" href="images/favicon.png">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ==========================
-     HEADER BANNER
-=========================== -->
+<!-- Banner -->
 
 <header class="banner">
 
-<img src="images/all icon/banner.png" class="banner" alt="Banner">
+<img src="images/banner.png" alt="Chakmansur Banishree Sangha Banner">
 
 </header>
 
-<!-- ==========================
-     NAVBAR
-=========================== -->
+<!-- Top Navigation -->
 
-<nav class="navbar">
+<nav class="topbar">
 
-<button id="menuBtn">
+<!-- Menu -->
+
+<button id="menuBtn" class="menu-btn">
 
 ☰
 
 </button>
 
+<!-- Live Greeting & Time -->
+
+<div class="live-info">
+
+<span id="greeting">🌅 শুভ সকাল</span>
+
+<span id="clock">00:00:00</span>
+
+</div>
+
+<!-- Social Media -->
+
 <div class="social">
 
-<a href="#">
+<a href="https://www.facebook.com/share/1EppWyFxSf/" target="_blank">
+
 <img src="images/all icon/facebook.png" alt="Facebook">
+
 </a>
 
 <a href="https://youtube.com/@chakmansur?si=8R_04Ek4vrFF2gFr" target="_blank">
+
 <img src="images/all icon/youtube.png" alt="YouTube">
+
 </a>
 
-<a href="#">
+<a href="#" target="_blank">
+
 <img src="images/all icon/instagram.png" alt="Instagram">
+
 </a>
 
 </div>
 
 </nav>
 
-<!-- ==========================
-     SIDE MENU
-=========================== -->
+<!-- Side Menu -->
 
 <div id="sideMenu" class="side-menu">
 
 <a href="index.html">🏠 Home</a>
 
 <a href="notice.html">📢 Notice Board</a>
+
+<a href="gallery.html">🖼 Gallery</a>
 
 <a href="Committee.html">👥 পরিচালনা কমিটি</a>
 
@@ -75,85 +89,58 @@
 
 </div>
 
-<!-- ==========================
-     RUNNING NEWS
-=========================== -->
+<!-- Running News -->
 
-<section class="news-bar">
+<div class="news-bar">
 
 <marquee scrollamount="5">
 
-চকমনসুর বানীশ্রী সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম • দুর্গাপূজা ২০২৬-এর প্রস্তুতি চলছে • সকলকে আন্তরিক শুভেচ্ছা • নতুন আপডেট খুব শীঘ্রই প্রকাশিত হবে।
+চকমনসুর বানীশ্রী সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম • দুর্গাপূজা ২০২৬-এর প্রস্তুতি চলছে • নতুন আপডেট খুব শীঘ্রই প্রকাশিত হবে।
 
 </marquee>
 
-</section>
-
-<!-- ==========================
-     IMAGE SLIDER
-=========================== -->
-
-<section class="slider">
-
-<div class="slider-box">
-
-<button id="prev" class="prev">
-
-&#10094;
-
-</button>
-
-<img
-id="slide"
-src="images/image slider/slider1.jpg"
-alt="Slider">
-
-<button id="next" class="next">
-
-&#10095;
-
-</button>
-
 </div>
 
-<div class="dots">
+<!-- Hero Slider -->
 
-<span class="dot active"></span>
+<section class="hero-slider">
 
-<span class="dot"></span>
+<img id="heroSlide" src="images/image slider/slider1.jpg" alt="Slider">
 
-<span class="dot"></span>
+<button class="prev">&#10094;</button>
 
-</div>
+<button class="next">&#10095;</button>
 
 </section>
-<!-- ==========================
-     DURGA PUJA 2026
-=========================== -->
+<!-- =========================
+     Advertisement Slider
+========================= -->
 
-<section class="highlight-card">
+<section class="ad-slider">
 
-<a href="durgapujo.html" class="highlight-link">
+<a href="advertisement.html">
 
-<img src="images/all icon/durgapuja2026.png" alt="Durga Puja 2026">
-
-<div class="highlight-text">
-
-<h2>🌺 Durga Puja 2026</h2>
-
-<p>অনুষ্ঠানসূচি, পোস্টার ও সর্বশেষ আপডেট দেখতে ট্যাপ করুন</p>
-
-</div>
+<img id="adSlide"
+src="images/advertisement/ad1.png"
+alt="Advertisement">
 
 </a>
 
 </section>
 
-<!-- ==========================
-     QUICK ACCESS
-=========================== -->
+<!-- =========================
+     Quick Access
+========================= -->
 
 <section class="quick-access">
+
+<a href="durgapujo.html" class="quick-card highlight">
+
+<img src="images/all icon/durgapuja2026.png" alt="Durga Puja 2026">
+
+<span>Durga Puja 2026</span>
+
+</a>
 
 <a href="cultivation.html" class="quick-card">
 
@@ -171,9 +158,17 @@ alt="Slider">
 
 </a>
 
+<a href="move.html" class="quick-card">
+
+<img src="images/all icon/movie.png" alt="Movie">
+
+<span>Movie</span>
+
+</a>
+
 <a href="student.html" class="quick-card">
 
-<img src="images/all icon/student.png" alt="Student">
+<img src="images/all icon/student.png" alt="Student Corner">
 
 <span>Student Corner</span>
 
@@ -203,51 +198,66 @@ alt="Slider">
 
 </a>
 
-</section>
+<a href="notice.html" class="quick-card">
 
-<!-- ==========================
+<img src="images/all icon/notice.png" alt="Notice">
+
+<span>Notice Board</span>
+
+</a>
+
+</section>
+<!-- =========================
      COMMITTEE
-=========================== -->
+========================= -->
 
 <section class="committee">
 
-<h2>👥 পরিচালনা কমিটি</h2>
+<h2>পরিচালনা কমিটি</h2>
 
-<p>চকমনসুর বানীশ্রী সংঘের পরিচালনা কমিটির বিস্তারিত দেখতে নিচের বাটনে ক্লিক করুন।</p>
+<p>
+চকমনসুর বানীশ্রী সংঘের পরিচালনা কমিটির সম্পূর্ণ তালিকা দেখতে নিচের বাটনে ক্লিক করুন।
+</p>
 
-<a href="Committee.html" class="btn">বিস্তারিত দেখুন</a>
+<a href="Committee.html" class="btn">
+পরিচালনা কমিটি দেখুন
+</a>
 
 </section>
 
-<!-- ==========================
+<!-- =========================
      ABOUT
-=========================== -->
+========================= -->
 
 <section class="about">
 
-<h2>🏛️ আমাদের সম্পর্কে</h2>
+<h2>আমাদের সম্পর্কে</h2>
 
 <p>
 
-চকমনসুর বানীশ্রী সংঘ একটি সামাজিক, সাংস্কৃতিক ও সেবামূলক প্রতিষ্ঠান।
+চকমনসুর বানীশ্রী সংঘ একটি সামাজিক, সাংস্কৃতিক ও ধর্মীয় সংগঠন। আমাদের লক্ষ্য সমাজের উন্নয়ন, সংস্কৃতির সংরক্ষণ এবং বিভিন্ন সামাজিক কার্যক্রম পরিচালনা করা।
 
 </p>
 
-<a href="about.html" class="btn">আরও জানুন</a>
+<a href="about.html" class="btn">
+
+আরও জানুন
+
+</a>
 
 </section>
 
-<!-- ==========================
+<!-- =========================
      CONTACT
-=========================== -->
+========================= -->
 
 <section class="contact">
 
-<h2>📞 যোগাযোগ</h2>
+<h2>যোগাযোগ</h2>
 
 <p>📍 চকমনসুর, পশ্চিমবঙ্গ</p>
 
-<p>📞 +91 XXXXX XXXXX</p>
+<p>📞 যোগাযোগের তথ্য এখানে যুক্ত করুন</p>
 
 <a href="contact.html" class="btn">
 
@@ -256,29 +266,32 @@ alt="Slider">
 </a>
 
 </section>
-<!-- ==========================
+
+<!-- =========================
      FOOTER
-=========================== -->
+========================= -->
 
 <footer class="footer">
 
-<div class="footer-content">
-
 <h3>চকমনসুর বানীশ্রী সংঘ</h3>
-
-<p>সামাজিক • সাংস্কৃতিক • সেবামূলক প্রতিষ্ঠান</p>
 
 <p>© 2026 All Rights Reserved</p>
 
-<p>Designed & Developed by <b>DEBU</b></p>
-
-</div>
+<p>Designed & Developed by DEBU</p>
 
 </footer>
 
-<!-- ==========================
-     JAVASCRIPT
-=========================== -->
+<!-- =========================
+     VISITOR COUNTER
+========================= -->
+
+<section class="visitor">
+
+<p>👁 Total Website Visitors</p>
+
+<div id="visitorCount">000000</div>
+
+</section>
 
 <script src="script.js"></script>
 
