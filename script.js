@@ -1,11 +1,6 @@
 /*==========================================
-  CHAKMANSUR BANISHREE SANGHA
-  FINAL SCRIPT
+MENU
 ==========================================*/
-
-/*==============================
- MENU
-==============================*/
 
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
@@ -25,29 +20,29 @@ document.addEventListener("click", function(e){
 
 });
 
-/*==============================
- LIVE TIME
-==============================*/
+/*==========================================
+LIVE CLOCK
+==========================================*/
 
-function liveClock(){
+function updateClock(){
 
-const now = new Date();
+const now=new Date();
 
-let h = now.getHours();
-let m = now.getMinutes();
-let s = now.getSeconds();
+let h=now.getHours();
+let m=now.getMinutes();
+let s=now.getSeconds();
 
-let wish = "";
+let wish="";
 
-if(h < 12){
+if(h<12){
 
 wish="🌅 শুভ সকাল";
 
-}else if(h < 16){
+}else if(h<16){
 
 wish="☀️ শুভ দুপুর";
 
-}else if(h < 19){
+}else if(h<19){
 
 wish="🌇 শুভ সন্ধ্যা";
 
@@ -57,9 +52,9 @@ wish="🌙 শুভ রাত্রি";
 
 }
 
-let ampm = h >= 12 ? "PM":"AM";
+let ampm=h>=12?"PM":"AM";
 
-h = h % 12;
+h=h%12;
 
 if(h==0){
 
@@ -71,7 +66,7 @@ h=String(h).padStart(2,"0");
 m=String(m).padStart(2,"0");
 s=String(s).padStart(2,"0");
 
-document.getElementById("greeting").innerHTML=wish;
+document.getElementById("wish").innerHTML=wish;
 
 document.getElementById("clock").innerHTML=
 
@@ -79,231 +74,228 @@ h+":"+m+":"+s+" "+ampm;
 
 }
 
-liveClock();
+updateClock();
 
-setInterval(liveClock,1000);
+setInterval(updateClock,1000);
 
-/*==============================
- HERO IMAGE SLIDER
-==============================*/
-
-const heroImages=[
-
-"images/image slider/slider1.jpg",
-
-"images/image slider/slider2.jpg",
-
-"images/image slider/slider3.jpg"
-
-];
-
-let hero=0;
-
-const heroSlide=document.getElementById("heroSlide");
-
-function heroSlider(){
-
-hero++;
-
-if(hero>=heroImages.length){
-
-hero=0;
-
-}
-
-heroSlide.style.opacity="0";
-
-setTimeout(function(){
-
-heroSlide.src=heroImages[hero];
-
-heroSlide.style.opacity="1";
-
-},350);
-
-}
-
-setInterval(heroSlider,4000);
 /*==========================================
-  UNIQUE ADVERTISEMENT SLIDER
+IMAGE SLIDER
+==========================================*/
+
+let slideIndex=0;
+
+showSlides();
+
+function showSlides(){
+
+let slides=document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+
+slides[i].style.display="none";
+
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length){
+
+slideIndex=1;
+
+}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(showSlides,4000);
+
+}/*==========================================
+ADVERTISEMENT SLIDER
 ==========================================*/
 
 const adImages = [
-    "images/advertisement/ad1.png",
-    "images/advertisement/ad2.png"
-    // পরে ad3.png, ad4.png যোগ করতে পারবেন
+"images/advertisement/ad1.png",
+"images/advertisement/ad2.png"
 ];
 
 let adIndex = 0;
 
 const adSlide = document.getElementById("adSlide");
 
-function changeAd(){
+function changeAdvertisement(){
 
-    adSlide.style.opacity = "0";
-    adSlide.style.transform = "scale(1.10)";
+adSlide.style.opacity = "0";
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        adIndex++;
+adIndex++;
 
-        if(adIndex >= adImages.length){
-            adIndex = 0;
-        }
+if(adIndex >= adImages.length){
 
-        adSlide.src = adImages[adIndex];
-
-        adSlide.style.opacity = "1";
-        adSlide.style.transform = "scale(1)";
-
-    },600);
+adIndex = 0;
 
 }
 
-/* Hero Slider থেকে আলাদা */
-setInterval(changeAd,6000);
+adSlide.src = adImages[adIndex];
+
+adSlide.style.opacity = "1";
+
+},500);
+
+}
+
+setInterval(changeAdvertisement,5000);
 
 /*==========================================
-  PREVIOUS / NEXT BUTTON
+PREVIOUS / NEXT BUTTON
 ==========================================*/
 
-const leftBtn = document.querySelector(".left");
-const rightBtn = document.querySelector(".right");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
-function showHero(i){
+prev.onclick = function(){
 
-    if(i >= heroImages.length){
+slideIndex -= 2;
 
-        hero = 0;
+if(slideIndex < 0){
 
-    }else if(i < 0){
-
-        hero = heroImages.length - 1;
-
-    }else{
-
-        hero = i;
-
-    }
-
-    heroSlide.src = heroImages[hero];
+slideIndex = document.getElementsByClassName("slide").length - 1;
 
 }
 
-leftBtn.onclick = function(){
+showSlides();
 
-    showHero(hero-1);
+};
 
-}
+next.onclick = function(){
 
-rightBtn.onclick = function(){
+showSlides();
 
-    showHero(hero+1);
-
-}
+};
 
 /*==========================================
-  MOBILE SWIPE
+SWIPE SUPPORT
 ==========================================*/
 
-let touchStart = 0;
+let startX = 0;
 
-heroSlide.addEventListener("touchstart",function(e){
+const slider = document.querySelector(".slider");
 
-    touchStart = e.touches[0].clientX;
+slider.addEventListener("touchstart",function(e){
+
+startX = e.touches[0].clientX;
 
 });
 
-heroSlide.addEventListener("touchend",function(e){
+slider.addEventListener("touchend",function(e){
 
-    let touchEnd = e.changedTouches[0].clientX;
+let endX = e.changedTouches[0].clientX;
 
-    if(touchStart-touchEnd>60){
+if(startX-endX>60){
 
-        showHero(hero+1);
+showSlides();
 
-    }
+}
 
-    if(touchEnd-touchStart>60){
+if(endX-startX>60){
 
-        showHero(hero-1);
+slideIndex -= 2;
 
-    }
+if(slideIndex<0){
+
+slideIndex=document.getElementsByClassName("slide").length-1;
+
+}
+
+showSlides();
+  
+
+}
 
 });
 /*==========================================
-  VISITOR COUNTER
+TOTAL VISITOR COUNTER
 ==========================================*/
 
-const visitorCount = document.getElementById("visitorCount");
+const visitor = document.getElementById("visitorCount");
 
-if (visitorCount) {
-    let total = localStorage.getItem("cbs_total_visitor");
+if (visitor) {
 
-    if (!total) {
-        total = 1;
-    } else {
-        total = Number(total) + 1;
-    }
+let total = localStorage.getItem("CBS_Total_Visitors");
 
-    localStorage.setItem("cbs_total_visitor", total);
+if (total == null) {
 
-    visitorCount.innerHTML = total.toLocaleString("en-IN");
+total = 1;
+
+} else {
+
+total = parseInt(total) + 1;
+
+}
+
+localStorage.setItem("CBS_Total_Visitors", total);
+
+visitor.innerHTML = total.toLocaleString();
+
 }
 
 /*==========================================
-  PRELOAD IMAGES
+PRELOAD IMAGES
 ==========================================*/
 
-heroImages.forEach(function(img){
-    const image = new Image();
-    image.src = img;
+window.addEventListener("load", function () {
+
+const preload = [
+
+"images/image slider/slider1.jpg",
+
+"images/image slider/slider2.jpg",
+
+"images/image slider/slider3.jpg",
+
+"images/image slider/slider4.jpg",
+
+"images/advertisement/ad1.png",
+
+"images/advertisement/ad2.png"
+
+];
+
+preload.forEach(function (src) {
+
+const img = new Image();
+
+img.src = src;
+
 });
-
-adImages.forEach(function(img){
-    const image = new Image();
-    image.src = img;
-});
-
-/*==========================================
-  SMOOTH IMAGE FADE
-==========================================*/
-
-heroSlide.style.transition = "opacity .5s ease";
-
-adSlide.style.transition =
-"opacity .6s ease, transform 6s linear";
-
-/*==========================================
-  QUICK ACCESS TOUCH EFFECT
-==========================================*/
-
-document.querySelectorAll(".quick-card").forEach(function(card){
-
-    card.addEventListener("touchstart",function(){
-
-        card.style.transform="scale(.96)";
-
-    });
-
-    card.addEventListener("touchend",function(){
-
-        setTimeout(function(){
-
-            card.style.transform="scale(1)";
-
-        },120);
-
-    });
 
 });
 
 /*==========================================
-  PAGE LOADED
+SMOOTH SCROLL
 ==========================================*/
 
-window.onload=function(){
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-console.log("CBS Website Loaded Successfully");
+anchor.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior: "smooth"
+
+});
+
+});
+
+});
+
+/*==========================================
+PAGE LOADED
+==========================================*/
+
+window.onload = function () {
+
+console.log("✅ Chakmansur Banishree Sangha Website Loaded");
 
 };
