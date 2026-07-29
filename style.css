@@ -151,66 +151,44 @@ cursor:pointer;
 transform:scale(1.12);
 
 }
-
 /* ==========================================
 SIDE MENU
 ========================================== */
 
 .sideMenu{
-
 position:fixed;
-
 top:0;
-
 left:-280px;
-
 width:260px;
-
 height:100%;
-
-background:#fff;
-
-box-shadow:5px 0 18px rgba(0,0,0,.25);
-
+background:linear-gradient(180deg,#0b6b2f,#15803d,#1e8e3e);
+box-shadow:5px 0 20px rgba(0,0,0,.35);
 transition:.35s;
-
 padding-top:70px;
-
 z-index:99999;
-
 }
 
 .sideMenu.active{
-
 left:0;
-
 }
 
 .sideMenu a{
-
 display:block;
-
-padding:14px 20px;
-
+padding:16px 22px;
+color:#fff;
 text-decoration:none;
-
-font-size:15px;
-
-font-weight:600;
-
-color:#222;
-
-border-bottom:1px solid #eee;
-
+font-size:16px;
+font-weight:bold;
+border-bottom:1px solid rgba(255,255,255,.15);
+transition:.3s;
 }
 
 .sideMenu a:hover{
-
-background:#0b6b2f;
-
-color:#fff;
-
+background:rgba(255,255,255,.15);
+padding-left:30px;
 }
+
+
 
 /* ==========================================
 BREAKING NEWS
