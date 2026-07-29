@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>চকমনসুর বানীশ্রী সংঘ</title>
 
 <link rel="icon" href="images/all icon/favicon.png">
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<!-- ================= Banner ================= -->
+<!-- ===== Banner ===== -->
 
 <header>
-
-<img src="images/all icon/banner.png"
-class="banner"
-alt="Banner">
-
+<img src="images/all icon/banner.png" class="banner" alt="Banner">
 </header>
 
-<!-- ================= Top Bar ================= -->
+<!-- ===== Top Bar ===== -->
 
 <div class="topbar">
 
-<button id="menuBtn">☰</button>
+<button id="menuBtn" aria-label="Menu">
+☰
+</button>
 
 <div class="live">
 
-<div id="wish"></div>
+<span id="wish">🌅 শুভ সকাল</span>
 
-<div id="clock"></div>
+<span>|</span>
+
+<span id="clock">00:00 AM</span>
 
 </div>
 
 <div class="social">
 
 <a href="https://www.facebook.com/share/1EppWyFxSf/" target="_blank">
-<img src="images/all icon/facebook.png">
+<img src="images/all icon/facebook.png" alt="Facebook">
+</a>
+
+<a href="https://youtube.com/@chakmansur?si=zD4rTFeWO-Uouoyn" target="_blank">
+<img src="images/all icon/youtube.png" alt="YouTube">
 </a>
 
 <a href="#">
-<img src="images/all icon/youtube.png">
-</a>
-
-<a href="#">
-<img src="images/all icon/instagram.png">
+<img src="images/all icon/instagram.png" alt="Instagram">
 </a>
 
 </div>
 
 </div>
 
-<!-- ================= Side Menu ================= -->
+<!-- ===== Side Menu ===== -->
 
 <nav id="sideMenu" class="sideMenu">
 
@@ -76,7 +72,7 @@ alt="Banner">
 
 </nav>
 
-<!-- ================= Breaking News ================= -->
+<!-- ===== Breaking News ===== -->
 
 <div class="breaking">
 
@@ -88,7 +84,7 @@ alt="Banner">
 
 </div>
 
-<!-- ================= Hero Slider ================= -->
+<!-- ===== Hero Slider ===== -->
 
 <section class="slider">
 
@@ -100,8 +96,19 @@ alt="Slider">
 
 <button class="next">&#10095;</button>
 
+<div class="dots">
+
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
+
 </section>
-<!-- ================= Advertisement ================= -->
+<!-- =========================
+Advertisement
+========================= -->
 
 <section class="advertisement">
 
@@ -115,58 +122,60 @@ alt="Advertisement">
 
 </section>
 
-<!-- ================= Quick Menu ================= -->
+<!-- =========================
+Quick Menu
+========================= -->
 
 <section class="quick-grid">
 
 <a href="durgapujo.html" class="quick-card">
-<img src="images/all icon/durgapujo2026.png">
+<img src="images/all icon/durgapujo2026.png" alt="">
 <span>দুর্গাপূজা ২০২৬</span>
 </a>
 
 <a href="gallery.html" class="quick-card">
-<img src="images/all icon/gallery.png">
+<img src="images/all icon/gallery.png" alt="">
 <span>গ্যালারি</span>
 </a>
 
 <a href="newspaper.html" class="quick-card">
-<img src="images/all icon/newspaper.png">
+<img src="images/all icon/newspaper.png" alt="">
 <span>সংবাদপত্র</span>
 </a>
 
 <a href="weather.html" class="quick-card">
-<img src="images/all icon/weather.png">
+<img src="images/all icon/weather.png" alt="">
 <span>আবহাওয়া</span>
 </a>
 
 <a href="cultivation.html" class="quick-card">
-<img src="images/all icon/cultivation.png">
+<img src="images/all icon/cultivation.png" alt="">
 <span>চাষাবাদ</span>
 </a>
 
 <a href="student.html" class="quick-card">
-<img src="images/all icon/student.png">
+<img src="images/all icon/student.png" alt="">
 <span>Student Corner</span>
 </a>
 
 <a href="movie.html" class="quick-card">
-<img src="images/all icon/movie.png">
+<img src="images/all icon/movie.png" alt="">
 <span>Movie</span>
 </a>
 
 <a href="calendar.html" class="quick-card">
-<img src="images/all icon/calendar.png">
+<img src="images/all icon/calendar.png" alt="">
 <span>অনুষ্ঠান সূচি</span>
 </a>
 
-<a href="notice.html" class="quick-card">
-<img src="images/all icon/notice.png">
-<span>নোটিশ বোর্ড</span>
-</a>
+<!-- ফাঁকা বক্স (Notice Board-এর জায়গা) -->
+<div class="quick-card empty-card"></div>
 
 </section>
 
-<!-- ================= পরিচালনা কমিটি ================= -->
+<!-- =========================
+Committee
+========================= -->
 
 <section class="home-card">
 
@@ -177,12 +186,16 @@ alt="Advertisement">
 </p>
 
 <a href="Committee.html" class="btn">
+
 বিস্তারিত দেখুন
+
 </a>
 
 </section>
 
-<!-- ================= আমাদের সম্পর্কে ================= -->
+<!-- =========================
+About
+========================= -->
 
 <section class="home-card">
 
@@ -201,40 +214,62 @@ alt="Advertisement">
 </a>
 
 </section>
-<!-- ================= যোগাযোগ ================= -->
+<!-- =========================
+Contact
+========================= -->
 
 <section class="home-card">
 
 <h2>☎ যোগাযোগ</h2>
 
-<p>📍 চকমনসুর, পশ্চিমবঙ্গ</p>
+<p><strong>ঠিকানা:</strong> চকমনসুর, পশ্চিমবঙ্গ</p>
 
-<p>📧 chakmansurbanishreesangha@gmail.com</p>
+<p><strong>ইমেইল:</strong> chakmansurbanishreesangha@gmail.com</p>
+
+<div class="contact-social">
+
+<a href="https://www.facebook.com/share/1EppWyFxSf/" target="_blank">
+Facebook
+</a>
+
+<a href="https://youtube.com/@chakmansur?si=zD4rTFeWO-Uouoyn" target="_blank">
+YouTube
+</a>
+
+</div>
 
 <a href="contact.html" class="btn">
+
 যোগাযোগ করুন
+
 </a>
 
 </section>
 
-<!-- ================= Footer ================= -->
+<!-- =========================
+Footer
+========================= -->
 
 <footer class="footer">
-
-<h3>চকমনসুর বানীশ্রী সংঘ</h3>
-
-<p>© ২০২৬ সর্বস্বত্ব সংরক্ষিত</p>
 
 <div class="visitor-box">
 
 <span>👁 Website Visitors</span>
 
-<div id="visitorCount">000001</div>
+<h3 id="visitorCount">000001</h3>
 
 </div>
 
+<p class="copyright">
+
+© ২০২৬ চকমনসুর বানীশ্রী সংঘ
+
+</p>
+
 <p class="developer">
+
 Developed &amp; Maintained by <strong>DEBU</strong>
+
 </p>
 
 </footer>
