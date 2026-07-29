@@ -1,193 +1,97 @@
-/*==========================================
-MENU
-==========================================*/
+// ================= MENU =================
 
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.addEventListener("click", function () {
+menuBtn.onclick = () => {
     sideMenu.classList.toggle("active");
-});
+};
 
-document.addEventListener("click", function (e) {
-    if (
-        !sideMenu.contains(e.target) &&
-        e.target.id !== "menuBtn"
-    ) {
+document.addEventListener("click", (e) => {
+    if (!sideMenu.contains(e.target) && e.target !== menuBtn) {
         sideMenu.classList.remove("active");
     }
 });
 
-/*==========================================
-LIVE TIME & WISH
-==========================================*/
+// ================= LIVE CLOCK =================
 
 function updateClock() {
-
     const now = new Date();
 
     let h = now.getHours();
-    let m = now.getMinutes();
-    let s = now.getSeconds();
+    const m = String(now.getMinutes()).padStart(2, "0");
+    const s = String(now.getSeconds()).padStart(2, "0");
 
-    let wish = "";
+    let wish = "🌅 শুভ সকাল";
 
-    if (h < 12) {
+    if (h >= 12 && h < 16) wish = "☀️ শুভ দুপুর";
+    else if (h >= 16 && h < 19) wish = "🌇 শুভ সন্ধ্যা";
+    else if (h >= 19) wish = "🌙 শুভ রাত্রি";
 
-        wish = "🌅 শুভ সকাল";
-
-    } else if (h < 16) {
-
-        wish = "☀️ শুভ দুপুর";
-
-    } else if (h < 19) {
-
-        wish = "🌇 শুভ সন্ধ্যা";
-
-    } else {
-
-        wish = "🌙 শুভ রাত্রি";
-
-    }
-
-    let ampm = h >= 12 ? "PM" : "AM";
-
-    h = h % 12;
-
-    if (h === 0) h = 12;
-
-    h = String(h).padStart(2, "0");
-    m = String(m).padStart(2, "0");
-    s = String(s).padStart(2, "0");
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
 
     document.getElementById("wish").innerHTML = wish;
-
     document.getElementById("clock").innerHTML =
-        h + ":" + m + ":" + s + " " + ampm;
-
+        `${String(h).padStart(2,"0")}:${m}:${s} ${ampm}`;
 }
 
 updateClock();
-
 setInterval(updateClock, 1000);
 
-/*==========================================
-HERO SLIDER
-==========================================*/
+// ================= HERO SLIDER =================
 
 const heroImages = [
-
 "images/image slider/slider1.jpg",
-
 "images/image slider/slider2.jpg",
-
 "images/image slider/slider3.jpg",
-
 "images/image slider/slider4.jpg"
-
 ];
 
-let heroIndex = 0;
+let current = 0;
 
-const heroSlide = document.getElementById("heroSlide");
+const hero = document.getElementById("heroSlide");
 
-function nextSlide() {
+function showSlide(i){
+    current = i;
 
-heroIndex++;
+    if(current >= heroImages.length) current = 0;
+    if(current < 0) current = heroImages.length - 1;
 
-if(heroIndex >= heroImages.length){
-
-heroIndex = 0;
-
+    hero.src = heroImages[current];
 }
 
-heroSlide.src = heroImages[heroIndex];
+document.querySelector(".right").onclick = () => showSlide(current + 1);
+document.querySelector(".left").onclick = () => showSlide(current - 1);
 
-}
+setInterval(() => {
+    showSlide(current + 1);
+}, 4000);
 
-setInterval(nextSlide,4000);
-/*==========================================
-ADVERTISEMENT SLIDER
-==========================================*/
+// ================= ADVERTISEMENT =================
 
-const adImages = [
-  "images/advertisement/ad1.png",
-  "images/advertisement/ad2.png"
+const ads = [
+"images/advertisement/ad1.png",
+"images/advertisement/ad2.png"
 ];
 
-let adIndex = 0;
+let ad = 0;
+
 const adSlide = document.getElementById("adSlide");
 
-function changeAd() {
+setInterval(() => {
 
-  if (!adSlide) return;
+    if(!adSlide) return;
 
-  adIndex++;
+    ad++;
 
-  if (adIndex >= adImages.length) {
-    adIndex = 0;
-  }
+    if(ad >= ads.length) ad = 0;
 
-  adSlide.style.opacity = "0";
+    adSlide.src = ads[ad];
 
-  setTimeout(() => {
+},5000);
 
-    adSlide.src = adImages[adIndex];
-
-    adSlide.style.opacity = "1";
-
-  }, 300);
-
-}
-
-setInterval(changeAd, 5000);
-
-/*==========================================
-SLIDER BUTTON
-==========================================*/
-
-const leftBtn = document.querySelector(".left");
-const rightBtn = document.querySelector(".right");
-
-if (leftBtn) {
-
-leftBtn.onclick = function () {
-
-heroIndex--;
-
-if(heroIndex < 0){
-
-heroIndex = heroImages.length - 1;
-
-}
-
-heroSlide.src = heroImages[heroIndex];
-
-};
-
-}
-
-if (rightBtn) {
-
-rightBtn.onclick = function () {
-
-heroIndex++;
-
-if(heroIndex >= heroImages.length){
-
-heroIndex = 0;
-
-}
-
-heroSlide.src = heroImages[heroIndex];
-
-};
-
-}
-
-/*==========================================
-VISITOR COUNTER
-==========================================*/
+// ================= VISITOR =================
 
 const visitor = document.getElementById("visitorCount");
 
@@ -195,7 +99,7 @@ if(visitor){
 
 let total = localStorage.getItem("CBS_VISITOR");
 
-if(total === null){
+if(total == null){
 
 total = 1;
 
@@ -207,20 +111,6 @@ total = parseInt(total) + 1;
 
 localStorage.setItem("CBS_VISITOR", total);
 
-visitor.innerHTML = total.toLocaleString();
+visitor.innerHTML = total;
 
 }
-
-/*==========================================
-IMAGE PRELOAD
-==========================================*/
-
-heroImages.concat(adImages).forEach(function(img){
-
-const image = new Image();
-
-image.src = img;
-
-});
-
-console.log("✅ Website Loaded Successfully");
