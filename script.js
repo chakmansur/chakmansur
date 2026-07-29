@@ -5,15 +5,17 @@ MENU
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.addEventListener("click", function (e) {
+menuBtn.onclick = function(e){
     e.stopPropagation();
     sideMenu.classList.toggle("active");
-});
+};
 
-document.addEventListener("click", function (e) {
-    if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        sideMenu.classList.remove("active");
-    }
+sideMenu.onclick = function(e){
+    e.stopPropagation();
+};
+
+document.addEventListener("click", function(){
+    sideMenu.classList.remove("active");
 });
 
 /* ===========================
