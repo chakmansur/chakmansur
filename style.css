@@ -1,6 +1,6 @@
-/*==================================
-CHAKMANSUR BANISHREE SANGHA
-==================================*/
+/*==============================
+RESET
+==============================*/
 
 *{
 margin:0;
@@ -10,7 +10,7 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,sans-serif;
-background:#f4f7f9;
+background:#f5f6f8;
 overflow-x:hidden;
 }
 
@@ -20,6 +20,8 @@ BANNER
 
 .banner{
 width:100%;
+height:100px;
+object-fit:cover;
 display:block;
 }
 
@@ -28,39 +30,39 @@ TOP BAR
 ==============================*/
 
 .topbar{
-height:60px;
+height:55px;
 background:#0a7a2f;
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:0 12px;
+justify-content:space-between;
+padding:0 10px;
 position:sticky;
 top:0;
 z-index:999;
-box-shadow:0 3px 10px rgba(0,0,0,.2);
+box-shadow:0 3px 10px rgba(0,0,0,.20);
 }
 
 #menuBtn{
 background:none;
 border:none;
-font-size:28px;
+font-size:26px;
 color:#fff;
 cursor:pointer;
 }
 
 .live-area{
+flex:1;
 text-align:center;
 color:#fff;
-flex:1;
 }
 
 #wish{
-font-size:15px;
+font-size:14px;
 font-weight:bold;
 }
 
 #clock{
-font-size:13px;
+font-size:12px;
 }
 
 .social{
@@ -69,14 +71,14 @@ gap:8px;
 }
 
 .social img{
-width:32px;
-height:32px;
+width:28px;
+height:28px;
 border-radius:50%;
 transition:.3s;
 }
 
 .social img:hover{
-transform:scale(1.15);
+transform:scale(1.1);
 }
 
 /*==============================
@@ -85,15 +87,15 @@ SIDE MENU
 
 .sideMenu{
 position:fixed;
-left:-280px;
+left:-270px;
 top:0;
-width:260px;
+width:250px;
 height:100%;
 background:#fff;
 padding-top:70px;
 transition:.35s;
-box-shadow:2px 0 15px rgba(0,0,0,.3);
-z-index:1000;
+box-shadow:2px 0 15px rgba(0,0,0,.25);
+z-index:9999;
 }
 
 .sideMenu.active{
@@ -104,9 +106,8 @@ left:0;
 display:block;
 padding:15px 20px;
 text-decoration:none;
-color:#333;
+color:#222;
 border-bottom:1px solid #eee;
-font-size:16px;
 }
 
 .sideMenu a:hover{
@@ -118,23 +119,11 @@ color:#fff;
 BREAKING NEWS
 ==============================*/
 
-.breaking-red{
+.breaking{
 background:#d50000;
 color:#fff;
 padding:8px;
-font-weight:bold;
-}
-
-.breaking-blue{
-background:#0056d6;
-color:#fff;
-padding:8px;
-font-weight:bold;
-}
-
-.breaking-title{
-display:inline-block;
-margin-right:10px;
+font-size:14px;
 font-weight:bold;
 }
 
@@ -145,13 +134,13 @@ HERO SLIDER
 .hero-slider{
 position:relative;
 width:100%;
-background:#000;
 overflow:hidden;
+background:#000;
 }
 
 .hero-slider img{
 width:100%;
-height:320px;
+height:360px;
 object-fit:cover;
 display:block;
 }
@@ -160,87 +149,79 @@ display:block;
 position:absolute;
 top:50%;
 transform:translateY(-50%);
-width:42px;
-height:42px;
-background:rgba(255,255,255,.5);
+width:28px;
+height:28px;
+border:none;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
+background:rgba(0,0,0,.5);
+color:#fff;
+font-size:16px;
 cursor:pointer;
 }
 
 .left{
-left:10px;
+left:8px;
 }
 
 .right{
-right:10px;
+right:8px;
 }
 /*==============================
 ADVERTISEMENT
 ==============================*/
 
 .advertisement{
-padding:15px;
+padding:10px;
 background:#fff;
 }
 
 #adSlide{
 width:100%;
-height:190px;
+height:170px;
 object-fit:cover;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-transition:all .5s ease;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 /*==============================
-QUICK ICON GRID
+QUICK MENU
 ==============================*/
 
 .quick-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:12px;
-padding:15px;
-background:#f8f8f8;
+gap:10px;
+padding:12px;
+background:#f7f7f7;
 }
 
 .quick-card{
 background:#fff;
+border-radius:12px;
+padding:12px 8px;
+text-align:center;
 text-decoration:none;
 color:#222;
-padding:12px 8px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,.12);
+box-shadow:0 3px 8px rgba(0,0,0,.12);
 transition:.3s;
 }
 
 .quick-card:hover{
-transform:translateY(-5px);
-background:#eef9f0;
+transform:translateY(-4px);
 }
 
 .quick-card img{
-width:65px;
-height:65px;
+width:55px;
+height:55px;
 object-fit:contain;
 margin-bottom:8px;
-transition:.3s;
-}
-
-.quick-card:hover img{
-transform:scale(1.1);
 }
 
 .quick-card span{
 display:block;
-font-size:13px;
+font-size:12px;
 font-weight:bold;
-line-height:18px;
+line-height:16px;
 }
 
 /*==============================
@@ -248,42 +229,41 @@ HOME CARD
 ==============================*/
 
 .home-card{
+margin:12px;
+padding:16px;
 background:#fff;
-margin:15px;
-padding:18px;
-border-radius:15px;
-box-shadow:0 4px 12px rgba(0,0,0,.10);
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,.10);
 }
 
 .home-card h2{
+font-size:20px;
 color:#0a7a2f;
-font-size:22px;
 margin-bottom:10px;
-border-left:5px solid #0a7a2f;
-padding-left:10px;
 }
 
 .home-card p{
-font-size:15px;
-line-height:1.8;
+font-size:14px;
+line-height:1.7;
 color:#444;
 }
 
 .btn{
 display:inline-block;
-margin-top:15px;
-padding:10px 20px;
+margin-top:12px;
+padding:10px 18px;
 background:#0a7a2f;
 color:#fff;
 text-decoration:none;
-border-radius:30px;
+border-radius:25px;
+font-size:14px;
 font-weight:bold;
-transition:.3s;
 }
 
 .btn:hover{
-background:#086225;
+background:#075b22;
 }
+
 /*==============================
 FOOTER
 ==============================*/
@@ -292,155 +272,59 @@ FOOTER
 background:#0a7a2f;
 color:#fff;
 text-align:center;
-padding:30px 15px;
-margin-top:20px;
+padding:15px 10px;
+margin-top:15px;
 }
 
 .footer h3{
-font-size:22px;
-margin-bottom:8px;
+font-size:16px;
 }
 
 .footer p{
-font-size:14px;
-margin:5px 0;
+font-size:11px;
+margin:4px 0;
 }
-
-.developer{
-font-size:12px;
-color:#ddd;
-margin-top:10px;
-}
-
-/*==============================
-VISITOR COUNTER
-==============================*/
 
 .visitor-box{
 display:inline-block;
-margin-top:15px;
-padding:12px 25px;
-background:rgba(255,255,255,.15);
-border-radius:12px;
-}
-
-#visitorCount{
-font-size:28px;
-font-weight:bold;
-color:#ffd700;
 margin-top:8px;
-letter-spacing:2px;
-}
-
-/*==============================
-SCROLLBAR
-==============================*/
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-track{
-background:#eee;
-}
-
-::-webkit-scrollbar-thumb{
-background:#0a7a2f;
+padding:8px 15px;
+background:rgba(255,255,255,.15);
 border-radius:10px;
 }
 
+#visitorCount{
+font-size:18px;
+font-weight:bold;
+color:#ffd700;
+}
+
+.developer{
+font-size:10px;
+color:#ddd;
+}
+
 /*==============================
-RESPONSIVE
+MOBILE
 ==============================*/
 
 @media(max-width:768px){
 
 .hero-slider img{
-height:250px;
+height:380px;
 }
 
-#adSlide{
-height:170px;
-}
-
-.quick-grid{
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-padding:10px;
+.banner{
+height:100px;
 }
 
 .quick-card img{
-width:58px;
-height:58px;
+width:50px;
+height:50px;
 }
 
 .quick-card span{
-font-size:12px;
+font-size:11px;
 }
 
-.home-card{
-margin:10px;
-padding:15px;
-}
-
-.topbar{
-height:58px;
-}
-
-.social img{
-width:28px;
-height:28px;
-}
-
-}
-
-/*==============================
-ANIMATION
-==============================*/
-
-.banner{
-animation:fadeIn 1s;
-}
-
-.hero-slider img{
-animation:fadeIn 1s;
-}
-
-#adSlide{
-animation:zoomIn 1s;
-}
-
-@keyframes fadeIn{
-
-from{
-opacity:0;
-}
-
-to{
-opacity:1;
-}
-
-}
-
-@keyframes zoomIn{
-
-from{
-opacity:0;
-transform:scale(.95);
-}
-
-to{
-opacity:1;
-transform:scale(1);
-}
-
-}
-
-.quick-card{
-transition:.3s ease;
-}
-
-.quick-card:hover{
-transform:translateY(-5px);
-box-shadow:0 8px 18px rgba(0,0,0,.18);
 }
