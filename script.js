@@ -1,144 +1,178 @@
-// ================= MENU =================
+/* ===========================
+MENU
+=========================== */
 
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.onclick = function () {
+menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
     sideMenu.classList.toggle("active");
-};
+});
 
-// ================= LIVE CLOCK =================
+document.addEventListener("click", function (e) {
+    if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        sideMenu.classList.remove("active");
+    }
+});
 
-function updateClock(){
+/* ===========================
+LIVE TIME
+=========================== */
 
-const now=new Date();
+function updateClock() {
 
-let h=now.getHours();
+    const now = new Date();
 
-let m=String(now.getMinutes()).padStart(2,"0");
+    let hour = now.getHours();
+    let minute = String(now.getMinutes()).padStart(2, "0");
+    let second = String(now.getSeconds()).padStart(2, "0");
 
-let s=String(now.getSeconds()).padStart(2,"0");
+    let wish = "🌅 শুভ সকাল";
 
-let wish="🌅 শুভ সকাল";
+    if (hour >= 12 && hour < 16) {
+        wish = "☀️ শুভ দুপুর";
+    } else if (hour >= 16 && hour < 19) {
+        wish = "🌇 শুভ সন্ধ্যা";
+    } else if (hour >= 19) {
+        wish = "🌙 শুভ রাত্রি";
+    }
 
-if(h>=12 && h<16) wish="☀️ শুভ দুপুর";
+    let ampm = hour >= 12 ? "PM" : "AM";
+    hour = hour % 12 || 12;
 
-else if(h>=16 && h<19) wish="🌇 শুভ সন্ধ্যা";
-
-else if(h>=19) wish="🌙 শুভ রাত্রি";
-
-let ampm=h>=12?"PM":"AM";
-
-h=h%12||12;
-
-document.getElementById("wish").innerHTML=wish;
-
-document.getElementById("clock").innerHTML=
-
-`${String(h).padStart(2,"0")}:${m}:${s} ${ampm}`;
-
+    document.getElementById("wish").textContent = wish;
+    document.getElementById("clock").textContent =
+        `${hour}:${minute}:${second} ${ampm}`;
 }
 
-setInterval(updateClock,1000);
-
 updateClock();
+setInterval(updateClock, 1000);
 
-// ================= HERO SLIDER =================
+/* ===========================
+HERO SLIDER
+=========================== */
 
-const slides=[
-
+const heroImages = [
 "images/image slider/slider1.jpg",
-
 "images/image slider/slider2.jpg",
-
 "images/image slider/slider3.jpg",
-
 "images/image slider/slider4.jpg"
-
 ];
 
-let current=0;
+const heroSlide = document.getElementById("heroSlide");
+const dots = document.querySelectorAll(".dot");
 
-const hero=document.getElementById("heroSlide");
+let current = 0;
 
 function showSlide(index){
 
-current=index;
+    if(index >= heroImages.length){
+        current = 0;
+    }else if(index < 0){
+        current = heroImages.length - 1;
+    }else{
+        current = index;
+    }
 
-if(current>=slides.length) current=0;
+    heroSlide.style.opacity = "0";
 
-if(current<0) current=slides.length-1;
+    setTimeout(() => {
 
-hero.style.opacity=0;
+        heroSlide.src = heroImages[current];
 
-setTimeout(()=>{
+        heroSlide.style.opacity = "1";
 
-hero.src=slides[current];
+        dots.forEach(dot => dot.classList.remove("active"));
 
-hero.style.opacity=1;
+        dots[current].classList.add("active");
 
-},300);
+    },250);
 
 }
 
-document.querySelector(".next").onclick=()=>showSlide(current+1);
+document.querySelector(".next").onclick = () => showSlide(current + 1);
 
-document.querySelector(".prev").onclick=()=>showSlide(current-1);
+document.querySelector(".prev").onclick = () => showSlide(current - 1);
 
-setInterval(()=>{
+setInterval(() => {
 
-showSlide(current+1);
+    showSlide(current + 1);
 
 },4000);
 
-// ================= ADVERTISEMENT =================
+/* ===========================
+ADVERTISEMENT SLIDER
+=========================== */
 
-const ads=[
+const adSlide = document.getElementById("adSlide");
 
-"images/advertisement/ad1.png",
-
-"images/advertisement/ad2.png"
-
+const ads = [
+    "images/advertisement/ad1.png",
+    "images/advertisement/ad2.png",
+    "images/advertisement/ad3.png"
 ];
 
-let ad=0;
+let adIndex = 0;
 
-const adSlide=document.getElementById("adSlide");
+if (adSlide) {
+    setInterval(() => {
+        adIndex = (adIndex + 1) % ads.length;
+        adSlide.src = ads[adIndex];
+    }, 5000);
+}
 
-if(adSlide){
+/* ===========================
+VISITOR COUNTER
+=========================== */
 
-setInterval(()=>{
+const visitorCount = document.getElementById("visitorCount");
 
-ad++;
+if (visitorCount) {
 
-if(ad>=ads.length) ad=0;
+    let total = localStorage.getItem("CBS_VISITOR");
 
-adSlide.src=ads[ad];
+    if (total === null) {
+        total = 1;
+    } else {
+        total = parseInt(total) + 1;
+    }
 
-},5000);
+    localStorage.setItem("CBS_VISITOR", total);
+
+    visitorCount.textContent = total;
 
 }
 
-// ================= VISITOR =================
+/* ===========================
+MOBILE SWIPE
+=========================== */
 
-const visitor=document.getElementById("visitorCount");
+let startX = 0;
 
-if(visitor){
+heroSlide.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
 
-let total=localStorage.getItem("CBS_VISITOR");
+heroSlide.addEventListener("touchend", (e) => {
 
-if(total==null){
+    let endX = e.changedTouches[0].clientX;
 
-total=1;
+    if (startX - endX > 50) {
+        showSlide(current + 1);
+    }
 
-}else{
+    if (endX - startX > 50) {
+        showSlide(current - 1);
+    }
 
-total=parseInt(total)+1;
+});
 
-}
+/* ===========================
+IMAGE PRELOAD
+=========================== */
 
-localStorage.setItem("CBS_VISITOR",total);
-
-visitor.innerHTML=total;
-
-}
+heroImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
