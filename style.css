@@ -460,19 +460,6 @@ padding:18px 10px;
 margin-top:20px;
 }
 
-.visitor-box{
-display:inline-block;
-margin:10px 0;
-padding:8px 15px;
-background:rgba(255,255,255,.15);
-border-radius:10px;
-}
-
-#visitorCount{
-font-size:18px;
-font-weight:bold;
-color:#ffd700;
-}
 
 .developer{
 font-size:11px;
