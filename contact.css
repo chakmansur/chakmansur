@@ -1,1 +1,154 @@
+/* ===== RESET ===== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7f5;
+color:#222;
+}
+
+/* ===== PAGE TITLE ===== */
+
+.contact-title{
+text-align:center;
+padding:25px;
+background:#0b6b2f;
+color:#fff;
+}
+
+.contact-title h1{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.contact-title p{
+font-size:15px;
+}
+
+/* ===== CONTACT BOX ===== */
+
+.contact-box{
+width:90%;
+max-width:700px;
+margin:25px auto;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.contact-box h2{
+color:#0b6b2f;
+margin-top:15px;
+margin-bottom:8px;
+}
+
+.contact-box p{
+font-size:16px;
+line-height:28px;
+}
+
+/* ===== FORM ===== */
+
+.contact-form{
+width:90%;
+max-width:700px;
+margin:20px auto;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.contact-form h2{
+text-align:center;
+color:#0b6b2f;
+margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+
+.contact-form textarea{
+height:120px;
+resize:none;
+}
+
+.contact-form button{
+width:100%;
+padding:14px;
+border:none;
+background:#0b6b2f;
+color:#fff;
+font-size:17px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact-form button:hover{
+background:#15803d;
+}
+
+/* ===== QUICK BUTTON ===== */
+
+.quick-contact{
+width:90%;
+max-width:700px;
+margin:25px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.quick-contact a{
+text-decoration:none;
+background:#0b6b2f;
+color:#fff;
+padding:15px;
+text-align:center;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.quick-contact a:hover{
+background:#15803d;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+background:#0b6b2f;
+color:#fff;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.quick-contact{
+grid-template-columns:1fr;
+}
+
+.contact-title h1{
+font-size:24px;
+}
+
+}
