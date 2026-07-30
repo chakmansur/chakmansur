@@ -1,6 +1,6 @@
-/* =========================
+/* ====================================
 RESET
-========================= */
+==================================== */
 
 *{
 margin:0;
@@ -10,61 +10,61 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,sans-serif;
-background:#f4f7f4;
+background:#f5f7f5;
 color:#222;
 }
 
-/* =========================
+/* ====================================
 TOP BAR
-========================= */
+==================================== */
 
 .topbar{
 height:55px;
-background:#0b6b2f;
+background:linear-gradient(90deg,#0b6b2f,#15803d);
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:0 12px;
 position:sticky;
 top:0;
-z-index:999;
+z-index:9999;
 }
 
 #menuBtn{
 font-size:24px;
+color:#fff;
 background:none;
 border:none;
-color:#fff;
 cursor:pointer;
 }
 
 .live{
 display:flex;
 gap:10px;
+color:#fff;
 font-size:13px;
 font-weight:bold;
-color:#fff;
 }
 
 .social{
 display:flex;
-gap:8px;
+gap:10px;
 }
 
 .social img{
-width:34px;
-height:34px;
+width:36px;
+height:36px;
 border-radius:50%;
 transition:.3s;
 }
 
 .social img:hover{
-transform:scale(1.1);
+transform:scale(1.15);
 }
 
-/* =========================
+/* ====================================
 SIDE MENU
-========================= */
+==================================== */
 
 .sideMenu{
 position:fixed;
@@ -72,10 +72,10 @@ left:-280px;
 top:0;
 width:260px;
 height:100%;
-background:linear-gradient(#0b6b2f,#15803d);
+background:linear-gradient(180deg,#0b6b2f,#15803d);
 padding-top:70px;
 transition:.35s;
-z-index:9999;
+z-index:99999;
 }
 
 .sideMenu.active{
@@ -85,19 +85,21 @@ left:0;
 .sideMenu a{
 display:block;
 padding:15px 20px;
-text-decoration:none;
 color:#fff;
+text-decoration:none;
 font-weight:bold;
 border-bottom:1px solid rgba(255,255,255,.15);
+transition:.3s;
 }
 
 .sideMenu a:hover{
 background:rgba(255,255,255,.15);
+padding-left:28px;
 }
 
-/* =========================
+/* ====================================
 BANNER
-========================= */
+==================================== */
 
 .banner{
 width:100%;
@@ -106,37 +108,38 @@ object-fit:cover;
 display:block;
 }
 
-/* =========================
-PAGE TITLE
-========================= */
+/* ====================================
+TITLE
+==================================== */
 
-.page-title{
+.title{
 text-align:center;
-padding:20px;
+padding:22px;
 background:#fff;
 }
 
-.page-title h1{
+.title h1{
 font-size:28px;
 color:#0b6b2f;
 margin-bottom:8px;
 }
 
-.page-title p{
-color:#666;
+.title p{
 font-size:14px;
+color:#666;
 }
-/* =========================
-COMMITTEE CARD
-========================= */
+/* ====================================
+COMMITTEE CARDS
+==================================== */
 
 .committee-container{
 width:95%;
-max-width:1100px;
+max-width:1200px;
 margin:25px auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
+padding:10px;
 }
 
 .committee-card{
@@ -144,27 +147,27 @@ background:#ffffff;
 border-radius:18px;
 padding:25px 20px;
 text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
 border-top:5px solid #0b6b2f;
-box-shadow:0 5px 15px rgba(0,0,0,.10);
-transition:all .35s ease;
+transition:.35s;
 }
 
 .committee-card:hover{
 transform:translateY(-8px);
-box-shadow:0 12px 25px rgba(0,0,0,.18);
+box-shadow:0 15px 30px rgba(0,0,0,.18);
 }
 
-.committee-card .icon{
-width:70px;
-height:70px;
+.member-icon{
+width:80px;
+height:80px;
 margin:0 auto 15px;
-background:#0b6b2f;
-color:#fff;
+background:linear-gradient(135deg,#0b6b2f,#1fa64a);
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
-font-size:34px;
+align-items:center;
+font-size:40px;
+color:#fff;
 }
 
 .committee-card h2{
@@ -175,14 +178,17 @@ margin-bottom:15px;
 
 .committee-card p{
 font-size:15px;
-margin:8px 0;
+line-height:28px;
 color:#444;
-line-height:24px;
 }
 
-/* =========================
+.committee-card strong{
+color:#0b6b2f;
+}
+
+/* ====================================
 HOME BUTTON
-========================= */
+==================================== */
 
 .back-home{
 text-align:center;
@@ -191,10 +197,10 @@ margin:35px 0;
 
 .home-btn{
 display:inline-block;
+padding:12px 30px;
 background:#0b6b2f;
 color:#fff;
 text-decoration:none;
-padding:12px 28px;
 border-radius:30px;
 font-weight:bold;
 transition:.3s;
@@ -203,19 +209,20 @@ transition:.3s;
 .home-btn:hover{
 background:#15803d;
 transform:scale(1.05);
-  /* =========================
+}
+/* ====================================
 FOOTER
-========================= */
+==================================== */
 
-footer{
-background:#0b6b2f;
+.footer{
+background:linear-gradient(90deg,#0b6b2f,#15803d);
 color:#fff;
 text-align:center;
 padding:20px 15px;
 margin-top:40px;
 }
 
-footer p{
+.footer p{
 margin:6px 0;
 font-size:14px;
 }
@@ -225,16 +232,16 @@ font-size:12px;
 opacity:.9;
 }
 
-/* =========================
+/* ====================================
 SCROLLBAR
-========================= */
+==================================== */
 
 ::-webkit-scrollbar{
 width:8px;
 }
 
 ::-webkit-scrollbar-track{
-background:#e9e9e9;
+background:#e8e8e8;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -242,38 +249,37 @@ background:#0b6b2f;
 border-radius:10px;
 }
 
-/* =========================
+/* ====================================
 MOBILE RESPONSIVE
-========================= */
+==================================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .banner{
 height:100px;
 }
 
-.page-title h1{
+.title h1{
 font-size:24px;
 }
 
-.page-title p{
+.title p{
 font-size:13px;
 }
 
 .committee-container{
-width:94%;
 grid-template-columns:1fr;
-gap:16px;
+width:94%;
 }
 
 .committee-card{
 padding:20px 15px;
 }
 
-.committee-card .icon{
-width:60px;
-height:60px;
-font-size:28px;
+.member-icon{
+width:65px;
+height:65px;
+font-size:32px;
 }
 
 .committee-card h2{
@@ -282,6 +288,7 @@ font-size:20px;
 
 .committee-card p{
 font-size:14px;
+line-height:24px;
 }
 
 .home-btn{
@@ -300,9 +307,9 @@ font-size:12px;
 
 }
 
-/* =========================
-CARD ANIMATION
-========================= */
+/* ====================================
+FADE ANIMATION
+==================================== */
 
 .committee-card{
 animation:fadeUp .6s ease;
@@ -312,7 +319,7 @@ animation:fadeUp .6s ease;
 
 from{
 opacity:0;
-transform:translateY(20px);
+transform:translateY(25px);
 }
 
 to{
@@ -320,5 +327,4 @@ opacity:1;
 transform:translateY(0);
 }
 
-}
 }
