@@ -1,1 +1,307 @@
+/* ===================================
+RESET
+=================================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f7f4;
+color:#222;
+}
+
+/* ===================================
+TOP BAR
+=================================== */
+
+.topbar{
+height:55px;
+background:#0b6b2f;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 12px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+#menuBtn{
+font-size:24px;
+background:none;
+border:none;
+color:#fff;
+cursor:pointer;
+}
+
+.live{
+display:flex;
+gap:10px;
+font-size:13px;
+color:#fff;
+font-weight:bold;
+}
+
+.social{
+display:flex;
+gap:8px;
+}
+
+.social img{
+width:34px;
+height:34px;
+border-radius:50%;
+transition:.3s;
+}
+
+.social img:hover{
+transform:scale(1.1);
+}
+
+/* ===================================
+SIDE MENU
+=================================== */
+
+.sideMenu{
+position:fixed;
+left:-280px;
+top:0;
+width:260px;
+height:100%;
+background:linear-gradient(#0b6b2f,#15803d);
+padding-top:70px;
+transition:.35s;
+z-index:9999;
+}
+
+.sideMenu.active{
+left:0;
+}
+
+.sideMenu a{
+display:block;
+padding:15px 20px;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.sideMenu a:hover{
+background:rgba(255,255,255,.15);
+}
+
+/* ===================================
+BANNER
+=================================== */
+
+.banner{
+width:100%;
+height:110px;
+object-fit:cover;
+display:block;
+}
+
+/* ===================================
+TITLE
+=================================== */
+
+.page-title{
+text-align:center;
+padding:20px 15px;
+background:#fff;
+}
+
+.page-title h1{
+font-size:28px;
+color:#0b6b2f;
+margin-bottom:8px;
+}
+
+.page-title p{
+font-size:14px;
+color:#555;
+}
+/* ===================================
+PROGRAMME CARD
+=================================== */
+
+.programme-container{
+width:95%;
+max-width:1000px;
+margin:20px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+}
+
+.programme-card{
+background:#fff;
+border-radius:18px;
+padding:22px 18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.10);
+transition:.35s;
+cursor:pointer;
+border-top:5px solid #0b6b2f;
+}
+
+.programme-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+}
+
+.programme-card span{
+font-size:42px;
+display:block;
+margin-bottom:12px;
+}
+
+.programme-card h3{
+font-size:18px;
+color:#0b6b2f;
+line-height:28px;
+font-weight:bold;
+}
+
+/* ===================================
+HOME BUTTON
+=================================== */
+
+.back-home{
+text-align:center;
+margin:30px 0;
+}
+
+.home-btn{
+display:inline-block;
+background:#0b6b2f;
+color:#fff;
+text-decoration:none;
+padding:12px 30px;
+border-radius:30px;
+font-size:16px;
+font-weight:bold;
+transition:.3s;
+}
+
+.home-btn:hover{
+background:#15803d;
+transform:scale(1.05);
+}
+/* ===================================
+FOOTER
+=================================== */
+
+footer{
+background:#0b6b2f;
+color:#fff;
+text-align:center;
+padding:20px 15px;
+margin-top:40px;
+}
+
+footer p{
+margin:6px 0;
+font-size:14px;
+}
+
+.developer{
+font-size:12px;
+opacity:.9;
+}
+
+/* ===================================
+SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#0b6b2f;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#e9e9e9;
+}
+
+/* ===================================
+MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.banner{
+height:100px;
+}
+
+.page-title h1{
+font-size:24px;
+}
+
+.page-title p{
+font-size:13px;
+}
+
+.programme-container{
+width:94%;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.programme-card{
+padding:18px;
+}
+
+.programme-card span{
+font-size:36px;
+}
+
+.programme-card h3{
+font-size:17px;
+}
+
+.home-btn{
+width:90%;
+padding:14px;
+}
+
+.social img{
+width:30px;
+height:30px;
+}
+
+.live{
+font-size:12px;
+}
+
+}
+
+/* ===================================
+ANIMATION
+=================================== */
+
+.programme-card{
+animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
