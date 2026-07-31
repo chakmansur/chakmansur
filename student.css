@@ -1,131 +1,481 @@
-/* ===== EXAM SECTION ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-.exam-section{
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* HEADER */
+.student-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:15px;
+    color:white;
+    background:linear-gradient(135deg,#5b21b6,#2563eb);
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.back-btn{
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.student-header h1{
+    font-size:23px;
+}
+
+.student-header p{
+    font-size:12px;
+    opacity:.9;
+    margin-top:3px;
+}
+
+/* HERO */
+.career-hero{
+    width:94%;
+    max-width:1000px;
+    margin:20px auto;
+    padding:30px 18px;
+    text-align:center;
+    color:white;
+    border-radius:24px;
+    background:linear-gradient(135deg,#ec4899,#f97316,#facc15);
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+.hero-icon{
+    font-size:48px;
+}
+
+.career-hero h2{
+    margin:8px 0;
+    font-size:27px;
+}
+
+.career-hero p{
+    font-size:14px;
+}
+
+/* SECTION */
+.section{
     width:94%;
     max-width:1100px;
     margin:30px auto;
 }
 
-.exam-section h2{
+.section-title{
     text-align:center;
-    color:#075f2b;
+    margin-bottom:18px;
+    font-size:23px;
+    color:#172554;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-top:-10px;
     margin-bottom:20px;
 }
 
-.exam-grid{
+/* QUICK */
+.quick-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
-.exam-grid a{
-    background:#fff;
-    color:#075f2b;
+.quick-card{
     text-decoration:none;
-    padding:20px 15px;
-    border-radius:15px;
+    color:white;
+    padding:20px 10px;
+    border-radius:18px;
     text-align:center;
-    font-weight:bold;
-    font-size:17px;
-    box-shadow:0 4px 14px rgba(0,0,0,.12);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
     transition:.3s;
 }
 
-.exam-grid a:hover{
-    transform:translateY(-5px);
-    background:#e8f5ec;
+.quick-card:hover{
+    transform:translateY(-6px);
 }
 
-.exam-grid small{
+.quick-card span{
     display:block;
-    margin-top:8px;
-    color:#777;
-    font-size:12px;
-    font-weight:normal;
+    font-size:38px;
+    margin-bottom:8px;
 }
 
+.quick-card b{
+    display:block;
+    font-size:17px;
+}
 
-/* ===== MOTIVATION ===== */
+.quick-card small{
+    display:block;
+    margin-top:6px;
+    font-size:11px;
+}
 
-.student-motivation{
-    width:94%;
-    max-width:900px;
-    margin:35px auto;
-    padding:30px 20px;
+.job{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+.exam{
+    background:linear-gradient(135deg,#7c3aed,#c026d3);
+}
+
+.admit{
+    background:linear-gradient(135deg,#ea580c,#f59e0b);
+}
+
+.result{
+    background:linear-gradient(135deg,#059669,#16a34a);
+}
+
+/* LINK GRID */
+.link-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:13px;
+}
+
+.link-grid a{
+    background:white;
+    padding:18px 12px;
+    border-radius:15px;
     text-align:center;
-    background:linear-gradient(135deg,#075f2b,#159447);
-    color:white;
+    text-decoration:none;
+    color:#172554;
+    font-weight:bold;
+    box-shadow:0 4px 13px rgba(0,0,0,.1);
+    border-left:5px solid #6366f1;
+    transition:.3s;
+}
+
+.link-grid a:hover{
+    transform:translateY(-4px);
+    background:#eef2ff;
+}
+
+/* STUDY */
+.study-section{
+    padding:25px 0;
     border-radius:20px;
-    box-shadow:0 7px 20px rgba(0,0,0,.2);
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8);
 }
 
-.student-motivation h2{
+.study-grid{
+    width:94%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:13px;
+}
+
+.study-grid a{
+    background:white;
+    padding:20px 10px;
+    border-radius:17px;
+    text-align:center;
+    text-decoration:none;
+    color:#312e81;
+    box-shadow:0 4px 13px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.study-grid a:hover{
+    transform:scale(1.04);
+}
+
+.study-grid a:first-child{
+    border-top:5px solid #2563eb;
+}
+
+.study-grid a:nth-child(2){
+    border-top:5px solid #f59e0b;
+}
+
+.study-grid a:nth-child(3){
+    border-top:5px solid #ec4899;
+}
+
+.study-grid a:nth-child(4){
+    border-top:5px solid #10b981;
+}
+
+.study-grid a{
+    font-size:28px;
+}
+
+.study-grid b,
+.study-grid small{
+    display:block;
+}
+
+.study-grid b{
+    font-size:16px;
+    margin-top:7px;
+}
+
+.study-grid small{
+    font-size:11px;
+    color:#777;
+    margin-top:5px;
+}
+
+/* CAREER */
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.career-card{
+    background:white;
+    padding:20px 12px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.11);
+    border-top:6px solid #6366f1;
+    transition:.3s;
+}
+
+.career-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 9px 22px rgba(0,0,0,.17);
+}
+
+.career-card span{
+    font-size:40px;
+}
+
+.career-card h3{
+    margin:8px 0;
+    color:#172554;
+    font-size:17px;
+}
+
+.career-card p{
+    min-height:42px;
+    color:#666;
+    font-size:12px;
+    line-height:18px;
+}
+
+.career-card a,
+.career-card button{
+    display:inline-block;
+    margin-top:13px;
+    padding:9px 15px;
+    border:0;
+    border-radius:20px;
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.police{
+    border-color:#ef4444;
+}
+
+.ssc{
+    border-color:#8b5cf6;
+}
+
+.railway{
+    border-color:#0ea5e9;
+}
+
+.teacher{
+    border-color:#ec4899;
+}
+
+.defence{
+    border-color:#16a34a;
+}
+
+.bank{
+    border-color:#f59e0b;
+}
+
+.technical{
+    border-color:#f97316;
+}
+
+.computer{
+    border-color:#06b6d4;
+}
+
+/* MOTIVATION */
+.motivation-box{
+    width:94%;
+    max-width:1000px;
+    margin:35px auto;
+    padding:30px 18px;
+    text-align:center;
+    color:white;
+    border-radius:25px;
+    background:linear-gradient(135deg,#7c3aed,#db2777,#f97316);
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.motivation-icon{
+    font-size:45px;
+}
+
+.motivation-box h2{
     font-size:27px;
-    margin-bottom:12px;
+    margin:7px 0;
 }
 
-.student-motivation p{
-    line-height:25px;
+.motivation-box p{
+    line-height:24px;
 }
 
-.motivation-points{
+.motivation-list{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:10px;
     margin:20px 0;
 }
 
-.motivation-points div{
-    background:rgba(255,255,255,.15);
+.motivation-list span{
     padding:12px 5px;
-    border-radius:10px;
-    font-size:14px;
+    background:rgba(255,255,255,.18);
+    border-radius:12px;
+    font-size:13px;
 }
 
-.student-motivation h3{
-    margin-top:15px;
-    font-size:20px;
-}
-
-.student-motivation .quote{
-    margin:12px auto;
+.motivation-box h3{
     font-size:18px;
-    font-weight:bold;
 }
 
+/* FOOTER */
+footer{
+    padding:22px 10px;
+    text-align:center;
+    color:white;
+    background:#172554;
+    line-height:25px;
+    font-size:13px;
+}
 
-/* ===== MOBILE ===== */
+/* TABLET */
+@media(max-width:900px){
 
-@media(max-width:768px){
-
-    .exam-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
+    .career-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .exam-grid a{
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .study-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .link-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .student-header h1{
+        font-size:19px;
+    }
+
+    .career-hero{
+        padding:25px 12px;
+    }
+
+    .career-hero h2{
+        font-size:22px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .quick-card{
+        padding:16px 7px;
+    }
+
+    .quick-card span{
+        font-size:32px;
+    }
+
+    .quick-card b{
         font-size:14px;
-        padding:16px 8px;
     }
 
-    .motivation-points{
-        grid-template-columns:repeat(2,1fr);
+    .link-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
     }
 
-}
+    .link-grid a{
+        padding:15px 7px;
+        font-size:12px;
+    }
 
-@media(max-width:480px){
+    .career-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
 
-    .exam-grid{
+    .career-card{
+        padding:15px 8px;
+    }
+
+    .career-card span{
+        font-size:32px;
+    }
+
+    .career-card h3{
+        font-size:14px;
+    }
+
+    .career-card p{
+        font-size:11px;
+    }
+
+    .study-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .student-motivation{
-        padding:25px 15px;
+    .motivation-list{
+        grid-template-columns:1fr 1fr;
     }
 
-    .student-motivation h2{
+    .motivation-box h2{
         font-size:23px;
+    }
+
+}
+
+@media(max-width:380px){
+
+    .career-grid{
+        grid-template-columns:1fr;
+    }
+
+    .link-grid{
+        grid-template-columns:1fr;
     }
 
 }
