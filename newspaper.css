@@ -1,1 +1,164 @@
+/* ===========================
+   NEWSPAPER.CSS - PART 1
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    background:linear-gradient(135deg,#0f766e,#2563eb);
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#fff;
+}
+
+.logo-area h2{
+    font-size:20px;
+}
+
+.logo-area p{
+    font-size:12px;
+    opacity:.9;
+}
+
+.home-btn{
+    text-decoration:none;
+    color:#fff;
+    background:#ef4444;
+    padding:
+      /* ===========================
+   NEWS GRID & CARDS
+=========================== */
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.news-grid a{
+    background:#fff;
+    text-decoration:none;
+    color:#222;
+    padding:22px 18px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+    border-top:5px solid #2563eb;
+}
+
+.news-grid a:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+/* Different Card Colors */
+
+.news-grid a:nth-child(1){border-top-color:#2563eb;}
+.news-grid a:nth-child(2){border-top-color:#16a34a;}
+.news-grid a:nth-child(3){border-top-color:#7c3aed;}
+.news-grid a:nth-child(4){border-top-color:#ea580c;}
+.news-grid a:nth-child(5){border-top-color:#ec4899;}
+.news-grid a:nth-child(6){border-top-color:#0891b2;}
+
+.news-grid h3{
+    margin:12px 0 8px;
+    color:#1e3a8a;
+    font-size:18px;
+}
+
+.news-grid p{
+    color:#666;
+    font-size:14px;
+}
+
+/* Emoji/Icon */
+
+.news-grid a{
+    font-size:34px;
+}
+
+/* LIVE Badge */
+
+.news-grid a::after{
+    content:" LIVE";
+    display:inline-block;
+    margin-top:12px;
+    background:#ef4444;
+    color:#fff;
+    font-size:10px;
+    padding:4px 8px;
+    border-radius:20px;
+    font-weight:bold;
+  
+}
+  /* ===========================
+   WEATHER & FOOTER
+=========================== */
+
+.footer{
+    margin-top:40px;
+    padding:30px 20px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.footer h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.footer p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .quick-menu{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .news-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+  
+
+}
