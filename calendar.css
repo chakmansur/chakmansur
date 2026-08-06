@@ -1,128 +1,254 @@
+/* ===========================
+   CALENDAR.CSS - PART 1
+=========================== */
 
-<!-- ========================= -->
-<!-- Festival -->
-<!-- ========================= -->
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<section id="festival" class="section">
+body{
+    font-family:Arial,sans-serif;
+    background:#f8fbff;
+    color:#222;
+    line-height:1.6;
+}
 
-<h2>🎉 বার্ষিক উৎসব</h2>
+/* HEADER */
 
-<div class="card-grid">
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    background:linear-gradient(135deg,#1565c0,#3949ab);
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
 
-<div class="card">
-🪔
-<h3>দুর্গাপূজা</h3>
-<p>অক্টোবর</p>
-</div>
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-<div class="card">
-🌺
-<h3>সরস্বতী পূজা</h3>
-<p>ফেব্রুয়ারি</p>
-</div>
+.logo-area img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#fff;
+}
 
-<div class="card">
-🎆
-<h3>কালী পূজা</h3>
-<p>নভেম্বর</p>
-</div>
+.home-btn{
+    text-decoration:none;
+    color:#fff;
+    background:#ff9800;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:bold;
+}
 
-</div>
+/* HERO */
 
-</section>
+.hero{
+    width:94%;
+    max-width:1200px;
+    margin:20px auto;
+    padding:40px 20px;
+    text-align:center;
+    color:#fff;
+    border-radius:20px;
+    background:linear-gradient(135deg,#5e35b1,#1e88e5,#26c6da);
+}
 
-<!-- ========================= -->
-<!-- Sports -->
-<!-- ========================= -->
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
 
-<section id="sports" class="section">
+/* QUICK MENU */
 
-<h2>🏏 ক্রীড়া অনুষ্ঠান</h2>
+.quick-menu{
+    width:94%;
+    max-width:1200px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
 
-<div class="card-grid">
+.quick-menu a{
+    text-decoration:none;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    border-radius:15px;
+    font-weight:bold;
+    background:#1976d2;
+    transition:.3s;
+}
 
-<div class="card">
-🏏
-<h3>ক্রিকেট টুর্নামেন্ট</h3>
-<p>বার্ষিক প্রতিযোগিতা</p>
-</div>
+.quick-menu a:hover{
+    transform:translateY(-5px);
+}
 
-<div class="card">
-⚽
-<h3>ফুটবল টুর্নামেন্ট</h3>
-<p>গ্রামভিত্তিক প্রতিযোগিতা</p>
-</div>
+/* SECTION */
 
-<div class="card">
-🏐
-<h3>ভলিবল প্রতিযোগিতা</h3>
-<p>যুব উৎসব</p>
-</div>
+.section{
+    width:94%;
+    max-width:1200px;
+    margin:35px auto;
+}
 
-</div>
+.section h2{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:20px;
+}
 
-</section>
+/* CARD GRID */
 
-<!-- ========================= -->
-<!-- Cultural Programme -->
-<!-- ========================= -->
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-<section id="culture" class="section">
+.card{
+    background:#fff;
+    padding:20px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    border-top:5px solid #1e88e5;
+    transition:.3s;
+}
 
-<h2>🎭 সাংস্কৃতিক অনুষ্ঠান</h2>
+.card:hover{
+    transform:translateY(-8px);
+}
 
-<div class="card-grid">
+.card h3{
+    margin:10px 0;
+    color:#0d47a1;
+}
 
-<div class="card">
-🎤
-<h3>সঙ্গীত</h3>
-<p>রবীন্দ্র ও আধুনিক গান</p>
-</div>
+.card p{
+    color:#666;
+}
+/* ===========================
+   FOOTER
+=========================== */
 
-<div class="card">
-💃
-<h3>নৃত্য</h3>
-<p>সাংস্কৃতিক পরিবেশনা</p>
-</div>
+.footer{
+    margin-top:40px;
+    padding:30px 20px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+}
 
-<div class="card">
-🎭
-<h3>নাটক</h3>
-<p>বিশেষ অনুষ্ঠান</p>
-</div>
+.footer h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
 
-</div>
+.footer p{
+    margin:6px 0;
+    font-size:14px;
+}
 
-</section>
+/* Animation */
 
-<!-- ========================= -->
-<!-- Social Service -->
-<!-- ========================= -->
+.hero{
+    animation:fadeIn 1s ease;
+}
 
-<section id="service" class="section">
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-<h2>🤝 সমাজসেবা</h2>
+.card,
+.quick-menu a{
+    transition:all .35s ease;
+}
 
-<div class="card-grid">
+/* Tablet */
 
-<div class="card">
-🩸
-<h3>রক্তদান শিবির</h3>
-<p>স্বেচ্ছায় রক্তদান</p>
-</div>
+@media(max-width:900px){
 
-<div class="card">
-🌳
-<h3>বৃক্ষরোপণ</h3>
-<p>সবুজ পরিবেশ গড়ি</p>
-</div>
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-<div class="card">
-🧹
-<h3>পরিষ্কার-পরিচ্ছন্নতা অভিযান</h3>
-<p>গ্রাম উন্নয়ন কর্মসূচি</p>
-</div>
+    .quick-menu{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-</div>
+}
 
-</section>
+/* Mobile */
+
+@media(max-width:600px){
+
+    .top-header{
+        flex-direction:column;
+        text-align:center;
+        gap:12px;
+    }
+
+    .logo-area{
+        flex-direction:column;
+    }
+
+    .hero{
+        padding:25px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .quick-menu{
+        grid-template-columns:1fr;
+    }
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .section h2{
+        font-size:22px;
+    }
+
+}
+
+/* Extra Small */
+
+@media(max-width:400px){
+
+    .hero h1{
+        font-size:24px;
+    }
+
+    .home-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
