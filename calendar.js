@@ -15,203 +15,118 @@ const months = [
 
 const monthInfo = {
 
-    "বৈশাখ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "পয়লা বৈশাখ",
-            "অক্ষয় তৃতীয়া"
-        ]
-    },
+    "বৈশাখ": [
+        "পয়লা বৈশাখ",
+        "অক্ষয় তৃতীয়া"
+    ],
 
-    "জ্যৈষ্ঠ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "জামাই ষষ্ঠী",
-            "জ্যৈষ্ঠ পূর্ণিমা"
-        ]
-    },
+    "জ্যৈষ্ঠ": [
+        "জামাই ষষ্ঠী",
+        "জ্যৈষ্ঠ পূর্ণিমা"
+    ],
 
-    "আষাঢ়": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "জগন্নাথ রথযাত্রা",
-            "উল্টো রথযাত্রা"
-        ]
-    },
+    "আষাঢ়": [
+        "রথযাত্রা",
+        "উল্টো রথযাত্রা"
+    ],
 
-    "শ্রাবণ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "শ্রাবণী পূর্ণিমা",
-            "ঝুলন যাত্রা",
-            "জন্মাষ্টমী"
-        ]
-    },
+    "শ্রাবণ": [
+        "শ্রাবণী পূর্ণিমা",
+        "ঝুলন যাত্রা",
+        "জন্মাষ্টমী"
+    ],
 
-    "ভাদ্র": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "গণেশ চতুর্থী",
-            "বিশ্বকর্মা পূজা"
-        ]
-    },
+    "ভাদ্র": [
+        "গণেশ চতুর্থী",
+        "বিশ্বকর্মা পূজা"
+    ],
 
-    "আশ্বিন": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "মহালয়া",
-            "দুর্গাপূজা",
-            "বিজয়া দশমী"
-        ]
-    },
+    "আশ্বিন": [
+        "মহালয়া",
+        "দুর্গাপূজা",
+        "বিজয়া দশমী"
+    ],
 
-    "কার্তিক": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "কালীপূজা",
-            "দীপাবলি",
-            "ভাইফোঁটা"
-        ]
-    },
+    "কার্তিক": [
+        "কালীপূজা",
+        "দীপাবলি",
+        "ভাইফোঁটা"
+    ],
 
-    "অগ্রহায়ণ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "নবান্ন",
-            "রাস পূর্ণিমা"
-        ]
-    },
+    "অগ্রহায়ণ": [
+        "নবান্ন",
+        "রাস পূর্ণিমা"
+    ],
 
-    "পৌষ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "পৌষ সংক্রান্তি",
-            "পৌষ পার্বণ"
-        ]
-    },
+    "পৌষ": [
+        "পৌষ সংক্রান্তি",
+        "পৌষ পার্বণ"
+    ],
 
-    "মাঘ": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "সরস্বতী পূজা",
-            "মাঘী পূর্ণিমা"
-        ]
-    },
+    "মাঘ": [
+        "সরস্বতী পূজা",
+        "মাঘী পূর্ণিমা"
+    ],
 
-    "ফাল্গুন": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "শিবরাত্রি",
-            "দোলযাত্রা",
-            "দোল পূর্ণিমা"
-        ]
-    },
+    "ফাল্গুন": [
+        "শিবরাত্রি",
+        "দোলযাত্রা",
+        "দোল পূর্ণিমা"
+    ],
 
-    "চৈত্র": {
-        bibaha: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        annaprashan: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        grihapravesh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        namakaran: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vidyarambh: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        vehicle: "পঞ্জিকা অনুযায়ী শুভ দিন",
-        festivals: [
-            "চৈত্র সংক্রান্তি",
-            "চড়ক পূজা",
-            "গাজন"
-        ]
-    }
-};
+    "চৈত্র": [
+        "চৈত্র সংক্রান্তি",
+        "চড়ক পূজা",
+        "গাজন"
+    ]
+];
 
+const banglaDigits = [
+    "০","১","২","৩","৪",
+    "৫","৬","৭","৮","৯"
+];
 
-/* বাংলা সংখ্যা */
-
-function banglaNumber(number){
-
-    const digits = [
-        "০","১","২","৩","৪",
-        "৫","৬","৭","৮","৯"
-    ];
-
-    return String(number).replace(
-        /\d/g,
-        function(digit){
-            return digits[digit];
-        }
-    );
+function banglaNumber(number) {
+    return String(number).replace(/\d/g, function(d) {
+        return banglaDigits[d];
+    });
 }
 
 
-/* বর্তমান মাস */
+/* শ্রাবণ ১৪৩৩ থেকে শুরু */
 
 let currentMonth = 3;
 let currentYear = 1433;
 
 
-/* মাস দেখানো */
+/* ক্যালেন্ডারের দিন */
 
-function showMonth(){
+function createCalendar() {
+
+    const calendarDays =
+        document.getElementById("calendarDays");
+
+    calendarDays.innerHTML = "";
+
+    for (let day = 1; day <= 30; day++) {
+
+        const cell =
+            document.createElement("div");
+
+        cell.textContent =
+            banglaNumber(day);
+
+        calendarDays.appendChild(cell);
+    }
+}
+
+
+/* মাসের তথ্য */
+
+function updateMonth() {
 
     const month =
         months[currentMonth];
-
-    const info =
-        monthInfo[month];
-
 
     document.getElementById("monthName")
         .textContent = month;
@@ -222,117 +137,64 @@ function showMonth(){
         " বঙ্গাব্দ";
 
 
-    document.getElementById("bibaha")
-        .textContent = info.bibaha;
-
-    document.getElementById("annaprashan")
-        .textContent = info.annaprashan;
-
-    document.getElementById("grihapravesh")
-        .textContent = info.grihapravesh;
-
-    document.getElementById("namakaran")
-        .textContent = info.namakaran;
-
-    document.getElementById("vidyarambh")
-        .textContent = info.vidyarambh;
-
-    document.getElementById("vehicle")
-        .textContent = info.vehicle;
-
-
-    const festivalList =
+    const festivals =
         document.getElementById("festivalList");
 
-    festivalList.innerHTML = "";
+    festivals.innerHTML = "";
 
 
-    info.festivals.forEach(function(festival){
+    monthInfo[month].forEach(function(item) {
 
-        const item =
+        const div =
             document.createElement("div");
 
-        item.className =
+        div.className =
             "festival-item";
 
-        item.innerHTML =
-            "🪔 " +
-            "<strong>" +
-            festival +
-            "</strong>";
+        div.textContent =
+            "🪔 " + item;
 
-        festivalList.appendChild(item);
+        festivals.appendChild(div);
 
     });
 
 
-    createDays();
-}
-
-
-/* বাংলা মাসের ৩০ দিন */
-
-function createDays(){
-
-    const calendarDays =
-        document.getElementById("calendarDays");
-
-    calendarDays.innerHTML = "";
-
-
-    for(let day = 1; day <= 30; day++){
-
-        const cell =
-            document.createElement("div");
-
-        cell.textContent =
-            banglaNumber(day);
-
-        calendarDays.appendChild(cell);
-
-    }
-
+    createCalendar();
 }
 
 
 /* আগের মাস */
 
 document.getElementById("prevMonth")
-.addEventListener("click", function(){
+    .addEventListener("click", function() {
 
-    currentMonth--;
+        currentMonth--;
 
-    if(currentMonth < 0){
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
 
-        currentMonth = 11;
-        currentYear--;
-
-    }
-
-    showMonth();
-
-});
+        updateMonth();
+    });
 
 
 /* পরের মাস */
 
 document.getElementById("nextMonth")
-.addEventListener("click", function(){
+    .addEventListener("click", function() {
 
-    currentMonth++;
+        currentMonth++;
 
-    if(currentMonth > 11){
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
 
-        currentMonth = 0;
-        currentYear++;
-
-    }
-
-    showMonth();
-
-});
+        updateMonth();
+    });
 
 
 /* প্রথমবার চালু */
 
-showMonth();
+updateMonth();
