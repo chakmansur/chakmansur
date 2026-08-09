@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>📅 বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
+<title>বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
 
 <link rel="stylesheet" href="calendar.css">
 <link rel="icon" href="images/favicon.png">
@@ -17,7 +17,7 @@
 
     <div class="logo-area">
 
-        <img src="images/logo.png" alt="Club Logo">
+        <img src="images/logo.png" alt="Logo">
 
         <div>
             <h2>চকমনসুর বানীশ্রী সংঘ</h2>
@@ -31,114 +31,87 @@
 </header>
 
 
-<!-- =========================
-     ১. বাংলা পঞ্জিকা
-========================= -->
+<!-- বাংলা পঞ্জিকা -->
 
-<section class="hero">
+<section class="panchang">
 
     <h1>📅 বাংলা পঞ্জিকা</h1>
 
-    <p>বাংলা মাস, তারিখ ও পঞ্জিকার তথ্য</p>
+    <div class="month-box">
 
-</section>
+        <button id="prevMonth">◀</button>
 
-
-<section class="panchang-section">
-
-    <div class="panchang-box">
-
-        <div class="month-navigation">
-
-            <button id="prevMonth">◀</button>
-
-            <div>
-                <h2 id="banglaMonth">শ্রাবণ</h2>
-                <p id="banglaYear">১৪৩৩ বঙ্গাব্দ</p>
-            </div>
-
-            <button id="nextMonth">▶</button>
-
+        <div>
+            <h2 id="monthName">শ্রাবণ</h2>
+            <p id="yearName">১৪৩৩ বঙ্গাব্দ</p>
         </div>
 
+        <button id="nextMonth">▶</button>
 
-        <div class="panchang-info">
+    </div>
 
-            <div class="info-box">
-                🌙
-                <h3>তিথি</h3>
-                <p id="tithi">তথ্য</p>
-            </div>
 
-            <div class="info-box">
-                ⭐
-                <h3>নক্ষত্র</h3>
-                <p id="nakshatra">তথ্য</p>
-            </div>
+    <div class="calendar">
 
-            <div class="info-box">
-                🌕
-                <h3>পূর্ণিমা</h3>
-                <p id="purnima">তথ্য</p>
-            </div>
-
-            <div class="info-box">
-                🌑
-                <h3>অমাবস্যা</h3>
-                <p id="amavasya">তথ্য</p>
-            </div>
-
+        <div class="week">
+            <div>রবি</div>
+            <div>সোম</div>
+            <div>মঙ্গল</div>
+            <div>বুধ</div>
+            <div>বৃহস্পতি</div>
+            <div>শুক্র</div>
+            <div>শনি</div>
         </div>
+
+        <div id="calendarDays" class="days"></div>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     ২. এই মাসের শুভ সময়
-========================= -->
+<!-- এই মাসের সময় -->
 
 <section class="section">
 
     <h2>🌸 এই মাসের শুভ সময়</h2>
 
-    <div class="auspicious-grid">
+    <div class="cards">
 
-        <div class="auspicious-card">
+        <div class="card">
             💍
             <h3>বিবাহ</h3>
-            <p id="bibaha">শুভ দিন দেখানো হবে</p>
+            <p id="bibaha">তথ্য আপডেট হবে</p>
         </div>
 
-        <div class="auspicious-card">
+        <div class="card">
             🍚
             <h3>অন্নপ্রাশন</h3>
-            <p id="annaprashan">শুভ দিন দেখানো হবে</p>
+            <p id="annaprashan">তথ্য আপডেট হবে</p>
         </div>
 
-        <div class="auspicious-card">
+        <div class="card">
             🏠
             <h3>গৃহপ্রবেশ</h3>
-            <p id="grihapravesh">শুভ দিন দেখানো হবে</p>
+            <p id="grihapravesh">তথ্য আপডেট হবে</p>
         </div>
 
-        <div class="auspicious-card">
+        <div class="card">
             ✍️
             <h3>নামকরণ</h3>
-            <p id="namakaran">শুভ দিন দেখানো হবে</p>
+            <p id="namakaran">তথ্য আপডেট হবে</p>
         </div>
 
-        <div class="auspicious-card">
+        <div class="card">
             📚
             <h3>বিদ্যারম্ভ</h3>
-            <p id="vidyarambh">শুভ দিন দেখানো হবে</p>
+            <p id="vidyarambh">তথ্য আপডেট হবে</p>
         </div>
 
-        <div class="auspicious-card">
+        <div class="card">
             🚗
             <h3>যানবাহন ক্রয়</h3>
-            <p id="vehicle">শুভ দিন দেখানো হবে</p>
+            <p id="vehicle">তথ্য আপডেট হবে</p>
         </div>
 
     </div>
@@ -146,35 +119,29 @@
 </section>
 
 
-<!-- =========================
-     ৩. এই মাসের উৎসব
-========================= -->
+<!-- এই মাসের উৎসব -->
 
 <section class="section">
 
     <h2>🪔 এই মাসের উৎসব ও ব্রত</h2>
 
-    <div id="festivalList" class="festival-list">
-
-    </div>
+    <div id="festivalList" class="festival-list"></div>
 
 </section>
 
 
-<!-- =========================
-     ৪. ক্লাবের অনুষ্ঠান সূচি
-========================= -->
+<!-- ক্লাবের অনুষ্ঠান -->
 
 <section class="section">
 
-    <h2>🎉 চকমনসুর বানীশ্রী সংঘের অনুষ্ঠান সূচি</h2>
+    <h2>🎉 অনুষ্ঠান সূচি</h2>
 
-    <div class="card-grid">
+    <div class="cards">
 
         <div class="card">
             🕉️
             <h3>শিবরাত্রি</h3>
-            <p>বার্ষিক ধর্মীয় অনুষ্ঠান</p>
+            <p>বার্ষিক অনুষ্ঠান</p>
         </div>
 
         <div class="card">
@@ -198,37 +165,37 @@
         <div class="card">
             🌺
             <h3>সরস্বতী পূজা</h3>
-            <p>শিক্ষা ও সাংস্কৃতিক অনুষ্ঠান</p>
+            <p>বার্ষিক পূজা</p>
         </div>
 
         <div class="card">
             🩺
             <h3>স্বাস্থ্য শিবির</h3>
-            <p>স্বাস্থ্য পরীক্ষা কর্মসূচি</p>
+            <p>স্বাস্থ্য পরীক্ষা</p>
         </div>
 
         <div class="card">
             👁️
             <h3>চোখ পরীক্ষা শিবির</h3>
-            <p>চক্ষু পরীক্ষা ও পরামর্শ</p>
+            <p>চক্ষু পরীক্ষা</p>
         </div>
 
         <div class="card">
             🩸
             <h3>রক্তদান শিবির</h3>
-            <p>স্বেচ্ছায় রক্তদান কর্মসূচি</p>
+            <p>স্বেচ্ছায় রক্তদান</p>
         </div>
 
         <div class="card">
             🌳
-            <h3>বৃক্ষরোপণ অভিযান</h3>
+            <h3>বৃক্ষরোপণ</h3>
             <p>সবুজ পরিবেশ গড়ার উদ্যোগ</p>
         </div>
 
         <div class="card">
             🏏
             <h3>বার্ষিক ক্রীড়া</h3>
-            <p>বিভিন্ন ক্রীড়া প্রতিযোগিতা</p>
+            <p>ক্রীড়া প্রতিযোগিতা</p>
         </div>
 
         <div class="card">
@@ -251,8 +218,6 @@
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
     <p>© 2026 All Rights Reserved</p>
-
-    <p>Developed & Maintained by DEBU</p>
 
 </footer>
 
