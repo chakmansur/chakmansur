@@ -6,7 +6,7 @@
 
 body{
     font-family:Arial,sans-serif;
-    background:#f5f8ff;
+    background:#fff8e7;
     color:#222;
     line-height:1.6;
 }
@@ -14,8 +14,8 @@ body{
 /* HEADER */
 
 .top-header{
-    background:linear-gradient(135deg,#6a1b9a,#1565c0);
-    color:#fff;
+    background:linear-gradient(135deg,#8e24aa,#d81b60);
+    color:white;
     padding:15px;
     display:flex;
     justify-content:space-between;
@@ -32,7 +32,7 @@ body{
     width:58px;
     height:58px;
     border-radius:50%;
-    background:#fff;
+    background:white;
 }
 
 .logo-area h2{
@@ -44,8 +44,8 @@ body{
 }
 
 .home-btn{
-    color:#fff;
     text-decoration:none;
+    color:white;
     background:#ff9800;
     padding:9px 16px;
     border-radius:25px;
@@ -58,9 +58,10 @@ body{
     margin:15px;
     padding:35px 15px;
     text-align:center;
-    color:#fff;
+    color:white;
     border-radius:20px;
-    background:linear-gradient(135deg,#8e24aa,#3949ab,#039be5);
+    background:linear-gradient(135deg,#e65100,#f9a825,#d81b60);
+    box-shadow:0 6px 20px rgba(0,0,0,.15);
 }
 
 .hero h1{
@@ -72,7 +73,7 @@ body{
     font-size:16px;
 }
 
-/* CALENDAR */
+/* BANGLA CALENDAR */
 
 .calendar-section{
     width:94%;
@@ -81,7 +82,7 @@ body{
 }
 
 .calendar-box{
-    background:#fff;
+    background:white;
     border-radius:20px;
     padding:20px;
     box-shadow:0 6px 20px rgba(0,0,0,.15);
@@ -89,71 +90,72 @@ body{
 
 .calendar-header{
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     text-align:center;
     margin-bottom:20px;
 }
 
 .calendar-header h2{
-    color:#6a1b9a;
+    color:#8e24aa;
+    font-size:25px;
 }
 
 .calendar-header p{
-    color:#666;
+    color:#d81b60;
+    font-weight:bold;
 }
 
 .calendar-header button{
+    width:42px;
+    height:42px;
     border:0;
-    background:#6a1b9a;
-    color:#fff;
-    width:40px;
-    height:40px;
     border-radius:50%;
+    background:#8e24aa;
+    color:white;
     font-size:18px;
     cursor:pointer;
 }
 
-.today-info{
-    background:#f3e5f5;
-    border-radius:12px;
-    padding:12px;
+/* WEEK */
+
+.calendar-week{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+    margin-bottom:5px;
+}
+
+.calendar-week div{
     text-align:center;
-    margin-bottom:18px;
+    padding:8px 2px;
+    font-weight:bold;
+    color:#8e24aa;
 }
 
-.today-info span{
-    display:block;
-    color:#555;
-}
+/* DAYS */
 
-.calendar-week,
 .calendar-days{
     display:grid;
     grid-template-columns:repeat(7,1fr);
     gap:5px;
 }
 
-.calendar-week div{
-    text-align:center;
-    font-weight:bold;
-    color:#6a1b9a;
-    padding:8px 2px;
-}
-
 .calendar-days div{
-    min-height:45px;
+    min-height:48px;
     display:flex;
     align-items:center;
     justify-content:center;
     border-radius:10px;
-    background:#f5f5f5;
+    background:#fff3e0;
+    font-size:17px;
+    font-weight:bold;
 }
 
 .calendar-days .today{
-    background:#ff9800;
-    color:#fff;
-    font-weight:bold;
+    background:#d81b60;
+    color:white;
+    box-shadow:0 3px 10px rgba(216,27,96,.35);
 }
 
 .calendar-days .empty{
@@ -170,7 +172,7 @@ body{
 
 .section h2{
     text-align:center;
-    color:#6a1b9a;
+    color:#8e24aa;
     margin-bottom:22px;
 }
 
@@ -183,21 +185,16 @@ body{
 }
 
 .card{
-    background:#fff;
+    background:white;
     padding:22px 15px;
     text-align:center;
     border-radius:18px;
-    border-top:5px solid #8e24aa;
+    border-top:5px solid #d81b60;
     box-shadow:0 5px 16px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
 }
 
 .card h3{
-    color:#1565c0;
+    color:#8e24aa;
     margin:8px 0;
 }
 
@@ -210,8 +207,8 @@ body{
     margin-top:40px;
     padding:30px 15px;
     text-align:center;
-    color:#fff;
-    background:linear-gradient(135deg,#4a148c,#1565c0);
+    color:white;
+    background:linear-gradient(135deg,#6a1b9a,#d81b60);
 }
 
 .footer h3{
@@ -225,28 +222,27 @@ body{
 }
 
 
-/* ANIMATION */
+/* HOVER */
 
-.hero{
-    animation:fadeIn .8s ease;
+.card{
+    transition:transform .3s ease,box-shadow .3s ease;
 }
 
-@keyframes fadeIn{
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
 
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
+.calendar-header button{
+    transition:.2s;
+}
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+.calendar-header button:hover{
+    transform:scale(1.08);
 }
 
 
-/* TABLET */
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -257,7 +253,7 @@ body{
 }
 
 
-/* MOBILE */
+/* SMALL MOBILE */
 
 @media(max-width:600px){
 
@@ -272,7 +268,7 @@ body{
     }
 
     .hero{
-        padding:30px 15px;
+        padding:28px 12px;
     }
 
     .hero h1{
@@ -283,18 +279,6 @@ body{
         font-size:14px;
     }
 
-    .card-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section{
-        width:92%;
-    }
-
-    .section h2{
-        font-size:22px;
-    }
-
     .calendar-section{
         width:92%;
     }
@@ -303,45 +287,60 @@ body{
         padding:12px;
     }
 
+    .calendar-header h2{
+        font-size:20px;
+    }
+
+    .calendar-header p{
+        font-size:13px;
+    }
+
+    .calendar-header button{
+        width:36px;
+        height:36px;
+        font-size:15px;
+    }
+
+    .calendar-week div{
+        font-size:12px;
+        padding:7px 1px;
+    }
+
     .calendar-days div{
-        min-height:40px;
-        font-size:14px;
+        min-height:42px;
+        font-size:15px;
+    }
+
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        width:92%;
     }
 
 }
 
 
-/* SMALL MOBILE */
+/* VERY SMALL MOBILE */
 
 @media(max-width:380px){
 
-    .hero h1{
-        font-size:24px;
+    .calendar-days{
+        gap:3px;
+    }
+
+    .calendar-days div{
+        min-height:38px;
+        font-size:14px;
+    }
+
+    .calendar-week div{
+        font-size:11px;
     }
 
     .logo-area h2{
         font-size:18px;
     }
 
-    .calendar-header h2{
-        font-size:18px;
-    }
-
-}
-.calendar-days div{
-    flex-direction:column;
-    gap:2px;
-}
-
-.calendar-days div strong{
-    font-size:16px;
-}
-
-.calendar-days div small{
-    font-size:11px;
-    color:#6a1b9a;
-}
-
-.calendar-days .today small{
-    color:white;
 }
