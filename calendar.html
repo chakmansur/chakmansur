@@ -2,22 +2,16 @@
 <html lang="bn">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>বাংলা ক্যালেন্ডার | চকমনসুর বানীশ্রী সংঘ</title>
-
-<link rel="stylesheet" href="calendar.css">
-
-<link rel="icon" href="images/favicon.png">
-
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header class="top-header">
 
@@ -32,73 +26,65 @@
 
     </div>
 
-    <a href="index.html" class="home-btn">
-        🏠 হোম
-    </a>
+    <a href="index.html" class="home-btn">🏠 হোম</a>
 
 </header>
 
 
-<!-- TITLE -->
-
 <section class="hero">
 
-    <h1>📅 বাংলা ক্যালেন্ডার</h1>
+    <h1>📜 বাংলা পঞ্জিকা</h1>
 
-    <p>বাংলা মাস ও বাংলা তারিখ</p>
+    <p>বাংলা মাস, তিথি, উৎসব ও শুভদিন</p>
 
 </section>
 
 
-<!-- BANGLA CALENDAR -->
+<!-- বাংলা পঞ্জিকা -->
 
-<section class="calendar-section">
+<section class="panchang-section">
 
-    <div class="calendar-box">
+    <div class="panchang-box">
 
-        <div class="calendar-header">
+        <div class="month-navigation">
 
-            <button id="prevMonth">
-                ◀
-            </button>
+            <button id="prevMonth">◀</button>
 
             <div>
-
-                <h2 id="banglaMonth">
-                    বৈশাখ
-                </h2>
-
-                <p id="banglaYear">
-                    ১৪৩৩ বঙ্গাব্দ
-                </p>
-
+                <h2 id="banglaMonth">শ্রাবণ</h2>
+                <p id="banglaYear">১৪৩৩ বঙ্গাব্দ</p>
             </div>
 
-            <button id="nextMonth">
-                ▶
-            </button>
+            <button id="nextMonth">▶</button>
 
         </div>
 
 
-        <!-- WEEK -->
+        <div class="panchang-info">
 
-        <div class="calendar-week">
+            <div class="info-box">
+                <span>🌙</span>
+                <strong>তিথি</strong>
+                <p id="tithi">তথ্য আসছে</p>
+            </div>
 
-            <div>রবি</div>
-            <div>সোম</div>
-            <div>মঙ্গল</div>
-            <div>বুধ</div>
-            <div>বৃহস্পতি</div>
-            <div>শুক্র</div>
-            <div>শনি</div>
+            <div class="info-box">
+                <span>⭐</span>
+                <strong>নক্ষত্র</strong>
+                <p id="nakshatra">তথ্য আসছে</p>
+            </div>
 
-        </div>
+            <div class="info-box">
+                <span>🌕</span>
+                <strong>পূর্ণিমা</strong>
+                <p id="purnima">তথ্য আসছে</p>
+            </div>
 
-
-        <!-- DAYS -->
-
-        <div id="calendarDays" class="calendar-days">
+            <div class="info-box">
+                <span>🌑</span>
+                <strong>অমাবস্যা</strong>
+                <p id="amavasya">তথ্য আসছে</p>
+            </div>
 
         </div>
 
@@ -107,78 +93,48 @@
 </section>
 
 
-<!-- অনুষ্ঠান সূচি -->
+<!-- এই মাসের শুভ দিন -->
 
 <section class="section">
 
-    <h2>🎉 অনুষ্ঠান সূচি</h2>
+    <h2>🌸 এই মাসের শুভ দিন</h2>
 
-    <div class="card-grid">
+    <div class="auspicious-grid">
 
-        <div class="card">
-            🕉️
-            <h3>শিবরাত্রি</h3>
-            <p>বার্ষিক অনুষ্ঠান</p>
+        <div class="auspicious-card">
+            🍚
+            <h3>অন্নপ্রাশন</h3>
+            <p id="annaprashan">তথ্য আপডেট করা হবে</p>
         </div>
 
-        <div class="card">
-            🪔
-            <h3>দুর্গাপূজা</h3>
-            <p>বার্ষিক পূজা ও উৎসব</p>
+        <div class="auspicious-card">
+            💍
+            <h3>বিবাহ</h3>
+            <p id="bibaha">তথ্য আপডেট করা হবে</p>
         </div>
 
-        <div class="card">
-            🪔
-            <h3>কালীপূজা</h3>
-            <p>বার্ষিক পূজা</p>
+        <div class="auspicious-card">
+            🏠
+            <h3>গৃহপ্রবেশ</h3>
+            <p id="grihapravesh">তথ্য আপডেট করা হবে</p>
         </div>
 
-        <div class="card">
-            🌼
-            <h3>লক্ষ্মীপূজা</h3>
-            <p>বার্ষিক পূজা</p>
+        <div class="auspicious-card">
+            ✍️
+            <h3>নামকরণ</h3>
+            <p id="namakaran">তথ্য আপডেট করা হবে</p>
         </div>
 
-        <div class="card">
-            🩺
-            <h3>স্বাস্থ্য শিবির</h3>
-            <p>স্বাস্থ্য পরীক্ষা</p>
+        <div class="auspicious-card">
+            📚
+            <h3>বিদ্যারম্ভ</h3>
+            <p id="vidyarambh">তথ্য আপডেট করা হবে</p>
         </div>
 
-        <div class="card">
-            👁️
-            <h3>চোখ পরীক্ষা শিবির</h3>
-            <p>চক্ষু পরীক্ষা ও পরামর্শ</p>
-        </div>
-
-        <div class="card">
-            🌺
-            <h3>সরস্বতী পূজা</h3>
-            <p>শিক্ষা ও সাংস্কৃতিক অনুষ্ঠান</p>
-        </div>
-
-        <div class="card">
-            🩸
-            <h3>রক্তদান শিবির</h3>
-            <p>স্বেচ্ছায় রক্তদান</p>
-        </div>
-
-        <div class="card">
-            🌳
-            <h3>বৃক্ষরোপণ অভিযান</h3>
-            <p>সবুজ পরিবেশ গড়ার উদ্যোগ</p>
-        </div>
-
-        <div class="card">
-            🏏
-            <h3>বার্ষিক ক্রীড়া</h3>
-            <p>বিভিন্ন ক্রীড়া প্রতিযোগিতা</p>
-        </div>
-
-        <div class="card">
-            🎭
-            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
-            <p>নাচ, গান, আবৃত্তি ও নাটক</p>
+        <div class="auspicious-card">
+            🚗
+            <h3>যানবাহন ক্রয়</h3>
+            <p id="vehicle">তথ্য আপডেট করা হবে</p>
         </div>
 
     </div>
@@ -186,11 +142,24 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- এই মাসের উৎসব -->
+
+<section class="section">
+
+    <h2>🪔 এই মাসের উৎসব ও ব্রত</h2>
+
+    <div id="festivalList" class="festival-list">
+
+        <p>এই মাসের উৎসবের তথ্য এখানে দেখা যাবে।</p>
+
+    </div>
+
+</section>
+
 
 <footer class="footer">
 
-    <h3>📅 বাংলা ক্যালেন্ডার</h3>
+    <h3>📜 বাংলা পঞ্জিকা</h3>
 
     <p>চকমনসুর বানীশ্রী সংঘ</p>
 
@@ -199,11 +168,3 @@
     <p>© 2026 All Rights Reserved</p>
 
 </footer>
-
-
-<script src="calendar.js"></script>
-
-</body>
-
-</
-     
