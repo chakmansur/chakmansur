@@ -1,330 +1,236 @@
-/* ====================================
-RESET
-==================================== */
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f5f7f5;
-color:#222;
+    font-family:Arial,sans-serif;
+    background:#fff8e8;
+    color:#222;
+    line-height:1.6;
 }
 
-/* ====================================
-TOP BAR
-==================================== */
+/* HEADER */
 
-.topbar{
-height:55px;
-background:linear-gradient(90deg,#0b6b2f,#15803d);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 12px;
-position:sticky;
-top:0;
-z-index:9999;
+.top-header{
+    background:linear-gradient(135deg,#7b1fa2,#c2185b);
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-#menuBtn{
-font-size:24px;
-color:#fff;
-background:none;
-border:none;
-cursor:pointer;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.live{
-display:flex;
-gap:10px;
-color:#fff;
-font-size:13px;
-font-weight:bold;
+.logo-area img{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:white;
 }
 
-.social{
-display:flex;
-gap:10px;
+.logo-area h2{
+    font-size:20px;
 }
 
-.social img{
-width:36px;
-height:36px;
-border-radius:50%;
-transition:.3s;
-}
-
-.social img:hover{
-transform:scale(1.15);
-}
-
-/* ====================================
-SIDE MENU
-==================================== */
-
-.sideMenu{
-position:fixed;
-left:-280px;
-top:0;
-width:260px;
-height:100%;
-background:linear-gradient(180deg,#0b6b2f,#15803d);
-padding-top:70px;
-transition:.35s;
-z-index:99999;
-}
-
-.sideMenu.active{
-left:0;
-}
-
-.sideMenu a{
-display:block;
-padding:15px 20px;
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-border-bottom:1px solid rgba(255,255,255,.15);
-transition:.3s;
-}
-
-.sideMenu a:hover{
-background:rgba(255,255,255,.15);
-padding-left:28px;
-}
-
-/* ====================================
-BANNER
-==================================== */
-
-.banner{
-width:100%;
-height:110px;
-object-fit:cover;
-display:block;
-}
-
-/* ====================================
-TITLE
-==================================== */
-
-.title{
-text-align:center;
-padding:22px;
-background:#fff;
-}
-
-.title h1{
-font-size:28px;
-color:#0b6b2f;
-margin-bottom:8px;
-}
-
-.title p{
-font-size:14px;
-color:#666;
-}
-/* ====================================
-COMMITTEE CARDS
-==================================== */
-
-.committee-container{
-width:95%;
-max-width:1200px;
-margin:25px auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-padding:10px;
-}
-
-.committee-card{
-background:#ffffff;
-border-radius:18px;
-padding:25px 20px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.12);
-border-top:5px solid #0b6b2f;
-transition:.35s;
-}
-
-.committee-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,.18);
-}
-
-.member-icon{
-width:80px;
-height:80px;
-margin:0 auto 15px;
-background:linear-gradient(135deg,#0b6b2f,#1fa64a);
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:40px;
-color:#fff;
-}
-
-.committee-card h2{
-font-size:22px;
-color:#0b6b2f;
-margin-bottom:15px;
-}
-
-.committee-card p{
-font-size:15px;
-line-height:28px;
-color:#444;
-}
-
-.committee-card strong{
-color:#0b6b2f;
-}
-
-/* ====================================
-HOME BUTTON
-==================================== */
-
-.back-home{
-text-align:center;
-margin:35px 0;
+.logo-area p{
+    font-size:13px;
 }
 
 .home-btn{
-display:inline-block;
-padding:12px 30px;
-background:#0b6b2f;
-color:#fff;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-transition:.3s;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:25px;
+    font-weight:bold;
 }
 
-.home-btn:hover{
-background:#15803d;
-transform:scale(1.05);
+
+/* বাংলা পঞ্জিকা */
+
+.panchang{
+    width:94%;
+    max-width:900px;
+    margin:25px auto;
+    text-align:center;
 }
-/* ====================================
-FOOTER
-==================================== */
+
+.panchang > h1{
+    color:#7b1fa2;
+    margin-bottom:20px;
+}
+
+.month-box{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.month-box h2{
+    color:#c2185b;
+    font-size:28px;
+}
+
+.month-box p{
+    color:#777;
+    font-weight:bold;
+}
+
+.month-box button{
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:#7b1fa2;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+/* CALENDAR */
+
+.calendar{
+    background:white;
+    margin-top:15px;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+
+.week,
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+}
+
+.week div{
+    background:#7b1fa2;
+    color:white;
+    padding:8px 2px;
+    font-size:13px;
+    border-radius:6px;
+}
+
+.days{
+    margin-top:8px;
+}
+
+.days div{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff3e0;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.days .today{
+    background:#e65100;
+    color:white;
+}
+
+
+/* SECTION */
+
+.section{
+    width:94%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.section > h2{
+    text-align:center;
+    color:#7b1fa2;
+    margin-bottom:20px;
+}
+
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:22px 15px;
+    text-align:center;
+    border-radius:18px;
+    border-top:5px solid #c2185b;
+    box-shadow:0 5px 16px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:#7b1fa2;
+    margin:8px 0;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+
+/* FESTIVAL */
+
+.festival-list{
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 5px 16px rgba(0,0,0,.12);
+}
+
+.festival-item{
+    background:#fff3e0;
+    border-left:5px solid #e65100;
+    padding:12px;
+    margin-bottom:8px;
+    border-radius:8px;
+}
+
+.festival-item strong{
+    color:#7b1fa2;
+}
+
+
+/* FOOTER */
 
 .footer{
-background:linear-gradient(90deg,#0b6b2f,#15803d);
-color:#fff;
-text-align:center;
-padding:20px 15px;
-margin-top:40px;
+    margin-top:40px;
+    padding:30px 15px;
+    text-align:center;
+    background:linear-gradient(135deg,#4a148c,#c2185b);
+    color:white;
 }
 
 .footer p{
-margin:6px 0;
-font-size:14px;
+    margin:5px;
+    font-size:14px;
 }
 
-.developer{
-font-size:12px;
-opacity:.9;
-}
 
-/* ====================================
-SCROLLBAR
-==================================== */
+/* MOBILE */
 
-::-webkit-scrollbar{
-width:8px;
-}
+@media(max-width:700px){
 
-::-webkit-scrollbar-track{
-background:#e8e8e8;
-}
-
-::-webkit-scrollbar-thumb{
-background:#0b6b2f;
-border-radius:10px;
-}
-
-/* ====================================
-MOBILE RESPONSIVE
-==================================== */
-
-@media (max-width:768px){
-
-.banner{
-height:100px;
-}
-
-.title h1{
-font-size:24px;
-}
-
-.title p{
-font-size:13px;
-}
-
-.committee-container{
-grid-template-columns:1fr;
-width:94%;
-}
-
-.committee-card{
-padding:20px 15px;
-}
-
-.member-icon{
-width:65px;
-height:65px;
-font-size:32px;
-}
-
-.committee-card h2{
-font-size:20px;
-}
-
-.committee-card p{
-font-size:14px;
-line-height:24px;
-}
-
-.home-btn{
-width:90%;
-padding:14px;
-}
-
-.social img{
-width:30px;
-height:30px;
-}
-
-.live{
-font-size:12px;
-}
-
-}
-
-/* ====================================
-FADE ANIMATION
-==================================== */
-
-.committee-card{
-animation:fadeUp .6s ease;
-}
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(25px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
+    .top-header{
+        flex-direction:column;
+        gap:
