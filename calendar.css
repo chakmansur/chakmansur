@@ -328,3 +328,20 @@ body{
     }
 
 }
+.calendar-days div{
+    flex-direction:column;
+    gap:2px;
+}
+
+.calendar-days div strong{
+    font-size:16px;
+}
+
+.calendar-days div small{
+    font-size:11px;
+    color:#6a1b9a;
+}
+
+.calendar-days .today small{
+    color:white;
+}
