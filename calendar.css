@@ -8,14 +8,13 @@ body{
     font-family:Arial,sans-serif;
     background:#fff8e8;
     color:#222;
-    line-height:1.6;
 }
 
-/* HEADER */
+/* Header */
 
 .top-header{
-    background:linear-gradient(135deg,#7b1fa2,#c2185b);
-    color:#fff;
+    background:#7b1fa2;
+    color:white;
     padding:15px;
     display:flex;
     justify-content:space-between;
@@ -25,153 +24,223 @@ body{
 .logo-area{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
 .logo-area img{
-    width:58px;
-    height:58px;
+    width:55px;
+    height:55px;
     border-radius:50%;
-    background:#fff;
+    background:white;
 }
 
 .logo-area h2{
-    font-size:20px;
+    font-size:18px;
 }
 
 .logo-area p{
-    font-size:13px;
+    font-size:12px;
 }
 
 .home-btn{
-    color:#fff;
-    text-decoration:none;
     background:#ff9800;
-    padding:9px 16px;
-    border-radius:25px;
-    font-weight:bold;
-}
-
-
-/* HERO */
-
-.hero{
-    margin:15px;
-    padding:35px 15px;
-    text-align:center;
-    color:#fff;
+    color:white;
+    text-decoration:none;
+    padding:8px 14px;
     border-radius:20px;
-    background:linear-gradient(135deg,#e65100,#f9a825,#c2185b);
-    box-shadow:0 6px 20px rgba(0,0,0,.15);
-}
-
-.hero h1{
-    font-size:31px;
-    margin-bottom:8px;
-}
-
-.hero p{
-    font-size:15px;
 }
 
 
-/* PANCHANG */
+/* বাংলা পঞ্জিকা */
 
-.panchang-section{
+.panchang{
     width:94%;
     max-width:900px;
-    margin:30px auto;
+    margin:25px auto;
+    text-align:center;
 }
 
-.panchang-box{
-    background:#fff;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 6px 20px rgba(0,0,0,.15);
+.panchang h1{
+    color:#7b1fa2;
+    margin-bottom:15px;
 }
 
-.month-navigation{
+.month-box{
+    background:white;
+    padding:18px;
+    border-radius:18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    text-align:center;
-    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-.month-navigation h2{
-    color:#7b1fa2;
-    font-size:28px;
-}
-
-.month-navigation p{
+.month-box h2{
     color:#c2185b;
-    font-weight:bold;
+    font-size:26px;
 }
 
-.month-navigation button{
-    width:42px;
-    height:42px;
+.month-box p{
+    color:#555;
+    margin-top:3px;
+}
+
+.month-box button{
+    width:40px;
+    height:40px;
     border:0;
     border-radius:50%;
     background:#7b1fa2;
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
+    color:white;
+    font-size:17px;
 }
 
 
-/* PANCHANG INFO */
+/* Calendar */
 
-.panchang-info{
+.calendar{
+    background:white;
+    margin-top:15px;
+    padding:12px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.week,
+.days{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
 }
 
-.info-box{
-    text-align:center;
-    padding:16px 8px;
-    border-radius:15px;
+.week div{
+    background:#7b1fa2;
+    color:white;
+    padding:7px 2px;
+    font-size:12px;
+    border-radius:5px;
+}
+
+.days{
+    margin-top:5px;
+}
+
+.days div{
+    min-height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background:#fff3e0;
-    border-top:4px solid #e65100;
-}
-
-.info-box h3{
-    color:#7b1fa2;
-    margin:5px 0;
-}
-
-.info-box p{
-    font-size:14px;
-    color:#555;
+    border-radius:6px;
+    font-weight:bold;
 }
 
 
-/* SECTION */
+/* Sections */
 
 .section{
     width:94%;
     max-width:1100px;
-    margin:40px auto;
+    margin:35px auto;
 }
 
 .section h2{
     text-align:center;
     color:#7b1fa2;
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
 
-/* SHUBHO SOMOY */
+/* Cards */
 
-.auspicious-grid{
+.cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:15px;
 }
 
-.auspicious-card{
-    background:#fff;
-    padding:22px 15px;
+.card{
+    background:white;
+    padding:20px 12px;
     text-align:center;
-    border
+    border-radius:15px;
+    border-top:4px solid #c2185b;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:#7b1fa2;
+    margin:7px 0;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+
+/* Festival */
+
+.festival-list{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+}
+
+.festival-item{
+    background:#fff3e0;
+    padding:10px;
+    margin-bottom:7px;
+    border-left:4px solid #e65100;
+    border-radius:6px;
+}
+
+
+/* Footer */
+
+.footer{
+    margin-top:40px;
+    background:#4a148c;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+}
+
+.footer p{
+    margin:5px;
+    font-size:13px;
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .top-header{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .logo-area{
+        flex-direction:column;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .month-box h2{
+        font-size:22px;
+    }
+
+    .week div{
+        font-size:10px;
+    }
+
+    .days div{
+        min-height:40px;
+        font-size:13px;
+    }
+}
