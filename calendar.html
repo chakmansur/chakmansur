@@ -2,42 +2,138 @@
 <html lang="bn">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>📅 অনুষ্ঠান সূচি | চকমনসুর বানীশ্রী সংঘ</title>
+<title>📅 বাংলা ক্যালেন্ডার ও অনুষ্ঠান সূচি | চকমনসুর বানীশ্রী সংঘ</title>
 
 <link rel="stylesheet" href="calendar.css">
+
 <link rel="icon" href="images/favicon.png">
+
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="top-header">
 
     <div class="logo-area">
+
         <img src="images/logo.png" alt="Club Logo">
 
         <div>
+
             <h2>চকমনসুর বানীশ্রী সংঘ</h2>
+
             <p>প্রতিষ্ঠিত - ১৯৬৫</p>
+
         </div>
+
     </div>
 
-    <a href="index.html" class="home-btn">🏠 হোম</a>
+    <a href="index.html" class="home-btn">
+        🏠 হোম
+    </a>
 
 </header>
 
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
 <section class="hero">
 
-    <h1>📅 অনুষ্ঠান সূচি</h1>
+    <h1>📅 বাংলা ক্যালেন্ডার</h1>
 
     <p>
-        চকমনসুর বানীশ্রী সংঘের সকল অনুষ্ঠান,
-        উৎসব ও কর্মসূচির সময়সূচি
+        বাংলা তারিখ ও ইংরেজি তারিখ
     </p>
 
 </section>
+
+
+<!-- =========================
+     BANGLA CALENDAR
+========================= -->
+
+<section class="calendar-section">
+
+    <div class="calendar-box">
+
+        <div class="calendar-header">
+
+            <button id="prevMonth">
+                ◀
+            </button>
+
+            <div>
+
+                <h2 id="banglaMonth">
+                    বাংলা মাস
+                </h2>
+
+                <p id="englishMonth">
+                    English Month
+                </p>
+
+            </div>
+
+            <button id="nextMonth">
+                ▶
+            </button>
+
+        </div>
+
+
+        <div class="today-info">
+
+            <strong>
+                আজ
+            </strong>
+
+            <span id="todayBangla">
+                বাংলা তারিখ
+            </span>
+
+            <span id="todayEnglish">
+                ইংরেজি তারিখ
+            </span>
+
+        </div>
+
+
+        <div class="calendar-week">
+
+            <div>রবি</div>
+            <div>সোম</div>
+            <div>মঙ্গল</div>
+            <div>বুধ</div>
+            <div>বৃহস্পতি</div>
+            <div>শুক্র</div>
+            <div>শনি</div>
+
+        </div>
+
+
+        <div id="calendarDays" class="calendar-days">
+
+            <!-- JavaScript এখানে তারিখ তৈরি করবে -->
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     অনুষ্ঠান সূচি
+========================= -->
 
 <section class="section">
 
@@ -46,27 +142,45 @@
     <div class="card-grid">
 
         <div class="card">
+            🕉️
+            <h3>শিবরাত্রি</h3>
+            <p>বার্ষিক ধর্মীয় অনুষ্ঠান</p>
+        </div>
+
+        <div class="card">
             🪔
             <h3>দুর্গাপূজা</h3>
-            <p>অক্টোবর ২০২৬</p>
+            <p>বার্ষিক পূজা ও উৎসব</p>
         </div>
 
         <div class="card">
             🌺
             <h3>সরস্বতী পূজা</h3>
-            <p>ফেব্রুয়ারি ২০২৬</p>
+            <p>শিক্ষা ও সাংস্কৃতিক অনুষ্ঠান</p>
         </div>
 
         <div class="card">
-            🏏
-            <h3>বার্ষিক ক্রীড়া</h3>
-            <p>ডিসেম্বর ২০২৬</p>
+            🪔
+            <h3>কালীপূজা</h3>
+            <p>বার্ষিক পূজা ও উৎসব</p>
         </div>
 
         <div class="card">
-            🎭
-            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
-            <p>নাচ • গান • আবৃত্তি • নাটক</p>
+            🌼
+            <h3>লক্ষ্মীপূজা</h3>
+            <p>বার্ষিক পূজা</p>
+        </div>
+
+        <div class="card">
+            🩺
+            <h3>স্বাস্থ্য শিবির</h3>
+            <p>বিনামূল্যে স্বাস্থ্য পরীক্ষা</p>
+        </div>
+
+        <div class="card">
+            👁️
+            <h3>চোখ পরীক্ষা শিবির</h3>
+            <p>চক্ষু পরীক্ষা ও পরামর্শ</p>
         </div>
 
         <div class="card">
@@ -81,93 +195,72 @@
             <p>সবুজ পরিবেশ গড়ার উদ্যোগ</p>
         </div>
 
-    </div>
-
-</section>
-  
-<!DOCTYPE html>
-<html lang="bn">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>📅 অনুষ্ঠান সূচি | চকমনসুর বানীশ্রী সংঘ</title>
-
-<link rel="stylesheet" href="calendar.css">
-<link rel="icon" href="images/favicon.png">
-</head>
-
-<body>
-
-<header class="top-header">
-
-    <div class="logo-area">
-        <img src="images/logo.png" alt="Club Logo">
-
-        <div>
-            <h2>চকমনসুর বানীশ্রী সংঘ</h2>
-            <p>প্রতিষ্ঠিত - ১৯৬৫</p>
-        </div>
-    </div>
-
-    <a href="index.html" class="home-btn">🏠 হোম</a>
-
-</header>
-
-<section class="hero">
-
-    <h1>📅 অনুষ্ঠান সূচি</h1>
-
-    <p>
-        চকমনসুর বানীশ্রী সংঘের সকল অনুষ্ঠান,
-        উৎসব ও কর্মসূচির সময়সূচি
-    </p>
-
-</section>
-
-<section class="section">
-
-    <h2>🎉 অনুষ্ঠান সূচি</h2>
-
-    <div class="card-grid">
-
-        <div class="card">
-            🪔
-            <h3>দুর্গাপূজা</h3>
-            <p>অক্টোবর ২০২৬</p>
-        </div>
-
-        <div class="card">
-            🌺
-            <h3>সরস্বতী পূজা</h3>
-            <p>ফেব্রুয়ারি ২০২৬</p>
-        </div>
-
         <div class="card">
             🏏
             <h3>বার্ষিক ক্রীড়া</h3>
-            <p>ডিসেম্বর ২০২৬</p>
+            <p>ক্রিকেট, ফুটবল ও অন্যান্য খেলা</p>
         </div>
 
         <div class="card">
             🎭
             <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
-            <p>নাচ • গান • আবৃত্তি • নাটক</p>
-        </div>
-
-        <div class="card">
-            🩸
-            <h3>রক্তদান শিবির</h3>
-            <p>স্বেচ্ছায় রক্তদান কর্মসূচি</p>
-        </div>
-
-        <div class="card">
-            🌳
-            <h3>বৃক্ষরোপণ অভিযান</h3>
-            <p>সবুজ পরিবেশ গড়ার উদ্যোগ</p>
+            <p>নাচ, গান, আবৃত্তি ও নাটক</p>
         </div>
 
     </div>
 
 </section>
+<!-- =========================
+     IMPORTANT NOTICE
+========================= -->
+
+<section class="section">
+
+    <h2>📢 গুরুত্বপূর্ণ বিজ্ঞপ্তি</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            📌
+            <h3>নতুন বিজ্ঞপ্তি</h3>
+            <p>ক্লাবের নতুন বিজ্ঞপ্তি এখানে প্রকাশ করা হবে।</p>
+        </div>
+
+        <div class="card">
+            📅
+            <h3>আগামী অনুষ্ঠান</h3>
+            <p>অনুষ্ঠানের তারিখ ও সময় এখানে আপডেট করা হবে।</p>
+        </div>
+
+        <div class="card">
+            🎯
+            <h3>বিশেষ ঘোষণা</h3>
+            <p>ক্লাবের বিশেষ ঘোষণা এখানে প্রকাশ করা হবে।</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <h3>📅 অনুষ্ঠান সূচি</h3>
+
+    <p>চকমনসুর বানীশ্রী সংঘ</p>
+
+    <p>প্রতিষ্ঠিত - ১৯৬৫</p>
+
+    <p>© 2026 All Rights Reserved</p>
+
+    <p>Developed & Maintained by DEBU</p>
+
+</footer>
+
+
+</body>
+</html>
