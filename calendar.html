@@ -5,177 +5,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>📅 বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
+<title>বাংলা পঞ্জিকা</title>
 
-<link rel="icon" href="images/favicon.png">
-
-<style>
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#fff8e8;
-    color:#222;
-}
-
-/* Header */
-
-.header{
-    background:#7b1fa2;
-    color:white;
-    text-align:center;
-    padding:18px 10px;
-}
-
-.header h1{
-    margin:0;
-    font-size:24px;
-}
-
-.header p{
-    margin:6px 0 0;
-    font-size:14px;
-}
-
-.home{
-    display:inline-block;
-    margin-top:12px;
-    background:#ff9800;
-    color:white;
-    text-decoration:none;
-    padding:8px 16px;
-    border-radius:20px;
-}
-
-
-/* Calendar */
-
-.calendar{
-    width:95%;
-    max-width:700px;
-    margin:22px auto;
-}
-
-.month{
-    background:white;
-    padding:18px;
-    text-align:center;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.15);
-}
-
-.month h2{
-    margin:0;
-    color:#c2185b;
-    font-size:26px;
-}
-
-.month p{
-    margin:6px 0 0;
-    color:#666;
-}
-
-
-/* Week */
-
-.week{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:4px;
-    margin-top:15px;
-}
-
-.week div{
-    background:#7b1fa2;
-    color:white;
-    text-align:center;
-    padding:9px 2px;
-    border-radius:5px;
-    font-size:12px;
-}
-
-
-/* Days */
-
-.days{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:4px;
-    margin-top:5px;
-}
-
-.days div{
-    background:white;
-    min-height:55px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:6px;
-    font-size:16px;
-    font-weight:bold;
-    box-shadow:0 1px 4px rgba(0,0,0,.08);
-}
-
-
-/* Important dates */
-
-.special{
-    background:#ffe082 !important;
-    color:#b71c1c;
-}
-
-
-/* Footer */
-
-.footer{
-    margin-top:35px;
-    background:#4a148c;
-    color:white;
-    text-align:center;
-    padding:22px 10px;
-}
-
-.footer p{
-    margin:5px;
-    font-size:13px;
-}
-
-
-/* Mobile */
-
-@media(max-width:500px){
-
-    .header h1{
-        font-size:21px;
-    }
-
-    .month h2{
-        font-size:22px;
-    }
-
-    .week div{
-        font-size:9px;
-    }
-
-    .days div{
-        min-height:45px;
-        font-size:13px;
-    }
-
-}
-
-</style>
+<link rel="stylesheet" href="calendar.css">
 
 </head>
 
 <body>
 
-
-<header class="header">
+<header class="calendar-header">
 
     <h1>📅 বাংলা পঞ্জিকা</h1>
 
@@ -183,87 +21,158 @@ body{
 
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
-    <a href="index.html" class="home">🏠 হোম</a>
+    <a href="index.html" class="home-btn">🏠 হোম</a>
 
 </header>
 
 
-<main class="calendar">
+<main>
 
-    <div class="month">
+    <!-- Calendar -->
 
-        <h2>শ্রাবণ ১৪৩৩ বঙ্গাব্দ</h2>
+    <section class="calendar-container">
 
-        <p>বাংলা মাসের পঞ্জিকা</p>
+        <div class="calendar-title">
 
-    </div>
+            <button id="prevMonth">◀</button>
+
+            <div class="month-name">
+
+                <h2 id="monthName">বৈশাখ</h2>
+
+                <p id="yearName">১৪৩৩ বঙ্গাব্দ</p>
+
+            </div>
+
+            <button id="nextMonth">▶</button>
+
+        </div>
 
 
-    <div class="week">
+        <!-- Today's Bengali date -->
 
-        <div>রবি</div>
-        <div>সোম</div>
-        <div>মঙ্গল</div>
-        <div>বুধ</div>
-        <div>বৃহস্পতি</div>
-        <div>শুক্র</div>
-        <div>শনি</div>
+        <div class="today-box">
 
-    </div>
+            <h3>🌞 আজকের বাংলা তারিখ</h3>
+
+            <p id="todayDate">লোড হচ্ছে...</p>
+
+        </div>
 
 
-    <div class="days">
+        <!-- Week -->
 
-        <div>১</div>
-        <div>২</div>
-        <div>৩</div>
-        <div>৪</div>
-        <div>৫</div>
-        <div>৬</div>
-        <div>৭</div>
+        <div class="week">
 
-        <div>৮</div>
-        <div>৯</div>
-        <div>১০</div>
-        <div>১১</div>
-        <div>১২</div>
-        <div>১৩</div>
-        <div>১৪</div>
+            <div>রবি</div>
+            <div>সোম</div>
+            <div>মঙ্গল</div>
+            <div>বুধ</div>
+            <div>বৃহস্পতি</div>
+            <div>শুক্র</div>
+            <div>শনি</div>
 
-        <div>১৫</div>
-        <div>১৬</div>
-        <div>১৭</div>
-        <div>১৮</div>
-        <div>১৯</div>
-        <div>২০</div>
-        <div>২১</div>
+        </div>
 
-        <div>২২</div>
-        <div>২৩</div>
-        <div>২৪</div>
-        <div>২৫</div>
-        <div>২৬</div>
-        <div>২৭</div>
-        <div>২৮</div>
 
-        <div>২৯</div>
-        <div>৩০</div>
+        <!-- Dates -->
 
-    </div>
+        <div id="calendarDays" class="calendar-days">
+
+        </div>
+
+    </section>
+
+
+    <!-- This month's summary -->
+
+    <section class="summary-section">
+
+        <h2>🌸 এই মাসের সারাংশ</h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-card">
+                💍
+                <h3>বিবাহ</h3>
+                <p>শুভ দিন</p>
+            </div>
+
+            <div class="summary-card">
+                🍚
+                <h3>অন্নপ্রাশন</h3>
+                <p>শুভ দিন</p>
+            </div>
+
+            <div class="summary-card">
+                🏠
+                <h3>গৃহপ্রবেশ</h3>
+                <p>শুভ দিন</p>
+            </div>
+
+            <div class="summary-card">
+                ✍️
+                <h3>নামকরণ</h3>
+                <p>শুভ দিন</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Events -->
+
+    <section class="event-section">
+
+        <h2>🎉 অনুষ্ঠান সূচি</h2>
+
+        <div class="event-grid">
+
+            <div class="event-card">
+                🕉️
+                <h3>শিবরাত্রি</h3>
+            </div>
+
+            <div class="event-card">
+                🪔
+                <h3>কালীপূজা</h3>
+            </div>
+
+            <div class="event-card">
+                🌼
+                <h3>লক্ষ্মীপূজা</h3>
+            </div>
+
+            <div class="event-card">
+                🩺
+                <h3>স্বাস্থ্য শিবির</h3>
+            </div>
+
+            <div class="event-card">
+                👁️
+                <h3>চক্ষু পরীক্ষা</h3>
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 
 <footer class="footer">
 
-    <p>📅 বাংলা পঞ্জিকা</p>
-
     <p>চকমনসুর বানীশ্রী সংঘ</p>
+
+    <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
     <p>© 2026 All Rights Reserved</p>
 
 </footer>
 
+
+<script src="calendar.js"></script>
 
 </body>
 
