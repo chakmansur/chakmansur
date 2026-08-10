@@ -1,7 +1,18 @@
 <!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>আবহাওয়া | চকমনসুর বানীশ্রী সংঘ</title><link rel="stylesheet" href="weather.css"><link rel="icon" href="images/favicon.png"></head><body><!-- HEADER --><header class="weather-header"><div class="club-area">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <img src="images/logo.png" alt="চকমনসুর বানীশ্রী সংঘ">
+<title>আবহাওয়া | চকমনসুর বানীশ্রী সংঘ</title>
+
+<link rel="stylesheet" href="weather.css">
+
+<link rel="icon" href="images/favicon.png">
+
+</head><body><!-- ================= HEADER ================= --><header class="weather-header"><div class="club-info">
+
+    <img
+        src="images/logo.png"
+        alt="চকমনসুর বানীশ্রী সংঘ"
+    >
 
     <div>
 
@@ -13,11 +24,12 @@
 
 </div>
 
+
 <a href="index.html" class="home-btn">
     🏠 হোম
 </a>
 
-</header><!-- WEATHER HERO --><section class="weather-title"><div class="weather-title-icon">
+</header><!-- ================= HERO ================= --><section class="weather-hero"><div class="hero-icon">
     🌦️
 </div>
 
@@ -28,20 +40,38 @@
 </p>
 
 <span>
-    আজকের আবহাওয়া • বৃষ্টি • তাপমাত্রা • পূর্বাভাস
+    ☀️ তাপমাত্রা • 🌧️ বৃষ্টি • 💨 বাতাস • 🌤️ পূর্বাভাস
 </span>
 
-</section><!-- QUICK MENU --><nav class="weather-menu"><a href="#medinipur">📍 মেদিনীপুর</a>
+</section><!-- ================= QUICK MENU ================= --><nav class="weather-menu"><a href="#medinipur">
+    📍 মেদিনীপুর
+</a>
 
-<a href="#keshpur">📍 কেশপুর</a>
+<a href="#keshpur">
+    📍 কেশপুর
+</a>
 
-<a href="#video">📺 ভিডিও</a>
+<a href="#weather-info">
+    🌡️ তথ্য
+</a>
 
-</nav><!-- WEATHER CARDS --><section class="weather-section"><div class="section-heading">
+<a href="#weather-video">
+    📺 ভিডিও
+</a>
+
+</nav><!-- ================= LOCAL WEATHER ================= --><main><section class="weather-section"><div class="section-title">
 
     <span>🌤️</span>
 
-    <h2>স্থানীয় আবহাওয়া</h2>
+    <div>
+
+        <h2>স্থানীয় আবহাওয়া</h2>
+
+        <p>
+            পশ্চিম মেদিনীপুরের গুরুত্বপূর্ণ এলাকার আবহাওয়া
+        </p>
+
+    </div>
 
 </div>
 
@@ -51,92 +81,92 @@
 
     <!-- MEDINIPUR -->
 
-    <div class="weather-box" id="medinipur">
+    <article class="weather-card" id="medinipur">
 
-        <div class="weather-box-top">
+        <div class="card-top">
 
             <div class="weather-icon">
                 🌦️
             </div>
 
-            <span class="location-tag">
+            <span class="district">
                 পশ্চিম মেদিনীপুর
             </span>
 
         </div>
 
-        <h2>
+        <h3>
             📍 মেদিনীপুর
-        </h2>
+        </h3>
 
         <p>
             মেদিনীপুরের আজকের আবহাওয়া,
-            তাপমাত্রা, বৃষ্টি ও বিস্তারিত পূর্বাভাস।
+            তাপমাত্রা, বৃষ্টি এবং বিস্তারিত পূর্বাভাস।
         </p>
 
         <a
             href="https://www.accuweather.com/bn/in/medinipur/196592/weather-forecast/196592"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="weather-btn"
         >
             🌤️ আবহাওয়া দেখুন
-            <span>→</span>
+            <b>→</b>
         </a>
 
-    </div>
+    </article>
 
 
     <!-- KESHPUR -->
 
-    <div class="weather-box" id="keshpur">
+    <article class="weather-card" id="keshpur">
 
-        <div class="weather-box-top">
+        <div class="card-top">
 
             <div class="weather-icon">
                 🌧️
             </div>
 
-            <span class="location-tag">
+            <span class="district">
                 পশ্চিম মেদিনীপুর
             </span>
 
         </div>
 
-        <h2>
+        <h3>
             📍 কেশপুর
-        </h2>
+        </h3>
 
         <p>
             কেশপুরের আজকের আবহাওয়া,
-            তাপমাত্রা, বৃষ্টি ও বিস্তারিত পূর্বাভাস।
+            তাপমাত্রা, বৃষ্টি এবং বিস্তারিত পূর্বাভাস।
         </p>
 
         <a
             href="https://www.accuweather.com/bn/in/keshpur/2877600/weather-forecast/2877600"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="weather-btn"
         >
             🌧️ আবহাওয়া দেখুন
-            <span>→</span>
+            <b>→</b>
         </a>
 
-    </div>
+    </article>
 
 
 </div>
 
-</section><!-- WEATHER INFORMATION --><section class="weather-info"><div class="info-card">
+</section><!-- ================= WEATHER INFORMATION ================= --><section class="weather-info-section" id="weather-info"><div class="section-title">
 
     <span>🌡️</span>
 
     <div>
 
-        <h3>তাপমাত্রা</h3>
+        <h2>আবহাওয়ার তথ্য</h2>
 
         <p>
-            আজকের তাপমাত্রার আপডেট দেখুন
+            আবহাওয়ার গুরুত্বপূর্ণ তথ্য
         </p>
 
     </div>
@@ -144,45 +174,50 @@
 </div>
 
 
-<div class="info-card">
+<div class="info-grid">
 
-    <span>🌧️</span>
+    <div class="info-card">
 
-    <div>
+        <div>🌡️</div>
+
+        <h3>তাপমাত্রা</h3>
+
+        <p>
+            আজকের তাপমাত্রার আপডেট
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div>🌧️</div>
 
         <h3>বৃষ্টির সম্ভাবনা</h3>
 
         <p>
-            বৃষ্টি ও বজ্রপাতের পূর্বাভাস দেখুন
+            বৃষ্টি ও বজ্রপাতের পূর্বাভাস
         </p>
 
     </div>
 
-</div>
 
+    <div class="info-card">
 
-<div class="info-card">
-
-    <span>💨</span>
-
-    <div>
+        <div>💨</div>
 
         <h3>বাতাস</h3>
 
         <p>
-            বাতাসের গতি ও দিকের তথ্য
+            বাতাসের গতি ও দিক
         </p>
 
     </div>
 
-</div>
 
+    <div class="info-card">
 
-<div class="info-card">
-
-    <span>☀️</span>
-
-    <div>
+        <div>☀️</div>
 
         <h3>দিনের পূর্বাভাস</h3>
 
@@ -194,7 +229,7 @@
 
 </div>
 
-</section><!-- YOUTUBE --><section class="weather-youtube" id="video"><div class="youtube-icon">
+</section><!-- ================= YOUTUBE ================= --><section class="weather-video" id="weather-video"><div class="youtube-icon">
     ▶️
 </div>
 
@@ -203,20 +238,19 @@
 </h2>
 
 <p>
-    প্রতিদিনের আবহাওয়ার খবর,
-    বৃষ্টি ও স্থানীয় আবহাওয়ার ভিডিও আপডেট।
+    প্রতিদিনের আবহাওয়ার খবর ও স্থানীয় আবহাওয়ার ভিডিও আপডেট।
 </p>
 
 <a
     href="https://youtube.com/@livebong?si=ixyLyxcK09oa7VxG"
     target="_blank"
-    rel="noopener"
+    rel="noopener noreferrer"
     class="youtube-btn"
 >
-    ▶️ আবহাওয়ার ভিডিও দেখুন
+    ▶️ ভিডিও আপডেট দেখুন
 </a>
 
-</section><!-- FOOTER --><footer class="weather-footer"><h3>
+</section></main><!-- ================= FOOTER ================= --><footer class="weather-footer"><h3>
     চকমনসুর বানীশ্রী সংঘ
 </h3>
 
