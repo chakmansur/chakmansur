@@ -1,7 +1,7 @@
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
@@ -10,118 +10,125 @@ body{
     color:#222;
 }
 
-.calendar-header{
+
+/* Header */
+
+.header{
     background:#7b1fa2;
-    color:#fff;
+    color:white;
     text-align:center;
     padding:20px 10px;
 }
 
-.calendar-header h1{
+.header h1{
     font-size:25px;
     margin-bottom:6px;
 }
 
-.calendar-header p{
+.header p{
     font-size:14px;
     margin:4px 0;
 }
 
-.home-btn{
+.header a{
     display:inline-block;
     margin-top:10px;
     padding:8px 18px;
     background:#ff9800;
-    color:#fff;
+    color:white;
     text-decoration:none;
     border-radius:20px;
 }
 
-.calendar-container{
+
+/* Today's date */
+
+.today{
     width:95%;
     max-width:700px;
-    margin:22px auto;
-}
-
-.calendar-title{
-    background:#fff;
-    padding:15px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    box-shadow:0 3px 12px rgba(0,0,0,.15);
-}
-
-.calendar-title button{
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    background:#7b1fa2;
-    color:#fff;
-    font-size:18px;
-}
-
-.month-name{
-    text-align:center;
-}
-
-.month-name h2{
-    color:#c2185b;
-    font-size:25px;
-}
-
-.month-name p{
-    margin-top:5px;
-    color:#666;
-}
-
-
-/* আজকের তারিখ */
-
-.today-box{
-    background:#fff;
-    margin-top:12px;
+    margin:20px auto 12px;
     padding:18px 10px;
+    background:white;
     text-align:center;
     border:2px solid #ff9800;
     border-radius:15px;
     box-shadow:0 3px 12px rgba(0,0,0,.12);
 }
 
-.today-label{
-    font-size:16px;
-    font-weight:bold;
+.today h2{
     color:#7b1fa2;
+    font-size:18px;
     margin-bottom:8px;
 }
 
-.today-date{
-    font-size:25px;
-    font-weight:bold;
+#todayDate{
     color:#c2185b;
+    font-size:24px;
+    font-weight:bold;
 }
 
-.today-english{
-    margin-top:7px;
-    font-size:14px;
+#todayEnglish{
     color:#666;
+    font-size:14px;
+    margin-top:6px;
 }
 
 
-/* সপ্তাহ */
+/* Calendar */
+
+.calendar{
+    width:95%;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.month-header{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.month-header button{
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:#7b1fa2;
+    color:white;
+    font-size:18px;
+}
+
+.month-header div{
+    text-align:center;
+}
+
+#monthName{
+    color:#c2185b;
+    font-size:25px;
+}
+
+#yearName{
+    color:#666;
+    margin-top:4px;
+}
+
+
+/* Week */
 
 .week{
     display:grid;
     grid-template-columns:repeat(7,1fr);
     gap:4px;
-    margin-top:16px;
+    margin-top:15px;
 }
 
 .week div{
     background:#7b1fa2;
-    color:#fff;
+    color:white;
     text-align:center;
     padding:10px 2px;
     border-radius:5px;
@@ -130,140 +137,7 @@ body{
 }
 
 
-/* তারিখ */
+/* Days */
 
-.calendar-days{
+.days{
     display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:4px;
-    margin-top:5px;
-}
-
-.calendar-days div{
-    min-height:55px;
-    background:#fff;
-    border:1px solid #eadfce;
-    border-radius:6px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.calendar-days div.today{
-    background:#ff9800;
-    color:#fff;
-    border:2px solid #e65100;
-}
-
-
-/* সারাংশ */
-
-.summary-section,
-.event-section{
-    width:95%;
-    max-width:700px;
-    margin:32px auto;
-}
-
-.summary-section h2,
-.event-section h2{
-    text-align:center;
-    color:#7b1fa2;
-    margin-bottom:16px;
-}
-
-.summary-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.summary-card{
-    background:#fff;
-    text-align:center;
-    padding:18px 8px;
-    border-radius:12px;
-    border-top:4px solid #c2185b;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-.summary-card h3{
-    color:#7b1fa2;
-    margin:7px 0;
-}
-
-.summary-card p{
-    color:#666;
-    font-size:13px;
-}
-
-
-/* অনুষ্ঠান */
-
-.event-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.event-card{
-    background:#fff;
-    text-align:center;
-    padding:18px 8px;
-    border-radius:12px;
-    border-top:4px solid #ff9800;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-.event-card h3{
-    color:#7b1fa2;
-    margin-top:7px;
-}
-
-
-/* Footer */
-
-.footer{
-    margin-top:35px;
-    padding:22px 10px;
-    background:#4a148c;
-    color:#fff;
-    text-align:center;
-}
-
-.footer p{
-    margin:5px;
-    font-size:13px;
-}
-
-
-/* Mobile */
-
-@media(max-width:500px){
-
-    .calendar-header h1{
-        font-size:22px;
-    }
-
-    .month-name h2{
-        font-size:21px;
-    }
-
-    .calendar-title button{
-        width:38px;
-        height:38px;
-    }
-
-    .week div{
-        font-size:9px;
-        padding:9px 1px;
-    }
-
-    .calendar-days div{
-        min-height:45px;
-        font-size:14px;
-    }
-
-}
