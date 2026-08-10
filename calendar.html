@@ -18,7 +18,6 @@
     <h1>📅 বাংলা পঞ্জিকা</h1>
 
     <p>চকমনসুর বানীশ্রী সংঘ</p>
-
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
     <a href="index.html" class="home-btn">🏠 হোম</a>
@@ -28,135 +27,119 @@
 
 <main>
 
-    <!-- Calendar -->
+<section class="calendar-container">
 
-    <section class="calendar-container">
+    <div class="calendar-title">
 
-        <div class="calendar-title">
+        <button id="prevMonth">◀</button>
 
-            <button id="prevMonth">◀</button>
+        <div class="month-name">
 
-            <div class="month-name">
+            <h2 id="monthName">বৈশাখ</h2>
 
-                <h2 id="monthName">বৈশাখ</h2>
-
-                <p id="yearName">১৪৩৩ বঙ্গাব্দ</p>
-
-            </div>
-
-            <button id="nextMonth">▶</button>
+            <p id="yearName">১৪৩৩ বঙ্গাব্দ</p>
 
         </div>
 
+        <button id="nextMonth">▶</button>
 
-        <!-- Today's Bengali date -->
+    </div>
 
-        <div class="today-box">
 
-            <h3>🌞 আজকের বাংলা তারিখ</h3>
+    <div class="today-box">
 
-            <p id="todayDate">লোড হচ্ছে...</p>
-
+        <div class="today-label">
+            🌞 আজকের বাংলা তারিখ
         </div>
 
-
-        <!-- Week -->
-
-        <div class="week">
-
-            <div>রবি</div>
-            <div>সোম</div>
-            <div>মঙ্গল</div>
-            <div>বুধ</div>
-            <div>বৃহস্পতি</div>
-            <div>শুক্র</div>
-            <div>শনি</div>
-
+        <div id="todayDate" class="today-date">
+            লোড হচ্ছে...
         </div>
 
-
-        <!-- Dates -->
-
-        <div id="calendarDays" class="calendar-days">
-
+        <div id="todayEnglish" class="today-english">
+            লোড হচ্ছে...
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- This month's summary -->
+    <div class="week">
 
-    <section class="summary-section">
+        <div>রবি</div>
+        <div>সোম</div>
+        <div>মঙ্গল</div>
+        <div>বুধ</div>
+        <div>বৃহস্পতি</div>
+        <div>শুক্র</div>
+        <div>শনি</div>
 
-        <h2>🌸 এই মাসের সারাংশ</h2>
+    </div>
 
-        <div class="summary-grid">
 
-            <div class="summary-card">
-                💍
-                <h3>বিবাহ</h3>
-                <p>শুভ দিন</p>
-            </div>
+    <div id="calendarDays" class="calendar-days"></div>
 
-            <div class="summary-card">
-                🍚
-                <h3>অন্নপ্রাশন</h3>
-                <p>শুভ দিন</p>
-            </div>
+</section>
 
-            <div class="summary-card">
-                🏠
-                <h3>গৃহপ্রবেশ</h3>
-                <p>শুভ দিন</p>
-            </div>
 
-            <div class="summary-card">
-                ✍️
-                <h3>নামকরণ</h3>
-                <p>শুভ দিন</p>
-            </div>
+<section class="summary-section">
 
+    <h2>🌸 এই মাসের সারাংশ</h2>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            💍
+            <h3>বিবাহ</h3>
+            <p>শুভ দিন</p>
         </div>
 
-    </section>
-
-
-    <!-- Events -->
-
-    <section class="event-section">
-
-        <h2>🎉 অনুষ্ঠান সূচি</h2>
-
-        <div class="event-grid">
-
-            <div class="event-card">
-                🕉️
-                <h3>শিবরাত্রি</h3>
-            </div>
-
-            <div class="event-card">
-                🪔
-                <h3>কালীপূজা</h3>
-            </div>
-
-            <div class="event-card">
-                🌼
-                <h3>লক্ষ্মীপূজা</h3>
-            </div>
-
-            <div class="event-card">
-                🩺
-                <h3>স্বাস্থ্য শিবির</h3>
-            </div>
-
-            <div class="event-card">
-                👁️
-                <h3>চক্ষু পরীক্ষা</h3>
-            </div>
-
+        <div class="summary-card">
+            🍚
+            <h3>অন্নপ্রাশন</h3>
+            <p>শুভ দিন</p>
         </div>
 
-    </section>
+        <div class="summary-card">
+            🏠
+            <h3>গৃহপ্রবেশ</h3>
+            <p>শুভ দিন</p>
+        </div>
+
+        <div class="summary-card">
+            ✍️
+            <h3>নামকরণ</h3>
+            <p>শুভ দিন</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="event-section">
+
+    <h2>🎉 অনুষ্ঠান সূচি</h2>
+
+    <div class="event-grid">
+
+        <div class="event-card">
+            🕉️
+            <h3>শিবরাত্রি</h3>
+        </div>
+
+        <div class="event-card">
+            🪔
+            <h3>কালীপূজা</h3>
+        </div>
+
+        <div class="event-card">
+            🌼
+            <h3>লক্ষ্মীপূজা</h3>
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
@@ -164,10 +147,7 @@
 <footer class="footer">
 
     <p>চকমনসুর বানীশ্রী সংঘ</p>
-
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
-
-    <p>© 2026 All Rights Reserved</p>
 
 </footer>
 
