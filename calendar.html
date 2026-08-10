@@ -1,1 +1,260 @@
+<!DOCTYPE html>
+<html lang="bn">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
+
+<link rel="stylesheet" href="calendar.css">
+<link rel="icon" href="images/favicon.png">
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Club Logo">
+
+        <div>
+            <h2>চকমনসুর বানীশ্রী সংঘ</h2>
+            <p>প্রতিষ্ঠিত - ১৯৬৫</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="home-btn">🏠 হোম</a>
+
+</header>
+
+
+<!-- ========================= -->
+<!-- বাংলা পঞ্জিকা -->
+<!-- ========================= -->
+
+<section class="panchang">
+
+    <h1>📅 বাংলা পঞ্জিকা</h1>
+
+    <div class="month-control">
+
+        <button id="prevMonth">◀</button>
+
+        <div>
+            <h2 id="monthName">বাংলা মাস</h2>
+            <p id="yearName">বঙ্গাব্দ</p>
+        </div>
+
+        <button id="nextMonth">▶</button>
+
+    </div>
+
+
+    <!-- আজকের তারিখ -->
+
+    <div class="today-box">
+
+        <h3>আজকের বাংলা তারিখ</h3>
+
+        <p id="todayBanglaDate">
+            বাংলা তারিখ লোড হচ্ছে...
+        </p>
+
+        <p id="todayTithi">
+            তিথি লোড হচ্ছে...
+        </p>
+
+    </div>
+
+
+    <!-- Calendar -->
+
+    <div class="calendar-box">
+
+        <div class="week">
+
+            <div>রবি</div>
+            <div>সোম</div>
+            <div>মঙ্গল</div>
+            <div>বুধ</div>
+            <div>বৃহস্পতি</div>
+            <div>শুক্র</div>
+            <div>শনি</div>
+
+        </div>
+
+        <div id="calendarDays" class="calendar-days">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- এই মাসের সারাংশ -->
+<!-- ========================= -->
+
+<section class="section">
+
+    <h2>🌸 এই মাসের সারাংশ</h2>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            💍
+            <h3>বিবাহ</h3>
+            <p id="bibaha">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+        <div class="summary-card">
+            🍚
+            <h3>অন্নপ্রাশন</h3>
+            <p id="annaprashan">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+        <div class="summary-card">
+            🏠
+            <h3>গৃহপ্রবেশ</h3>
+            <p id="grihapravesh">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+        <div class="summary-card">
+            ✍️
+            <h3>নামকরণ</h3>
+            <p id="namakaran">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+        <div class="summary-card">
+            📚
+            <h3>বিদ্যারম্ভ</h3>
+            <p id="vidyarambh">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+        <div class="summary-card">
+            🚗
+            <h3>যানবাহন ক্রয়</h3>
+            <p id="vehicle">তথ্য লোড হচ্ছে...</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- এই মাসের তিথি ও উৎসব -->
+<!-- ========================= -->
+
+<section class="section">
+
+    <h2>🪔 এই মাসের তিথি ও উৎসব</h2>
+
+    <div id="festivalList" class="festival-list">
+
+        <p>তথ্য লোড হচ্ছে...</p>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- অনুষ্ঠান সূচি -->
+<!-- ========================= -->
+
+<section class="section">
+
+    <h2>🎉 অনুষ্ঠান সূচি</h2>
+
+    <div class="event-grid">
+
+        <div class="event-card">
+            🕉️
+            <h3>শিবরাত্রি</h3>
+            <p>বার্ষিক ধর্মীয় অনুষ্ঠান</p>
+        </div>
+
+        <div class="event-card">
+            🪔
+            <h3>কালীপূজা</h3>
+            <p>বার্ষিক পূজা</p>
+        </div>
+
+        <div class="event-card">
+            🌼
+            <h3>লক্ষ্মীপূজা</h3>
+            <p>বার্ষিক পূজা</p>
+        </div>
+
+        <div class="event-card">
+            🌺
+            <h3>সরস্বতী পূজা</h3>
+            <p>বার্ষিক পূজা</p>
+        </div>
+
+        <div class="event-card">
+            🩺
+            <h3>স্বাস্থ্য শিবির</h3>
+            <p>স্বাস্থ্য পরীক্ষা কর্মসূচি</p>
+        </div>
+
+        <div class="event-card">
+            👁️
+            <h3>চক্ষু পরীক্ষা</h3>
+            <p>চোখ পরীক্ষা শিবির</p>
+        </div>
+
+        <div class="event-card">
+            🩸
+            <h3>রক্তদান শিবির</h3>
+            <p>স্বেচ্ছায় রক্তদান কর্মসূচি</p>
+        </div>
+
+        <div class="event-card">
+            🌳
+            <h3>বৃক্ষরোপণ</h3>
+            <p>সবুজ পরিবেশ গড়ার উদ্যোগ</p>
+        </div>
+
+        <div class="event-card">
+            🏏
+            <h3>বার্ষিক ক্রীড়া</h3>
+            <p>ক্রীড়া প্রতিযোগিতা</p>
+        </div>
+
+        <div class="event-card">
+            🎭
+            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+            <p>নাচ, গান, আবৃত্তি ও নাটক</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+<footer class="footer">
+
+    <p>চকমনসুর বানীশ্রী সংঘ</p>
+
+    <p>প্রতিষ্ঠিত - ১৯৬৫</p>
+
+    <p>© 2026 All Rights Reserved</p>
+
+    <p>Developed & Maintained by DEBU</p>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="./calendar.js"></script>
+
+</body>
+</html>
