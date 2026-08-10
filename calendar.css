@@ -10,134 +10,231 @@ body{
     color:#222;
 }
 
-
 /* Header */
 
-.header{
-    background:#7b1fa2;
+.calendar-header{
+    background:linear-gradient(135deg,#7b1fa2,#4a148c);
     color:white;
     text-align:center;
-    padding:20px 10px;
+    padding:22px 10px;
 }
 
-.header h1{
-    font-size:25px;
-    margin-bottom:6px;
+.calendar-header h1{
+    font-size:27px;
+    margin-bottom:7px;
 }
 
-.header p{
+.calendar-header p{
     font-size:14px;
     margin:4px 0;
 }
 
-.header a{
+.home-btn{
     display:inline-block;
-    margin-top:10px;
-    padding:8px 18px;
+    margin-top:12px;
+    padding:9px 20px;
     background:#ff9800;
     color:white;
     text-decoration:none;
-    border-radius:20px;
+    border-radius:25px;
 }
 
 
-/* Today's date */
+/* Main */
 
-.today{
+.calendar-page{
     width:95%;
-    max-width:700px;
-    margin:20px auto 12px;
-    padding:18px 10px;
-    background:white;
-    text-align:center;
-    border:2px solid #ff9800;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-}
-
-.today h2{
-    color:#7b1fa2;
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-#todayDate{
-    color:#c2185b;
-    font-size:24px;
-    font-weight:bold;
-}
-
-#todayEnglish{
-    color:#666;
-    font-size:14px;
-    margin-top:6px;
+    max-width:750px;
+    margin:25px auto;
 }
 
 
-/* Calendar */
+/* Bengali Panjika */
 
-.calendar{
-    width:95%;
-    max-width:700px;
-    margin:0 auto;
+.panji-section{
+    margin-bottom:30px;
 }
 
-.month-header{
-    background:white;
-    padding:15px;
-    border-radius:15px;
+.panji-tab{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    gap:18px;
+
+    background:white;
+    text-decoration:none;
+    color:#222;
+
+    padding:22px 18px;
+
+    border-radius:18px;
+
+    border:3px solid #8e24aa;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+
+    transition:.2s;
 }
 
-.month-header button{
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    background:#7b1fa2;
-    color:white;
-    font-size:18px;
+.panji-tab:hover{
+    transform:translateY(-2px);
 }
 
-.month-header div{
-    text-align:center;
+.panji-icon{
+    width:75px;
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#f3e5f5;
+
+    border-radius:15px;
+
+    font-size:42px;
+
+    flex-shrink:0;
 }
 
-#monthName{
-    color:#c2185b;
-    font-size:25px;
+.panji-content h2{
+    color:#7b1fa2;
+    font-size:23px;
+    margin-bottom:7px;
 }
 
-#yearName{
+.panji-content p{
     color:#666;
-    margin-top:4px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.panji-content span{
+    display:inline-block;
+    margin-top:8px;
+
+    background:#ff9800;
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:15px;
+
+    font-size:13px;
 }
 
 
-/* Week */
+/* Social Program */
 
-.week{
+.social-section{
+    margin-top:25px;
+}
+
+.social-section > h2{
+    text-align:center;
+    color:#7b1fa2;
+    font-size:23px;
+    margin-bottom:18px;
+}
+
+.social-list{
     display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:4px;
-    margin-top:15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
-.week div{
-    background:#7b1fa2;
+.social-card{
+    background:white;
+
+    padding:20px 10px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    border-top:4px solid #ff9800;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.10);
+}
+
+.social-card span{
+    font-size:32px;
+}
+
+.social-card h3{
+    margin-top:8px;
+    color:#6a1b9a;
+    font-size:16px;
+}
+
+
+/* Footer */
+
+.footer{
+    background:#4a148c;
     color:white;
     text-align:center;
-    padding:10px 2px;
-    border-radius:5px;
-    font-size:11px;
-    font-weight:bold;
+
+    padding:24px 10px;
+
+    margin-top:40px;
+}
+
+.footer p{
+    font-size:13px;
+    margin:5px;
 }
 
 
-/* Days */
+/* Mobile */
 
-.days{
-    display:grid;
+@media(max-width:500px){
+
+    .calendar-header h1{
+        font-size:23px;
+    }
+
+    .calendar-page{
+        width:94%;
+    }
+
+    .panji-tab{
+        padding:17px 12px;
+        gap:12px;
+    }
+
+    .panji-icon{
+        width:62px;
+        height:62px;
+        font-size:34px;
+    }
+
+    .panji-content h2{
+        font-size:19px;
+    }
+
+    .panji-content p{
+        font-size:12px;
+    }
+
+    .panji-content span{
+        font-size:12px;
+    }
+
+    .social-list{
+        grid-template-columns:repeat(2,1fr);
+        gap:9px;
+    }
+
+    .social-card{
+        padding:17px 5px;
+    }
+
+    .social-card span{
+        font-size:28px;
+    }
+
+    .social-card h3{
+        font-size:14px;
+    }
+
+}
