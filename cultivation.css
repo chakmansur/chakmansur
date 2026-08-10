@@ -1,1 +1,709 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
+background: #f4f8ef;
+color: #26351f;
+}
+
+/* =================================
+HEADER
+================================= */
+
+.cultivation-header {
+position: relative;
+overflow: hidden;
+
+text-align: center;
+
+padding: 25px 15px 30px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        145deg,
+        #174d2b,
+        #28743c 55%,
+        #4c8d3f
+    );
+
+border-bottom-left-radius: 38px;
+border-bottom-right-radius: 38px;
+
+box-shadow:
+    0 8px 20px rgba(30, 80, 35, 0.22);
+
+}
+
+/* Decorative circles */
+
+.cultivation-header::before,
+.cultivation-header::after {
+content: "";
+
+position: absolute;
+
+width: 90px;
+height: 90px;
+
+border: 1px solid rgba(255,255,255,0.16);
+
+border-radius: 50%;
+
+}
+
+.cultivation-header::before {
+left: -35px;
+top: 15px;
+}
+
+.cultivation-header::after {
+right: -35px;
+bottom: 10px;
+}
+
+/* Header icon */
+
+.header-icon {
+width: 70px;
+height: 70px;
+
+margin: 0 auto 10px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: rgba(255,255,255,0.15);
+
+border: 1px solid rgba(255,255,255,0.25);
+
+border-radius: 50%;
+
+font-size: 38px;
+
+position: relative;
+z-index: 2;
+
+}
+
+.cultivation-header h1,
+.cultivation-header p,
+.cultivation-header h2,
+.home-btn {
+position: relative;
+z-index: 2;
+}
+
+.cultivation-header h1 {
+font-size: 24px;
+line-height: 1.4;
+
+margin-bottom: 4px;
+
+}
+
+.cultivation-header p {
+font-size: 14px;
+}
+
+.cultivation-header h2 {
+margin-top: 13px;
+
+font-size: 19px;
+
+color: #eaffc8;
+
+}
+
+/* Home */
+
+.home-btn {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+margin-top: 15px;
+
+padding: 9px 23px;
+
+min-width: 105px;
+
+background: #ffffff;
+
+color: #236331;
+
+text-decoration: none;
+
+border-radius: 30px;
+
+font-size: 14px;
+
+font-weight: bold;
+
+box-shadow:
+    0 4px 10px rgba(0,0,0,0.18);
+
+}
+
+/* =================================
+MAIN
+================================= */
+
+.cultivation-page {
+width: 100%;
+
+max-width: 720px;
+
+margin: auto;
+
+padding: 22px 12px 35px;
+
+}
+
+/* =================================
+SECTION
+================================= */
+
+.agri-section,
+.weather-section,
+.government-section,
+.notice-section {
+margin-bottom: 30px;
+}
+
+/* =================================
+SECTION TITLE
+================================= */
+
+.agri-section h2,
+.weather-section h2,
+.government-section h2,
+.notice-section h2 {
+
+text-align: center;
+
+color: #245d2f;
+
+font-size: 20px;
+
+margin-bottom: 15px;
+
+line-height: 1.4;
+
+}
+
+/* =================================
+AGRICULTURE TAB
+================================= */
+
+.agri-tab {
+
+position: relative;
+
+display: flex;
+
+align-items: center;
+
+gap: 14px;
+
+width: 100%;
+
+min-height: 91px;
+
+padding: 14px;
+
+margin-bottom: 13px;
+
+background: #ffffff;
+
+color: #26351f;
+
+text-decoration: none;
+
+border-radius: 20px;
+
+border: 1px solid #dce9d6;
+
+box-shadow:
+    0 5px 14px rgba(40, 90, 40, 0.09);
+
+overflow: hidden;
+
+transition: 0.2s;
+
+}
+
+/* Green side strip */
+
+.agri-tab::before {
+
+content: "";
+
+position: absolute;
+
+left: 0;
+top: 0;
+
+width: 7px;
+height: 100%;
+
+background:
+    linear-gradient(
+        #2e7d32,
+        #8bc34a
+    );
+
+}
+
+/* =================================
+AGRI ICON
+================================= */
+
+.agri-icon {
+
+width: 58px;
+height: 58px;
+
+min-width: 58px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+background:
+    linear-gradient(
+        145deg,
+        #e9f6df,
+        #d8edc8
+    );
+
+border: 1px solid #cde3be;
+
+border-radius: 18px;
+
+font-size: 29px;
+
+}
+
+/* =================================
+CONTENT
+================================= */
+
+.agri-content {
+
+flex: 1;
+
+min-width: 0;
+
+}
+
+.agri-content h3 {
+
+color: #245d2f;
+
+font-size: 17px;
+
+line-height: 1.4;
+
+margin-bottom: 3px;
+
+}
+
+.agri-content p {
+
+color: #6b7567;
+
+font-size: 13px;
+
+line-height: 1.5;
+
+margin-bottom: 5px;
+
+}
+
+.agri-content span {
+
+color: #388e3c;
+
+font-size: 12px;
+
+font-weight: bold;
+
+}
+
+/* =================================
+VIDEO TAB
+================================= */
+
+.video-tab {
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0faed
+    );
+
+}
+
+.video-tab .agri-icon {
+
+background:
+    linear-gradient(
+        145deg,
+        #e0f2e9,
+        #c8e6d0
+    );
+
+}
+
+/* =================================
+WEATHER
+================================= */
+
+.weather-section h2 {
+
+color: #176b73;
+
+}
+
+.weather-tab {
+
+border-color: #cfe7e5;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #effafa
+    );
+
+}
+
+.weather-tab::before {
+
+background:
+    linear-gradient(
+        #00838f,
+        #4db6ac
+    );
+
+}
+
+.weather-tab .agri-icon {
+
+background:
+    linear-gradient(
+        145deg,
+        #e0f7f5,
+        #c8ece8
+    );
+
+border-color: #c4e3df;
+
+}
+
+.weather-tab .agri-content h3 {
+
+color: #176b73;
+
+}
+
+.weather-tab .agri-content span {
+
+color: #00838f;
+
+}
+
+/* =================================
+GOVERNMENT
+================================= */
+
+.government-section h2 {
+
+color: #5a4711;
+
+}
+
+.government-tab {
+
+border-color: #eadfbf;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fffaf0
+    );
+
+}
+
+.government-tab::before {
+
+background:
+    linear-gradient(
+        #9b7a18,
+        #d4af37
+    );
+
+}
+
+.government-tab .agri-icon {
+
+background:
+    linear-gradient(
+        145deg,
+        #fff8dc,
+        #f6e6a8
+    );
+
+border-color: #e8d79c;
+
+}
+
+.government-tab .agri-content h3 {
+
+color: #70570d;
+
+}
+
+.government-tab .agri-content span {
+
+color: #9b7a18;
+
+}
+
+/* =================================
+NOTICE
+================================= */
+
+.notice-section h2 {
+
+color: #7a4611;
+
+}
+
+.notice-box {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 13px;
+
+padding: 17px;
+
+background:
+    linear-gradient(
+        135deg,
+        #fffaf0,
+        #fff2d7
+    );
+
+border: 1px solid #efd9ad;
+
+border-radius: 20px;
+
+box-shadow:
+    0 5px 14px rgba(120, 80, 20, 0.08);
+
+}
+
+.notice-icon {
+
+width: 48px;
+height: 48px;
+
+min-width: 48px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+background: #fff0c4;
+
+border-radius: 15px;
+
+font-size: 25px;
+
+}
+
+.notice-box h3 {
+
+color: #805018;
+
+font-size: 16px;
+
+margin-bottom: 5px;
+
+}
+
+.notice-box p {
+
+color: #6d6255;
+
+font-size: 13px;
+
+line-height: 1.6;
+
+}
+
+/* =================================
+TOUCH EFFECT
+================================= */
+
+.agri-tab:active,
+.home-btn:active {
+
+transform: scale(0.975);
+
+}
+
+/* =================================
+FOOTER
+================================= */
+
+.footer {
+
+text-align: center;
+
+padding: 23px 10px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        145deg,
+        #163d23,
+        #245d2f
+    );
+
+border-top-left-radius: 32px;
+border-top-right-radius: 32px;
+
+font-size: 13px;
+
+box-shadow:
+    0 -5px 15px rgba(30,70,30,0.14);
+
+}
+
+.footer p {
+margin: 4px 0;
+}
+
+/* =================================
+SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+.cultivation-header {
+    padding: 23px 11px 28px;
+}
+
+.cultivation-header h1 {
+    font-size: 22px;
+}
+
+.cultivation-header h2 {
+    font-size: 18px;
+}
+
+.cultivation-page {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.agri-section h2,
+.weather-section h2,
+.government-section h2,
+.notice-section h2 {
+    font-size: 18px;
+}
+
+.agri-tab {
+    gap: 11px;
+    padding: 12px;
+}
+
+.agri-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    font-size: 25px;
+}
+
+.agri-content h3 {
+    font-size: 16px;
+}
+
+.agri-content p {
+    font-size: 12px;
+}
+
+.agri-content span {
+    font-size: 11px;
+}
+
+}
+
+/* =================================
+TABLET / DESKTOP
+================================= */
+
+@media (min-width: 700px) {
+
+.cultivation-page {
+    padding-top: 32px;
+}
+
+.agri-tab {
+    min-height: 100px;
+    padding: 18px;
+}
+
+.agri-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    font-size: 31px;
+}
+
+.agri-content h3 {
+    font-size: 19px;
+}
+
+.agri-content p {
+    font-size: 14px;
+}
+
+.agri-content span {
+    font-size: 13px;
+}
+
+.agri-tab:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 20px rgba(40, 90, 40, 0.15);
+}
+
+.home-btn:hover {
+    transform: translateY(-2px);
+}
+
+  }
