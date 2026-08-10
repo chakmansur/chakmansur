@@ -2,156 +2,117 @@
 <html lang="bn">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>বাংলা পঞ্জিকা</title>
+    <title>বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
 
-<link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="calendar.css">
 </head>
 
 <body>
 
-<header class="header">
+<header class="calendar-header">
 
-    <h1>📅 বাংলা পঞ্জিকা</h1>
+    <h1>🕉️ বাংলা পঞ্জিকা</h1>
 
     <p>চকমনসুর বানীশ্রী সংঘ</p>
-
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
-    <a href="index.html">🏠 হোম</a>
+    <a href="index.html" class="home-btn">🏠 হোম</a>
 
 </header>
 
 
-<main>
+<main class="calendar-page">
 
-    <!-- আজকের তারিখ -->
 
-    <section class="today">
+    <!-- ONLINE BENGALI PANJIKA -->
 
-        <h2>🌞 আজকের বাংলা তারিখ</h2>
+    <section class="panji-section">
 
-        <div id="todayDate">
-            লোড হচ্ছে...
-        </div>
+        <a
+            href="https://www.drikpanchang.com/bengali/bengali-month-panjika.html"
+            target="_blank"
+            class="panji-tab"
+        >
 
-        <div id="todayEnglish">
-            লোড হচ্ছে...
-        </div>
+            <div class="panji-icon">
+                📅
+            </div>
+
+            <div class="panji-content">
+
+                <h2>অনলাইন বাংলা পঞ্জিকা</h2>
+
+                <p>
+                    বাংলা ক্যালেন্ডার • তিথি • নক্ষত্র • উৎসব
+                </p>
+
+                <span>
+                    পঞ্জিকা খুলুন →
+                </span>
+
+            </div>
+
+        </a>
 
     </section>
 
 
-    <!-- মাস -->
+    <!-- SOCIAL PROGRAM -->
 
-    <section class="calendar">
+    <section class="social-section">
 
-        <div class="month-header">
+        <h2>🎉 সামাজিক অনুষ্ঠান</h2>
 
-            <button id="prevMonth">◀</button>
+        <div class="social-list">
 
-            <div>
-                <h2 id="monthName">শ্রাবণ</h2>
-                <p id="yearName">১৪৩৩ বঙ্গাব্দ</p>
+            <div class="social-card">
+                <span>🏥</span>
+                <h3>স্বাস্থ্য শিবির</h3>
             </div>
 
-            <button id="nextMonth">▶</button>
-
-        </div>
-
-
-        <!-- সপ্তাহ -->
-
-        <div class="week">
-
-            <div>রবি</div>
-            <div>সোম</div>
-            <div>মঙ্গল</div>
-            <div>বুধ</div>
-            <div>বৃহস্পতি</div>
-            <div>শুক্র</div>
-            <div>শনি</div>
-
-        </div>
-
-
-        <!-- তারিখ -->
-
-        <div id="calendarDays" class="days"></div>
-
-    </section>
-
-
-    <!-- এই মাসের সারাংশ -->
-
-    <section class="summary">
-
-        <h2>🌸 এই মাসের সারাংশ</h2>
-
-        <div class="summary-box">
-
-            <div>
-                💍
-                <h3>বিবাহ</h3>
-                <p>শুভ দিন</p>
+            <div class="social-card">
+                <span>👁️</span>
+                <h3>চক্ষু পরীক্ষা</h3>
             </div>
 
-            <div>
-                🍚
-                <h3>অন্নপ্রাশন</h3>
-                <p>শুভ দিন</p>
+            <div class="social-card">
+                <span>🩸</span>
+                <h3>রক্তদান শিবির</h3>
             </div>
 
-            <div>
-                🏠
-                <h3>গৃহপ্রবেশ</h3>
-                <p>শুভ দিন</p>
+            <div class="social-card">
+                <span>📚</span>
+                <h3>শিক্ষা সহায়তা</h3>
             </div>
 
-            <div>
-                ✍️
-                <h3>নামকরণ</h3>
-                <p>শুভ দিন</p>
+            <div class="social-card">
+                <span>🌳</span>
+                <h3>বৃক্ষরোপণ</h3>
+            </div>
+
+            <div class="social-card">
+                <span>🤝</span>
+                <h3>সমাজসেবা</h3>
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- অনুষ্ঠান -->
-
-    <section class="events">
-
-        <h2>🎉 অনুষ্ঠান</h2>
-
-        <div class="event-box">
-
-            <div>🪔<br>পূজা</div>
-
-            <div>🌼<br>উৎসব</div>
-
-            <div>🎊<br>অনুষ্ঠান</div>
-
-        </div>
-
-    </section>
 
 </main>
 
 
-<footer>
+<footer class="footer">
 
     <p>চকমনসুর বানীশ্রী সংঘ</p>
-
     <p>প্রতিষ্ঠিত - ১৯৬৫</p>
 
 </footer>
 
-
-<script src="calendar.js"></script>
 
 </body>
 
