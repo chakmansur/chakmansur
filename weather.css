@@ -1,7 +1,7 @@
 /* =====================================================
 WEATHER.CSS
-TAB STYLE DESIGN
-CHAKMANSUR BANISHRI SANGHA
+চকমনসুর বানীশ্রী সংঘ
+TAB STYLE • MOBILE FIRST
 ===================================================== */
 
 * {
@@ -16,285 +16,274 @@ scroll-behavior: smooth;
 
 body {
 font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
-background: #f3f8f3;
-color: #263d32;
+background: #f3f7f4;
+color: #243b31;
 overflow-x: hidden;
 }
 
 a {
 text-decoration: none;
+-webkit-tap-highlight-color: transparent;
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+HEADER
+===================================================== */
 
 .weather-header {
+
 display: flex;
 align-items: center;
 justify-content: space-between;
+
+gap: 8px;
+
 padding: 10px;
-background: linear-gradient(135deg, #176b4f, #27936d);
-color: white;
+
+background: linear-gradient(
+    135deg,
+    #075b48,
+    #14966e
+);
+
+color: #ffffff;
+
+box-shadow:
+    0 4px 14px rgba(0, 70, 50, .18);
+
 }
 
 .club-info {
+
 display: flex;
 align-items: center;
+
 gap: 9px;
+
+min-width: 0;
+
 }
 
 .club-info img {
+
 width: 48px;
 height: 48px;
-padding: 3px;
+
+flex-shrink: 0;
+
 object-fit: contain;
-background: white;
-border-radius: 50%;
-}
 
-.club-info h2 {
-font-size: 14px;
-font-weight: 900;
-}
-
-.club-info p {
-font-size: 9px;
-color: #d9f5e8;
-}
-
-.home-btn {
-padding: 7px 11px;
-background: white;
-color: #176b4f;
-border-radius: 20px;
-font-size: 10px;
-font-weight: 900;
-}
-
-/* ================= HERO ================= */
-
-.weather-hero {
-position: relative;
-overflow: hidden;
-padding: 25px 12px 30px;
-text-align: center;
-color: white;
-background:
-linear-gradient(
-135deg,
-#237c63,
-#4aa879
-);
-border-radius: 0 0 28px 28px;
-}
-
-.weather-hero::before {
-content: "☁️";
-position: absolute;
-right: -10px;
-top: -30px;
-font-size: 100px;
-opacity: .10;
-}
-
-.weather-hero::after {
-content: "🌿";
-position: absolute;
-left: -5px;
-bottom: -35px;
-font-size: 90px;
-opacity: .10;
-}
-
-.hero-icon {
-position: relative;
-z-index: 2;
-font-size: 40px;
-}
-
-.weather-hero h1 {
-position: relative;
-z-index: 2;
-margin-top: 5px;
-font-size: 27px;
-font-weight: 900;
-}
-
-.weather-hero p {
-position: relative;
-z-index: 2;
-margin-top: 4px;
-font-size: 10px;
-}
-
-.weather-hero span {
-position: relative;
-z-index: 2;
-display: inline-block;
-margin-top: 8px;
-padding: 5px 10px;
-background: rgba(255,255,255,.15);
-border-radius: 20px;
-font-size: 8px;
-}
-
-/* ================= QUICK TAB ================= */
-
-.weather-menu {
-
-display: grid;
-
-grid-template-columns: repeat(4, 1fr);
-
-gap: 6px;
-
-padding: 10px;
+padding: 3px;
 
 background: #ffffff;
 
-border-bottom: 1px solid #dce8df;
+border-radius: 50%;
 
-box-shadow: 0 3px 12px rgba(0,0,0,.06);
+border: 2px solid rgba(255,255,255,.6);
 
 }
 
-.weather-menu a {
+.club-info h1 {
 
-min-height: 48px;
+font-size: 14px;
 
-display: flex;
+line-height: 1.3;
 
-align-items: center;
+font-weight: 900;
 
-justify-content: center;
+}
 
-text-align: center;
+.club-info p {
 
-padding: 5px;
+margin-top: 2px;
 
-color: #245c48;
-
-background: #edf8f1;
-
-border: 1px solid #cfe7d8;
-
-border-radius: 12px;
+color: #d6f6e9;
 
 font-size: 8px;
+
+}
+
+.home-btn {
+
+flex-shrink: 0;
+
+padding: 7px 10px;
+
+color: #075b48;
+
+background: #ffffff;
+
+border-radius: 20px;
+
+font-size: 9px;
 
 font-weight: 900;
 
 box-shadow:
-    0 3px 7px rgba(25,100,65,.07);
-
-transition: .2s;
+    0 3px 8px rgba(0,0,0,.12);
 
 }
 
-.weather-menu a:active {
-transform: scale(.95);
-}
+/* =====================================================
+PAGE TITLE
+===================================================== */
 
-/* ================= SECTION ================= */
+.page-title {
 
-.weather-section,
-.weather-info-section {
+position: relative;
 
-padding: 20px 10px 0;
+overflow: hidden;
 
-}
+padding: 25px 12px 28px;
 
-.section-title {
+text-align: center;
 
-display: flex;
+color: #ffffff;
 
-align-items: center;
+background:
+    linear-gradient(
+        135deg,
+        #128d6a,
+        #53b879
+    );
 
-gap: 8px;
+border-radius:
+    0 0 30px 30px;
 
-margin-bottom: 12px;
-
-padding: 8px 10px;
-
-background: white;
-
-border-left: 4px solid #25865f;
-
-border-radius: 9px;
-
-box-shadow: 0 3px 10px rgba(0,0,0,.05);
+box-shadow:
+    0 6px 18px rgba(20,110,75,.18);
 
 }
 
-.section-title > span {
-font-size: 25px;
+.page-title::before {
+
+content: "☁️";
+
+position: absolute;
+
+top: -28px;
+
+right: -8px;
+
+font-size: 100px;
+
+opacity: .10;
+
 }
 
-.section-title h2 {
+.page-title::after {
 
-color: #216548;
+content: "🌿";
 
-font-size: 17px;
+position: absolute;
+
+bottom: -30px;
+
+left: -5px;
+
+font-size: 90px;
+
+opacity: .10;
+
+}
+
+.title-icon {
+
+position: relative;
+
+z-index: 2;
+
+font-size: 42px;
+
+line-height: 1;
+
+}
+
+.page-title h2 {
+
+position: relative;
+
+z-index: 2;
+
+margin-top: 5px;
+
+font-size: 27px;
 
 font-weight: 900;
 
 }
 
-.section-title p {
+.page-title p {
 
-margin-top: 1px;
+position: relative;
 
-color: #829088;
+z-index: 2;
 
-font-size: 8px;
+margin-top: 3px;
+
+color: #effff6;
+
+font-size: 9px;
 
 }
 
 /* =====================================================
-MAIN WEATHER TABS
+WEATHER TAB CONTAINER
 ===================================================== */
 
-.weather-grid {
+.weather-container {
 
 display: grid;
 
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
 gap: 9px;
 
+padding: 15px 9px 25px;
+
+max-width: 1100px;
+
+margin: auto;
+
 }
 
-/* TAB */
+/* =====================================================
+MAIN TAB
+===================================================== */
 
-.weather-card {
+.weather-tab {
 
 position: relative;
-
-min-height: 185px;
 
 display: flex;
 
 flex-direction: column;
 
-padding: 14px 10px;
+min-height: 190px;
 
-background: white;
+padding: 13px 10px;
 
-border: 1px solid #d9e8de;
+background: #ffffff;
 
-border-radius: 16px;
+border-radius: 17px;
+
+border: 1px solid #dbe7df;
+
+box-shadow:
+    0 5px 13px rgba(30,90,60,.08);
 
 overflow: hidden;
 
-box-shadow:
-    0 5px 14px rgba(30,90,60,.08);
-
-transition: .2s;
+transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 
 }
 
-/* TOP COLOUR STRIP */
+/* TOP STRIPE */
 
-.weather-card::before {
+.weather-tab::before {
 
 content: "";
 
@@ -307,343 +296,277 @@ width: 100%;
 
 height: 5px;
 
-background:
-    linear-gradient(
-        90deg,
-        #18875c,
-        #72bd82
-    );
+background: #249366;
 
 }
 
-/* CARD ICON */
+/* ICON */
 
-.card-top {
+.tab-icon {
 
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-margin-top: 4px;
-
-margin-bottom: 8px;
-
-}
-
-.weather-icon {
-
-width: 48px;
-height: 48px;
+width: 53px;
+height: 53px;
 
 display: flex;
 
 align-items: center;
 justify-content: center;
 
-background: #eef9f1;
+margin-bottom: 9px;
 
-border-radius: 14px;
+border-radius: 15px;
 
-font-size: 29px;
+font-size: 30px;
 
-}
-
-.district {
-
-padding: 4px 6px;
-
-color: #357253;
-
-background: #edf8f0;
-
-border-radius: 12px;
-
-font-size: 6px;
-
-font-weight: 900;
+background: #edf8f1;
 
 }
 
-/* CARD TEXT */
+/* CONTENT */
 
-.weather-card h3 {
-
-color: #236548;
-
-font-size: 14px;
-
-font-weight: 900;
-
-}
-
-.weather-card p {
-
-flex: 1;
-
-margin-top: 5px;
-
-color: #77847c;
-
-font-size: 8px;
-
-line-height: 1.5;
-
-}
-
-/* OPEN TAB BUTTON */
-
-.weather-btn {
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-margin-top: 9px;
-
-padding: 9px;
-
-color: white;
-
-background:
-    linear-gradient(
-        135deg,
-        #20865e,
-        #42a873
-    );
-
-border-radius: 9px;
-
-font-size: 8px;
-
-font-weight: 900;
-
-}
-
-.weather-btn b {
-font-size: 15px;
-}
-
-/* ================= INFO TABS ================= */
-
-.info-grid {
-
-display: grid;
-
-grid-template-columns: repeat(2, 1fr);
-
-gap: 8px;
-
-}
-
-.info-card {
-
-min-height: 105px;
+.tab-content {
 
 display: flex;
 
 flex-direction: column;
 
-align-items: center;
-
-justify-content: center;
-
-padding: 10px;
-
-background: white;
-
-border: 1px solid #dce9df;
-
-border-radius: 15px;
-
-text-align: center;
-
-box-shadow:
-    0 4px 12px rgba(30,90,60,.06);
+flex: 1;
 
 }
 
-.info-card > div {
+.tab-content h3 {
 
-width: 45px;
-height: 45px;
+color: #215e45;
 
-display: flex;
+font-size: 13px;
 
-align-items: center;
-justify-content: center;
-
-margin-bottom: 5px;
-
-background: #edf8f0;
-
-border-radius: 13px;
-
-font-size: 24px;
-
-}
-
-.info-card h3 {
-
-color: #286548;
-
-font-size: 11px;
+line-height: 1.35;
 
 font-weight: 900;
 
 }
 
-.info-card p {
+.tab-content p {
 
-margin-top: 2px;
+flex: 1;
 
-color: #88938d;
+margin-top: 5px;
 
-font-size: 7px;
-
-}
-
-/* ================= VIDEO TAB ================= */
-
-.weather-video {
-
-position: relative;
-
-margin: 22px 10px 0;
-
-padding: 22px 12px;
-
-text-align: center;
-
-color: white;
-
-background:
-    linear-gradient(
-        135deg,
-        #bd252d,
-        #e34d4d
-    );
-
-border-radius: 18px;
-
-box-shadow:
-    0 6px 16px rgba(170,30,35,.15);
-
-overflow: hidden;
-
-}
-
-.weather-video::after {
-
-content: "▶";
-
-position: absolute;
-
-right: -15px;
-
-bottom: -45px;
-
-font-size: 120px;
-
-opacity: .07;
-
-}
-
-.youtube-icon {
-
-position: relative;
-
-z-index: 2;
-
-font-size: 36px;
-
-}
-
-.weather-video h2 {
-
-position: relative;
-
-z-index: 2;
-
-margin-top: 4px;
-
-font-size: 18px;
-
-font-weight: 900;
-
-}
-
-.weather-video p {
-
-position: relative;
-
-z-index: 2;
-
-margin: 5px auto 13px;
+color: #75837b;
 
 font-size: 8px;
 
-color: #ffeaea;
+line-height: 1.55;
 
 }
 
-.youtube-btn {
+.tab-content span {
 
-position: relative;
+display: block;
 
-z-index: 2;
+margin-top: 9px;
 
-display: inline-block;
+padding: 8px 7px;
 
-padding: 9px 15px;
+color: #ffffff;
 
-color: #bd252d;
+background:
+    linear-gradient(
+        135deg,
+        #19875f,
+        #46ad78
+    );
 
-background: white;
+border-radius: 9px;
 
-border-radius: 20px;
+text-align: center;
 
-font-size: 9px;
+font-size: 8px;
 
 font-weight: 900;
 
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+DIFFERENT TAB COLORS
+===================================================== */
+
+/* MEDINIPUR */
+
+.medinipur-tab::before {
+background: linear-gradient(90deg,#008ca8,#47c5a3);
+}
+
+.medinipur-tab .tab-icon {
+background: #e7f8fa;
+}
+
+.medinipur-tab .tab-content h3 {
+color: #087383;
+}
+
+/* KESHPUR */
+
+.keshpur-tab::before {
+background: linear-gradient(90deg,#3774c5,#65a9ef);
+}
+
+.keshpur-tab .tab-icon {
+background: #eaf3ff;
+}
+
+.keshpur-tab .tab-content h3 {
+color: #285c9c;
+}
+
+.keshpur-tab .tab-content span {
+background: linear-gradient(135deg,#3774c5,#5c9be0);
+}
+
+/* TEMPERATURE */
+
+.temperature-tab::before {
+background: linear-gradient(90deg,#e15a30,#f3a03d);
+}
+
+.temperature-tab .tab-icon {
+background: #fff1e7;
+}
+
+.temperature-tab .tab-content h3 {
+color: #b64b29;
+}
+
+.temperature-tab .tab-content span {
+background: linear-gradient(135deg,#dd5c30,#ec963b);
+}
+
+/* RAIN */
+
+.rain-tab::before {
+background: linear-gradient(90deg,#526db7,#789ee5);
+}
+
+.rain-tab .tab-icon {
+background: #eef1ff;
+}
+
+.rain-tab .tab-content h3 {
+color: #4a60a2;
+}
+
+.rain-tab .tab-content span {
+background: linear-gradient(135deg,#536fb9,#789ce0);
+}
+
+/* WIND */
+
+.wind-tab::before {
+background: linear-gradient(90deg,#2d9b88,#66c4aa);
+}
+
+.wind-tab .tab-icon {
+background: #e9f8f3;
+}
+
+.wind-tab .tab-content h3 {
+color: #287664;
+}
+
+/* DAILY */
+
+.daily-tab::before {
+background: linear-gradient(90deg,#e39b1f,#f1c24a);
+}
+
+.daily-tab .tab-icon {
+background: #fff8df;
+}
+
+.daily-tab .tab-content h3 {
+color: #a87516;
+}
+
+.daily-tab .tab-content span {
+background: linear-gradient(135deg,#df991d,#edbd43);
+}
+
+/* VIDEO */
+
+.video-tab::before {
+background: linear-gradient(90deg,#c5232d,#ed5656);
+}
+
+.video-tab .tab-icon {
+background: #fff0f1;
+}
+
+.video-tab .tab-content h3 {
+color: #b82029;
+}
+
+.video-tab .tab-content span {
+background: linear-gradient(135deg,#c5232d,#e94c4c);
+}
+
+/* NEWS */
+
+.news-tab::before {
+background: linear-gradient(90deg,#7a4da4,#a66acb);
+}
+
+.news-tab .tab-icon {
+background: #f5ecfb;
+}
+
+.news-tab .tab-content h3 {
+color: #714493;
+}
+
+.news-tab .tab-content span {
+background: linear-gradient(135deg,#794ca2,#a267c4);
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
 
 .weather-footer {
 
-margin-top: 30px;
+margin-top: 5px;
 
-padding: 25px 10px;
+padding:
+    25px 10px;
 
 text-align: center;
 
-color: white;
+color: #ffffff;
 
 background:
     linear-gradient(
         135deg,
-        #185b47,
-        #254d42
+        #155a47,
+        #234c41
     );
 
-border-radius: 25px 25px 0 0;
+border-radius:
+    27px 27px 0 0;
 
 }
 
 .weather-footer h3 {
+
 font-size: 15px;
+
+font-weight: 900;
+
 }
 
 .weather-footer p {
 
 margin-top: 4px;
 
-color: #d5e7dd;
+color: #d5e8df;
 
 font-size: 8px;
 
@@ -656,68 +579,72 @@ TABLET
 @media (min-width: 650px) {
 
 .weather-header {
-    padding: 14px 25px;
+
+    padding:
+        14px 25px;
 }
 
 .club-info img {
-    width: 55px;
-    height: 55px;
+
+    width: 56px;
+    height: 56px;
 }
 
-.club-info h2 {
+.club-info h1 {
+
     font-size: 18px;
 }
 
-.weather-hero {
-    padding: 40px 20px;
+.page-title {
+
+    padding:
+        40px 20px;
 }
 
-.weather-hero h1 {
-    font-size: 34px;
+.page-title h2 {
+
+    font-size: 35px;
 }
 
-.weather-menu {
-    grid-template-columns: repeat(4, 140px);
-    justify-content: center;
+.weather-container {
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    padding:
+        22px;
 }
 
-.weather-menu a {
-    min-height: 55px;
-    font-size: 10px;
-}
+.weather-tab {
 
-.weather-section,
-.weather-info-section {
-    max-width: 1000px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.weather-grid {
-    gap: 15px;
-}
-
-.weather-card {
     min-height: 220px;
+
     padding: 18px;
 }
 
-.weather-card h3 {
-    font-size: 17px;
+.tab-icon {
+
+    width: 62px;
+    height: 62px;
+
+    font-size: 35px;
 }
 
-.weather-card p {
+.tab-content h3 {
+
+    font-size: 16px;
+}
+
+.tab-content p {
+
     font-size: 10px;
 }
 
-.weather-btn {
-    font-size: 10px;
-}
+.tab-content span {
 
-.info-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    font-size: 10px;
 }
 
 }
@@ -728,72 +655,75 @@ DESKTOP
 
 @media (min-width: 1000px) {
 
-.weather-header {
-    padding-left: 50px;
-    padding-right: 50px;
+.weather-container {
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    padding:
+        30px;
 }
 
-.weather-card:hover,
-.info-card:hover {
+.weather-tab:hover {
 
-    transform: translateY(-5px);
+    transform:
+        translateY(-6px);
 
     box-shadow:
-        0 12px 25px rgba(25,90,60,.13);
+        0 13px 28px rgba(30,90,60,.14);
 }
 
 }
 
 /* =====================================================
-SMALL MOBILE
+VERY SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 380px) {
 
-.weather-menu {
-    gap: 4px;
-    padding: 7px 5px;
-}
+.weather-container {
 
-.weather-menu a {
-    min-height: 43px;
-    font-size: 7px;
-}
-
-.weather-grid {
     gap: 6px;
+
+    padding:
+        12px 6px 20px;
 }
 
-.weather-card {
+.weather-tab {
+
     min-height: 175px;
-    padding: 12px 8px;
+
+    padding:
+        11px 8px;
 }
 
-.weather-icon {
-    width: 42px;
-    height: 42px;
+.tab-icon {
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 7px;
+
     font-size: 25px;
+
+    border-radius: 12px;
 }
 
-.weather-card h3 {
-    font-size: 12px;
+.tab-content h3 {
+
+    font-size: 11px;
 }
 
-.weather-card p {
+.tab-content p {
+
     font-size: 7px;
 }
 
-.weather-btn {
-    padding: 8px 7px;
+.tab-content span {
+
+    padding: 7px 5px;
+
     font-size: 7px;
 }
 
-.info-grid {
-    gap: 6px;
-}
-
-.info-card {
-    min-height: 95px;
-}
-
-}
+  }
