@@ -1,240 +1,301 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#fff8e8;
-    color:#222;
+body {
+font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
+background: #f5f7fb;
+color: #222;
 }
 
-/* Header */
+/* =========================
+HEADER
+========================= */
 
-.calendar-header{
-    background:linear-gradient(135deg,#7b1fa2,#4a148c);
-    color:white;
-    text-align:center;
-    padding:22px 10px;
+.calendar-header {
+background: linear-gradient(135deg, #7b1fa2, #512da8);
+color: #ffffff;
+text-align: center;
+padding: 22px 15px 25px;
 }
 
-.calendar-header h1{
-    font-size:27px;
-    margin-bottom:7px;
+.calendar-header h1 {
+font-size: 25px;
+line-height: 1.4;
+margin-bottom: 7px;
 }
 
-.calendar-header p{
-    font-size:14px;
-    margin:4px 0;
+.calendar-header p {
+font-size: 14px;
+margin: 4px 0;
 }
 
-.home-btn{
-    display:inline-block;
-    margin-top:12px;
-    padding:9px 20px;
-    background:#ff9800;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
+.home-btn {
+display: inline-block;
+margin-top: 14px;
+padding: 9px 22px;
+
+background: #ffffff;
+color: #512da8;
+
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+
+border-radius: 25px;
+
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
 }
 
+/* =========================
+MAIN PAGE
+========================= */
 
-/* Main */
+.calendar-page {
+width: 100%;
+max-width: 700px;
 
-.calendar-page{
-    width:95%;
-    max-width:750px;
-    margin:25px auto;
+margin: 0 auto;
+
+padding: 18px 12px 30px;
+
 }
 
+/* =========================
+PAGE TITLE
+========================= */
 
-/* Bengali Panjika */
-
-.panji-section{
-    margin-bottom:30px;
+.page-title {
+text-align: center;
+margin-bottom: 18px;
 }
 
-.panji-tab{
-    display:flex;
-    align-items:center;
-    gap:18px;
-
-    background:white;
-    text-decoration:none;
-    color:#222;
-
-    padding:22px 18px;
-
-    border-radius:18px;
-
-    border:3px solid #8e24aa;
-
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
-
-    transition:.2s;
+.page-title h2 {
+color: #512da8;
+font-size: 20px;
+line-height: 1.4;
 }
 
-.panji-tab:hover{
-    transform:translateY(-2px);
+.page-title p {
+margin-top: 5px;
+color: #777;
+font-size: 13px;
 }
 
-.panji-icon{
-    width:75px;
-    height:75px;
+/* =========================
+CALENDAR TAB
+========================= */
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.calendar-tab {
+width: 100%;
 
-    background:#f3e5f5;
+display: flex;
+align-items: center;
 
-    border-radius:15px;
+gap: 13px;
 
-    font-size:42px;
+padding: 14px 12px;
+margin-bottom: 12px;
 
-    flex-shrink:0;
+background: #ffffff;
+
+text-decoration: none;
+color: #222;
+
+border-radius: 14px;
+
+border-left: 5px solid #7b1fa2;
+
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+
+transition: 0.2s;
+
 }
 
-.panji-content h2{
-    color:#7b1fa2;
-    font-size:23px;
-    margin-bottom:7px;
+/* =========================
+ICON
+========================= */
+
+.tab-icon {
+width: 55px;
+height: 55px;
+
+min-width: 55px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #f0e7f8;
+
+border-radius: 50%;
+
+font-size: 27px;
+
 }
 
-.panji-content p{
-    color:#666;
-    font-size:14px;
-    line-height:1.5;
+/* =========================
+TEXT
+========================= */
+
+.tab-text {
+flex: 1;
+min-width: 0;
 }
 
-.panji-content span{
-    display:inline-block;
-    margin-top:8px;
+.tab-text h3 {
+color: #512da8;
 
-    background:#ff9800;
-    color:white;
+font-size: 17px;
 
-    padding:6px 12px;
+line-height: 1.4;
 
-    border-radius:15px;
+margin-bottom: 3px;
 
-    font-size:13px;
 }
 
+.tab-text p {
+color: #666;
 
-/* Social Program */
+font-size: 13px;
 
-.social-section{
-    margin-top:25px;
+line-height: 1.5;
+
+margin-bottom: 4px;
+
 }
 
-.social-section > h2{
-    text-align:center;
-    color:#7b1fa2;
-    font-size:23px;
-    margin-bottom:18px;
+.tab-text span {
+color: #7b1fa2;
+
+font-size: 12px;
+
+font-weight: bold;
+
 }
 
-.social-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+/* =========================
+TAB PRESS EFFECT
+========================= */
+
+.calendar-tab:active {
+transform: scale(0.98);
 }
 
-.social-card{
-    background:white;
+/* =========================
+FOOTER
+========================= */
 
-    padding:20px 10px;
+.footer {
+background: #311b92;
 
-    text-align:center;
+color: #ffffff;
 
-    border-radius:15px;
+text-align: center;
 
-    border-top:4px solid #ff9800;
+padding: 18px 10px;
 
-    box-shadow:0 3px 12px rgba(0,0,0,.10);
+font-size: 13px;
+
+margin-top: 10px;
+
 }
 
-.social-card span{
-    font-size:32px;
+.footer p {
+margin: 4px 0;
 }
 
-.social-card h3{
-    margin-top:8px;
-    color:#6a1b9a;
-    font-size:16px;
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+.calendar-header h1 {
+    font-size: 22px;
 }
 
-
-/* Footer */
-
-.footer{
-    background:#4a148c;
-    color:white;
-    text-align:center;
-
-    padding:24px 10px;
-
-    margin-top:40px;
+.calendar-header p {
+    font-size: 13px;
 }
 
-.footer p{
-    font-size:13px;
-    margin:5px;
+.calendar-page {
+    padding-left: 9px;
+    padding-right: 9px;
 }
 
+.calendar-tab {
+    gap: 10px;
+    padding: 12px 10px;
+}
 
-/* Mobile */
+.tab-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 24px;
+}
 
-@media(max-width:500px){
+.tab-text h3 {
+    font-size: 16px;
+}
 
-    .calendar-header h1{
-        font-size:23px;
-    }
+.tab-text p {
+    font-size: 12px;
+}
 
-    .calendar-page{
-        width:94%;
-    }
+.tab-text span {
+    font-size: 11px;
+}
 
-    .panji-tab{
-        padding:17px 12px;
-        gap:12px;
-    }
+}
 
-    .panji-icon{
-        width:62px;
-        height:62px;
-        font-size:34px;
-    }
+/* =========================
+TABLET / DESKTOP
+========================= */
 
-    .panji-content h2{
-        font-size:19px;
-    }
+@media (min-width: 700px) {
 
-    .panji-content p{
-        font-size:12px;
-    }
+.calendar-page {
+    padding-top: 30px;
+}
 
-    .panji-content span{
-        font-size:12px;
-    }
+.calendar-tab {
+    padding: 17px;
+}
 
-    .social-list{
-        grid-template-columns:repeat(2,1fr);
-        gap:9px;
-    }
+.calendar-tab:hover {
+    transform: translateY(-2px);
 
-    .social-card{
-        padding:17px 5px;
-    }
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.14);
+}
 
-    .social-card span{
-        font-size:28px;
-    }
+.tab-icon {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
 
-    .social-card h3{
-        font-size:14px;
-    }
+    font-size: 30px;
+}
+
+.tab-text h3 {
+    font-size: 19px;
+}
+
+.tab-text p {
+    font-size: 14px;
+}
+
+.tab-text span {
+    font-size: 13px;
+}
 
 }
