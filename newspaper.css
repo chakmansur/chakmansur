@@ -1,164 +1,1100 @@
-/* ===========================
-   NEWSPAPER.CSS - PART 1
-=========================== */
+<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+«»
+
+<title>
+    News Hub | চকমনসুর বানীশ্রী সংঘ
+</title><link
+    rel="stylesheet"
+    href="newspaper.css"
+><link
+    rel="icon"
+    href="images/favicon.png"
+></head><body><!-- =====================================================
+     TOP HEADER
+===================================================== --><header class="top-header"><div class="logo-area">
+
+    <img
+        src="images/logo.png"
+        alt="চকমনসুর বানীশ্রী সংঘ"
+    >
+
+    <div>
+
+        <h2>
+            চকমনসুর বানীশ্রী সংঘ
+        </h2>
+
+        <p>
+            প্রতিষ্ঠিত - ১৯৬৫
+        </p>
+
+    </div>
+
+</div>
+
+
+<a
+    href="index.html"
+    class="home-btn"
+>
+    🏠 হোম
+</a>
+
+</header><!-- =====================================================
+     HERO
+===================================================== --><section class="hero"><div class="hero-badge">
+    📰 NEWS CENTER
+</div>
+
+<h1>
+    সংবাদ ও তথ্য কেন্দ্র
+</h1>
+
+<p>
+    বাংলা সংবাদ • ইংরেজি সংবাদ • চাকরি • লাইভ নিউজ • আবহাওয়া
+</p>
+
+</section><!-- =====================================================
+     DATE BAR
+===================================================== --><section class="date-bar"><div>
+    📅
+    <strong>
+        আজকের সংবাদ
+    </strong>
+</div>
+
+<div id="todayDate">
+    Loading...
+</div>
+
+</section><!-- =====================================================
+     BREAKING NEWS
+===================================================== --><section class="breaking-wrapper"><div class="breaking-label">
+    🔴 ব্রেকিং
+</div>
+
+<div class="breaking-news">
+
+    <div class="breaking-track">
+
+        <span>
+            পশ্চিমবঙ্গের সর্বশেষ খবর দেখতে নিচের সংবাদপত্রগুলি দেখুন
+        </span>
+
+        <span>
+            • চাকরি • কৃষি • আবহাওয়া • শিক্ষা • রাজ্য • দেশ • বিশ্ব
+        </span>
+
+        <span>
+            • Live News • Government Update • Job Update
+        </span>
+
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     QUICK MENU
+===================================================== --><section class="quick-menu"><a href="#jobnews">
+    💼
+    <span>চাকরি</span>
+</a>
+
+<a href="#bangla">
+    📰
+    <span>বাংলা</span>
+</a>
+
+<a href="#english">
+    🌍
+    <span>English</span>
+</a>
+
+<a href="#live">
+    📺
+    <span>Live</span>
+</a>
+
+<a href="#weather">
+    🌦️
+    <span>আবহাওয়া</span>
+</a>
+
+<a href="#trending">
+    🔥
+    <span>Trending</span>
+</a>
+
+</section><!-- =====================================================
+     FEATURED NEWS
+===================================================== --><section class="featured-section"><div class="section-heading">
+
+    <span>
+        ⭐
+    </span>
+
+    <h2>
+        আজকের গুরুত্বপূর্ণ তথ্য
+    </h2>
+
+</div>
+
+
+<div class="featured-grid">
+
+
+    <a
+        href="#jobnews"
+        class="featured-card job-feature"
+    >
+
+        <span class="featured-icon">
+            💼
+        </span>
+
+        <div>
+
+            <small>
+                JOB UPDATE
+            </small>
+
+            <h3>
+                চাকরির নতুন খবর
+            </h3>
+
+            <p>
+                পশ্চিমবঙ্গের সরকারি ও অন্যান্য চাকরির আপডেট
+            </p>
+
+        </div>
+
+    </a>
+
+
+    <a
+        href="#bangla"
+        class="featured-card news-feature"
+    >
+
+        <span class="featured-icon">
+            📰
+        </span>
+
+        <div>
+
+            <small>
+                WEST BENGAL
+            </small>
+
+            <h3>
+                বাংলা সংবাদ
+            </h3>
+
+            <p>
+                পশ্চিমবঙ্গের বিভিন্ন বাংলা সংবাদপত্র
+            </p>
+
+        </div>
+
+    </a>
+
+
+    <a
+        href="#weather"
+        class="featured-card weather-feature"
+    >
+
+        <span class="featured-icon">
+            🌦️
+        </span>
+
+        <div>
+
+            <small>
+                WEATHER
+            </small>
+
+            <h3>
+                মেদিনীপুরের আবহাওয়া
+            </h3>
+
+            <p>
+                আজকের আবহাওয়া ও বৃষ্টির আপডেট
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     SEARCH
+===================================================== --><section class="search-section"><h2>
+    🔎 সংবাদ খুঁজুন
+</h2>
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="newsSearch"
+        placeholder="যেমন: পশ্চিমবঙ্গ, চাকরি, ক্রিকেট..."
+    >
+
+    <button
+        type="button"
+        onclick="searchNews()"
+    >
+        খুঁজুন
+    </button>
+
+</div>
+
+<p class="search-hint">
+    Google-এ আপনার পছন্দের খবর খুঁজে দেখুন
+</p>
+
+</section><!-- =====================================================
+     JOB NEWS
+===================================================== --><section
+    id="jobnews"
+    class="section"
+><div class="section-heading">
+
+    <span>💼</span>
+
+    <h2>
+        Job News
+    </h2>
+
+</div>
+
+
+<div class="news-grid">
+
+
+    <a
+        href="https://karmasangsthanpaper.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        💼
+
+        <h3>
+            কর্মসংস্থান পত্রিকা
+        </h3>
+
+        <p>
+            Daily Job Update
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.exambangla.com/west-bengal-government-jobs/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            WB Government Jobs
+        </h3>
+
+        <p>
+            West Bengal Job News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+government+job+latest+update"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🏛️
+
+        <h3>
+            সরকারি চাকরি
+        </h3>
+
+        <p>
+            নতুন সরকারি চাকরির খবর
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+exam+result+latest"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📝
+
+        <h3>
+            পরীক্ষা ও ফলাফল
+        </h3>
+
+        <p>
+            Exam & Result Update
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     BANGLA NEWSPAPER
+===================================================== --><section
+    id="bangla"
+    class="section"
+><div class="section-heading">
+
+    <span>📰</span>
+
+    <h2>
+        বাংলা সংবাদপত্র
+    </h2>
+
+</div>
+
+
+<div class="news-grid">
+
+
+    <a
+        href="https://www.anandabazar.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            আনন্দবাজার পত্রিকা
+        </h3>
+
+        <p>
+            Breaking News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://bartamanpatrika.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            বর্তমান
+        </h3>
+
+        <p>
+            Latest Bengali News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://eisamay.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            এই সময়
+        </h3>
+
+        <p>
+            Today's News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.sangbadpratidin.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            সংবাদ প্রতিদিন
+        </h3>
+
+        <p>
+            Live Update
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://aajkaal.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            আজকাল
+        </h3>
+
+        <p>
+            Daily News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.uttarbangasambad.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            উত্তরবঙ্গ সংবাদ
+        </h3>
+
+        <p>
+            North Bengal News
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     ENGLISH NEWSPAPER
+===================================================== --><section
+    id="english"
+    class="section"
+><div class="section-heading">
+
+    <span>🌍</span>
+
+    <h2>
+        English Newspaper
+    </h2>
+
+</div>
+
+
+<div class="news-grid">
+
+
+    <a
+        href="https://www.thehindu.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🌍
+
+        <h3>
+            The Hindu
+        </h3>
+
+        <p>
+            National & International News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://indianexpress.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            Indian Express
+        </h3>
+
+        <p>
+            Breaking News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://timesofindia.indiatimes.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            Times of India
+        </h3>
+
+        <p>
+            India & World News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.hindustantimes.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            Hindustan Times
+        </h3>
+
+        <p>
+            Top Headlines
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.telegraphindia.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📰
+
+        <h3>
+            The Telegraph
+        </h3>
+
+        <p>
+            Latest Updates
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.business-standard.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        💹
+
+        <h3>
+            Business Standard
+        </h3>
+
+        <p>
+            Business & Economy
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     LIVE TV
+===================================================== --><section
+    id="live"
+    class="section"
+><div class="section-heading live-heading">
+
+    <span>📺</span>
+
+    <h2>
+        Live TV News
+    </h2>
+
+    <span class="live-badge">
+        🔴 LIVE
+    </span>
+
+</div>
+
+
+<div class="news-grid">
+
+
+    <a
+        href="https://www.youtube.com/@abpananda"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🔴
+
+        <h3>
+            ABP Ananda LIVE
+        </h3>
+
+        <p>
+            Bengali News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@Zee24Ghanta"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🔴
+
+        <h3>
+            Zee 24 Ghanta LIVE
+        </h3>
+
+        <p>
+            Breaking News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@News18Bangla"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🔴
+
+        <h3>
+            News18 Bangla LIVE
+        </h3>
+
+        <p>
+            Latest Bengali News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@RepublicBangla"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🔴
+
+        <h3>
+            Republic Bangla LIVE
+        </h3>
+
+        <p>
+            24×7 Live News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@DDBanglaOfficial"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📺
+
+        <h3>
+            DD Bangla
+        </h3>
+
+        <p>
+            Government News
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@IndiaToday"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🌍
+
+        <h3>
+            India Today LIVE
+        </h3>
+
+        <p>
+            National & World News
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     TRENDING
+===================================================== --><section
+    id="trending"
+    class="section trending-section"
+><div class="section-heading">
+
+    <span>🔥</span>
+
+    <h2>
+        Trending News
+    </h2>
+
+</div>
+
+
+<div class="trending-list">
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+latest+news"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <span class="trend-number">
+            01
+        </span>
+
+        <div>
+
+            <strong>
+                পশ্চিমবঙ্গের সর্বশেষ খবর
+            </strong>
+
+            <small>
+                Latest West Bengal News
+            </small>
+
+        </div>
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+weather+today"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <span class="trend-number">
+            02
+        </span>
+
+        <div>
+
+            <strong>
+                আজকের আবহাওয়া
+            </strong>
+
+            <small>
+                Weather Update
+            </small>
+
+        </div>
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+government+job+latest"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <span class="trend-number">
+            03
+        </span>
+
+        <div>
+
+            <strong>
+                সরকারি চাকরির খবর
+            </strong>
+
+            <small>
+                Government Job Update
+            </small>
+
+        </div>
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     WEATHER
+===================================================== --><section
+    id="weather"
+    class="section"
+><div class="section-heading">
+
+    <span>🌦️</span>
+
+    <h2>
+        Weather Update
+    </h2>
+
+</div>
+
+
+<div class="news-grid">
+
+
+    <a
+        href="https://www.accuweather.com/bn/in/medinipur/196592/weather-forecast/196592"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🌤️
+
+        <h3>
+            Medinipur Weather
+        </h3>
+
+        <p>
+            মেদিনীপুরের আজকের আবহাওয়া
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://www.accuweather.com/bn/in/keshpur/2877600/weather-forecast/2877600"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🌧️
+
+        <h3>
+            Keshpur Weather
+        </h3>
+
+        <p>
+            কেশপুরের আবহাওয়া
+        </p>
+
+    </a>
+
+
+    <a
+        href="https://youtube.com/@livebong?si=ixyLyxcK09oa7VxG"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📺
+
+        <h3>
+            Live Bong Weather
+        </h3>
+
+        <p>
+            ভিডিও আবহাওয়ার আপডেট
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     WEST BENGAL SPECIAL
+===================================================== --><section class="special-section"><div class="section-heading">
+
+    <span>⭐</span>
+
+    <h2>
+        পশ্চিমবঙ্গ বিশেষ
+    </h2>
+
+</div>
+
+
+<div class="special-grid">
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+news+today"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🏛️
+
+        <strong>
+            রাজ্য সংবাদ
+        </strong>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+education+news"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🎓
+
+        <strong>
+            শিক্ষা সংবাদ
+        </strong>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+agriculture+news+Bengali"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🌾
+
+        <strong>
+            কৃষি সংবাদ
+        </strong>
+
+    </a>
+
+
+    <a
+        href="https://www.google.com/search?q=West+Bengal+sports+news"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        🏏
+
+        <strong>
+            খেলাধুলা
+        </strong>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     FOOTER
+===================================================== --><footer class="footer"><h3>
+    চকমনসুর বানীশ্রী সংঘ
+</h3>
+
+<p>
+    প্রতিষ্ঠিত - ১৯৬৫
+</p>
+
+<p>
+    News Hub • Student Corner • Weather • Gallery
+</p>
+
+<p>
+    © 2026 All Rights Reserved
+</p>
+
+<p>
+    Developed & Maintained by
+    <strong>
+        DEBU
+    </strong>
+</p>
+
+</footer><!-- =====================================================
+     JAVASCRIPT
+===================================================== --><script>
+
+function updateDate() {
+
+    const now = new Date();
+
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+
+    document.getElementById("todayDate").textContent =
+        now.toLocaleDateString(
+            "bn-BD",
+            options
+        );
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f5f7fb;
-    color:#222;
-    line-height:1.6;
-}
 
-/* HEADER */
+function searchNews() {
 
-.top-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-    background:linear-gradient(135deg,#0f766e,#2563eb);
-    color:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
+    const input =
+        document.getElementById("newsSearch");
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
+    const query =
+        input.value.trim();
 
-.logo-area img{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#fff;
-}
+    if (query === "") {
 
-.logo-area h2{
-    font-size:20px;
-}
+        input.focus();
 
-.logo-area p{
-    font-size:12px;
-    opacity:.9;
-}
-
-.home-btn{
-    text-decoration:none;
-    color:#fff;
-    background:#ef4444;
-    padding:
-      /* ===========================
-   NEWS GRID & CARDS
-=========================== */
-
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.news-grid a{
-    background:#fff;
-    text-decoration:none;
-    color:#222;
-    padding:22px 18px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-    transition:.3s;
-    border-top:5px solid #2563eb;
-}
-
-.news-grid a:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-/* Different Card Colors */
-
-.news-grid a:nth-child(1){border-top-color:#2563eb;}
-.news-grid a:nth-child(2){border-top-color:#16a34a;}
-.news-grid a:nth-child(3){border-top-color:#7c3aed;}
-.news-grid a:nth-child(4){border-top-color:#ea580c;}
-.news-grid a:nth-child(5){border-top-color:#ec4899;}
-.news-grid a:nth-child(6){border-top-color:#0891b2;}
-
-.news-grid h3{
-    margin:12px 0 8px;
-    color:#1e3a8a;
-    font-size:18px;
-}
-
-.news-grid p{
-    color:#666;
-    font-size:14px;
-}
-
-/* Emoji/Icon */
-
-.news-grid a{
-    font-size:34px;
-}
-
-/* LIVE Badge */
-
-.news-grid a::after{
-    content:" LIVE";
-    display:inline-block;
-    margin-top:12px;
-    background:#ef4444;
-    color:#fff;
-    font-size:10px;
-    padding:4px 8px;
-    border-radius:20px;
-    font-weight:bold;
-  
-}
-  /* ===========================
-   WEATHER & FOOTER
-=========================== */
-
-.footer{
-    margin-top:40px;
-    padding:30px 20px;
-    text-align:center;
-    color:#fff;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-}
-
-.footer h3{
-    margin-bottom:10px;
-    font-size:24px;
-}
-
-.footer p{
-    margin:6px 0;
-    font-size:14px;
-}
-
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
-
-@media(max-width:900px){
-
-    .quick-menu{
-        grid-template-columns:repeat(3,1fr);
+        return;
     }
 
-    .news-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-  
+    const url =
+        "https://www.google.com/search?q=" +
+        encodeURIComponent(query + " পশ্চিমবঙ্গ সংবাদ");
 
+    window.open(
+        url,
+        "_blank"
+    );
 }
+
+
+updateDate();
+
+</script></body></html>
