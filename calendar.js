@@ -18,81 +18,215 @@ const banglaDigits = [
     "৫","৬","৭","৮","৯"
 ];
 
-function bn(number) {
-    return String(number).replace(/\d/g, function(d) {
+function bn(number){
+    return String(number).replace(/\d/g, function(d){
         return banglaDigits[d];
     });
 }
 
 
-/* বর্তমানে ১৪৩৩ বঙ্গাব্দ */
+/* =========================
+   ২০২৬ সালের বাংলা পঞ্জিকা
+   ========================= */
+
+const banglaMonths = [
+
+    {
+        name: "বৈশাখ",
+        year: ১৪৩৩,
+        days: 31
+    },
+
+    {
+        name: "জ্যৈষ্ঠ",
+        year: ১৪৩৩,
+        days: 31
+    },
+
+    {
+        name: "আষাঢ়",
+        year: ১৪৩৩,
+        days: 31
+    },
+
+    {
+        name: "শ্রাবণ",
+        year: ১৪৩৩,
+        days: 31
+    },
+
+    {
+        name: "ভাদ্র",
+        year: ১৪৩৩,
+        days: 31
+    },
+
+    {
+        name: "আশ্বিন",
+        year: ১৪৩৩,
+        days: 30
+    },
+
+    {
+        name: "কার্তিক",
+        year: ১৪৩৩,
+        days: 30
+    },
+
+    {
+        name: "অগ্রহায়ণ",
+        year: ১৪৩৩,
+        days: 30
+    },
+
+    {
+        name: "পৌষ",
+        year: ১৪৩৩,
+        days: 30
+    },
+
+    {
+        name: "মাঘ",
+        year: ১৪৩৩,
+        days: 30
+    },
+
+    {
+        name: "ফাল্গুন",
+        year: ১৪৩৩,
+        days: 29
+    },
+
+    {
+        name: "চৈত্র",
+        year: ১৪৩৩,
+        days: 30
+    }
+
+];
+
+
+/* =========================
+   Current month
+========================= */
 
 let currentMonth = 3;
-let currentYear = 1433;
 
 
-/* Calendar তৈরি */
+/* =========================
+   Calendar show
+========================= */
 
-function showCalendar() {
+function showCalendar(){
 
-    document.getElementById("monthName").innerText =
-        months[currentMonth];
+    const month =
+        banglaMonths[currentMonth];
 
-    document.getElementById("yearName").innerText =
-        bn(currentYear) + " বঙ্গাব্দ";
+    document.getElementById("monthName")
+        .innerText = month.name;
 
-    const calendarDays =
+    document.getElementById("yearName")
+        .innerText = "১৪৩৩ বঙ্গাব্দ";
+
+
+    const container =
         document.getElementById("calendarDays");
 
-    calendarDays.innerHTML = "";
+    container.innerHTML = "";
 
-    for (let day = 1; day <= 30; day++) {
 
-        const box = document.createElement("div");
+    for(let i = 1; i <= month.days; i++){
 
-        box.innerText = bn(day);
+        const day =
+            document.createElement("div");
 
-        calendarDays.appendChild(box);
+        day.innerText = bn(i);
+
+        container.appendChild(day);
+
     }
+
 }
 
 
-/* আগের মাস */
+/* =========================
+   Previous month
+========================= */
 
-document.getElementById("prevMonth").addEventListener(
-    "click",
-    function() {
+document.getElementById("prevMonth")
+.addEventListener("click", function(){
 
-        currentMonth--;
+    currentMonth--;
 
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
-        }
-
-        showCalendar();
+    if(currentMonth < 0){
+        currentMonth = 11;
     }
-);
+
+    showCalendar();
+
+});
 
 
-/* পরের মাস */
+/* =========================
+   Next month
+========================= */
 
-document.getElementById("nextMonth").addEventListener(
-    "click",
-    function() {
+document.getElementById("nextMonth")
+.addEventListener("click", function(){
 
-        currentMonth++;
+    currentMonth++;
 
-        if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
-        }
-
-        showCalendar();
+    if(currentMonth > 11){
+        currentMonth = 0;
     }
-);
+
+    showCalendar();
+
+});
 
 
-/* প্রথমবার Calendar চালু */
+/* =========================
+   Today's date
+========================= */
+
+function showToday(){
+
+    const today =
+        new Date();
+
+    const englishDate =
+        today.toLocaleDateString(
+            "bn-BD",
+            {
+                day:"numeric",
+                month:"long",
+                year:"numeric"
+            }
+        );
+
+
+    document.getElementById("todayEnglish")
+        .innerText =
+        "আজ: " + englishDate;
+
+
+    /*
+       আপাতত বাংলা তারিখ
+       পরে আসল পঞ্জিকা data বসানো হবে
+    */
+
+    document.getElementById("todayDate")
+        .innerText =
+        "আজকের বাংলা তারিখ";
+
+
+}
+
+
+/* =========================
+   Start
+========================= */
 
 showCalendar();
+
+showToday();
