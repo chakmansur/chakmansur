@@ -1,5 +1,3 @@
-// বাংলা পঞ্জিকা - মাস পরিবর্তন
-
 const months = [
     "বৈশাখ",
     "জ্যৈষ্ঠ",
@@ -16,114 +14,239 @@ const months = [
 ];
 
 const festivals = {
-    "বৈশাখ": ["পয়লা বৈশাখ", "অক্ষয় তৃতীয়া"],
-    "জ্যৈষ্ঠ": ["জামাই ষষ্ঠী", "জ্যৈষ্ঠ পূর্ণিমা"],
-    "আষাঢ়": ["রথযাত্রা", "উল্টো রথযাত্রা"],
-    "শ্রাবণ": ["শ্রাবণী পূর্ণিমা", "ঝুলন যাত্রা", "জন্মাষ্টমী"],
-    "ভাদ্র": ["গণেশ চতুর্থী", "বিশ্বকর্মা পূজা"],
-    "আশ্বিন": ["মহালয়া", "দুর্গাপূজা", "বিজয়া দশমী"],
-    "কার্তিক": ["কালীপূজা", "দীপাবলি", "ভাইফোঁটা"],
-    "অগ্রহায়ণ": ["নবান্ন", "রাস পূর্ণিমা"],
-    "পৌষ": ["পৌষ সংক্রান্তি", "পৌষ পার্বণ"],
-    "মাঘ": ["সরস্বতী পূজা", "মাঘী পূর্ণিমা"],
-    "ফাল্গুন": ["শিবরাত্রি", "দোলযাত্রা", "দোল পূর্ণিমা"],
-    "চৈত্র": ["চৈত্র সংক্রান্তি", "চড়ক পূজা", "গাজন"]
+    "বৈশাখ": [
+        "পয়লা বৈশাখ",
+        "অক্ষয় তৃতীয়া"
+    ],
+
+    "জ্যৈষ্ঠ": [
+        "জামাই ষষ্ঠী",
+        "জ্যৈষ্ঠ পূর্ণিমা"
+    ],
+
+    "আষাঢ়": [
+        "রথযাত্রা",
+        "উল্টো রথযাত্রা"
+    ],
+
+    "শ্রাবণ": [
+        "শ্রাবণী পূর্ণিমা",
+        "ঝুলন যাত্রা",
+        "জন্মাষ্টমী"
+    ],
+
+    "ভাদ্র": [
+        "গণেশ চতুর্থী",
+        "বিশ্বকর্মা পূজা"
+    ],
+
+    "আশ্বিন": [
+        "মহালয়া",
+        "দুর্গাপূজা",
+        "বিজয়া দশমী"
+    ],
+
+    "কার্তিক": [
+        "কালীপূজা",
+        "দীপাবলি",
+        "ভাইফোঁটা"
+    ],
+
+    "অগ্রহায়ণ": [
+        "নবান্ন",
+        "রাস পূর্ণিমা"
+    ],
+
+    "পৌষ": [
+        "পৌষ সংক্রান্তি",
+        "পৌষ পার্বণ"
+    ],
+
+    "মাঘ": [
+        "সরস্বতী পূজা",
+        "মাঘী পূর্ণিমা"
+    ],
+
+    "ফাল্গুন": [
+        "শিবরাত্রি",
+        "দোলযাত্রা",
+        "দোল পূর্ণিমা"
+    ],
+
+    "চৈত্র": [
+        "চৈত্র সংক্রান্তি",
+        "চড়ক পূজা",
+        "গাজন"
+    ]
 };
 
-const banglaDigits = [
-    "০","১","২","৩","৪",
-    "৫","৬","৭","৮","৯"
-];
 
-function banglaNumber(number) {
+const banglaNumber = function(number) {
+
+    const digits = [
+        "০","১","২","৩","৪",
+        "৫","৬","৭","৮","৯"
+    ];
+
     return String(number).replace(
         /\d/g,
-        digit => banglaDigits[digit]
+        function(d) {
+            return digits[d];
+        }
     );
+};
+
+
+/*
+   বাংলা পঞ্জিকা
+   শুরু: শ্রাবণ ১৪৩৩
+*/
+
+let currentMonth = 3;
+let currentYear = 1433;
+
+
+/* Calendar তৈরি */
+
+function createCalendar() {
+
+    const box =
+        document.getElementById("calendarDays");
+
+    if (!box) return;
+
+    box.innerHTML = "";
+
+    for (let i = 1; i <= 30; i++) {
+
+        const day =
+            document.createElement("div");
+
+        day.innerText =
+            banglaNumber(i);
+
+        box.appendChild(day);
+    }
 }
 
 
-// শুরু হবে শ্রাবণ ১৪৩৩ থেকে
-let monthIndex = 3;
-let banglaYear = 1433;
+/* মাসের উৎসব */
 
+function createFestivals() {
 
-// মাস দেখানো
-function showMonth() {
-
-    const month = months[monthIndex];
-
-    document.getElementById("monthName").innerText = month;
-
-    document.getElementById("yearName").innerText =
-        banglaNumber(banglaYear) + " বঙ্গাব্দ";
-
-
-    // ক্যালেন্ডারের তারিখ
-    const calendarDays =
-        document.getElementById("calendarDays");
-
-    calendarDays.innerHTML = "";
-
-
-    for (let day = 1; day <= 30; day++) {
-
-        const box = document.createElement("div");
-
-        box.innerText = banglaNumber(day);
-
-        calendarDays.appendChild(box);
-    }
-
-
-    // উৎসব
-    const festivalList =
+    const list =
         document.getElementById("festivalList");
 
-    festivalList.innerHTML = "";
+    if (!list) return;
 
+    list.innerHTML = "";
 
-    festivals[month].forEach(function(festival) {
+    const month =
+        months[currentMonth];
+
+    const data =
+        festivals[month] || [];
+
+    data.forEach(function(name) {
 
         const item =
             document.createElement("div");
 
-        item.className = "festival-item";
+        item.className =
+            "festival-item";
 
-        item.innerText = "🪔 " + festival;
+        item.innerText =
+            "🪔 " + name;
 
-        festivalList.appendChild(item);
+        list.appendChild(item);
     });
 }
 
 
-// আগের মাস
-document.getElementById("prevMonth").onclick = function() {
+/* মাস দেখানো */
 
-    monthIndex--;
+function updateCalendar() {
 
-    if (monthIndex < 0) {
-        monthIndex = 11;
-        banglaYear--;
+    const month =
+        months[currentMonth];
+
+    const monthName =
+        document.getElementById("monthName");
+
+    const yearName =
+        document.getElementById("yearName");
+
+
+    if (monthName) {
+        monthName.innerText = month;
     }
 
-    showMonth();
-};
 
-
-// পরের মাস
-document.getElementById("nextMonth").onclick = function() {
-
-    monthIndex++;
-
-    if (monthIndex > 11) {
-        monthIndex = 0;
-        banglaYear++;
+    if (yearName) {
+        yearName.innerText =
+            banglaNumber(currentYear) +
+            " বঙ্গাব্দ";
     }
 
-    showMonth();
-};
+
+    createCalendar();
+
+    createFestivals();
+}
 
 
-// প্রথমবার চালু
-showMonth();
+/* আগের মাস */
+
+const previous =
+    document.getElementById("prevMonth");
+
+if (previous) {
+
+    previous.addEventListener(
+        "click",
+        function() {
+
+            currentMonth--;
+
+            if (currentMonth < 0) {
+
+                currentMonth = 11;
+                currentYear--;
+
+            }
+
+            updateCalendar();
+        }
+    );
+}
+
+
+/* পরের মাস */
+
+const next =
+    document.getElementById("nextMonth");
+
+if (next) {
+
+    next.addEventListener(
+        "click",
+        function() {
+
+            currentMonth++;
+
+            if (currentMonth > 11) {
+
+                currentMonth = 0;
+                currentYear++;
+
+            }
+
+            updateCalendar();
+        }
+    );
+}
+
+
+/* প্রথমবার */
+
+updateCalendar();
