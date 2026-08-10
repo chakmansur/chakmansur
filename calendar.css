@@ -10,7 +10,7 @@ body{
     color:#222;
 }
 
-/* Header */
+/* HEADER */
 
 .top-header{
     background:#7b1fa2;
@@ -35,11 +35,11 @@ body{
 }
 
 .logo-area h2{
-    font-size:18px;
+    font-size:19px;
 }
 
 .logo-area p{
-    font-size:12px;
+    font-size:13px;
 }
 
 .home-btn{
@@ -62,12 +62,12 @@ body{
 
 .panchang h1{
     color:#7b1fa2;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .month-box{
     background:white;
-    padding:18px;
+    padding:20px;
     border-radius:18px;
     display:flex;
     justify-content:space-between;
@@ -77,26 +77,26 @@ body{
 
 .month-box h2{
     color:#c2185b;
-    font-size:26px;
+    font-size:27px;
 }
 
 .month-box p{
     color:#555;
-    margin-top:3px;
+    margin-top:4px;
 }
 
 .month-box button{
-    width:40px;
-    height:40px;
+    width:42px;
+    height:42px;
     border:0;
     border-radius:50%;
     background:#7b1fa2;
     color:white;
-    font-size:17px;
+    font-size:18px;
 }
 
 
-/* Calendar */
+/* CALENDAR */
 
 .calendar{
     background:white;
@@ -116,7 +116,7 @@ body{
 .week div{
     background:#7b1fa2;
     color:white;
-    padding:7px 2px;
+    padding:8px 2px;
     font-size:12px;
     border-radius:5px;
 }
@@ -136,7 +136,7 @@ body{
 }
 
 
-/* Sections */
+/* SECTION */
 
 .section{
     width:94%;
@@ -147,16 +147,16 @@ body{
 .section h2{
     text-align:center;
     color:#7b1fa2;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 
-/* Cards */
+/* CARDS */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
+    gap:16px;
 }
 
 .card{
@@ -170,7 +170,7 @@ body{
 
 .card h3{
     color:#7b1fa2;
-    margin:7px 0;
+    margin:8px 0;
 }
 
 .card p{
@@ -179,7 +179,7 @@ body{
 }
 
 
-/* Festival */
+/* FESTIVAL */
 
 .festival-list{
     background:white;
@@ -190,14 +190,14 @@ body{
 
 .festival-item{
     background:#fff3e0;
-    padding:10px;
-    margin-bottom:7px;
+    padding:12px;
+    margin-bottom:8px;
     border-left:4px solid #e65100;
-    border-radius:6px;
+    border-radius:7px;
 }
 
 
-/* Footer */
+/* FOOTER */
 
 .footer{
     margin-top:40px;
@@ -213,7 +213,7 @@ body{
 }
 
 
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -232,7 +232,7 @@ body{
     }
 
     .month-box h2{
-        font-size:22px;
+        font-size:23px;
     }
 
     .week div{
