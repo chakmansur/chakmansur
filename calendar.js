@@ -1,252 +1,39 @@
-const months = [
-    "বৈশাখ",
-    "জ্যৈষ্ঠ",
-    "আষাঢ়",
-    "শ্রাবণ",
-    "ভাদ্র",
-    "আশ্বিন",
-    "কার্তিক",
-    "অগ্রহায়ণ",
-    "পৌষ",
-    "মাঘ",
-    "ফাল্গুন",
-    "চৈত্র"
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-const festivals = {
-    "বৈশাখ": [
-        "পয়লা বৈশাখ",
-        "অক্ষয় তৃতীয়া"
-    ],
+    console.log("Calendar JavaScript loaded successfully");
 
-    "জ্যৈষ্ঠ": [
-        "জামাই ষষ্ঠী",
-        "জ্যৈষ্ঠ পূর্ণিমা"
-    ],
+    const monthName = document.getElementById("monthName");
+    const yearName = document.getElementById("yearName");
+    const calendarDays = document.getElementById("calendarDays");
 
-    "আষাঢ়": [
-        "রথযাত্রা",
-        "উল্টো রথযাত্রা"
-    ],
+    if (!monthName || !yearName || !calendarDays) {
+        console.log("Calendar HTML elements not found");
+        return;
+    }
 
-    "শ্রাবণ": [
-        "শ্রাবণী পূর্ণিমা",
-        "ঝুলন যাত্রা",
-        "জন্মাষ্টমী"
-    ],
+    monthName.innerText = "শ্রাবণ";
+    yearName.innerText = "১৪৩৩ বঙ্গাব্দ";
 
-    "ভাদ্র": [
-        "গণেশ চতুর্থী",
-        "বিশ্বকর্মা পূজা"
-    ],
-
-    "আশ্বিন": [
-        "মহালয়া",
-        "দুর্গাপূজা",
-        "বিজয়া দশমী"
-    ],
-
-    "কার্তিক": [
-        "কালীপূজা",
-        "দীপাবলি",
-        "ভাইফোঁটা"
-    ],
-
-    "অগ্রহায়ণ": [
-        "নবান্ন",
-        "রাস পূর্ণিমা"
-    ],
-
-    "পৌষ": [
-        "পৌষ সংক্রান্তি",
-        "পৌষ পার্বণ"
-    ],
-
-    "মাঘ": [
-        "সরস্বতী পূজা",
-        "মাঘী পূর্ণিমা"
-    ],
-
-    "ফাল্গুন": [
-        "শিবরাত্রি",
-        "দোলযাত্রা",
-        "দোল পূর্ণিমা"
-    ],
-
-    "চৈত্র": [
-        "চৈত্র সংক্রান্তি",
-        "চড়ক পূজা",
-        "গাজন"
-    ]
-};
-
-
-const banglaNumber = function(number) {
-
-    const digits = [
-        "০","১","২","৩","৪",
-        "৫","৬","৭","৮","৯"
-    ];
-
-    return String(number).replace(
-        /\d/g,
-        function(d) {
-            return digits[d];
-        }
-    );
-};
-
-
-/*
-   বাংলা পঞ্জিকা
-   শুরু: শ্রাবণ ১৪৩৩
-*/
-
-let currentMonth = 3;
-let currentYear = 1433;
-
-
-/* Calendar তৈরি */
-
-function createCalendar() {
-
-    const box =
-        document.getElementById("calendarDays");
-
-    if (!box) return;
-
-    box.innerHTML = "";
+    calendarDays.innerHTML = "";
 
     for (let i = 1; i <= 30; i++) {
 
-        const day =
-            document.createElement("div");
+        const day = document.createElement("div");
 
-        day.innerText =
-            banglaNumber(i);
+        day.innerText = i
+            .toString()
+            .replace(/0/g, "০")
+            .replace(/1/g, "১")
+            .replace(/2/g, "২")
+            .replace(/3/g, "৩")
+            .replace(/4/g, "৪")
+            .replace(/5/g, "৫")
+            .replace(/6/g, "৬")
+            .replace(/7/g, "৭")
+            .replace(/8/g, "৮")
+            .replace(/9/g, "৯");
 
-        box.appendChild(day);
-    }
-}
-
-
-/* মাসের উৎসব */
-
-function createFestivals() {
-
-    const list =
-        document.getElementById("festivalList");
-
-    if (!list) return;
-
-    list.innerHTML = "";
-
-    const month =
-        months[currentMonth];
-
-    const data =
-        festivals[month] || [];
-
-    data.forEach(function(name) {
-
-        const item =
-            document.createElement("div");
-
-        item.className =
-            "festival-item";
-
-        item.innerText =
-            "🪔 " + name;
-
-        list.appendChild(item);
-    });
-}
-
-
-/* মাস দেখানো */
-
-function updateCalendar() {
-
-    const month =
-        months[currentMonth];
-
-    const monthName =
-        document.getElementById("monthName");
-
-    const yearName =
-        document.getElementById("yearName");
-
-
-    if (monthName) {
-        monthName.innerText = month;
+        calendarDays.appendChild(day);
     }
 
-
-    if (yearName) {
-        yearName.innerText =
-            banglaNumber(currentYear) +
-            " বঙ্গাব্দ";
-    }
-
-
-    createCalendar();
-
-    createFestivals();
-}
-
-
-/* আগের মাস */
-
-const previous =
-    document.getElementById("prevMonth");
-
-if (previous) {
-
-    previous.addEventListener(
-        "click",
-        function() {
-
-            currentMonth--;
-
-            if (currentMonth < 0) {
-
-                currentMonth = 11;
-                currentYear--;
-
-            }
-
-            updateCalendar();
-        }
-    );
-}
-
-
-/* পরের মাস */
-
-const next =
-    document.getElementById("nextMonth");
-
-if (next) {
-
-    next.addEventListener(
-        "click",
-        function() {
-
-            currentMonth++;
-
-            if (currentMonth > 11) {
-
-                currentMonth = 0;
-                currentYear++;
-
-            }
-
-            updateCalendar();
-        }
-    );
-}
-
-
-/* প্রথমবার */
-
-updateCalendar();
+});
