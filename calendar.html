@@ -1,1 +1,599 @@
+<!DOCTYPE html>
+<html lang="bn">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>বাংলা পঞ্জিকা | চকমনসুর বানীশ্রী সংঘ</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff8e8;
+    color:#222;
+}
+
+.header{
+    background:#7b1fa2;
+    color:white;
+    text-align:center;
+    padding:18px 10px;
+}
+
+.header h1{
+    margin:0;
+    font-size:25px;
+}
+
+.header p{
+    margin:6px 0 0;
+}
+
+.calendar{
+    width:95%;
+    max-width:700px;
+    margin:20px auto;
+}
+
+.month-bar{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.month-bar button{
+    width:44px;
+    height:44px;
+    border:0;
+    border-radius:50%;
+    background:#7b1fa2;
+    color:white;
+    font-size:20px;
+}
+
+.month-name{
+    text-align:center;
+}
+
+.month-name h2{
+    margin:0;
+    color:#c2185b;
+    font-size:24px;
+}
+
+.month-name p{
+    margin:5px 0 0;
+    color:#666;
+}
+
+.today{
+    background:white;
+    margin-top:12px;
+    padding:16px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.today h3{
+    margin:0 0 8px;
+    color:#7b1fa2;
+}
+
+.today p{
+    margin:5px;
+}
+
+.week{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+    margin-top:15px;
+}
+
+.week div{
+    background:#7b1fa2;
+    color:white;
+    padding:9px 2px;
+    text-align:center;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+    margin-top:5px;
+}
+
+.days div{
+    min-height:50px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:6px;
+    font-weight:bold;
+    box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+
+.days .today-date{
+    background:#ff9800;
+    color:white;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    padding:20px;
+    background:#4a148c;
+    color:white;
+}
+
+.footer p{
+    margin:5px;
+}
+
+@media(max-width:500px){
+
+    .header h1{
+        font-size:22px;
+    }
+
+    .month-name h2{
+        font-size:20px;
+    }
+
+    .week div{
+        font-size:9px;
+    }
+
+    .days div{
+        min-height:43px;
+        font-size:13px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>📅 বাংলা পঞ্জিকা</h1>
+
+    <p>চকমনসুর বানীশ্রী সংঘ</p>
+
+</div>
+
+
+<div class="calendar">
+
+    <div class="month-bar">
+
+        <button id="previous">◀</button>
+
+        <div class="month-name">
+
+            <h2 id="monthName">লোড হচ্ছে...</h2>
+
+            <p id="yearName"></p>
+
+        </div>
+
+        <button id="next">▶</button>
+
+    </div>
+
+
+    <div class="today">
+
+        <h3>🌞 আজকের বাংলা তারিখ</h3>
+
+        <p id="todayDate">লোড হচ্ছে...</p>
+
+        <p id="todayDay">লোড হচ্ছে...</p>
+
+    </div>
+
+
+    <div class="week">
+
+        <div>রবি</div>
+        <div>সোম</div>
+        <div>মঙ্গল</div>
+        <div>বুধ</div>
+        <div>বৃহস্পতি</div>
+        <div>শুক্র</div>
+        <div>শনি</div>
+
+    </div>
+
+
+    <div id="days" class="days"></div>
+
+</div>
+
+
+<div class="footer">
+
+    <p>চকমনসুর বানীশ্রী সংঘ</p>
+
+    <p>প্রতিষ্ঠিত - ১৯৬৫</p>
+
+</div>
+
+
+<script>
+
+/* =========================
+   বাংলা মাস
+========================= */
+
+const months = [
+
+    "বৈশাখ",
+    "জ্যৈষ্ঠ",
+    "আষাঢ়",
+    "শ্রাবণ",
+    "ভাদ্র",
+    "আশ্বিন",
+    "কার্তিক",
+    "অগ্রহায়ণ",
+    "পৌষ",
+    "মাঘ",
+    "ফাল্গুন",
+    "চৈত্র"
+
+];
+
+
+/* =========================
+   বাংলা সংখ্যা
+========================= */
+
+const bnDigits = [
+    "০","১","২","৩","৪",
+    "৫","৬","৭","৮","৯"
+];
+
+function bn(number){
+
+    return String(number).replace(
+        /\d/g,
+        function(d){
+            return bnDigits[d];
+        }
+    );
+
+}
+
+
+/* =========================
+   আজকের বাংলা তারিখ
+========================= */
+
+function getTodayBangla(){
+
+    const now = new Date();
+
+    const year = now.getFullYear();
+
+    const month = now.getMonth();
+
+    const date = now.getDate();
+
+
+    /*
+       বাংলা ক্যালেন্ডার
+       ১৪৩৩ বঙ্গাব্দ
+
+       ২০২৬ সালে:
+       বৈশাখ শুরু ১৫ এপ্রিল
+    */
+
+
+    let banglaYear;
+
+    let banglaMonth;
+
+    let banglaDate;
+
+
+    if(month < 3){
+
+        banglaYear = year - 594;
+
+    }
+    else{
+
+        banglaYear = year - 593;
+
+    }
+
+
+    /*
+       মাসের শুরু Gregorian date
+    */
+
+    const starts = [
+
+        [4,15],  // বৈশাখ
+        [5,15],  // জ্যৈষ্ঠ
+        [6,15],  // আষাঢ়
+        [7,16],  // শ্রাবণ
+        [8,16],  // ভাদ্র
+        [9,16],  // আশ্বিন
+        [10,17], // কার্তিক
+        [11,16], // অগ্রহায়ণ
+        [12,16], // পৌষ
+        [1,15],  // মাঘ
+        [2,14],  // ফাল্গুন
+        [3,15]   // চৈত্র
+
+    ];
+
+
+    let found = false;
+
+
+    for(let i=0;i<12;i++){
+
+        let m = starts[i][0] - 1;
+
+        let d = starts[i][1];
+
+        let startYear = year;
+
+
+        if(m > month){
+
+            startYear--;
+
+        }
+
+
+        const start =
+            new Date(
+                startYear,
+                m,
+                d
+            );
+
+
+        if(now >= start){
+
+            banglaMonth = i;
+
+            const difference =
+                Math.floor(
+                    (now - start) /
+                    (1000*60*60*24)
+                );
+
+
+            banglaDate =
+                difference + 1;
+
+            found = true;
+
+        }
+
+    }
+
+
+    if(!found){
+
+        banglaMonth = 11;
+
+        banglaDate = 1;
+
+    }
+
+
+    return {
+
+        year:banglaYear,
+
+        month:banglaMonth,
+
+        date:banglaDate
+
+    };
+
+}
+
+
+/* =========================
+   Calendar দেখানো
+========================= */
+
+let todayBangla =
+    getTodayBangla();
+
+
+let currentMonth =
+    todayBangla.month;
+
+
+let currentYear =
+    todayBangla.year;
+
+
+function showCalendar(){
+
+    document.getElementById("monthName")
+        .innerText =
+        months[currentMonth];
+
+
+    document.getElementById("yearName")
+        .innerText =
+        bn(currentYear) +
+        " বঙ্গাব্দ";
+
+
+    const days =
+        document.getElementById("days");
+
+
+    days.innerHTML = "";
+
+
+    for(let i=1;i<=30;i++){
+
+        const box =
+            document.createElement("div");
+
+
+        box.innerText =
+            bn(i);
+
+
+        if(
+
+            currentMonth === todayBangla.month &&
+
+            currentYear === todayBangla.year &&
+
+            i === todayBangla.date
+
+        ){
+
+            box.classList.add(
+                "today-date"
+            );
+
+        }
+
+
+        days.appendChild(box);
+
+    }
+
+}
+
+
+/* =========================
+   আজকের তথ্য
+========================= */
+
+function showToday(){
+
+    document.getElementById("todayDate")
+        .innerText =
+
+        bn(todayBangla.date) +
+        " " +
+        months[todayBangla.month] +
+        " " +
+        bn(todayBangla.year) +
+        " বঙ্গাব্দ";
+
+
+    const days = [
+
+        "রবিবার",
+        "সোমবার",
+        "মঙ্গলবার",
+        "বুধবার",
+        "বৃহস্পতিবার",
+        "শুক্রবার",
+        "শনিবার"
+
+    ];
+
+
+    const today =
+        new Date();
+
+
+    document.getElementById("todayDay")
+        .innerText =
+        "আজ " +
+        days[today.getDay()];
+
+}
+
+
+/* =========================
+   আগের মাস
+========================= */
+
+document.getElementById("previous")
+.addEventListener(
+    "click",
+    function(){
+
+        currentMonth--;
+
+
+        if(currentMonth < 0){
+
+            currentMonth = 11;
+
+            currentYear--;
+
+        }
+
+
+        showCalendar();
+
+    }
+);
+
+
+/* =========================
+   পরের মাস
+========================= */
+
+document.getElementById("next")
+.addEventListener(
+    "click",
+    function(){
+
+        currentMonth++;
+
+
+        if(currentMonth > 11){
+
+            currentMonth = 0;
+
+            currentYear++;
+
+        }
+
+
+        showCalendar();
+
+    }
+);
+
+
+/* শুরু */
+
+showToday();
+
+showCalendar();
+
+</script>
+
+</body>
+
+</html>
