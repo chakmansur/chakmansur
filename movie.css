@@ -1,1 +1,900 @@
+/* =====================================================
+MOVIE.CSS
+চকমনসুর বানীশ্রী সংঘ
+MOBILE FIRST • TAB STYLE
+===================================================== */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
+background: #f5f3f7;
+color: #302d35;
+overflow-x: hidden;
+}
+
+a {
+text-decoration: none;
+-webkit-tap-highlight-color: transparent;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
+
+.movie-header {
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 8px;
+
+padding: 10px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #46124f,
+        #8d285f
+    );
+
+box-shadow:
+    0 4px 15px rgba(70,20,70,.18);
+
+}
+
+.club-info {
+
+display: flex;
+align-items: center;
+
+gap: 9px;
+
+min-width: 0;
+
+}
+
+.club-info img {
+
+width: 48px;
+height: 48px;
+
+flex-shrink: 0;
+
+object-fit: contain;
+
+padding: 3px;
+
+background: #ffffff;
+
+border-radius: 50%;
+
+border: 2px solid rgba(255,255,255,.65);
+
+}
+
+.club-info h1 {
+
+font-size: 14px;
+
+line-height: 1.3;
+
+font-weight: 900;
+
+}
+
+.club-info p {
+
+margin-top: 2px;
+
+color: #f5ddec;
+
+font-size: 8px;
+
+}
+
+.home-btn {
+
+flex-shrink: 0;
+
+padding: 7px 10px;
+
+color: #64164e;
+
+background: #ffffff;
+
+border-radius: 20px;
+
+font-size: 9px;
+
+font-weight: 900;
+
+box-shadow:
+    0 3px 8px rgba(0,0,0,.12);
+
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.movie-hero {
+
+position: relative;
+
+overflow: hidden;
+
+padding: 27px 12px 30px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #8a245c,
+        #c54a71
+    );
+
+border-radius:
+    0 0 30px 30px;
+
+box-shadow:
+    0 6px 18px rgba(120,30,80,.18);
+
+}
+
+.movie-hero::before {
+
+content: "🎞️";
+
+position: absolute;
+
+right: -15px;
+
+top: -35px;
+
+font-size: 110px;
+
+opacity: .09;
+
+}
+
+.movie-hero::after {
+
+content: "🍿";
+
+position: absolute;
+
+left: -10px;
+
+bottom: -35px;
+
+font-size: 100px;
+
+opacity: .10;
+
+}
+
+.hero-icon {
+
+position: relative;
+
+z-index: 2;
+
+font-size: 43px;
+
+}
+
+.movie-hero h2 {
+
+position: relative;
+
+z-index: 2;
+
+margin-top: 5px;
+
+font-size: 28px;
+
+font-weight: 900;
+
+}
+
+.movie-hero p {
+
+position: relative;
+
+z-index: 2;
+
+margin-top: 3px;
+
+color: #ffeef5;
+
+font-size: 9px;
+
+}
+
+/* =====================================================
+NEW MOVIE HIGHLIGHT
+===================================================== */
+
+.new-movie-highlight {
+
+position: relative;
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+margin: 13px 9px 2px;
+
+padding: 15px 12px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #d18b16,
+        #e64f32
+    );
+
+border-radius: 18px;
+
+box-shadow:
+    0 6px 17px rgba(180,80,25,.18);
+
+overflow: hidden;
+
+}
+
+.new-movie-highlight::after {
+
+content: "★";
+
+position: absolute;
+
+right: -18px;
+
+bottom: -55px;
+
+font-size: 130px;
+
+opacity: .10;
+
+}
+
+.highlight-icon {
+
+position: relative;
+
+z-index: 2;
+
+width: 55px;
+height: 55px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+background: rgba(255,255,255,.18);
+
+border-radius: 16px;
+
+font-size: 32px;
+
+}
+
+.highlight-content {
+
+position: relative;
+
+z-index: 2;
+
+min-width: 0;
+
+}
+
+.highlight-content small {
+
+font-size: 7px;
+
+font-weight: 900;
+
+letter-spacing: .5px;
+
+opacity: .85;
+
+}
+
+.highlight-content h2 {
+
+margin-top: 2px;
+
+font-size: 17px;
+
+font-weight: 900;
+
+}
+
+.highlight-content p {
+
+margin-top: 3px;
+
+font-size: 8px;
+
+line-height: 1.4;
+
+color: #fff8e8;
+
+}
+
+.highlight-content span {
+
+display: inline-block;
+
+margin-top: 6px;
+
+padding: 5px 9px;
+
+color: #a44222;
+
+background: #ffffff;
+
+border-radius: 15px;
+
+font-size: 7px;
+
+font-weight: 900;
+
+}
+
+/* =====================================================
+MOVIE CONTAINER
+===================================================== */
+
+.movie-container {
+
+display: grid;
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 9px;
+
+padding: 13px 9px 25px;
+
+max-width: 1100px;
+
+margin: auto;
+
+}
+
+/* =====================================================
+MOVIE TAB
+===================================================== */
+
+.movie-tab {
+
+position: relative;
+
+display: flex;
+
+flex-direction: column;
+
+min-height: 190px;
+
+padding: 13px 10px;
+
+background: #ffffff;
+
+border: 1px solid #e5dfe6;
+
+border-radius: 17px;
+
+overflow: hidden;
+
+box-shadow:
+    0 5px 13px rgba(70,30,70,.07);
+
+transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+/* TOP STRIPE */
+
+.movie-tab::before {
+
+content: "";
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+height: 5px;
+
+background: #8a245c;
+
+}
+
+/* ICON */
+
+.tab-icon {
+
+width: 53px;
+height: 53px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+margin-bottom: 9px;
+
+background: #f8edf4;
+
+border-radius: 15px;
+
+font-size: 30px;
+
+}
+
+/* CONTENT */
+
+.tab-content {
+
+display: flex;
+
+flex-direction: column;
+
+flex: 1;
+
+}
+
+.tab-content h3 {
+
+color: #6d2252;
+
+font-size: 13px;
+
+line-height: 1.35;
+
+font-weight: 900;
+
+}
+
+.tab-content p {
+
+flex: 1;
+
+margin-top: 5px;
+
+color: #7d767d;
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+.tab-content span {
+
+display: block;
+
+margin-top: 9px;
+
+padding: 8px 7px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #84265c,
+        #b74370
+    );
+
+border-radius: 9px;
+
+text-align: center;
+
+font-size: 8px;
+
+font-weight: 900;
+
+}
+
+/* =====================================================
+BENGALI
+===================================================== */
+
+.bengali-tab::before {
+background: linear-gradient(90deg,#008b69,#39b47e);
+}
+
+.bengali-tab .tab-icon {
+background: #e9f8f0;
+}
+
+.bengali-tab .tab-content h3 {
+color: #167154;
+}
+
+.bengali-tab .tab-content span {
+background: linear-gradient(135deg,#17855f,#42ae78);
+}
+
+/* =====================================================
+HINDI
+===================================================== */
+
+.hindi-tab::before {
+background: linear-gradient(90deg,#df6827,#efae35);
+}
+
+.hindi-tab .tab-icon {
+background: #fff2e7;
+}
+
+.hindi-tab .tab-content h3 {
+color: #b55223;
+}
+
+.hindi-tab .tab-content span {
+background: linear-gradient(135deg,#dc6427,#e9a033);
+}
+
+/* =====================================================
+SOUTH
+===================================================== */
+
+.south-tab::before {
+background: linear-gradient(90deg,#275bb1,#36a1db);
+}
+
+.south-tab .tab-icon {
+background: #edf4ff;
+}
+
+.south-tab .tab-content h3 {
+color: #28568e;
+}
+
+.south-tab .tab-content span {
+background: linear-gradient(135deg,#2c62b6,#3f98d0);
+}
+
+/* =====================================================
+MULTI LANGUAGE
+===================================================== */
+
+.multi-tab::before {
+background: linear-gradient(90deg,#7852a4,#b16cc8);
+}
+
+.multi-tab .tab-icon {
+background: #f5edfb;
+}
+
+.multi-tab .tab-content h3 {
+color: #704a93;
+}
+
+.multi-tab .tab-content span {
+background: linear-gradient(135deg,#7750a2,#a466bd);
+}
+
+/* =====================================================
+WEB SERIES
+===================================================== */
+
+.series-tab::before {
+background: linear-gradient(90deg,#bb252e,#e34f59);
+}
+
+.series-tab .tab-icon {
+background: #fff0f1;
+}
+
+.series-tab .tab-content h3 {
+color: #aa242d;
+}
+
+.series-tab .tab-content span {
+background: linear-gradient(135deg,#bd2933,#e04d57);
+}
+
+/* =====================================================
+SONG
+===================================================== */
+
+.song-tab::before {
+background: linear-gradient(90deg,#b52b85,#dc55a3);
+}
+
+.song-tab .tab-icon {
+background: #fff0fa;
+}
+
+.song-tab .tab-content h3 {
+color: #a12a78;
+}
+
+.song-tab .tab-content span {
+background: linear-gradient(135deg,#ad2d80,#d34e9a);
+}
+
+/* =====================================================
+POPULAR
+===================================================== */
+
+.popular-tab::before {
+background: linear-gradient(90deg,#d49419,#e9bd42);
+}
+
+.popular-tab .tab-icon {
+background: #fff8df;
+}
+
+.popular-tab .tab-content h3 {
+color: #a87516;
+}
+
+.popular-tab .tab-content span {
+background: linear-gradient(135deg,#d4951e,#e5b53b);
+}
+
+/* =====================================================
+WATCH / SEARCH
+===================================================== */
+
+.watch-tab::before {
+background: linear-gradient(90deg,#176d96,#38a7c5);
+}
+
+.watch-tab .tab-icon {
+background: #eaf8fc;
+}
+
+.watch-tab .tab-content h3 {
+color: #17627f;
+}
+
+.watch-tab .tab-content span {
+background: linear-gradient(135deg,#1b7096,#38a4bf);
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.movie-footer {
+
+margin-top: 5px;
+
+padding: 25px 10px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #42143f,
+        #54253f
+    );
+
+border-radius:
+    27px 27px 0 0;
+
+}
+
+.movie-footer h3 {
+
+font-size: 15px;
+
+font-weight: 900;
+
+}
+
+.movie-footer p {
+
+margin-top: 4px;
+
+color: #eadce6;
+
+font-size: 8px;
+
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (min-width: 650px) {
+
+.movie-header {
+    padding: 14px 25px;
+}
+
+.club-info img {
+    width: 56px;
+    height: 56px;
+}
+
+.club-info h1 {
+    font-size: 18px;
+}
+
+.movie-hero {
+    padding: 40px 20px;
+}
+
+.movie-hero h2 {
+    font-size: 35px;
+}
+
+.new-movie-highlight {
+    max-width: 850px;
+    margin: 20px auto 5px;
+    padding: 20px;
+}
+
+.movie-container {
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    padding: 22px;
+}
+
+.movie-tab {
+
+    min-height: 220px;
+
+    padding: 18px;
+}
+
+.tab-icon {
+
+    width: 62px;
+    height: 62px;
+
+    font-size: 35px;
+}
+
+.tab-content h3 {
+    font-size: 16px;
+}
+
+.tab-content p {
+    font-size: 10px;
+}
+
+.tab-content span {
+    font-size: 10px;
+}
+
+}
+
+/* =====================================================
+DESKTOP
+===================================================== */
+
+@media (min-width: 1000px) {
+
+.movie-container {
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    padding: 30px;
+}
+
+.movie-tab:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 13px 28px rgba(80,30,70,.14);
+}
+
+.new-movie-highlight:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(180,80,25,.22);
+}
+
+}
+
+/* =====================================================
+VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+.movie-container {
+
+    gap: 6px;
+
+    padding:
+        12px 6px 20px;
+}
+
+.movie-tab {
+
+    min-height: 175px;
+
+    padding:
+        11px 8px;
+}
+
+.tab-icon {
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 7px;
+
+    font-size: 25px;
+
+    border-radius: 12px;
+}
+
+.tab-content h3 {
+    font-size: 11px;
+}
+
+.tab-content p {
+    font-size: 7px;
+}
+
+.tab-content span {
+
+    padding: 7px 5px;
+
+    font-size: 7px;
+}
+
+.highlight-icon {
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 27px;
+}
+
+.highlight-content h2 {
+    font-size: 15px;
+}
+
+}
