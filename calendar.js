@@ -1,3 +1,5 @@
+// বাংলা পঞ্জিকা - মাস পরিবর্তন
+
 const months = [
     "বৈশাখ",
     "জ্যৈষ্ঠ",
@@ -33,110 +35,95 @@ const banglaDigits = [
     "৫","৬","৭","৮","৯"
 ];
 
-function bn(number) {
-    return String(number).replace(/\d/g, d => banglaDigits[d]);
+function banglaNumber(number) {
+    return String(number).replace(
+        /\d/g,
+        digit => banglaDigits[digit]
+    );
 }
 
 
-/* শ্রাবণ ১৪৩৩ থেকে শুরু */
-
+// শুরু হবে শ্রাবণ ১৪৩৩ থেকে
 let monthIndex = 3;
 let banglaYear = 1433;
 
 
-/* ক্যালেন্ডার তৈরি */
+// মাস দেখানো
+function showMonth() {
 
-function makeCalendar() {
+    const month = months[monthIndex];
 
-    const days =
+    document.getElementById("monthName").innerText = month;
+
+    document.getElementById("yearName").innerText =
+        banglaNumber(banglaYear) + " বঙ্গাব্দ";
+
+
+    // ক্যালেন্ডারের তারিখ
+    const calendarDays =
         document.getElementById("calendarDays");
 
-    days.innerHTML = "";
+    calendarDays.innerHTML = "";
 
-    for (let i = 1; i <= 30; i++) {
 
-        const day =
-            document.createElement("div");
+    for (let day = 1; day <= 30; day++) {
 
-        day.innerText = bn(i);
+        const box = document.createElement("div");
 
-        days.appendChild(day);
+        box.innerText = banglaNumber(day);
+
+        calendarDays.appendChild(box);
     }
-}
 
 
-/* মাসের তথ্য দেখানো */
-
-function updateCalendar() {
-
-    const month =
-        months[monthIndex];
-
-    document.getElementById("monthName")
-        .innerText = month;
-
-    document.getElementById("yearName")
-        .innerText =
-        bn(banglaYear) + " বঙ্গাব্দ";
-
-
-    const list =
+    // উৎসব
+    const festivalList =
         document.getElementById("festivalList");
 
-    list.innerHTML = "";
+    festivalList.innerHTML = "";
 
 
-    festivals[month].forEach(function(name) {
+    festivals[month].forEach(function(festival) {
 
         const item =
             document.createElement("div");
 
-        item.className =
-            "festival-item";
+        item.className = "festival-item";
 
-        item.innerText = "🪔 " + name;
+        item.innerText = "🪔 " + festival;
 
-        list.appendChild(item);
-
+        festivalList.appendChild(item);
     });
-
-
-    makeCalendar();
 }
 
 
-/* আগের মাস */
+// আগের মাস
+document.getElementById("prevMonth").onclick = function() {
 
-document.getElementById("prevMonth")
-    .onclick = function() {
+    monthIndex--;
 
-        monthIndex--;
+    if (monthIndex < 0) {
+        monthIndex = 11;
+        banglaYear--;
+    }
 
-        if (monthIndex < 0) {
-            monthIndex = 11;
-            banglaYear--;
-        }
-
-        updateCalendar();
-    };
+    showMonth();
+};
 
 
-/* পরের মাস */
+// পরের মাস
+document.getElementById("nextMonth").onclick = function() {
 
-document.getElementById("nextMonth")
-    .onclick = function() {
+    monthIndex++;
 
-        monthIndex++;
+    if (monthIndex > 11) {
+        monthIndex = 0;
+        banglaYear++;
+    }
 
-        if (monthIndex > 11) {
-            monthIndex = 0;
-            banglaYear++;
-        }
-
-        updateCalendar();
-    };
+    showMonth();
+};
 
 
-/* প্রথমবার */
-
-updateCalendar();
+// প্রথমবার চালু
+showMonth();
