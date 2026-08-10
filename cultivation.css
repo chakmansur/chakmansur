@@ -1,3 +1,14 @@
+/* =========================================================
+চকমনসুর বানীশ্রী সংঘ
+কৃষি ও চাষাবাদ সহায়তা
+cultivation.css
+MOBILE FIRST • UNIQUE AGRI DESIGN
+========================================================= */
+
+/* =========================================================
+RESET
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,198 +20,278 @@ scroll-behavior: smooth;
 }
 
 body {
-font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
-background: #f3f7f0;
-color: #26352a;
-line-height: 1.5;
+font-family:
+"Noto Sans Bengali",
+"Nirmala UI",
+"SolaimanLipi",
+Arial,
+sans-serif;
+
+background:
+    linear-gradient(
+        180deg,
+        #f3f8ef 0%,
+        #f8faf5 45%,
+        #eef5ec 100%
+    );
+
+color: #27382b;
+
+line-height: 1.55;
+
+-webkit-tap-highlight-color: transparent;
+
 }
 
-/* =========================================
+/* =========================================================
 HEADER
-========================================= */
+========================================================= */
 
 .cultivation-header {
+
 position: relative;
+
 overflow: hidden;
 
 text-align: center;
 
-padding: 25px 15px 30px;
+padding: 28px 14px 32px;
 
-color: #fff;
+color: #ffffff;
 
 background:
     linear-gradient(
         145deg,
-        #0c4328 0%,
-        #176b38 48%,
-        #4c963e 100%
+        #063b23 0%,
+        #0b5930 42%,
+        #328043 100%
     );
 
-border-radius: 0 0 38px 38px;
+border-radius:
+    0 0 38px 38px;
 
 box-shadow:
-    0 8px 25px rgba(19, 76, 39, 0.25);
+    0 9px 28px rgba(18, 75, 38, 0.24);
 
 }
 
-/* Decorative circles */
+/* decorative circles */
 
 .cultivation-header::before {
+
 content: "";
 
 position: absolute;
 
-width: 170px;
-height: 170px;
+width: 220px;
+height: 220px;
 
-left: -90px;
-top: -70px;
+left: -135px;
+top: -125px;
 
-border: 1px solid rgba(255,255,255,0.12);
+border:
+    1px solid rgba(255,255,255,0.12);
 
 border-radius: 50%;
 
 }
 
 .cultivation-header::after {
+
 content: "";
 
 position: absolute;
 
-width: 130px;
-height: 130px;
+width: 190px;
+height: 190px;
 
-right: -65px;
-bottom: -55px;
+right: -110px;
+bottom: -120px;
 
-border: 1px solid rgba(255,255,255,0.12);
+border:
+    1px solid rgba(255,255,255,0.12);
 
 border-radius: 50%;
 
 }
 
-/* Header symbol */
+/* =========================================================
+HEADER SYMBOL
+========================================================= */
 
 .header-symbol {
+
 position: relative;
+
 z-index: 2;
 
-width: 72px;
-height: 72px;
+width: 76px;
+height: 76px;
 
-margin: 0 auto 11px;
+margin:
+    0 auto 12px;
 
 display: flex;
 
 align-items: center;
 justify-content: center;
 
+font-size: 40px;
+
 border-radius: 50%;
 
-font-size: 39px;
-
 background:
-    rgba(255,255,255,0.14);
+    rgba(255,255,255,0.13);
 
 border:
-    1px solid rgba(255,255,255,0.25);
+    1px solid rgba(255,255,255,0.22);
 
 box-shadow:
-    inset 0 0 20px rgba(255,255,255,0.08);
+    inset 0 0 25px rgba(255,255,255,0.07);
 
 }
 
-.cultivation-header h1,
-.cultivation-header p,
-.header-title,
-.home-button {
-position: relative;
-z-index: 2;
-}
+/* =========================================================
+HEADER TEXT
+========================================================= */
 
 .cultivation-header h1 {
+
+position: relative;
+
+z-index: 2;
+
 font-size: 23px;
-font-weight: 800;
+
+font-weight: 900;
 
 margin-bottom: 3px;
 
 }
 
-.cultivation-header p {
+.cultivation-header > p {
+
+position: relative;
+
+z-index: 2;
+
 font-size: 13px;
-opacity: 0.92;
+
+opacity: 0.94;
+
 }
 
+/* =========================================================
+HEADER TITLE
+========================================================= */
+
 .header-title {
-margin-top: 15px;
 
-font-size: 20px;
-font-weight: 800;
+position: relative;
 
-color: #eaffc8;
+z-index: 2;
+
+display: inline-block;
+
+margin-top: 16px;
+
+padding:
+    7px 18px;
+
+color: #eaffd6;
+
+background:
+    rgba(255,255,255,0.10);
+
+border:
+    1px solid rgba(255,255,255,0.17);
+
+border-radius: 30px;
+
+font-size: 19px;
+
+font-weight: 900;
 
 }
 
 .header-subtitle {
-margin-top: 3px;
 
-font-size: 13px !important;
+margin-top: 5px !important;
 
-color: #e3f4d7;
+color: #d9efd2;
+
+font-size: 12px !important;
 
 }
 
-/* Home button */
+/* =========================================================
+HOME BUTTON
+========================================================= */
 
 .home-button {
+
+position: relative;
+
+z-index: 5;
+
 display: inline-flex;
 
 align-items: center;
 justify-content: center;
 
-margin-top: 17px;
+margin-top: 18px;
 
-padding: 9px 25px;
+padding:
+    9px 25px;
 
 min-width: 105px;
 
-color: #18572f;
+color: #18582f;
 
-background: #fff;
-
-border-radius: 30px;
+background: #ffffff;
 
 text-decoration: none;
 
 font-size: 14px;
-font-weight: 800;
+
+font-weight: 900;
+
+border-radius: 30px;
 
 box-shadow:
-    0 5px 12px rgba(0,0,0,0.18);
+    0 6px 15px rgba(0,0,0,0.20);
 
 transition: 0.2s;
 
 }
 
-/* =========================================
-PAGE
-========================================= */
+.home-button:active {
 
-.cultivation-page {
-width: 100%;
-
-max-width: 760px;
-
-margin: auto;
-
-padding: 22px 11px 35px;
+transform:
+    scale(0.95);
 
 }
 
-/* =========================================
-SECTION COMMON
-========================================= */
+/* =========================================================
+MAIN PAGE
+========================================================= */
+
+.cultivation-page {
+
+width: 100%;
+
+max-width: 780px;
+
+margin: 0 auto;
+
+padding:
+    23px 10px 40px;
+
+}
+
+/* =========================================================
+SECTIONS
+========================================================= */
 
 .quick-section,
 .agriculture-section,
@@ -210,9 +301,16 @@ SECTION COMMON
 .news-section,
 .weather-section,
 .government-section,
+.loan-section,
 .notice-section {
-margin-bottom: 32px;
+
+margin-bottom: 34px;
+
 }
+
+/* =========================================================
+SECTION HEADINGS
+========================================================= */
 
 .quick-section h2,
 .agriculture-section h2,
@@ -222,62 +320,147 @@ margin-bottom: 32px;
 .news-section h2,
 .weather-section h2,
 .government-section h2,
+.loan-section h2,
 .notice-section h2 {
+
+position: relative;
 
 text-align: center;
 
+margin-bottom: 17px;
+
+padding-bottom: 10px;
+
 font-size: 20px;
 
-margin-bottom: 15px;
-
-font-weight: 800;
+font-weight: 900;
 
 }
 
-/* =========================================
+/* underline */
+
+.quick-section h2::after,
+.agriculture-section h2::after,
+.livestock-section h2::after,
+.fish-section h2::after,
+.video-section h2::after,
+.news-section h2::after,
+.weather-section h2::after,
+.government-section h2::after,
+.loan-section h2::after,
+.notice-section h2::after {
+
+content: "";
+
+position: absolute;
+
+left: 50%;
+bottom: 0;
+
+transform:
+    translateX(-50%);
+
+width: 46px;
+height: 3px;
+
+border-radius: 20px;
+
+}
+
+/* =========================================================
 SECTION COLORS
-========================================= */
+========================================================= */
+
+.quick-section h2 {
+color: #236c35;
+}
+
+.quick-section h2::after {
+background: #70aa48;
+}
 
 .agriculture-section h2 {
-color: #24732e;
+color: #277330;
+}
+
+.agriculture-section h2::after {
+background: #69a943;
 }
 
 .livestock-section h2 {
-color: #8a5228;
+color: #89532b;
+}
+
+.livestock-section h2::after {
+background: #bd7c45;
 }
 
 .fish-section h2 {
-color: #087b91;
+color: #08788a;
+}
+
+.fish-section h2::after {
+background: #4db4c0;
 }
 
 .video-section h2 {
-color: #b51f2b;
+color: #ad202c;
+}
+
+.video-section h2::after {
+background: #dd6069;
 }
 
 .news-section h2 {
-color: #6a5514;
+color: #75600f;
+}
+
+.news-section h2::after {
+background: #c9a633;
 }
 
 .weather-section h2 {
-color: #167786;
+color: #087784;
+}
+
+.weather-section h2::after {
+background: #51adb5;
 }
 
 .government-section h2 {
-color: #735313;
+color: #72550c;
+}
+
+.government-section h2::after {
+background: #c8a32f;
+}
+
+.loan-section h2 {
+color: #526c26;
+}
+
+.loan-section h2::after {
+background: #8faa51;
 }
 
 .notice-section h2 {
-color: #77501c;
+color: #785019;
 }
 
-/* =========================================
-QUICK GRID
-========================================= */
+.notice-section h2::after {
+background: #cc993c;
+}
+
+/* =========================================================
+QUICK ACCESS GRID
+========================================================= */
 
 .quick-grid {
+
 display: grid;
 
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns:
+    repeat(2, 1fr);
 
 gap: 10px;
 
@@ -285,66 +468,100 @@ gap: 10px;
 
 .quick-card {
 
-min-height: 115px;
+position: relative;
 
-padding: 13px 8px;
+min-height: 116px;
+
+padding:
+    13px 7px;
 
 display: flex;
 
 flex-direction: column;
 
 align-items: center;
+
 justify-content: center;
 
 text-align: center;
 
-color: #29402e;
+color: #29412e;
+
+background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f7fbf4
+    );
+
+border:
+    1px solid #dce8d7;
+
+border-radius: 21px;
 
 text-decoration: none;
 
-background: #fff;
-
-border: 1px solid #dce9d7;
-
-border-radius: 19px;
-
 box-shadow:
-    0 5px 13px rgba(34, 76, 39, 0.08);
+    0 5px 15px rgba(38, 76, 42, 0.08);
 
-transition: 0.2s;
+overflow: hidden;
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.quick-card::before {
+
+content: "";
+
+position: absolute;
+
+left: 0;
+top: 0;
+
+width: 100%;
+height: 4px;
+
+background:
+    linear-gradient(
+        90deg,
+        #32773b,
+        #80ae4f
+    );
 
 }
 
 .quick-card span {
-display: block;
 
-font-size: 30px;
+font-size: 31px;
 
-margin-bottom: 4px;
+margin-bottom: 5px;
 
 }
 
 .quick-card strong {
-display: block;
 
 font-size: 14px;
+
+font-weight: 900;
 
 }
 
 .quick-card small {
-display: block;
 
 margin-top: 2px;
 
-font-size: 10px;
+color: #7b857c;
 
-color: #7a847b;
+font-size: 10px;
 
 }
 
-/* =========================================
-MAIN INFO CARD
-========================================= */
+/* =========================================================
+UNIVERSAL INFO CARD
+========================================================= */
 
 .info-card {
 
@@ -358,32 +575,36 @@ gap: 13px;
 
 width: 100%;
 
-min-height: 96px;
+min-height: 99px;
 
 margin-bottom: 12px;
 
-padding: 13px 13px 13px 17px;
+padding:
+    13px 12px 13px 18px;
 
-color: #26352a;
+color: #27362b;
 
-background: #fff;
+background: #ffffff;
+
+border:
+    1px solid #e0e7de;
+
+border-radius: 21px;
 
 text-decoration: none;
 
-border-radius: 20px;
-
-border: 1px solid #e0e7de;
-
 box-shadow:
-    0 5px 15px rgba(37, 70, 40, 0.075);
+    0 5px 16px rgba(35, 70, 40, 0.075);
 
 overflow: hidden;
 
-transition: 0.2s;
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
 }
 
-/* Left colored bar */
+/* left stripe */
 
 .info-card::before {
 
@@ -399,27 +620,34 @@ height: 100%;
 
 }
 
+/* =========================================================
+ICON
+========================================================= */
+
 .card-icon {
 
-width: 57px;
-height: 57px;
+width: 58px;
+height: 58px;
 
-min-width: 57px;
+min-width: 58px;
 
 display: flex;
 
 align-items: center;
 justify-content: center;
 
-border-radius: 17px;
+font-size: 29px;
 
-font-size: 28px;
+border-radius: 17px;
 
 }
 
 .card-text {
+
 flex: 1;
+
 min-width: 0;
+
 }
 
 .card-text h3 {
@@ -428,17 +656,19 @@ font-size: 16px;
 
 line-height: 1.35;
 
+font-weight: 900;
+
 margin-bottom: 3px;
 
 }
 
 .card-text p {
 
+color: #717a72;
+
 font-size: 12px;
 
 line-height: 1.55;
-
-color: #707a70;
 
 margin-bottom: 4px;
 
@@ -448,103 +678,132 @@ margin-bottom: 4px;
 
 font-size: 11px;
 
-font-weight: 800;
+font-weight: 900;
 
 }
 
-/* =========================================
-AGRICULTURE
-========================================= */
+/* =========================================================
+GREEN AGRICULTURE
+========================================================= */
 
 .green-card {
-border-color: #d9e9d5;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f6fbf3
+    );
+
+border-color: #d9e8d4;
+
 }
 
 .green-card::before {
+
 background:
-linear-gradient(
-#287d32,
-#75ad42
-);
+    linear-gradient(
+        #287632,
+        #7aad49
+    );
+
 }
 
 .green-card .card-icon {
-background: #e7f5df;
-border: 1px solid #d1e7c8;
+
+background: #e8f5df;
+
+border:
+    1px solid #d3e8c9;
+
 }
 
 .green-card h3 {
-color: #276c30;
+color: #286d31;
 }
 
 .green-card span {
 color: #34823c;
 }
 
-/* =========================================
-LIVESTOCK
-========================================= */
+/* =========================================================
+ANIMAL / LIVESTOCK
+========================================================= */
 
 .animal-card {
-background:
-linear-gradient(
-135deg,
-#fff,
-#fffaf5
-);
 
-border-color: #eadbcb;
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fff9f4
+    );
+
+border-color: #eadbd0;
 
 }
 
 .animal-card::before {
+
 background:
-linear-gradient(
-#87502b,
-#c17b40
-);
+    linear-gradient(
+        #89502b,
+        #c27c43
+    );
+
 }
 
 .animal-card .card-icon {
-background: #f7eadf;
-border: 1px solid #ead5c2;
+
+background: #f8eadf;
+
+border:
+    1px solid #ecd5c2;
+
 }
 
 .animal-card h3 {
-color: #804b27;
+color: #824d29;
 }
 
 .animal-card span {
-color: #9a5a2d;
+color: #9c5c30;
 }
 
-/* =========================================
+/* =========================================================
 FISH
-========================================= */
+========================================================= */
 
 .fish-card {
-background:
-linear-gradient(
-135deg,
-#fff,
-#f0fbfd
-);
 
-border-color: #cfe8ed;
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fbfd
+    );
+
+border-color: #cde7ec;
 
 }
 
 .fish-card::before {
+
 background:
-linear-gradient(
-#08778c,
-#4cb9c6
-);
+    linear-gradient(
+        #087487,
+        #4eb6c2
+    );
+
 }
 
 .fish-card .card-icon {
-background: #e1f5f8;
-border: 1px solid #cbe8ed;
+
+background: #e0f5f8;
+
+border:
+    1px solid #cce8ed;
+
 }
 
 .fish-card h3 {
@@ -552,12 +811,100 @@ color: #087285;
 }
 
 .fish-card span {
-color: #07869a;
+color: #07899b;
 }
 
-/* =========================================
+/* =========================================================
+GOVERNMENT
+========================================================= */
+
+.government-card {
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fffaf0
+    );
+
+border-color: #e8dbb9;
+
+}
+
+.government-card::before {
+
+background:
+    linear-gradient(
+        #876912,
+        #d2ab36
+    );
+
+}
+
+.government-card .card-icon {
+
+background: #fff3cd;
+
+border:
+    1px solid #eadba9;
+
+}
+
+.government-card h3 {
+color: #73560d;
+}
+
+.government-card span {
+color: #9b7810;
+}
+
+/* =========================================================
+LOAN
+========================================================= */
+
+.loan-card {
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f9e9
+    );
+
+border-color: #dbe5bf;
+
+}
+
+.loan-card::before {
+
+background:
+    linear-gradient(
+        #55732a,
+        #91ad50
+    );
+
+}
+
+.loan-card .card-icon {
+
+background: #edf5dc;
+
+border:
+    1px solid #d7e5ba;
+
+}
+
+.loan-card h3 {
+color: #526d25;
+}
+
+.loan-card span {
+color: #66852d;
+}
+
+/* =========================================================
 VIDEO
-========================================= */
+========================================================= */
 
 .video-card {
 
@@ -569,33 +916,38 @@ align-items: center;
 
 gap: 13px;
 
-min-height: 91px;
+width: 100%;
+
+min-height: 96px;
 
 margin-bottom: 12px;
 
 padding: 14px;
 
-color: #382c2d;
-
-text-decoration: none;
+color: #382c2e;
 
 background:
     linear-gradient(
         135deg,
-        #fff,
+        #ffffff,
         #fff5f5
     );
 
-border: 1px solid #f0d8da;
+border:
+    1px solid #efd8da;
 
-border-radius: 20px;
+border-radius: 21px;
+
+text-decoration: none;
 
 box-shadow:
-    0 5px 15px rgba(100, 30, 35, 0.08);
+    0 5px 16px rgba(112, 32, 38, 0.08);
 
 overflow: hidden;
 
-transition: 0.2s;
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
 }
 
@@ -613,37 +965,42 @@ height: 100%;
 
 background:
     linear-gradient(
-        #d51f2d,
-        #ef6670
+        #c51f2d,
+        #e86b73
     );
 
 }
 
 .video-icon {
 
-width: 56px;
-height: 56px;
+width: 57px;
+height: 57px;
 
-min-width: 56px;
+min-width: 57px;
 
 display: flex;
 
 align-items: center;
 justify-content: center;
 
-border-radius: 17px;
-
-background: #ffe4e6;
-
 font-size: 27px;
+
+background: #ffe5e7;
+
+border:
+    1px solid #f1d0d3;
+
+border-radius: 17px;
 
 }
 
 .video-card h3 {
 
-color: #a61d29;
+color: #a71e29;
 
 font-size: 16px;
+
+font-weight: 900;
 
 margin-bottom: 3px;
 
@@ -655,134 +1012,113 @@ color: #74696a;
 
 font-size: 12px;
 
+line-height: 1.5;
+
 margin-bottom: 4px;
 
 }
 
 .video-card span {
 
-color: #c42632;
+color: #c12531;
 
 font-size: 11px;
 
-font-weight: 800;
+font-weight: 900;
 
 }
 
-/* =========================================
+/* =========================================================
 NEWS
-========================================= */
+========================================================= */
 
 .news-card {
+
 background:
-linear-gradient(
-135deg,
-#fff,
-#fffdf4
-);
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fffdf4
+    );
 
 border-color: #eadfb8;
 
 }
 
 .news-card::before {
+
 background:
-linear-gradient(
-#a28320,
-#d1ad3a
-);
+    linear-gradient(
+        #9c7b17,
+        #d2b03b
+    );
+
 }
 
 .news-card .card-icon {
-background: #fff6d9;
-border: 1px solid #ecdfb3;
+
+background: #fff5d7;
+
+border:
+    1px solid #ecdfb4;
+
 }
 
 .news-card h3 {
-color: #75600e;
+color: #76600e;
 }
 
 .news-card span {
-color: #a27d0d;
+color: #a27d0e;
 }
 
-/* =========================================
+/* =========================================================
 WEATHER
-========================================= */
+========================================================= */
 
 .weather-card {
-background:
-linear-gradient(
-135deg,
-#fff,
-#f1fbfc
-);
 
-border-color: #cfe7e9;
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fafc
+    );
+
+border-color: #cee6e9;
 
 }
 
 .weather-card::before {
+
 background:
-linear-gradient(
-#087d8b,
-#52b9c2
-);
+    linear-gradient(
+        #087986,
+        #54b9c2
+    );
+
 }
 
 .weather-card .card-icon {
-background: #e1f6f8;
-border: 1px solid #cce8eb;
+
+background: #e0f5f7;
+
+border:
+    1px solid #cce7ea;
+
 }
 
 .weather-card h3 {
-color: #087481;
+color: #08737e;
 }
 
 .weather-card span {
-color: #088899;
+color: #088b9b;
 }
 
-/* =========================================
-GOVERNMENT
-========================================= */
-
-.government-card {
-background:
-linear-gradient(
-135deg,
-#fff,
-#fffaf0
-);
-
-border-color: #e9dbb8;
-
-}
-
-.government-card::before {
-background:
-linear-gradient(
-#896b17,
-#d0aa34
-);
-}
-
-.government-card .card-icon {
-background: #fff4d0;
-border: 1px solid #eadba8;
-}
-
-.government-card h3 {
-color: #74580d;
-}
-
-.government-card span {
-color: #9a7710;
-}
-
-/* =========================================
+/* =========================================================
 NOTICE
-========================================= */
+========================================================= */
 
 .notice-box {
 
@@ -798,44 +1134,46 @@ background:
     linear-gradient(
         135deg,
         #fffaf0,
-        #fff1d3
+        #fff0d1
     );
 
 border:
     1px solid #ecd8ae;
 
-border-radius: 20px;
+border-radius: 21px;
 
 box-shadow:
-    0 5px 15px rgba(110, 75, 20, 0.07);
+    0 5px 15px rgba(112, 76, 19, 0.08);
 
 }
 
 .notice-icon {
 
-width: 50px;
-height: 50px;
+width: 51px;
+height: 51px;
 
-min-width: 50px;
+min-width: 51px;
 
 display: flex;
 
 align-items: center;
 justify-content: center;
 
-border-radius: 15px;
+font-size: 26px;
 
-background: #fff0c5;
+background: #fff0c6;
 
-font-size: 25px;
+border-radius: 16px;
 
 }
 
 .notice-box h3 {
 
-color: #7b5017;
+color: #795018;
 
 font-size: 16px;
+
+font-weight: 900;
 
 margin-bottom: 4px;
 
@@ -843,7 +1181,7 @@ margin-bottom: 4px;
 
 .notice-box p {
 
-color: #6f6659;
+color: #6f665a;
 
 font-size: 12px;
 
@@ -851,26 +1189,28 @@ line-height: 1.65;
 
 }
 
-/* =========================================
+/* =========================================================
 FOOTER
-========================================= */
+========================================================= */
 
 .footer {
 
+padding:
+    25px 12px;
+
 text-align: center;
 
-padding: 24px 10px;
-
-color: #fff;
+color: #ffffff;
 
 background:
     linear-gradient(
         145deg,
-        #123e25,
-        #236b36
+        #103d26,
+        #236a37
     );
 
-border-radius: 32px 32px 0 0;
+border-radius:
+    32px 32px 0 0;
 
 box-shadow:
     0 -5px 18px rgba(30, 70, 35, 0.15);
@@ -883,31 +1223,54 @@ font-size: 12px;
 margin: 4px 0;
 }
 
-/* =========================================
+/* =========================================================
 TOUCH EFFECT
-========================================= */
+========================================================= */
 
 .quick-card:active,
 .info-card:active,
 .video-card:active,
 .home-button:active {
 
-transform: scale(0.975);
+transform:
+    scale(0.975);
 
 }
 
-/* =========================================
+/* =========================================================
 TABLET / DESKTOP
-========================================= */
+========================================================= */
 
 @media (min-width: 700px) {
 
+.cultivation-header {
+
+    padding:
+        35px 20px 40px;
+}
+
+
+.cultivation-header h1 {
+
+    font-size: 27px;
+}
+
+
+.header-title {
+
+    font-size: 21px;
+}
+
+
 .cultivation-page {
-    padding: 30px 20px 45px;
+
+    padding:
+        32px 20px 50px;
 }
 
 
 .quick-grid {
+
     grid-template-columns:
         repeat(4, 1fr);
 
@@ -916,113 +1279,188 @@ TABLET / DESKTOP
 
 
 .quick-card {
+
     min-height: 135px;
 }
 
 
 .info-card {
-    min-height: 105px;
 
-    padding: 15px 17px;
+    min-height: 108px;
+
+    padding:
+        15px 17px;
 }
 
 
 .card-icon {
-    width: 63px;
-    height: 63px;
 
-    min-width: 63px;
+    width: 64px;
+    height: 64px;
+
+    min-width: 64px;
 
     font-size: 31px;
 }
 
 
 .card-text h3 {
+
     font-size: 18px;
 }
 
 
 .card-text p {
+
     font-size: 13px;
 }
 
 
 .card-text span {
+
     font-size: 12px;
 }
 
 
-.info-card:hover,
-.video-card:hover,
-.quick-card:hover {
+.video-card {
 
-    transform: translateY(-3px);
+    min-height: 105px;
+
+    padding: 16px;
+}
+
+
+.video-icon {
+
+    width: 64px;
+    height: 64px;
+
+    min-width: 64px;
+
+    font-size: 31px;
+}
+
+
+.video-card h3 {
+
+    font-size: 18px;
+}
+
+
+.video-card p {
+
+    font-size: 13px;
+}
+
+
+.video-card span {
+
+    font-size: 12px;
+}
+
+
+.quick-card:hover,
+.info-card:hover,
+.video-card:hover {
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 10px 24px rgba(35, 75, 40, 0.14);
+        0 11px 25px rgba(35, 75, 40, 0.14);
 }
 
 
 .home-button:hover {
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     box-shadow:
-        0 7px 16px rgba(0,0,0,0.22);
+        0 8px 17px rgba(0,0,0,0.22);
 }
 
 }
 
-/* =========================================
+/* =========================================================
 SMALL MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
 .cultivation-header {
-    padding: 22px 10px 28px;
+
+    padding:
+        23px 10px 28px;
 }
 
 
 .cultivation-header h1 {
+
     font-size: 21px;
 }
 
 
+.header-symbol {
+
+    width: 68px;
+    height: 68px;
+
+    font-size: 36px;
+}
+
+
 .header-title {
-    font-size: 18px;
+
+    font-size: 17px;
+
+    padding:
+        6px 14px;
 }
 
 
 .cultivation-page {
+
     padding-left: 8px;
     padding-right: 8px;
 }
 
 
 .quick-grid {
+
     gap: 8px;
 }
 
 
 .quick-card {
+
     min-height: 108px;
 }
 
 
 .quick-card span {
+
     font-size: 27px;
 }
 
 
+.quick-card strong {
+
+    font-size: 13px;
+}
+
+
 .info-card {
+
     gap: 10px;
 
-    padding: 12px 10px 12px 14px;
+    padding:
+        12px 10px 12px 14px;
 }
 
 
 .card-icon {
+
     width: 52px;
     height: 52px;
 
@@ -1033,21 +1471,25 @@ SMALL MOBILE
 
 
 .card-text h3 {
+
     font-size: 15px;
 }
 
 
 .card-text p {
+
     font-size: 11px;
 }
 
 
 .card-text span {
+
     font-size: 10px;
 }
 
 
 .video-card {
+
     gap: 10px;
 
     padding: 12px;
@@ -1055,6 +1497,7 @@ SMALL MOBILE
 
 
 .video-icon {
+
     width: 51px;
     height: 51px;
 
@@ -1065,7 +1508,20 @@ SMALL MOBILE
 
 
 .video-card h3 {
+
     font-size: 15px;
 }
 
-  }
+
+.video-card p {
+
+    font-size: 11px;
+}
+
+
+.video-card span {
+
+    font-size: 10px;
+}
+
+}
