@@ -1,152 +1,663 @@
-<!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>গ্যালারি | চকমনসুর বানীশ্রী সংঘ</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="gallery.css">
-    <link rel="icon" href="images/favicon.png">
-</head>
+<title>গ্যালারি | চকমনসুর বানীশ্রী সংঘ</title>
 
-<body>
+<link rel="stylesheet" href="gallery.css">
 
-<!-- ===== TOP BAR ===== -->
+<link rel="icon"
+      href="images/favicon.png">
 
-<header class="topbar">
+</head><body><!-- ==================================================
+     TOP BAR
+================================================== --><header class="topbar"><button
+    id="menuBtn"
+    class="menu-btn"
+    aria-label="Menu">
+    ☰
+</button>
 
-    <button id="menuBtn">☰</button>
 
-    <div class="live">
-        <span id="wish"></span>
-        <span id="clock"></span>
-    </div>
+<div class="live-info">
 
-    <div class="social">
+    <span id="wish"></span>
 
-        <a href="https://facebook.com" target="_blank">
-            <img src="images/social/facebook.png" alt="Facebook">
-        </a>
+    <span class="live-divider">•</span>
 
-        <a href="https://youtube.com/@chakmansur?si=zD4rTFeWO-Uouoyn" target="_blank">
-            <img src="images/social/youtube.png" alt="YouTube">
-        </a>
-
-        <a href="https://instagram.com" target="_blank">
-            <img src="images/social/instagram.png" alt="Instagram">
-        </a>
-
-    </div>
-
-</header>
-
-<!-- ===== SIDE MENU ===== -->
-
-<nav class="sideMenu" id="sideMenu">
-
-<a href="index.html">🏠 হোম</a>
-<a href="karmasuchi.html">📋 আমাদের কর্মসূচি</a>
-<a href="committee.html">👥 পরিচালনা কমিটি</a>
-<a href="gallery.html" class="active">🖼 গ্যালারি</a>
-<a href="student.html">🎓 Student Corner</a>
-<a href="weather.html">🌦 আবহাওয়া</a>
-<a href="newspaper.html">📰 সংবাদপত্র</a>
-<a href="about.html">📖 আমাদের সম্পর্কে</a>
-<a href="contact.html">☎ যোগাযোগ</a>
-
-</nav>
-
-<!-- ===== PAGE TITLE ===== -->
-
-<section class="gallery-title">
-
-<h1>📸 ফটো গ্যালারি</h1>
-
-<p>চকমনসুর বানীশ্রী সংঘ</p>
-
-</section>
-
-<!-- ===== GALLERY CATEGORY ===== -->
-
-<div class="gallery-tabs">
-
-<button class="tab active">🪔 পূজা উৎসব</button>
-
-<button class="tab">🏏 খেলাধুলা</button>
-
-<button class="tab">❤️ সমাজসেবা</button>
-
-<button class="tab">🎭 সাংস্কৃতিক অনুষ্ঠান</button>
+    <span id="clock"></span>
 
 </div>
-  <!-- ===== PUJO UTSAB ===== -->
 
-<section class="gallery-section active">
 
-<div class="photo-card"><img src="images/gallery/durga1.jpg" alt=""><p>দুর্গাপূজা</p></div>
+<div class="social">
 
-<div class="photo-card"><img src="images/gallery/kali1.jpg" alt=""><p>কালীপূজা</p></div>
+    <a
+        href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<div class="photo-card"><img src="images/gallery/laxmi1.jpg" alt=""><p>লক্ষ্মীপূজা</p></div>
+        <img
+            src="images/social/facebook.png"
+            alt="Facebook">
 
-<div class="photo-card"><img src="images/gallery/saraswati1.jpg" alt=""><p>সরস্বতী পূজা</p></div>
+    </a>
 
-<div class="photo-card"><img src="images/gallery/shiv1.jpg" alt=""><p>মহাশিবরাত্রি</p></div>
 
-</section>
+    <a
+        href="https://youtube.com/@chakmansur?si=zD4rTFeWO-Uouoyn"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<!-- ===== KHELADHULO ===== -->
+        <img
+            src="images/social/youtube.png"
+            alt="YouTube">
 
-<section class="gallery-section">
+    </a>
 
-<div class="photo-card"><img src="images/gallery/cricket1.jpg" alt=""><p>ক্রিকেট</p></div>
 
-<div class="photo-card"><img src="images/gallery/football1.jpg" alt=""><p>ফুটবল</p></div>
+    <a
+        href="https://instagram.com"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<div class="photo-card"><img src="images/gallery/volleyball1.jpg" alt=""><p>ভলিবল</p></div>
+        <img
+            src="images/social/instagram.png"
+            alt="Instagram">
 
-<div class="photo-card"><img src="images/gallery/kabaddi1.jpg" alt=""><p>কাবাডি</p></div>
+    </a>
 
-</section>
+</div>
 
-<!-- ===== SAMAJ SEVA ===== -->
+</header><!-- ==================================================
+     SIDE MENU
+================================================== --><nav
+    class="sideMenu"
+    id="sideMenu"><div class="menu-header">
 
-<section class="gallery-section">
+    <div class="menu-logo">
+        🖼️
+    </div>
 
-<div class="photo-card"><img src="images/gallery/eye1.jpg" alt=""><p>চক্ষু পরীক্ষা</p></div>
+    <div>
 
-<div class="photo-card"><img src="images/gallery/health1.jpg" alt=""><p>স্বাস্থ্য পরীক্ষা</p></div>
+        <h3>চকমনসুর বানীশ্রী সংঘ</h3>
 
-<div class="photo-card"><img src="images/gallery/blood1.jpg" alt=""><p>রক্তদান</p></div>
+        <p>গ্যালারি</p>
 
-<div class="photo-card"><img src="images/gallery/tree1.jpg" alt=""><p>বৃক্ষরোপণ</p></div>
+    </div>
 
-</section>
+</div>
 
-<!-- ===== SANGSKRITIK ===== -->
 
-<section class="gallery-section">
+<a href="index.html">
+    🏠 হোম
+</a>
 
-<div class="photo-card"><img src="images/gallery/culture1.jpg" alt=""><p>সাংস্কৃতিক অনুষ্ঠান</p></div>
+<a href="karmasuchi.html">
+    📋 আমাদের কর্মসূচি
+</a>
 
-<div class="photo-card"><img src="images/gallery/dance1.jpg" alt=""><p>নৃত্য</p></div>
+<a href="committee.html">
+    👥 পরিচালনা কমিটি
+</a>
 
-<div class="photo-card"><img src="images/gallery/music1.jpg" alt=""><p>সংগীত</p></div>
+<a href="gallery.html"
+   class="active">
+    🖼️ গ্যালারি
+</a>
 
-<div class="photo-card"><img src="images/gallery/drama1.jpg" alt=""><p>নাটক</p></div>
+<a href="student.html">
+    🎓 Student Corner
+</a>
 
-</section>
+<a href="weather.html">
+    🌦️ আবহাওয়া
+</a>
 
-<footer class="footer">
+<a href="newspaper.html">
+    📰 সংবাদপত্র
+</a>
 
-<p>© ২০২৬ চকমনসুর বানীশ্রী সংঘ</p>
+<a href="about.html">
+    📖 আমাদের সম্পর্কে
+</a>
 
-<p>Developed & Maintained by <b>DEBU</b></p>
+<a href="contact.html">
+    ☎️ যোগাযোগ
+</a>
 
-</footer>
+</nav><!-- ==================================================
+     PAGE HERO
+================================================== --><section class="gallery-title"><div class="gallery-title-icon">
+    📸
+</div>
 
-<script src="script.js"></script>
+<h1>
+    ফটো গ্যালারি
+</h1>
 
-</body>
-</html>
+<p>
+    চকমনসুর বানীশ্রী সংঘের অনুষ্ঠান,
+    খেলাধুলা ও সমাজসেবার স্মৃতি
+</p>
+
+</section><!-- ==================================================
+     GALLERY CATEGORY TABS
+================================================== --><section class="gallery-tab-area"><div class="gallery-tabs">
+
+    <button
+        class="tab active"
+        data-category="puja">
+
+        <span>🪔</span>
+
+        <strong>পূজা উৎসব</strong>
+
+    </button>
+
+
+    <button
+        class="tab"
+        data-category="sports">
+
+        <span>🏏</span>
+
+        <strong>খেলাধুলা</strong>
+
+    </button>
+
+
+    <button
+        class="tab"
+        data-category="social">
+
+        <span>❤️</span>
+
+        <strong>সমাজসেবা</strong>
+
+    </button>
+
+
+    <button
+        class="tab"
+        data-category="culture">
+
+        <span>🎭</span>
+
+        <strong>সাংস্কৃতিক</strong>
+
+    </button>
+
+</div>
+
+</section><!-- ==================================================
+     PUJA
+================================================== --><section
+    class="gallery-section active"
+    data-section="puja"><div class="section-heading">
+
+    <span>🪔</span>
+
+    <div>
+
+        <h2>পূজা উৎসব</h2>
+
+        <p>আমাদের বিভিন্ন ধর্মীয় অনুষ্ঠানের স্মৃতি</p>
+
+    </div>
+
+</div>
+
+
+<div class="photo-grid">
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/durga1.jpg"
+            alt="দুর্গাপূজা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>দুর্গাপূজা</h3>
+
+            <span>🪔 পূজা উৎসব</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/kali1.jpg"
+            alt="কালীপূজা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>কালীপূজা</h3>
+
+            <span>🪔 পূজা উৎসব</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/laxmi1.jpg"
+            alt="লক্ষ্মীপূজা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>লক্ষ্মীপূজা</h3>
+
+            <span>🪔 পূজা উৎসব</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/saraswati1.jpg"
+            alt="সরস্বতী পূজা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>সরস্বতী পূজা</h3>
+
+            <span>🪔 পূজা উৎসব</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/shiv1.jpg"
+            alt="মহাশিবরাত্রি"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>মহাশিবরাত্রি</h3>
+
+            <span>🪔 পূজা উৎসব</span>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ==================================================
+     SPORTS
+================================================== --><section
+    class="gallery-section"
+    data-section="sports"><div class="section-heading">
+
+    <span>🏆</span>
+
+    <div>
+
+        <h2>খেলাধুলা</h2>
+
+        <p>ক্রীড়া অনুষ্ঠান ও প্রতিযোগিতার স্মৃতি</p>
+
+    </div>
+
+</div>
+
+
+<div class="photo-grid">
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/cricket1.jpg"
+            alt="ক্রিকেট"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>ক্রিকেট</h3>
+
+            <span>🏏 খেলাধুলা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/football1.jpg"
+            alt="ফুটবল"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>ফুটবল</h3>
+
+            <span>⚽ খেলাধুলা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/volleyball1.jpg"
+            alt="ভলিবল"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>ভলিবল</h3>
+
+            <span>🏐 খেলাধুলা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/kabaddi1.jpg"
+            alt="কাবাডি"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>কাবাডি</h3>
+
+            <span>🏆 খেলাধুলা</span>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ==================================================
+     SOCIAL SERVICE
+================================================== --><section
+    class="gallery-section"
+    data-section="social"><div class="section-heading">
+
+    <span>❤️</span>
+
+    <div>
+
+        <h2>সমাজসেবা</h2>
+
+        <p>মানুষের পাশে আমাদের বিভিন্ন উদ্যোগ</p>
+
+    </div>
+
+</div>
+
+
+<div class="photo-grid">
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/eye1.jpg"
+            alt="চক্ষু পরীক্ষা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>চক্ষু পরীক্ষা</h3>
+
+            <span>👁️ স্বাস্থ্যসেবা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/health1.jpg"
+            alt="স্বাস্থ্য পরীক্ষা"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>স্বাস্থ্য পরীক্ষা</h3>
+
+            <span>🏥 স্বাস্থ্যসেবা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/blood1.jpg"
+            alt="রক্তদান"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>রক্তদান</h3>
+
+            <span>🩸 সমাজসেবা</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/tree1.jpg"
+            alt="বৃক্ষরোপণ"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>বৃক্ষরোপণ</h3>
+
+            <span>🌳 পরিবেশ</span>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ==================================================
+     CULTURAL
+================================================== --><section
+    class="gallery-section"
+    data-section="culture"><div class="section-heading">
+
+    <span>🎭</span>
+
+    <div>
+
+        <h2>সাংস্কৃতিক অনুষ্ঠান</h2>
+
+        <p>সংস্কৃতি, সংগীত, নৃত্য ও নাটকের স্মৃতি</p>
+
+    </div>
+
+</div>
+
+
+<div class="photo-grid">
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/culture1.jpg"
+            alt="সাংস্কৃতিক অনুষ্ঠান"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+
+            <span>🎭 সংস্কৃতি</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/dance1.jpg"
+            alt="নৃত্য"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>নৃত্য</h3>
+
+            <span>💃 নৃত্য</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/music1.jpg"
+            alt="সংগীত"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>সংগীত</h3>
+
+            <span>🎵 সংগীত</span>
+
+        </div>
+
+    </article>
+
+
+    <article class="photo-card">
+
+        <img
+            src="images/gallery/drama1.jpg"
+            alt="নাটক"
+            loading="lazy">
+
+        <div class="photo-info">
+
+            <h3>নাটক</h3>
+
+            <span>🎭 নাট্য অনুষ্ঠান</span>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ==================================================
+     LIGHTBOX
+================================================== --><div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"><button
+    class="lightbox-close"
+    id="lightboxClose"
+    aria-label="বন্ধ করুন">
+
+    ✕
+
+</button>
+
+
+<button
+    class="lightbox-prev"
+    id="lightboxPrev"
+    aria-label="আগের ছবি">
+
+    ‹
+
+</button>
+
+
+<div class="lightbox-content">
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="">
+
+    <div
+        class="lightbox-caption"
+        id="lightboxCaption">
+    </div>
+
+</div>
+
+
+<button
+    class="lightbox-next"
+    id="lightboxNext"
+    aria-label="পরের ছবি">
+
+    ›
+
+</button>
+
+</div><!-- ==================================================
+     FOOTER
+================================================== --><footer class="footer"><h3>
+    চকমনসুর বানীশ্রী সংঘ
+</h3>
+
+<p>
+    📸 আমাদের স্মৃতির গ্যালারি
+</p>
+
+<p>
+    © ২০২৬ চকমনসুর বানীশ্রী সংঘ
+</p>
+
+<p>
+    Developed & Maintained by
+    <b>DEBU</b>
+</p>
+
+</footer><!-- ==================================================
+     JAVASCRIPT
+================================================== --><script src="gallery.js"></script></body></html>
