@@ -1,19 +1,14 @@
-/* =====================================================
-COMMITTEE PAGE
-চকমনসুর বানীশ্রী সংঘ
-===================================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-html {
-scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
+html{
+scroll-behavior:smooth;
+}
+
+body{
 font-family:
 "Noto Sans Bengali",
 "Nirmala UI",
@@ -21,769 +16,654 @@ font-family:
 Arial,
 sans-serif;
 
-background: #f4f8f6;
-color: #29483f;
+background:#f3f8f6;
+color:#29483f;
 
-overflow-x: hidden;
+overflow-x:hidden;
 
 }
 
-a {
-text-decoration: none;
-color: inherit;
+a{
+text-decoration:none;
+color:inherit;
 }
 
-/* =====================================================
-TOP BAR
-===================================================== */
+/* ================= TOP BAR ================= */
 
-.topbar {
-position: sticky;
-top: 0;
-z-index: 1000;
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
 
-min-height: 62px;
+height:60px;
 
-display: flex;
-align-items: center;
+display:flex;
+align-items:center;
 
-padding: 8px 12px;
+padding:7px 10px;
 
-color: #fff;
+background:linear-gradient(
+    135deg,
+    #075b4b,
+    #159879
+);
 
-background:
-    linear-gradient(
-        135deg,
-        #075b4b,
-        #159879
-    );
+color:#fff;
 
 box-shadow:
-    0 4px 16px rgba(0,70,55,.18);
+0 4px 15px rgba(0,0,0,.15);
 
 }
 
-#menuBtn {
-width: 43px;
-height: 43px;
+#menuBtn{
+width:42px;
+height:42px;
 
-border: 0;
-border-radius: 12px;
+border:0;
+border-radius:11px;
 
-background: rgba(255,255,255,.14);
+background:rgba(255,255,255,.15);
 
-color: #fff;
+color:#fff;
 
-font-size: 22px;
+font-size:21px;
 
-cursor: pointer;
+cursor:pointer;
 
 }
 
-.live {
-flex: 1;
+.live{
+flex:1;
 
-display: flex;
-align-items: center;
+display:flex;
+align-items:center;
 
-gap: 7px;
+gap:6px;
 
-margin-left: 9px;
-
-overflow: hidden;
+margin-left:8px;
 
 }
 
 #wish,
-#clock {
-font-size: 11px;
+#clock{
+font-size:11px;
+font-weight:700;
 }
 
-#wish {
-color: #e2fff7;
-font-weight: 700;
+.social{
+display:flex;
+gap:5px;
 }
 
-#clock {
-color: #fff;
-font-weight: 800;
-}
+.social a{
+width:31px;
+height:31px;
 
-.social {
-display: flex;
-align-items: center;
+display:flex;
+align-items:center;
+justify-content:center;
 
-gap: 6px;
+background:rgba(255,255,255,.14);
 
-}
-
-.social a {
-width: 32px;
-height: 32px;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-background: rgba(255,255,255,.13);
-
-border-radius: 9px;
+border-radius:9px;
 
 }
 
-.social img {
-width: 19px;
-height: 19px;
+.social img{
+width:18px;
+height:18px;
 
-object-fit: contain;
+object-fit:contain;
 
 }
 
-/* =====================================================
-SIDE MENU
-===================================================== */
+/* ================= SIDE MENU ================= */
 
-.sideMenu {
-position: fixed;
+.sideMenu{
+position:fixed;
 
-top: 0;
-left: -280px;
+top:0;
+left:-275px;
 
-z-index: 2000;
+z-index:3000;
 
-width: 260px;
-height: 100vh;
+width:260px;
+height:100vh;
 
-padding: 78px 12px 20px;
+padding:75px 11px 20px;
 
-overflow-y: auto;
+overflow-y:auto;
 
-background: #fff;
+background:#fff;
 
 box-shadow:
-    7px 0 25px rgba(0,0,0,.15);
+8px 0 25px rgba(0,0,0,.16);
 
-transition: left .3s ease;
-
-}
-
-.sideMenu.open {
-left: 0;
-}
-
-.sideMenu a {
-display: flex;
-align-items: center;
-
-min-height: 48px;
-
-margin-bottom: 7px;
-
-padding: 9px 13px;
-
-background: #f5f9f7;
-
-border: 1px solid #e1ebe7;
-
-border-radius: 12px;
-
-color: #31584e;
-
-font-size: 14px;
-font-weight: 700;
-
-transition: .2s;
+transition:left .3s ease;
 
 }
 
-.sideMenu a:hover {
-transform: translateX(4px);
+.sideMenu.open{
+left:0;
 }
 
-.sideMenu a[href="committee.html"] {
-color: #fff;
+.menu-title{
+display:flex;
+align-items:center;
 
-background:
-    linear-gradient(
-        135deg,
-        #08745d,
-        #159e7c
-    );
+gap:8px;
 
-border-color: transparent;
+padding:12px;
+margin-bottom:10px;
 
-}
+color:#176252;
 
-/* =====================================================
-BANNER
-===================================================== */
+background:#edf8f4;
 
-.banner {
-width: 100%;
+border-radius:12px;
 
-max-height: 260px;
-
-display: block;
-
-object-fit: cover;
-
-background: #dcebe6;
+font-size:13px;
 
 }
 
-/* =====================================================
-PAGE TITLE
-===================================================== */
+.sideMenu a{
+display:flex;
+align-items:center;
 
-.title {
-position: relative;
+min-height:46px;
 
-overflow: hidden;
+margin-bottom:6px;
+padding:8px 12px;
 
-padding: 32px 15px;
+color:#31584e;
 
-text-align: center;
+background:#f5f9f7;
 
-color: #fff;
+border:1px solid #e1ebe7;
 
-background:
-    linear-gradient(
-        135deg,
-        #075b4b,
-        #159879
-    );
+border-radius:11px;
+
+font-size:13px;
+font-weight:700;
+
+transition:.2s;
+
+}
+
+.sideMenu a:hover,
+.sideMenu a.active{
+color:#fff;
+
+background:linear-gradient(
+    135deg,
+    #08745d,
+    #159e7c
+);
+
+border-color:transparent;
+
+}
+
+/* ================= BANNER ================= */
+
+.committee-banner{
+width:100%;
+
+overflow:hidden;
+
+background:#dcebe6;
+
+}
+
+.committee-banner img{
+width:100%;
+height:180px;
+
+display:block;
+
+object-fit:cover;
+
+}
+
+/* ================= TITLE ================= */
+
+.page-title{
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+padding:22px 12px;
+
+color:#fff;
+
+background:linear-gradient(
+    135deg,
+    #075b4b,
+    #159879
+);
 
 border-radius:
-    0 0 28px 28px;
+0 0 24px 24px;
+
+}
+
+.title-icon{
+width:53px;
+height:53px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+flex-shrink:0;
+
+background:rgba(255,255,255,.14);
+
+border:1px solid rgba(255,255,255,.18);
+
+border-radius:15px;
+
+font-size:27px;
+
+}
+
+.page-title h1{
+font-size:27px;
+font-weight:900;
+}
+
+.page-title p{
+margin-top:3px;
+
+color:#dcfff6;
+
+font-size:11px;
+
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+margin:12px 10px;
+
+padding:17px 13px;
+
+text-align:center;
+
+background:#fff;
+
+border:1px solid #dfe9e5;
+
+border-radius:16px;
 
 box-shadow:
-    0 7px 20px rgba(7,91,75,.14);
+0 4px 13px rgba(20,70,55,.06);
 
 }
 
-.title::before {
-content: "👥";
+.intro h2{
+color:#176252;
 
-position: absolute;
-
-right: -8px;
-top: -42px;
-
-font-size: 140px;
-
-opacity: .055;
+font-size:18px;
 
 }
 
-.title::after {
-content: "🌿";
+.intro p{
+margin-top:5px;
 
-position: absolute;
+color:#74827d;
 
-left: -18px;
-bottom: -55px;
+font-size:11px;
 
-font-size: 135px;
-
-opacity: .05;
+line-height:1.7;
 
 }
 
-.title h1 {
-position: relative;
-z-index: 2;
+/* ================= COMMITTEE GRID ================= */
 
-font-size: 29px;
-font-weight: 900;
+.committee-grid{
+width:100%;
+max-width:1100px;
 
-}
+margin:auto;
 
-.title p {
-position: relative;
-z-index: 2;
+padding:2px 10px 10px;
 
-margin-top: 5px;
+display:grid;
 
-color: #ddfff7;
+grid-template-columns:1fr;
 
-font-size: 12px;
+gap:10px;
 
 }
 
-/* =====================================================
-COMMITTEE CONTAINER
-===================================================== */
+/* ================= MEMBER CARD ================= */
 
-.committee-container {
-width: 100%;
-max-width: 1100px;
+.member-card{
+position:relative;
 
-margin: auto;
+overflow:hidden;
 
-padding: 14px 10px 5px;
+padding:15px 13px;
 
-display: grid;
+background:#fff;
 
-grid-template-columns: 1fr;
+border:1px solid #dfe9e5;
 
-gap: 10px;
+border-radius:17px;
 
-}
-
-/* =====================================================
-COMMITTEE CARD
-===================================================== */
-
-.committee-card {
-position: relative;
-
-overflow: hidden;
-
-min-height: 145px;
-
-padding: 18px 15px;
-
-display: flex;
-flex-direction: column;
-
-align-items: center;
-justify-content: center;
-
-text-align: center;
-
-background: #fff;
-
-border: 1px solid #dfe9e5;
-
-border-radius: 18px;
+text-align:center;
 
 box-shadow:
-    0 5px 15px rgba(20,70,55,.07);
+0 4px 14px rgba(20,70,55,.07);
 
 transition:
-    transform .2s ease,
-    box-shadow .2s ease;
+transform .2s ease,
+box-shadow .2s ease;
 
 }
 
-.committee-card::before {
-content: "";
+.member-card::before{
+content:"";
 
-position: absolute;
+position:absolute;
 
-top: 0;
-left: 0;
+top:0;
+left:0;
 
-width: 100%;
-height: 4px;
+width:100%;
+height:4px;
 
-background:
-    linear-gradient(
-        90deg,
-        #08745d,
-        #18a17e
-    );
-
-}
-
-.committee-card::after {
-content: "✦";
-
-position: absolute;
-
-right: 9px;
-top: 5px;
-
-color: #0b856b;
-
-font-size: 17px;
-
-opacity: .12;
+background:linear-gradient(
+    90deg,
+    #08745d,
+    #18a17e
+);
 
 }
 
-/* =====================================================
-MEMBER ICON
-===================================================== */
+.member-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
 
-.member-icon {
-width: 57px;
-height: 57px;
+margin-bottom:8px;
 
-display: flex;
-align-items: center;
-justify-content: center;
+}
 
-margin-bottom: 8px;
+.member-photo{
+width:54px;
+height:54px;
 
-background:
-    linear-gradient(
-        135deg,
-        #e4f5f0,
-        #f2faf7
-    );
+display:flex;
+align-items:center;
+justify-content:center;
 
-border: 1px solid #d6ebe4;
+background:#e8f6f1;
 
-border-radius: 16px;
+border:1px solid #d7ebe5;
 
-font-size: 28px;
+border-radius:15px;
+
+font-size:27px;
+
+}
+
+.role-badge{
+padding:5px 8px;
+
+color:#176252;
+
+background:#edf8f4;
+
+border-radius:20px;
+
+font-size:9px;
+font-weight:900;
+
+}
+
+.member-card h2{
+color:#294f45;
+
+font-size:17px;
+font-weight:900;
+
+}
+
+.role{
+margin-top:2px;
+
+color:#82908b;
+
+font-size:10px;
+
+}
+
+.member-info{
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin-top:8px;
+
+color:#60736c;
+
+font-size:11px;
+
+}
+
+.call-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+
+min-height:35px;
+
+margin-top:9px;
+
+color:#fff;
+
+background:linear-gradient(
+    135deg,
+    #08765f,
+    #16a17f
+);
+
+border-radius:9px;
+
+font-size:11px;
+font-weight:900;
+
+transition:.2s;
+
+}
+
+.call-btn:hover{
+transform:translateY(-2px);
+}
+
+/* ================= PRESIDENT ================= */
+
+.president{
+border-color:#ead7a2;
+}
+
+.president::before{
+background:linear-gradient(
+90deg,
+#d29a21,
+#efc95d
+);
+}
+
+.president .member-photo{
+background:#fff7df;
+}
+
+/* ================= HOME BUTTON ================= */
+
+.back-home{
+padding:12px 10px 24px;
+
+text-align:center;
+
+}
+
+.back-home a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+min-height:43px;
+
+padding:9px 17px;
+
+color:#fff;
+
+background:linear-gradient(
+    135deg,
+    #08765f,
+    #16a17f
+);
+
+border-radius:11px;
+
+font-size:12px;
+font-weight:900;
 
 box-shadow:
-    0 4px 10px rgba(20,100,80,.07);
+0 5px 13px rgba(8,118,95,.17);
 
 }
 
-/* =====================================================
-CARD TEXT
-===================================================== */
+/* ================= FOOTER ================= */
 
-.committee-card h2 {
-color: #176252;
+footer{
+padding:22px 10px;
 
-font-size: 18px;
-font-weight: 900;
+text-align:center;
 
-}
+color:#fff;
 
-.committee-card p {
-margin-top: 5px;
-
-color: #72817c;
-
-font-size: 12px;
-
-line-height: 1.5;
-
-}
-
-/* =====================================================
-SPECIAL POSITION COLORS
-===================================================== */
-
-.committee-card:nth-child(1)::before {
-background:
-linear-gradient(
-90deg,
-#d59b25,
-#f1c65d
+background:linear-gradient(
+    135deg,
+    #064a3e,
+    #075d4f
 );
-}
-
-.committee-card:nth-child(1) .member-icon {
-background: #fff7df;
-}
-
-.committee-card:nth-child(2)::before {
-background:
-linear-gradient(
-90deg,
-#3185b8,
-#65b4df
-);
-}
-
-.committee-card:nth-child(3)::before {
-background:
-linear-gradient(
-90deg,
-#08745d,
-#18a17e
-);
-}
-
-.committee-card:nth-child(4)::before {
-background:
-linear-gradient(
-90deg,
-#715184,
-#a16db5
-);
-}
-
-.committee-card:nth-child(5)::before {
-background:
-linear-gradient(
-90deg,
-#b66d2f,
-#d69a58
-);
-}
-
-.committee-card:nth-child(6)::before {
-background:
-linear-gradient(
-90deg,
-#277c75,
-#43aaa0
-);
-}
-
-.committee-card:nth-child(7)::before {
-background:
-linear-gradient(
-90deg,
-#4769a8,
-#7595cf
-);
-}
-
-.committee-card:nth-child(8)::before {
-background:
-linear-gradient(
-90deg,
-#a05b82,
-#ca83a7
-);
-}
-
-.committee-card:nth-child(9)::before {
-background:
-linear-gradient(
-90deg,
-#24834d,
-#53ae75
-);
-}
-
-.committee-card:nth-child(10)::before {
-background:
-linear-gradient(
-90deg,
-#98652f,
-#ca9654
-);
-}
-
-.committee-card:nth-child(11)::before {
-background:
-linear-gradient(
-90deg,
-#555f69,
-#818d97
-);
-}
-
-/* =====================================================
-HOME BUTTON
-===================================================== */
-
-.back-home {
-padding: 14px 10px 25px;
-
-text-align: center;
-
-}
-
-.home-btn {
-min-height: 46px;
-
-display: inline-flex;
-align-items: center;
-justify-content: center;
-
-padding: 10px 19px;
-
-color: #fff;
-
-background:
-    linear-gradient(
-        135deg,
-        #08765f,
-        #16a17f
-    );
-
-border-radius: 12px;
-
-font-size: 13px;
-font-weight: 900;
-
-box-shadow:
-    0 5px 14px rgba(8,118,95,.18);
-
-transition: .2s;
-
-}
-
-.home-btn:hover {
-transform: translateY(-2px);
-}
-
-/* =====================================================
-FOOTER
-===================================================== */
-
-.footer {
-padding: 23px 12px;
-
-text-align: center;
-
-color: #fff;
-
-background:
-    linear-gradient(
-        135deg,
-        #064a3e,
-        #075d4f
-    );
 
 border-radius:
-    26px 26px 0 0;
+23px 23px 0 0;
 
 }
 
-.footer p {
-margin: 5px 0;
+footer p{
+margin:4px;
 
-color: #d7eee8;
+color:#d8eee8;
 
-font-size: 10px;
-
-}
-
-.footer p:first-child {
-color: #fff;
-
-font-size: 14px;
-font-weight: 900;
+font-size:9px;
 
 }
 
-.footer .developer strong {
-color: #fff;
+footer p:first-child{
+color:#fff;
+
+font-size:13px;
+font-weight:900;
+
 }
 
-/* =====================================================
-TABLET
-===================================================== */
+/* ================= TABLET ================= */
 
-@media (min-width: 600px) {
+@media (min-width:600px){
 
-.banner {
-    max-height: 300px;
+.committee-banner img{
+    height:240px;
 }
 
-.title {
-    padding: 42px 20px 36px;
-}
-
-.title h1 {
-    font-size: 34px;
-}
-
-.title p {
-    font-size: 13px;
-}
-
-.committee-container {
+.committee-grid{
     grid-template-columns:
-        repeat(2, 1fr);
+    repeat(2,1fr);
 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left:20px;
+    padding-right:20px;
+}
 
-    gap: 12px;
+.intro{
+    margin-left:20px;
+    margin-right:20px;
 }
 
 }
 
-/* =====================================================
-DESKTOP
-===================================================== */
+/* ================= DESKTOP ================= */
 
-@media (min-width: 950px) {
+@media (min-width:950px){
 
-.banner {
-    max-height: 340px;
+.committee-banner img{
+    height:300px;
 }
 
-.title h1 {
-    font-size: 38px;
+.page-title h1{
+    font-size:35px;
 }
 
-.title p {
-    font-size: 14px;
+.page-title p{
+    font-size:13px;
 }
 
-.committee-container {
+.committee-grid{
     grid-template-columns:
-        repeat(3, 1fr);
+    repeat(3,1fr);
 
-    gap: 14px;
-
-    padding-left: 20px;
-    padding-right: 20px;
+    gap:13px;
 }
 
-.committee-card {
-    min-height: 175px;
-}
-
-.committee-card:hover {
-    transform: translateY(-5px);
+.member-card:hover{
+    transform:translateY(-4px);
 
     box-shadow:
-        0 12px 25px rgba(20,70,55,.13);
+    0 10px 23px rgba(20,70,55,.12);
 }
 
 }
 
-/* =====================================================
-SMALL MOBILE
-===================================================== */
+/* ================= SMALL MOBILE ================= */
 
-@media (max-width: 370px) {
+@media (max-width:370px){
 
-.topbar {
-    padding: 7px;
+.social{
+    gap:3px;
 }
 
-.social {
-    gap: 4px;
+.social a{
+    width:28px;
+    height:28px;
 }
 
-.social a {
-    width: 29px;
-    height: 29px;
+.social img{
+    width:16px;
+    height:16px;
 }
 
-.social img {
-    width: 17px;
-    height: 17px;
+.page-title h1{
+    font-size:24px;
 }
 
-.title h1 {
-    font-size: 25px;
+.page-title p{
+    font-size:10px;
 }
 
-.title p {
-    font-size: 11px;
+.member-card{
+    padding:13px 10px;
 }
 
-.committee-container {
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
-.committee-card {
-    min-height: 135px;
-
-    padding: 15px 10px;
-}
-
-.member-icon {
-    width: 52px;
-    height: 52px;
-
-    font-size: 25px;
-}
-
-.committee-card h2 {
-    font-size: 17px;
-}
-
-.committee-card p {
-    font-size: 11px;
+.member-photo{
+    width:50px;
+    height:50px;
 }
 
 }
