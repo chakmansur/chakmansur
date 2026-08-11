@@ -1,236 +1,789 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =====================================================
+COMMITTEE PAGE
+চকমনসুর বানীশ্রী সংঘ
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#fff8e8;
-    color:#222;
-    line-height:1.6;
+body {
+font-family:
+"Noto Sans Bengali",
+"Nirmala UI",
+"Segoe UI",
+Arial,
+sans-serif;
+
+background: #f4f8f6;
+color: #29483f;
+
+overflow-x: hidden;
+
 }
 
-/* HEADER */
-
-.top-header{
-    background:linear-gradient(135deg,#7b1fa2,#c2185b);
-    color:white;
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+a {
+text-decoration: none;
+color: inherit;
 }
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
+/* =====================================================
+TOP BAR
+===================================================== */
+
+.topbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+min-height: 62px;
+
+display: flex;
+align-items: center;
+
+padding: 8px 12px;
+
+color: #fff;
+
+background:
+    linear-gradient(
+        135deg,
+        #075b4b,
+        #159879
+    );
+
+box-shadow:
+    0 4px 16px rgba(0,70,55,.18);
+
 }
 
-.logo-area img{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:white;
+#menuBtn {
+width: 43px;
+height: 43px;
+
+border: 0;
+border-radius: 12px;
+
+background: rgba(255,255,255,.14);
+
+color: #fff;
+
+font-size: 22px;
+
+cursor: pointer;
+
 }
 
-.logo-area h2{
-    font-size:20px;
+.live {
+flex: 1;
+
+display: flex;
+align-items: center;
+
+gap: 7px;
+
+margin-left: 9px;
+
+overflow: hidden;
+
 }
 
-.logo-area p{
-    font-size:13px;
+#wish,
+#clock {
+font-size: 11px;
 }
 
-.home-btn{
-    background:#ff9800;
-    color:white;
-    text-decoration:none;
-    padding:9px 16px;
-    border-radius:25px;
-    font-weight:bold;
+#wish {
+color: #e2fff7;
+font-weight: 700;
 }
 
-
-/* বাংলা পঞ্জিকা */
-
-.panchang{
-    width:94%;
-    max-width:900px;
-    margin:25px auto;
-    text-align:center;
+#clock {
+color: #fff;
+font-weight: 800;
 }
 
-.panchang > h1{
-    color:#7b1fa2;
-    margin-bottom:20px;
+.social {
+display: flex;
+align-items: center;
+
+gap: 6px;
+
 }
 
-.month-box{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
+.social a {
+width: 32px;
+height: 32px;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: rgba(255,255,255,.13);
+
+border-radius: 9px;
+
 }
 
-.month-box h2{
-    color:#c2185b;
-    font-size:28px;
+.social img {
+width: 19px;
+height: 19px;
+
+object-fit: contain;
+
 }
 
-.month-box p{
-    color:#777;
-    font-weight:bold;
+/* =====================================================
+SIDE MENU
+===================================================== */
+
+.sideMenu {
+position: fixed;
+
+top: 0;
+left: -280px;
+
+z-index: 2000;
+
+width: 260px;
+height: 100vh;
+
+padding: 78px 12px 20px;
+
+overflow-y: auto;
+
+background: #fff;
+
+box-shadow:
+    7px 0 25px rgba(0,0,0,.15);
+
+transition: left .3s ease;
+
 }
 
-.month-box button{
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    background:#7b1fa2;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
+.sideMenu.open {
+left: 0;
 }
 
+.sideMenu a {
+display: flex;
+align-items: center;
 
-/* CALENDAR */
+min-height: 48px;
 
-.calendar{
-    background:white;
-    margin-top:15px;
-    padding:15px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
+margin-bottom: 7px;
+
+padding: 9px 13px;
+
+background: #f5f9f7;
+
+border: 1px solid #e1ebe7;
+
+border-radius: 12px;
+
+color: #31584e;
+
+font-size: 14px;
+font-weight: 700;
+
+transition: .2s;
+
 }
 
-.week,
-.days{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:5px;
+.sideMenu a:hover {
+transform: translateX(4px);
 }
 
-.week div{
-    background:#7b1fa2;
-    color:white;
-    padding:8px 2px;
-    font-size:13px;
-    border-radius:6px;
+.sideMenu a[href="committee.html"] {
+color: #fff;
+
+background:
+    linear-gradient(
+        135deg,
+        #08745d,
+        #159e7c
+    );
+
+border-color: transparent;
+
 }
 
-.days{
-    margin-top:8px;
+/* =====================================================
+BANNER
+===================================================== */
+
+.banner {
+width: 100%;
+
+max-height: 260px;
+
+display: block;
+
+object-fit: cover;
+
+background: #dcebe6;
+
 }
 
-.days div{
-    min-height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff3e0;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
+/* =====================================================
+PAGE TITLE
+===================================================== */
+
+.title {
+position: relative;
+
+overflow: hidden;
+
+padding: 32px 15px;
+
+text-align: center;
+
+color: #fff;
+
+background:
+    linear-gradient(
+        135deg,
+        #075b4b,
+        #159879
+    );
+
+border-radius:
+    0 0 28px 28px;
+
+box-shadow:
+    0 7px 20px rgba(7,91,75,.14);
+
 }
 
-.days .today{
-    background:#e65100;
-    color:white;
+.title::before {
+content: "👥";
+
+position: absolute;
+
+right: -8px;
+top: -42px;
+
+font-size: 140px;
+
+opacity: .055;
+
 }
 
+.title::after {
+content: "🌿";
 
-/* SECTION */
+position: absolute;
 
-.section{
-    width:94%;
-    max-width:1100px;
-    margin:40px auto;
+left: -18px;
+bottom: -55px;
+
+font-size: 135px;
+
+opacity: .05;
+
 }
 
-.section > h2{
-    text-align:center;
-    color:#7b1fa2;
-    margin-bottom:20px;
+.title h1 {
+position: relative;
+z-index: 2;
+
+font-size: 29px;
+font-weight: 900;
+
 }
 
+.title p {
+position: relative;
+z-index: 2;
 
-/* CARDS */
+margin-top: 5px;
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+color: #ddfff7;
+
+font-size: 12px;
+
 }
 
-.card{
-    background:white;
-    padding:22px 15px;
-    text-align:center;
-    border-radius:18px;
-    border-top:5px solid #c2185b;
-    box-shadow:0 5px 16px rgba(0,0,0,.12);
+/* =====================================================
+COMMITTEE CONTAINER
+===================================================== */
+
+.committee-container {
+width: 100%;
+max-width: 1100px;
+
+margin: auto;
+
+padding: 14px 10px 5px;
+
+display: grid;
+
+grid-template-columns: 1fr;
+
+gap: 10px;
+
 }
 
-.card h3{
-    color:#7b1fa2;
-    margin:8px 0;
+/* =====================================================
+COMMITTEE CARD
+===================================================== */
+
+.committee-card {
+position: relative;
+
+overflow: hidden;
+
+min-height: 145px;
+
+padding: 18px 15px;
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+background: #fff;
+
+border: 1px solid #dfe9e5;
+
+border-radius: 18px;
+
+box-shadow:
+    0 5px 15px rgba(20,70,55,.07);
+
+transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
 }
 
-.card p{
-    color:#555;
-    font-size:14px;
+.committee-card::before {
+content: "";
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 4px;
+
+background:
+    linear-gradient(
+        90deg,
+        #08745d,
+        #18a17e
+    );
+
 }
 
+.committee-card::after {
+content: "✦";
 
-/* FESTIVAL */
+position: absolute;
 
-.festival-list{
-    background:white;
-    padding:20px;
-    border-radius:18px;
-    box-shadow:0 5px 16px rgba(0,0,0,.12);
+right: 9px;
+top: 5px;
+
+color: #0b856b;
+
+font-size: 17px;
+
+opacity: .12;
+
 }
 
-.festival-item{
-    background:#fff3e0;
-    border-left:5px solid #e65100;
-    padding:12px;
-    margin-bottom:8px;
-    border-radius:8px;
+/* =====================================================
+MEMBER ICON
+===================================================== */
+
+.member-icon {
+width: 57px;
+height: 57px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin-bottom: 8px;
+
+background:
+    linear-gradient(
+        135deg,
+        #e4f5f0,
+        #f2faf7
+    );
+
+border: 1px solid #d6ebe4;
+
+border-radius: 16px;
+
+font-size: 28px;
+
+box-shadow:
+    0 4px 10px rgba(20,100,80,.07);
+
 }
 
-.festival-item strong{
-    color:#7b1fa2;
+/* =====================================================
+CARD TEXT
+===================================================== */
+
+.committee-card h2 {
+color: #176252;
+
+font-size: 18px;
+font-weight: 900;
+
 }
 
+.committee-card p {
+margin-top: 5px;
 
-/* FOOTER */
+color: #72817c;
 
-.footer{
-    margin-top:40px;
-    padding:30px 15px;
-    text-align:center;
-    background:linear-gradient(135deg,#4a148c,#c2185b);
-    color:white;
+font-size: 12px;
+
+line-height: 1.5;
+
 }
 
-.footer p{
-    margin:5px;
-    font-size:14px;
+/* =====================================================
+SPECIAL POSITION COLORS
+===================================================== */
+
+.committee-card:nth-child(1)::before {
+background:
+linear-gradient(
+90deg,
+#d59b25,
+#f1c65d
+);
 }
 
+.committee-card:nth-child(1) .member-icon {
+background: #fff7df;
+}
 
-/* MOBILE */
+.committee-card:nth-child(2)::before {
+background:
+linear-gradient(
+90deg,
+#3185b8,
+#65b4df
+);
+}
 
-@media(max-width:700px){
+.committee-card:nth-child(3)::before {
+background:
+linear-gradient(
+90deg,
+#08745d,
+#18a17e
+);
+}
 
-    .top-header{
-        flex-direction:column;
-        gap:
+.committee-card:nth-child(4)::before {
+background:
+linear-gradient(
+90deg,
+#715184,
+#a16db5
+);
+}
+
+.committee-card:nth-child(5)::before {
+background:
+linear-gradient(
+90deg,
+#b66d2f,
+#d69a58
+);
+}
+
+.committee-card:nth-child(6)::before {
+background:
+linear-gradient(
+90deg,
+#277c75,
+#43aaa0
+);
+}
+
+.committee-card:nth-child(7)::before {
+background:
+linear-gradient(
+90deg,
+#4769a8,
+#7595cf
+);
+}
+
+.committee-card:nth-child(8)::before {
+background:
+linear-gradient(
+90deg,
+#a05b82,
+#ca83a7
+);
+}
+
+.committee-card:nth-child(9)::before {
+background:
+linear-gradient(
+90deg,
+#24834d,
+#53ae75
+);
+}
+
+.committee-card:nth-child(10)::before {
+background:
+linear-gradient(
+90deg,
+#98652f,
+#ca9654
+);
+}
+
+.committee-card:nth-child(11)::before {
+background:
+linear-gradient(
+90deg,
+#555f69,
+#818d97
+);
+}
+
+/* =====================================================
+HOME BUTTON
+===================================================== */
+
+.back-home {
+padding: 14px 10px 25px;
+
+text-align: center;
+
+}
+
+.home-btn {
+min-height: 46px;
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+padding: 10px 19px;
+
+color: #fff;
+
+background:
+    linear-gradient(
+        135deg,
+        #08765f,
+        #16a17f
+    );
+
+border-radius: 12px;
+
+font-size: 13px;
+font-weight: 900;
+
+box-shadow:
+    0 5px 14px rgba(8,118,95,.18);
+
+transition: .2s;
+
+}
+
+.home-btn:hover {
+transform: translateY(-2px);
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.footer {
+padding: 23px 12px;
+
+text-align: center;
+
+color: #fff;
+
+background:
+    linear-gradient(
+        135deg,
+        #064a3e,
+        #075d4f
+    );
+
+border-radius:
+    26px 26px 0 0;
+
+}
+
+.footer p {
+margin: 5px 0;
+
+color: #d7eee8;
+
+font-size: 10px;
+
+}
+
+.footer p:first-child {
+color: #fff;
+
+font-size: 14px;
+font-weight: 900;
+
+}
+
+.footer .developer strong {
+color: #fff;
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (min-width: 600px) {
+
+.banner {
+    max-height: 300px;
+}
+
+.title {
+    padding: 42px 20px 36px;
+}
+
+.title h1 {
+    font-size: 34px;
+}
+
+.title p {
+    font-size: 13px;
+}
+
+.committee-container {
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    gap: 12px;
+}
+
+}
+
+/* =====================================================
+DESKTOP
+===================================================== */
+
+@media (min-width: 950px) {
+
+.banner {
+    max-height: 340px;
+}
+
+.title h1 {
+    font-size: 38px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+.committee-container {
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.committee-card {
+    min-height: 175px;
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(20,70,55,.13);
+}
+
+}
+
+/* =====================================================
+SMALL MOBILE
+===================================================== */
+
+@media (max-width: 370px) {
+
+.topbar {
+    padding: 7px;
+}
+
+.social {
+    gap: 4px;
+}
+
+.social a {
+    width: 29px;
+    height: 29px;
+}
+
+.social img {
+    width: 17px;
+    height: 17px;
+}
+
+.title h1 {
+    font-size: 25px;
+}
+
+.title p {
+    font-size: 11px;
+}
+
+.committee-container {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.committee-card {
+    min-height: 135px;
+
+    padding: 15px 10px;
+}
+
+.member-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 25px;
+}
+
+.committee-card h2 {
+    font-size: 17px;
+}
+
+.committee-card p {
+    font-size: 11px;
+}
+
+}
