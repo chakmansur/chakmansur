@@ -1,663 +1,955 @@
-<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8">
+/* =====================================================
+GALLERY.CSS
+চকমনসুর বানীশ্রী সংঘ
+Mobile First • Unique Tab Design
+===================================================== */
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
-<title>গ্যালারি | চকমনসুর বানীশ্রী সংঘ</title>
+html {
+scroll-behavior: smooth;
+}
 
-<link rel="stylesheet" href="gallery.css">
+body {
+font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
+background: #f5f7f6;
+color: #26332d;
+overflow-x: hidden;
+}
 
-<link rel="icon"
-      href="images/favicon.png">
+button,
+a {
+font-family: inherit;
+}
 
-</head><body><!-- ==================================================
-     TOP BAR
-================================================== --><header class="topbar"><button
-    id="menuBtn"
-    class="menu-btn"
-    aria-label="Menu">
-    ☰
-</button>
+button {
+border: 0;
+cursor: pointer;
+}
 
+a {
+text-decoration: none;
+color: inherit;
+}
 
-<div class="live-info">
+/* =====================================================
+TOP BAR
+===================================================== */
 
-    <span id="wish"></span>
+.topbar {
+position: sticky;
+top: 0;
+z-index: 1000;
 
-    <span class="live-divider">•</span>
+min-height: 58px;
 
-    <span id="clock"></span>
+display: flex;
+align-items: center;
+justify-content: space-between;
 
-</div>
+gap: 7px;
+padding: 7px 9px;
 
+background:
+    linear-gradient(135deg, #075b4c, #12806a);
 
-<div class="social">
+box-shadow:
+    0 4px 15px rgba(0, 60, 50, .18);
 
-    <a
-        href="https://facebook.com"
-        target="_blank"
-        rel="noopener noreferrer">
+}
 
-        <img
-            src="images/social/facebook.png"
-            alt="Facebook">
+.menu-btn {
+width: 40px;
+height: 40px;
 
-    </a>
+flex-shrink: 0;
 
+color: #075b4c;
+background: #ffffff;
 
-    <a
-        href="https://youtube.com/@chakmansur?si=zD4rTFeWO-Uouoyn"
-        target="_blank"
-        rel="noopener noreferrer">
+border-radius: 12px;
 
-        <img
-            src="images/social/youtube.png"
-            alt="YouTube">
+font-size: 22px;
+font-weight: 900;
 
-    </a>
+box-shadow:
+    0 3px 9px rgba(0, 0, 0, .12);
 
+}
 
-    <a
-        href="https://instagram.com"
-        target="_blank"
-        rel="noopener noreferrer">
+.live-info {
+flex: 1;
 
-        <img
-            src="images/social/instagram.png"
-            alt="Instagram">
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
 
-    </a>
+color: #ffffff;
 
-</div>
+font-size: 8px;
+font-weight: 700;
 
-</header><!-- ==================================================
-     SIDE MENU
-================================================== --><nav
-    class="sideMenu"
-    id="sideMenu"><div class="menu-header">
+white-space: nowrap;
 
-    <div class="menu-logo">
-        🖼️
-    </div>
+}
 
-    <div>
+.live-divider {
+opacity: .6;
+}
 
-        <h3>চকমনসুর বানীশ্রী সংঘ</h3>
+.social {
+display: flex;
+align-items: center;
+gap: 4px;
+}
 
-        <p>গ্যালারি</p>
+.social a {
+width: 31px;
+height: 31px;
 
-    </div>
+display: flex;
+align-items: center;
+justify-content: center;
 
-</div>
+background: rgba(255,255,255,.15);
 
+border-radius: 9px;
 
-<a href="index.html">
-    🏠 হোম
-</a>
+}
 
-<a href="karmasuchi.html">
-    📋 আমাদের কর্মসূচি
-</a>
+.social img {
+width: 22px;
+height: 22px;
 
-<a href="committee.html">
-    👥 পরিচালনা কমিটি
-</a>
+object-fit: contain;
 
-<a href="gallery.html"
-   class="active">
-    🖼️ গ্যালারি
-</a>
+}
 
-<a href="student.html">
-    🎓 Student Corner
-</a>
+/* =====================================================
+SIDE MENU
+===================================================== */
 
-<a href="weather.html">
-    🌦️ আবহাওয়া
-</a>
+.sideMenu {
+position: fixed;
 
-<a href="newspaper.html">
-    📰 সংবাদপত্র
-</a>
+top: 0;
+left: -285px;
 
-<a href="about.html">
-    📖 আমাদের সম্পর্কে
-</a>
+z-index: 2000;
 
-<a href="contact.html">
-    ☎️ যোগাযোগ
-</a>
+width: 270px;
+height: 100vh;
 
-</nav><!-- ==================================================
-     PAGE HERO
-================================================== --><section class="gallery-title"><div class="gallery-title-icon">
-    📸
-</div>
+padding: 14px 10px;
 
-<h1>
-    ফটো গ্যালারি
-</h1>
+overflow-y: auto;
 
-<p>
-    চকমনসুর বানীশ্রী সংঘের অনুষ্ঠান,
-    খেলাধুলা ও সমাজসেবার স্মৃতি
-</p>
+background:
+    linear-gradient(180deg, #ffffff, #f1f8f5);
 
-</section><!-- ==================================================
-     GALLERY CATEGORY TABS
-================================================== --><section class="gallery-tab-area"><div class="gallery-tabs">
+box-shadow:
+    5px 0 25px rgba(0,0,0,.18);
 
-    <button
-        class="tab active"
-        data-category="puja">
+transition: left .3s ease;
 
-        <span>🪔</span>
+}
 
-        <strong>পূজা উৎসব</strong>
+.sideMenu.open {
+left: 0;
+}
 
-    </button>
+.menu-header {
+display: flex;
+align-items: center;
 
+gap: 10px;
 
-    <button
-        class="tab"
-        data-category="sports">
+margin-bottom: 14px;
+padding: 13px;
 
-        <span>🏏</span>
+color: #ffffff;
 
-        <strong>খেলাধুলা</strong>
+background:
+    linear-gradient(135deg, #075b4c, #139477);
 
-    </button>
+border-radius: 15px;
 
+}
 
-    <button
-        class="tab"
-        data-category="social">
+.menu-logo {
+width: 43px;
+height: 43px;
 
-        <span>❤️</span>
+display: flex;
+align-items: center;
+justify-content: center;
 
-        <strong>সমাজসেবা</strong>
+background: rgba(255,255,255,.18);
 
-    </button>
+border-radius: 12px;
 
+font-size: 24px;
 
-    <button
-        class="tab"
-        data-category="culture">
+}
 
-        <span>🎭</span>
+.menu-header h3 {
+font-size: 13px;
+}
 
-        <strong>সাংস্কৃতিক</strong>
+.menu-header p {
+margin-top: 2px;
+font-size: 8px;
+opacity: .8;
+}
 
-    </button>
+.sideMenu > a {
+display: block;
 
-</div>
+margin: 5px 0;
+padding: 11px 12px;
 
-</section><!-- ==================================================
-     PUJA
-================================================== --><section
-    class="gallery-section active"
-    data-section="puja"><div class="section-heading">
+color: #315047;
 
-    <span>🪔</span>
+background: #ffffff;
 
-    <div>
+border-radius: 11px;
 
-        <h2>পূজা উৎসব</h2>
+font-size: 11px;
+font-weight: 700;
 
-        <p>আমাদের বিভিন্ন ধর্মীয় অনুষ্ঠানের স্মৃতি</p>
+transition: .2s;
 
-    </div>
+}
 
-</div>
+.sideMenu > a.active,
+.sideMenu > a:hover {
+color: #ffffff;
 
+background:
+    linear-gradient(135deg, #08705d, #15947a);
 
-<div class="photo-grid">
+transform: translateX(3px);
 
+}
 
-    <article class="photo-card">
+/* =====================================================
+PAGE HERO
+===================================================== */
 
-        <img
-            src="images/gallery/durga1.jpg"
-            alt="দুর্গাপূজা"
-            loading="lazy">
+.gallery-title {
+position: relative;
 
-        <div class="photo-info">
+overflow: hidden;
 
-            <h3>দুর্গাপূজা</h3>
+padding: 27px 13px 31px;
 
-            <span>🪔 পূজা উৎসব</span>
+text-align: center;
 
-        </div>
+color: #ffffff;
 
-    </article>
+background:
+    linear-gradient(135deg, #08725d, #18a080);
 
+border-radius:
+    0 0 30px 30px;
 
-    <article class="photo-card">
+}
 
-        <img
-            src="images/gallery/kali1.jpg"
-            alt="কালীপূজা"
-            loading="lazy">
+.gallery-title::before {
+content: "📷";
 
-        <div class="photo-info">
+position: absolute;
 
-            <h3>কালীপূজা</h3>
+top: -30px;
+right: -8px;
 
-            <span>🪔 পূজা উৎসব</span>
+font-size: 115px;
 
-        </div>
+opacity: .08;
 
-    </article>
+}
 
+.gallery-title::after {
+content: "🖼️";
 
-    <article class="photo-card">
+position: absolute;
 
-        <img
-            src="images/gallery/laxmi1.jpg"
-            alt="লক্ষ্মীপূজা"
-            loading="lazy">
+bottom: -40px;
+left: -10px;
 
-        <div class="photo-info">
+font-size: 110px;
 
-            <h3>লক্ষ্মীপূজা</h3>
+opacity: .08;
 
-            <span>🪔 পূজা উৎসব</span>
+}
 
-        </div>
+.gallery-title-icon {
+position: relative;
+z-index: 2;
 
-    </article>
+font-size: 42px;
 
+}
 
-    <article class="photo-card">
+.gallery-title h1 {
+position: relative;
+z-index: 2;
 
-        <img
-            src="images/gallery/saraswati1.jpg"
-            alt="সরস্বতী পূজা"
-            loading="lazy">
+margin-top: 4px;
 
-        <div class="photo-info">
+font-size: 27px;
+font-weight: 900;
 
-            <h3>সরস্বতী পূজা</h3>
+}
 
-            <span>🪔 পূজা উৎসব</span>
+.gallery-title p {
+position: relative;
+z-index: 2;
 
-        </div>
+margin-top: 4px;
 
-    </article>
+color: #e2fff7;
 
+font-size: 9px;
 
-    <article class="photo-card">
+}
 
-        <img
-            src="images/gallery/shiv1.jpg"
-            alt="মহাশিবরাত্রি"
-            loading="lazy">
+/* =====================================================
+TAB AREA
+===================================================== */
 
-        <div class="photo-info">
+.gallery-tab-area {
+max-width: 1100px;
 
-            <h3>মহাশিবরাত্রি</h3>
+margin: auto;
 
-            <span>🪔 পূজা উৎসব</span>
+padding: 13px 8px 4px;
 
-        </div>
+}
 
-    </article>
+.gallery-tabs {
+display: grid;
 
-</div>
+grid-template-columns: repeat(2, 1fr);
 
-</section><!-- ==================================================
-     SPORTS
-================================================== --><section
-    class="gallery-section"
-    data-section="sports"><div class="section-heading">
+gap: 7px;
 
-    <span>🏆</span>
+}
 
-    <div>
+.tab {
+min-height: 72px;
 
-        <h2>খেলাধুলা</h2>
+position: relative;
 
-        <p>ক্রীড়া অনুষ্ঠান ও প্রতিযোগিতার স্মৃতি</p>
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
-    </div>
+gap: 4px;
 
-</div>
+padding: 8px 5px;
 
+color: #52635d;
 
-<div class="photo-grid">
+background: #ffffff;
 
+border: 1px solid #dce7e2;
 
-    <article class="photo-card">
+border-radius: 14px;
 
-        <img
-            src="images/gallery/cricket1.jpg"
-            alt="ক্রিকেট"
-            loading="lazy">
+box-shadow:
+    0 4px 12px rgba(20,70,55,.07);
 
-        <div class="photo-info">
+transition: .2s;
 
-            <h3>ক্রিকেট</h3>
+}
 
-            <span>🏏 খেলাধুলা</span>
+.tab span {
+font-size: 23px;
+}
 
-        </div>
+.tab strong {
+font-size: 9px;
+}
 
-    </article>
+.tab.active {
+color: #ffffff;
 
+background:
+    linear-gradient(135deg, #08725d, #159b7c);
 
-    <article class="photo-card">
+border-color: transparent;
 
-        <img
-            src="images/gallery/football1.jpg"
-            alt="ফুটবল"
-            loading="lazy">
+box-shadow:
+    0 7px 17px rgba(8,114,93,.22);
 
-        <div class="photo-info">
+}
 
-            <h3>ফুটবল</h3>
+.tab.active::after {
+content: "";
 
-            <span>⚽ খেলাধুলা</span>
+position: absolute;
 
-        </div>
+bottom: 0;
+left: 22%;
+right: 22%;
 
-    </article>
+height: 3px;
 
+background: #ffffff;
 
-    <article class="photo-card">
+border-radius: 5px 5px 0 0;
 
-        <img
-            src="images/gallery/volleyball1.jpg"
-            alt="ভলিবল"
-            loading="lazy">
+}
 
-        <div class="photo-info">
+/* =====================================================
+GALLERY SECTION
+===================================================== */
 
-            <h3>ভলিবল</h3>
+.gallery-section {
+display: none;
 
-            <span>🏐 খেলাধুলা</span>
+max-width: 1100px;
 
-        </div>
+margin: auto;
 
-    </article>
+padding: 10px 8px 25px;
 
+}
 
-    <article class="photo-card">
+.gallery-section.active {
+display: block;
 
-        <img
-            src="images/gallery/kabaddi1.jpg"
-            alt="কাবাডি"
-            loading="lazy">
+animation:
+    galleryFade .35s ease;
 
-        <div class="photo-info">
+}
 
-            <h3>কাবাডি</h3>
+@keyframes galleryFade {
 
-            <span>🏆 খেলাধুলা</span>
+from {
+    opacity: 0;
+    transform: translateY(8px);
+}
 
-        </div>
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    </article>
+}
 
-</div>
+/* =====================================================
+SECTION HEADING
+===================================================== */
 
-</section><!-- ==================================================
-     SOCIAL SERVICE
-================================================== --><section
-    class="gallery-section"
-    data-section="social"><div class="section-heading">
+.section-heading {
+display: flex;
+align-items: center;
 
-    <span>❤️</span>
+gap: 9px;
 
-    <div>
+margin: 4px 0 10px;
+padding: 10px;
 
-        <h2>সমাজসেবা</h2>
+background: #ffffff;
 
-        <p>মানুষের পাশে আমাদের বিভিন্ন উদ্যোগ</p>
+border-left: 5px solid #0b8069;
 
-    </div>
+border-radius: 11px;
 
-</div>
+box-shadow:
+    0 3px 10px rgba(20,70,55,.06);
 
+}
 
-<div class="photo-grid">
+.section-heading > span {
+width: 38px;
+height: 38px;
 
+display: flex;
+align-items: center;
+justify-content: center;
 
-    <article class="photo-card">
+flex-shrink: 0;
 
-        <img
-            src="images/gallery/eye1.jpg"
-            alt="চক্ষু পরীক্ষা"
-            loading="lazy">
+background: #eaf7f3;
 
-        <div class="photo-info">
+border-radius: 11px;
 
-            <h3>চক্ষু পরীক্ষা</h3>
+font-size: 22px;
 
-            <span>👁️ স্বাস্থ্যসেবা</span>
+}
 
-        </div>
+.section-heading h2 {
+color: #08634f;
 
-    </article>
+font-size: 15px;
+font-weight: 900;
 
+}
 
-    <article class="photo-card">
+.section-heading p {
+margin-top: 2px;
 
-        <img
-            src="images/gallery/health1.jpg"
-            alt="স্বাস্থ্য পরীক্ষা"
-            loading="lazy">
+color: #7c8883;
 
-        <div class="photo-info">
+font-size: 7px;
 
-            <h3>স্বাস্থ্য পরীক্ষা</h3>
+}
 
-            <span>🏥 স্বাস্থ্যসেবা</span>
+/* =====================================================
+PHOTO GRID
+===================================================== */
 
-        </div>
+.photo-grid {
+display: grid;
 
-    </article>
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
+gap: 8px;
 
-    <article class="photo-card">
+}
 
-        <img
-            src="images/gallery/blood1.jpg"
-            alt="রক্তদান"
-            loading="lazy">
+/* =====================================================
+PHOTO CARD
+===================================================== */
 
-        <div class="photo-info">
+.photo-card {
+position: relative;
 
-            <h3>রক্তদান</h3>
+overflow: hidden;
 
-            <span>🩸 সমাজসেবা</span>
+margin: 0;
 
-        </div>
+background: #ffffff;
 
-    </article>
+border: 1px solid #e0e8e4;
 
+border-radius: 15px;
 
-    <article class="photo-card">
+box-shadow:
+    0 5px 13px rgba(20,70,55,.08);
 
-        <img
-            src="images/gallery/tree1.jpg"
-            alt="বৃক্ষরোপণ"
-            loading="lazy">
+cursor: pointer;
 
-        <div class="photo-info">
+transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 
-            <h3>বৃক্ষরোপণ</h3>
+}
 
-            <span>🌳 পরিবেশ</span>
+.photo-card::before {
+content: "🔍";
 
-        </div>
+position: absolute;
 
-    </article>
+top: 8px;
+right: 8px;
 
-</div>
+z-index: 3;
 
-</section><!-- ==================================================
-     CULTURAL
-================================================== --><section
-    class="gallery-section"
-    data-section="culture"><div class="section-heading">
+width: 29px;
+height: 29px;
 
-    <span>🎭</span>
+display: flex;
+align-items: center;
+justify-content: center;
 
-    <div>
+color: #ffffff;
 
-        <h2>সাংস্কৃতিক অনুষ্ঠান</h2>
+background: rgba(0,0,0,.48);
 
-        <p>সংস্কৃতি, সংগীত, নৃত্য ও নাটকের স্মৃতি</p>
+border-radius: 50%;
 
-    </div>
+font-size: 13px;
 
-</div>
+opacity: 0;
 
+transition: .2s;
 
-<div class="photo-grid">
+}
 
+.photo-card img {
+display: block;
 
-    <article class="photo-card">
+width: 100%;
 
-        <img
-            src="images/gallery/culture1.jpg"
-            alt="সাংস্কৃতিক অনুষ্ঠান"
-            loading="lazy">
+aspect-ratio: 4 / 3;
 
-        <div class="photo-info">
+object-fit: cover;
 
-            <h3>সাংস্কৃতিক অনুষ্ঠান</h3>
+background: #e8efec;
 
-            <span>🎭 সংস্কৃতি</span>
+transition:
+    transform .35s ease;
 
-        </div>
+}
 
-    </article>
+.photo-info {
+padding: 8px 8px 9px;
 
+background: #ffffff;
 
-    <article class="photo-card">
+}
 
-        <img
-            src="images/gallery/dance1.jpg"
-            alt="নৃত্য"
-            loading="lazy">
+.photo-info h3 {
+color: #235b4d;
 
-        <div class="photo-info">
+font-size: 10px;
+font-weight: 900;
 
-            <h3>নৃত্য</h3>
+line-height: 1.3;
 
-            <span>💃 নৃত্য</span>
+}
 
-        </div>
+.photo-info span {
+display: block;
 
-    </article>
+margin-top: 3px;
 
+color: #8a948f;
 
-    <article class="photo-card">
+font-size: 7px;
 
-        <img
-            src="images/gallery/music1.jpg"
-            alt="সংগীত"
-            loading="lazy">
+}
 
-        <div class="photo-info">
+.photo-card:active {
+transform: scale(.98);
+}
 
-            <h3>সংগীত</h3>
+/* =====================================================
+LIGHTBOX
+===================================================== */
 
-            <span>🎵 সংগীত</span>
+.lightbox {
+position: fixed;
 
-        </div>
+inset: 0;
 
-    </article>
+z-index: 5000;
 
+display: flex;
+align-items: center;
+justify-content: center;
 
-    <article class="photo-card">
+padding: 15px;
 
-        <img
-            src="images/gallery/drama1.jpg"
-            alt="নাটক"
-            loading="lazy">
+background:
+    rgba(5, 15, 13, .94);
 
-        <div class="photo-info">
+opacity: 0;
+visibility: hidden;
 
-            <h3>নাটক</h3>
+transition:
+    opacity .25s ease,
+    visibility .25s ease;
 
-            <span>🎭 নাট্য অনুষ্ঠান</span>
+}
 
-        </div>
+.lightbox.show {
+opacity: 1;
+visibility: visible;
+}
 
-    </article>
+.lightbox-content {
+width: 100%;
+max-width: 900px;
 
-</div>
+display: flex;
+flex-direction: column;
+align-items: center;
 
-</section><!-- ==================================================
-     LIGHTBOX
-================================================== --><div
-    class="lightbox"
-    id="lightbox"
-    aria-hidden="true"><button
-    class="lightbox-close"
-    id="lightboxClose"
-    aria-label="বন্ধ করুন">
+}
 
-    ✕
+.lightbox-content img {
+max-width: 100%;
+max-height: 76vh;
 
-</button>
+object-fit: contain;
 
+border-radius: 10px;
 
-<button
-    class="lightbox-prev"
-    id="lightboxPrev"
-    aria-label="আগের ছবি">
+box-shadow:
+    0 10px 40px rgba(0,0,0,.5);
 
-    ‹
+}
 
-</button>
+.lightbox-caption {
+margin-top: 9px;
 
+padding: 7px 13px;
 
-<div class="lightbox-content">
+color: #ffffff;
 
-    <img
-        id="lightboxImage"
-        src=""
-        alt="">
+background: rgba(255,255,255,.12);
 
-    <div
-        class="lightbox-caption"
-        id="lightboxCaption">
-    </div>
+border-radius: 20px;
 
-</div>
+font-size: 10px;
 
+}
 
-<button
-    class="lightbox-next"
-    id="lightboxNext"
-    aria-label="পরের ছবি">
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+position: absolute;
 
-    ›
+display: flex;
+align-items: center;
+justify-content: center;
 
-</button>
+color: #ffffff;
 
-</div><!-- ==================================================
-     FOOTER
-================================================== --><footer class="footer"><h3>
-    চকমনসুর বানীশ্রী সংঘ
-</h3>
+background: rgba(255,255,255,.15);
 
-<p>
-    📸 আমাদের স্মৃতির গ্যালারি
-</p>
+border: 1px solid rgba(255,255,255,.18);
 
-<p>
-    © ২০২৬ চকমনসুর বানীশ্রী সংঘ
-</p>
+border-radius: 50%;
 
-<p>
-    Developed & Maintained by
-    <b>DEBU</b>
-</p>
+backdrop-filter: blur(5px);
 
-</footer><!-- ==================================================
-     JAVASCRIPT
-================================================== --><script src="gallery.js"></script></body></html>
+}
+
+.lightbox-close {
+top: 14px;
+right: 14px;
+
+width: 40px;
+height: 40px;
+
+font-size: 20px;
+
+}
+
+.lightbox-prev,
+.lightbox-next {
+top: 50%;
+
+width: 42px;
+height: 42px;
+
+margin-top: -21px;
+
+font-size: 35px;
+
+line-height: 1;
+
+}
+
+.lightbox-prev {
+left: 9px;
+}
+
+.lightbox-next {
+right: 9px;
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.footer {
+margin-top: 5px;
+
+padding: 24px 10px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(135deg, #064a3e, #075e50);
+
+border-radius:
+    27px 27px 0 0;
+
+}
+
+.footer h3 {
+font-size: 14px;
+font-weight: 900;
+}
+
+.footer p {
+margin-top: 5px;
+
+color: #d8eee8;
+
+font-size: 8px;
+
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (min-width: 600px) {
+
+.topbar {
+    padding: 9px 20px;
+}
+
+.live-info {
+    font-size: 10px;
+}
+
+.gallery-title {
+    padding: 40px 20px;
+}
+
+.gallery-title h1 {
+    font-size: 35px;
+}
+
+.gallery-tabs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tab {
+    min-height: 90px;
+}
+
+.tab span {
+    font-size: 28px;
+}
+
+.tab strong {
+    font-size: 11px;
+}
+
+.gallery-section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.photo-grid {
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.photo-info h3 {
+    font-size: 13px;
+}
+
+.photo-info span {
+    font-size: 8px;
+}
+
+}
+
+/* =====================================================
+DESKTOP
+===================================================== */
+
+@media (min-width: 1000px) {
+
+.gallery-tab-area,
+.gallery-section {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.photo-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 13px 28px rgba(20,70,55,.15);
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+.photo-card:hover::before {
+    opacity: 1;
+}
+
+.tab:hover:not(.active) {
+    transform: translateY(-3px);
+
+    border-color: #72b9a9;
+}
+
+}
+
+/* =====================================================
+VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 370px) {
+
+.topbar {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.social a {
+    width: 27px;
+    height: 27px;
+}
+
+.social img {
+    width: 19px;
+    height: 19px;
+}
+
+.live-info {
+    font-size: 7px;
+}
+
+.gallery-tabs {
+    gap: 5px;
+}
+
+.tab {
+    min-height: 65px;
+    border-radius: 12px;
+}
+
+.tab span {
+    font-size: 20px;
+}
+
+.tab strong {
+    font-size: 8px;
+}
+
+.photo-grid {
+    gap: 6px;
+}
+
+.photo-card {
+    border-radius: 12px;
+}
+
+.photo-info {
+    padding: 7px 6px;
+}
+
+.photo-info h3 {
+    font-size: 9px;
+}
+
+.photo-info span {
+    font-size: 6px;
+}
+
+}
