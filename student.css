@@ -1,481 +1,1256 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =====================================================
+STUDENT.CSS
+চকমনসুর বানীশ্রী সংঘ
+Student Corner • Mobile First
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#f5f7fb;
-    color:#222;
+body {
+font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
+background: #f3f7f5;
+color: #263a34;
+overflow-x: hidden;
 }
 
-/* HEADER */
-.student-header{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:15px;
-    color:white;
-    background:linear-gradient(135deg,#5b21b6,#2563eb);
-    box-shadow:0 4px 15px rgba(0,0,0,.2);
+a {
+text-decoration: none;
+color: inherit;
 }
 
-.back-btn{
-    color:white;
-    text-decoration:none;
-    font-size:30px;
-    font-weight:bold;
+button {
+font-family: inherit;
+cursor: pointer;
 }
 
-.student-header h1{
-    font-size:23px;
+/* =====================================================
+HEADER
+===================================================== */
+
+.student-header {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+min-height: 62px;
+
+display: flex;
+align-items: center;
+
+gap: 10px;
+
+padding: 8px 10px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(135deg, #07594b, #159378);
+
+box-shadow:
+    0 5px 18px rgba(0, 65, 52, .20);
+
 }
 
-.student-header p{
-    font-size:12px;
-    opacity:.9;
-    margin-top:3px;
+.back-btn {
+width: 40px;
+height: 40px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+color: #07594b;
+background: #ffffff;
+
+border-radius: 12px;
+
+font-size: 25px;
+font-weight: 900;
+
+box-shadow:
+    0 3px 10px rgba(0,0,0,.13);
+
+transition: .2s;
+
 }
 
-/* HERO */
-.career-hero{
-    width:94%;
-    max-width:1000px;
-    margin:20px auto;
-    padding:30px 18px;
-    text-align:center;
-    color:white;
-    border-radius:24px;
-    background:linear-gradient(135deg,#ec4899,#f97316,#facc15);
-    box-shadow:0 8px 25px rgba(0,0,0,.18);
+.back-btn:active {
+transform: scale(.92);
 }
 
-.hero-icon{
-    font-size:48px;
+.student-brand {
+display: flex;
+align-items: center;
+
+gap: 9px;
+
 }
 
-.career-hero h2{
-    margin:8px 0;
-    font-size:27px;
+.student-logo {
+width: 42px;
+height: 42px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: rgba(255,255,255,.16);
+
+border: 1px solid rgba(255,255,255,.20);
+
+border-radius: 12px;
+
+font-size: 23px;
+
 }
 
-.career-hero p{
-    font-size:14px;
+.student-brand h1 {
+font-size: 17px;
+font-weight: 900;
 }
 
-/* SECTION */
-.section{
-    width:94%;
-    max-width:1100px;
-    margin:30px auto;
+.student-brand p {
+margin-top: 2px;
+
+color: #d9fff5;
+
+font-size: 7px;
+
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:18px;
-    font-size:23px;
-    color:#172554;
+/* =====================================================
+HERO
+===================================================== */
+
+.career-hero {
+position: relative;
+
+overflow: hidden;
+
+margin: 0 0 7px;
+
+padding: 29px 13px 25px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(135deg, #08735e, #19a17f);
+
+border-radius:
+    0 0 30px 30px;
+
+box-shadow:
+    0 7px 20px rgba(8,115,94,.15);
+
 }
 
-.section-subtitle{
-    text-align:center;
-    color:#666;
-    margin-top:-10px;
-    margin-bottom:20px;
+.career-hero::before {
+content: "🎓";
+
+position: absolute;
+
+top: -30px;
+right: -5px;
+
+font-size: 125px;
+
+opacity: .07;
+
 }
 
-/* QUICK */
-.quick-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
+.career-hero::after {
+content: "📚";
+
+position: absolute;
+
+bottom: -48px;
+left: -15px;
+
+font-size: 125px;
+
+opacity: .07;
+
 }
 
-.quick-card{
-    text-decoration:none;
-    color:white;
-    padding:20px 10px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
+.hero-icon,
+.hero-badge,
+.career-hero h2,
+.career-hero p,
+.hero-points {
+position: relative;
+z-index: 2;
 }
 
-.quick-card:hover{
-    transform:translateY(-6px);
+.hero-icon {
+width: 58px;
+height: 58px;
+
+margin: auto;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: rgba(255,255,255,.14);
+
+border: 1px solid rgba(255,255,255,.18);
+
+border-radius: 18px;
+
+font-size: 31px;
+
 }
 
-.quick-card span{
-    display:block;
-    font-size:38px;
-    margin-bottom:8px;
+.hero-badge {
+display: inline-block;
+
+margin-top: 10px;
+padding: 4px 9px;
+
+color: #dffff7;
+
+background: rgba(0,0,0,.12);
+
+border-radius: 20px;
+
+font-size: 7px;
+font-weight: 900;
+letter-spacing: .6px;
+
 }
 
-.quick-card b{
-    display:block;
-    font-size:17px;
+.career-hero h2 {
+margin-top: 8px;
+
+font-size: 23px;
+font-weight: 900;
+
 }
 
-.quick-card small{
-    display:block;
-    margin-top:6px;
-    font-size:11px;
+.career-hero p {
+margin-top: 5px;
+
+color: #e2fff8;
+
+font-size: 8px;
+
 }
 
-.job{
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
+.hero-points {
+display: flex;
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 5px;
+
+margin-top: 12px;
+
 }
 
-.exam{
-    background:linear-gradient(135deg,#7c3aed,#c026d3);
+.hero-points span {
+padding: 6px 9px;
+
+color: #ffffff;
+
+background: rgba(255,255,255,.13);
+
+border: 1px solid rgba(255,255,255,.15);
+
+border-radius: 20px;
+
+font-size: 7px;
+font-weight: 700;
+
 }
 
-.admit{
-    background:linear-gradient(135deg,#ea580c,#f59e0b);
+/* =====================================================
+COMMON SECTION
+===================================================== */
+
+.section {
+max-width: 1100px;
+
+margin: auto;
+
+padding: 9px 8px;
+
 }
 
-.result{
-    background:linear-gradient(135deg,#059669,#16a34a);
+.section-heading {
+display: flex;
+align-items: center;
+
+gap: 9px;
+
+margin-bottom: 9px;
+padding: 9px 10px;
+
+background: #ffffff;
+
+border-left: 5px solid #08775f;
+
+border-radius: 11px;
+
+box-shadow:
+    0 3px 11px rgba(20,70,55,.06);
+
 }
 
-/* LINK GRID */
-.link-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:13px;
+.section-heading > span {
+width: 37px;
+height: 37px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+background: #e9f7f2;
+
+border-radius: 11px;
+
+font-size: 21px;
+
 }
 
-.link-grid a{
-    background:white;
-    padding:18px 12px;
-    border-radius:15px;
-    text-align:center;
-    text-decoration:none;
-    color:#172554;
-    font-weight:bold;
-    box-shadow:0 4px 13px rgba(0,0,0,.1);
-    border-left:5px solid #6366f1;
-    transition:.3s;
+.section-title {
+color: #075f4e;
+
+font-size: 14px;
+font-weight: 900;
+
 }
 
-.link-grid a:hover{
-    transform:translateY(-4px);
-    background:#eef2ff;
+.section-subtitle {
+margin-top: 2px;
+
+color: #7b8883;
+
+font-size: 7px;
+
 }
 
-/* STUDY */
-.study-section{
-    padding:25px 0;
-    border-radius:20px;
-    background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+/* =====================================================
+QUICK CAREER
+===================================================== */
+
+.quick-grid {
+display: grid;
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 7px;
+
 }
 
-.study-grid{
-    width:94%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:13px;
+.quick-card {
+position: relative;
+
+min-height: 108px;
+
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+
+padding: 11px;
+
+overflow: hidden;
+
+color: #ffffff;
+
+border-radius: 15px;
+
+box-shadow:
+    0 5px 13px rgba(20,70,55,.10);
+
+transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
 }
 
-.study-grid a{
-    background:white;
-    padding:20px 10px;
-    border-radius:17px;
-    text-align:center;
-    text-decoration:none;
-    color:#312e81;
-    box-shadow:0 4px 13px rgba(0,0,0,.1);
-    transition:.3s;
+.quick-card::after {
+content: "";
+
+position: absolute;
+
+width: 80px;
+height: 80px;
+
+right: -30px;
+bottom: -30px;
+
+background: rgba(255,255,255,.10);
+
+border-radius: 50%;
+
 }
 
-.study-grid a:hover{
-    transform:scale(1.04);
+.quick-card > span {
+font-size: 25px;
 }
 
-.study-grid a:first-child{
-    border-top:5px solid #2563eb;
+.quick-card b {
+margin-top: 5px;
+
+font-size: 11px;
+
 }
 
-.study-grid a:nth-child(2){
-    border-top:5px solid #f59e0b;
+.quick-card small {
+margin-top: 2px;
+
+color: rgba(255,255,255,.82);
+
+font-size: 7px;
+
 }
 
-.study-grid a:nth-child(3){
-    border-top:5px solid #ec4899;
+.quick-card em {
+position: absolute;
+
+right: 9px;
+bottom: 8px;
+
+font-size: 18px;
+
+font-style: normal;
+
 }
 
-.study-grid a:nth-child(4){
-    border-top:5px solid #10b981;
+.quick-card.job {
+background:
+linear-gradient(135deg, #08765e, #11a17e);
 }
 
-.study-grid a{
-    font-size:28px;
+.quick-card.exam {
+background:
+linear-gradient(135deg, #395a91, #557fba);
 }
 
-.study-grid b,
-.study-grid small{
-    display:block;
+.quick-card.admit {
+background:
+linear-gradient(135deg, #8a6130, #c18b43);
 }
 
-.study-grid b{
-    font-size:16px;
-    margin-top:7px;
+.quick-card.result {
+background:
+linear-gradient(135deg, #744d83, #a06aae);
 }
 
-.study-grid small{
-    font-size:11px;
-    color:#777;
-    margin-top:5px;
+/* =====================================================
+LINK GRID
+===================================================== */
+
+.link-grid {
+display: grid;
+
+grid-template-columns:
+    1fr;
+
+gap: 7px;
+
 }
 
-/* CAREER */
-.career-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+.link-grid > a {
+min-height: 56px;
+
+display: flex;
+align-items: center;
+
+gap: 9px;
+
+padding: 9px;
+
+color: #315047;
+
+background: #ffffff;
+
+border: 1px solid #e0e9e5;
+
+border-radius: 13px;
+
+box-shadow:
+    0 3px 10px rgba(20,70,55,.06);
+
+transition: .2s;
+
 }
 
-.career-card{
-    background:white;
-    padding:20px 12px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,.11);
-    border-top:6px solid #6366f1;
-    transition:.3s;
+.link-grid > a > div {
+flex: 1;
 }
 
-.career-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 9px 22px rgba(0,0,0,.17);
+.link-grid > a > div b {
+display: block;
+
+color: #28584d;
+
+font-size: 10px;
+
 }
 
-.career-card span{
-    font-size:40px;
+.link-grid > a > div small {
+display: block;
+
+margin-top: 2px;
+
+color: #89938f;
+
+font-size: 7px;
+
 }
 
-.career-card h3{
-    margin:8px 0;
-    color:#172554;
-    font-size:17px;
+.link-grid > a > strong {
+color: #087760;
+
+font-size: 16px;
+
 }
 
-.career-card p{
-    min-height:42px;
-    color:#666;
-    font-size:12px;
-    line-height:18px;
+/* =====================================================
+QUIZ
+===================================================== */
+
+.quiz-section {
+padding-top: 12px;
 }
 
-.career-card a,
-.career-card button{
-    display:inline-block;
-    margin-top:13px;
-    padding:9px 15px;
-    border:0;
-    border-radius:20px;
-    background:#4f46e5;
-    color:white;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:bold;
-    cursor:pointer;
+.quiz-grid {
+display: grid;
+
+grid-template-columns:
+    1fr;
+
+gap: 7px;
+
 }
 
-.police{
-    border-color:#ef4444;
+.quiz-card {
+min-height: 67px;
+
+display: flex;
+align-items: center;
+
+gap: 10px;
+
+padding: 10px;
+
+color: #284e44;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f3faf7
+    );
+
+border: 1px solid #d9e9e3;
+
+border-radius: 14px;
+
+box-shadow:
+    0 4px 12px rgba(20,70,55,.07);
+
+transition: .2s;
+
 }
 
-.ssc{
-    border-color:#8b5cf6;
+.quiz-card > span {
+width: 40px;
+height: 40px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+
+background: #e8f6f1;
+
+border-radius: 12px;
+
+font-size: 22px;
+
 }
 
-.railway{
-    border-color:#0ea5e9;
+.quiz-card > div {
+flex: 1;
 }
 
-.teacher{
-    border-color:#ec4899;
+.quiz-card b {
+display: block;
+
+color: #176150;
+
+font-size: 10px;
+
 }
 
-.defence{
-    border-color:#16a34a;
+.quiz-card small {
+display: block;
+
+margin-top: 3px;
+
+color: #818e89;
+
+font-size: 7px;
+
 }
 
-.bank{
-    border-color:#f59e0b;
+.quiz-card > strong {
+color: #08765f;
+
+font-size: 17px;
+
 }
 
-.technical{
-    border-color:#f97316;
+/* =====================================================
+EDUCATION
+===================================================== */
+
+.education-grid {
+display: grid;
+
+grid-template-columns:
+    repeat(2, 1fr);
+
+gap: 7px;
+
 }
 
-.computer{
-    border-color:#06b6d4;
+.education-grid a {
+min-height: 105px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+padding: 8px;
+
+text-align: center;
+
+color: #315047;
+
+background: #ffffff;
+
+border: 1px solid #e0e9e5;
+
+border-radius: 14px;
+
+box-shadow:
+    0 4px 11px rgba(20,70,55,.06);
+
+transition: .2s;
+
 }
 
-/* MOTIVATION */
-.motivation-box{
-    width:94%;
-    max-width:1000px;
-    margin:35px auto;
-    padding:30px 18px;
-    text-align:center;
-    color:white;
-    border-radius:25px;
-    background:linear-gradient(135deg,#7c3aed,#db2777,#f97316);
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
+.education-grid a > b {
+margin-top: 5px;
+
+color: #226051;
+
+font-size: 10px;
+
 }
 
-.motivation-icon{
-    font-size:45px;
+.education-grid a > small {
+margin-top: 3px;
+
+color: #8a9591;
+
+font-size: 7px;
+
 }
 
-.motivation-box h2{
-    font-size:27px;
-    margin:7px 0;
+.education-grid a:first-child {
+border-top: 4px solid #0b8069;
 }
 
-.motivation-box p{
-    line-height:24px;
+.education-grid a:nth-child(2) {
+border-top: 4px solid #5576a5;
 }
 
-.motivation-list{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin:20px 0;
+.education-grid a:nth-child(3) {
+border-top: 4px solid #b47a38;
 }
 
-.motivation-list span{
-    padding:12px 5px;
-    background:rgba(255,255,255,.18);
-    border-radius:12px;
-    font-size:13px;
+.education-grid a:nth-child(4) {
+border-top: 4px solid #8b5c91;
 }
 
-.motivation-box h3{
-    font-size:18px;
+.education-grid a {
+font-size: 25px;
 }
 
-/* FOOTER */
-footer{
-    padding:22px 10px;
-    text-align:center;
-    color:white;
-    background:#172554;
-    line-height:25px;
-    font-size:13px;
+/* =====================================================
+DAILY STUDY
+===================================================== */
+
+.study-grid {
+display: grid;
+
+grid-template-columns:
+    repeat(2, 1fr);
+
+gap: 7px;
+
 }
 
-/* TABLET */
-@media(max-width:900px){
+.study-grid a {
+min-height: 105px;
 
-    .career-grid{
-        grid-template-columns:repeat(3,1fr);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+padding: 8px;
+
+text-align: center;
+
+color: #315047;
+
+background: #ffffff;
+
+border: 1px solid #e0e9e5;
+
+border-radius: 14px;
+
+box-shadow:
+    0 4px 11px rgba(20,70,55,.06);
+
+transition: .2s;
+
+}
+
+.study-grid a > b {
+margin-top: 4px;
+
+color: #226051;
+
+font-size: 10px;
+
+}
+
+.study-grid a > small {
+margin-top: 3px;
+
+color: #8a9591;
+
+font-size: 7px;
+
+}
+
+.study-grid a:first-child {
+background:
+linear-gradient(145deg, #ffffff, #edf9f5);
+}
+
+.study-grid a:nth-child(2) {
+background:
+linear-gradient(145deg, #ffffff, #f6f2fb);
+}
+
+.study-grid a:nth-child(3) {
+background:
+linear-gradient(145deg, #ffffff, #fff7ea);
+}
+
+.study-grid a:nth-child(4) {
+background:
+linear-gradient(145deg, #ffffff, #eef4fc);
+}
+
+/* =====================================================
+CAREER GUIDE
+===================================================== */
+
+.career-grid {
+display: grid;
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 7px;
+
+}
+
+.career-card {
+position: relative;
+
+min-height: 185px;
+
+display: flex;
+flex-direction: column;
+
+padding: 12px;
+
+overflow: hidden;
+
+background: #ffffff;
+
+border: 1px solid #e0e9e5;
+
+border-radius: 15px;
+
+box-shadow:
+    0 4px 12px rgba(20,70,55,.07);
+
+transition: .2s;
+
+}
+
+.career-card::before {
+content: "";
+
+position: absolute;
+
+top: -35px;
+right: -35px;
+
+width: 80px;
+height: 80px;
+
+background: #eaf6f2;
+
+border-radius: 50%;
+
+}
+
+.career-card > span {
+position: relative;
+z-index: 1;
+
+font-size: 28px;
+
+}
+
+.career-card h3 {
+position: relative;
+z-index: 1;
+
+margin-top: 5px;
+
+color: #24594d;
+
+font-size: 11px;
+
+}
+
+.career-card p {
+position: relative;
+z-index: 1;
+
+margin-top: 5px;
+
+color: #7b8883;
+
+font-size: 7px;
+
+line-height: 1.5;
+
+}
+
+.career-card button,
+.career-card a {
+position: relative;
+z-index: 1;
+
+align-self: flex-start;
+
+margin-top: auto;
+padding: 6px 9px;
+
+color: #ffffff;
+
+background: #08765f;
+
+border-radius: 8px;
+
+font-size: 7px;
+font-weight: 700;
+
+}
+
+.career-card:nth-child(2) button,
+.career-card:nth-child(2) a {
+background: #4e6f9d;
+}
+
+.career-card:nth-child(3) button,
+.career-card:nth-child(3) a {
+background: #a06c32;
+}
+
+.career-card:nth-child(4) button,
+.career-card:nth-child(4) a {
+background: #79548b;
+}
+
+/* =====================================================
+MOTIVATION
+===================================================== */
+
+.motivation-box {
+position: relative;
+
+overflow: hidden;
+
+margin: 13px 8px 25px;
+
+padding: 25px 13px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(135deg, #075b4b, #12876e);
+
+border-radius: 22px;
+
+box-shadow:
+    0 8px 22px rgba(5,80,65,.17);
+
+}
+
+.motivation-box::before {
+content: "★";
+
+position: absolute;
+
+top: -25px;
+left: -10px;
+
+font-size: 100px;
+
+opacity: .05;
+
+}
+
+.motivation-box::after {
+content: "🎯";
+
+position: absolute;
+
+right: -15px;
+bottom: -30px;
+
+font-size: 100px;
+
+opacity: .06;
+
+}
+
+.motivation-icon {
+position: relative;
+z-index: 2;
+
+font-size: 34px;
+
+}
+
+.motivation-box > span {
+position: relative;
+z-index: 2;
+
+display: inline-block;
+
+margin-top: 5px;
+
+color: #cffff2;
+
+font-size: 7px;
+font-weight: 900;
+
+letter-spacing: 1px;
+
+}
+
+.motivation-box h2 {
+position: relative;
+z-index: 2;
+
+margin-top: 5px;
+
+font-size: 21px;
+
+}
+
+.motivation-box > p {
+position: relative;
+z-index: 2;
+
+margin-top: 5px;
+
+color: #e2fff8;
+
+font-size: 8px;
+
+}
+
+.motivation-list {
+position: relative;
+z-index: 2;
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+gap: 5px;
+
+margin-top: 13px;
+
+}
+
+.motivation-list span {
+padding: 6px 8px;
+
+background: rgba(255,255,255,.12);
+
+border: 1px solid rgba(255,255,255,.13);
+
+border-radius: 20px;
+
+font-size: 7px;
+
+}
+
+.motivation-box h3 {
+position: relative;
+z-index: 2;
+
+margin-top: 15px;
+
+color: #ffffff;
+
+font-size: 9px;
+
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer {
+padding: 22px 10px;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(135deg, #064a3e, #075d4f);
+
+border-radius:
+    26px 26px 0 0;
+
+}
+
+footer p {
+margin: 4px 0;
+
+color: #d8eee8;
+
+font-size: 8px;
+
+}
+
+footer p:first-child {
+color: #ffffff;
+
+font-size: 12px;
+font-weight: 900;
+
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (min-width: 600px) {
+
+.student-header {
+    padding: 9px 20px;
+}
+
+.student-brand h1 {
+    font-size: 21px;
+}
+
+.student-brand p {
+    font-size: 9px;
+}
+
+.career-hero {
+    padding: 40px 20px;
+}
+
+.career-hero h2 {
+    font-size: 31px;
+}
+
+.career-hero p {
+    font-size: 10px;
+}
+
+.section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.quick-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.link-grid {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.quiz-grid {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.education-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.study-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.career-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.motivation-box {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+}
+
+/* =====================================================
+DESKTOP
+===================================================== */
+
+@media (min-width: 1000px) {
+
+.section {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.quick-card:hover,
+.quiz-card:hover,
+.link-grid > a:hover,
+.education-grid a:hover,
+.study-grid a:hover,
+.career-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(20,70,55,.13);
+}
+
+.quick-card,
+.quiz-card,
+.link-grid > a,
+.education-grid a,
+.study-grid a,
+.career-card {
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.motivation-box {
+    max-width: 1050px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+
+/* =====================================================
+SMALL MOBILE
+===================================================== */
+
+@media (max-width: 370px) {
+
+.student-header {
+    padding: 7px;
+}
+
+.back-btn {
+    width: 37px;
+    height: 37px;
+}
+
+.student-logo {
+    width: 38px;
+    height: 38px;
+
+    font-size: 21px;
+}
+
+.student-brand h1 {
+    font-size: 15px;
+}
+
+.career-hero h2 {
+    font-size: 20px;
+}
+
+.section {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.quick-grid,
+.career-grid {
+    gap: 5px;
+}
+
+.quick-card {
+    min-height: 100px;
+    padding: 9px;
+}
+
+.career-card {
+    min-height: 175px;
+    padding: 10px;
+}
+
+.motivation-box {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
     }
-
-    .quick-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .study-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .link-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-/* MOBILE */
-@media(max-width:600px){
-
-    .student-header h1{
-        font-size:19px;
-    }
-
-    .career-hero{
-        padding:25px 12px;
-    }
-
-    .career-hero h2{
-        font-size:22px;
-    }
-
-    .quick-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .quick-card{
-        padding:16px 7px;
-    }
-
-    .quick-card span{
-        font-size:32px;
-    }
-
-    .quick-card b{
-        font-size:14px;
-    }
-
-    .link-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .link-grid a{
-        padding:15px 7px;
-        font-size:12px;
-    }
-
-    .career-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .career-card{
-        padding:15px 8px;
-    }
-
-    .career-card span{
-        font-size:32px;
-    }
-
-    .career-card h3{
-        font-size:14px;
-    }
-
-    .career-card p{
-        font-size:11px;
-    }
-
-    .study-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .motivation-list{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .motivation-box h2{
-        font-size:23px;
-    }
-
-}
-
-@media(max-width:380px){
-
-    .career-grid{
-        grid-template-columns:1fr;
-    }
-
-    .link-grid{
-        grid-template-columns:1fr;
-    }
-
-}
