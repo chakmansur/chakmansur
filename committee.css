@@ -740,3 +740,11 @@ body {
         width: 94%;
 
         grid-template-columns: 1
+.top-back {
+    padding: 5px 15px 20px;
+}
+
+.top-back .home-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+}
