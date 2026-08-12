@@ -1,3 +1,8 @@
+/* =====================================================
+   COMMITTEE PAGE
+   চকমনসুর বানীশ্রী সংঘ
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +15,30 @@ html {
 
 body {
     font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
-    background: #f4f7f5;
-    color: #26352d;
+    background: #f5f8f5;
+    color: #26332a;
     line-height: 1.6;
 }
 
 
-/* ================= TOP BAR ================= */
+/* =====================================================
+   TOP BAR
+===================================================== */
 
 .topbar {
+    width: 100%;
     min-height: 58px;
-    padding: 8px 18px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: linear-gradient(135deg, #14532d, #166534);
+    padding: 8px 18px;
+
+    background: #14532d;
     color: #fff;
 
-    box-shadow: 0 3px 12px rgba(0,0,0,.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 }
 
 .live {
@@ -41,13 +50,18 @@ body {
     font-weight: 600;
 }
 
+#wish {
+    white-space: nowrap;
+}
+
 #clock {
-    padding-left: 10px;
-    border-left: 1px solid rgba(255,255,255,.35);
+    white-space: nowrap;
+    font-weight: 700;
 }
 
 .social {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -59,14 +73,14 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: 8px;
 
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
 .social a:hover {
-    background: rgba(255,255,255,.3);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
 }
 
@@ -77,29 +91,32 @@ body {
 }
 
 
-/* ================= HEADING ================= */
+/* =====================================================
+   PAGE HEADING
+===================================================== */
 
 .committee-heading {
     width: min(1100px, 94%);
-    margin: 24px auto 6px;
 
-    padding: 22px 25px;
+    margin: 20px auto 0;
+
+    padding: 18px 20px;
 
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
 
-    background: linear-gradient(135deg,#fff,#f0fdf4);
+    background: #ffffff;
 
-    border-left: 6px solid #16a34a;
-    border-radius: 16px;
+    border-left: 5px solid #15803d;
+    border-radius: 12px;
 
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .heading-icon {
-    width: 64px;
-    height: 64px;
+    width: 55px;
+    height: 55px;
 
     flex-shrink: 0;
 
@@ -108,43 +125,49 @@ body {
     justify-content: center;
 
     background: #dcfce7;
-    border-radius: 15px;
+    border-radius: 12px;
 
-    font-size: 33px;
+    font-size: 28px;
+}
+
+.heading-text {
+    min-width: 0;
 }
 
 .heading-small {
     display: block;
 
-    color: #15803d;
+    margin-bottom: 3px;
 
-    font-size: 19px;
+    color: #166534;
+
+    font-size: 20px;
     font-weight: 800;
-
-    margin-bottom: 1px;
 }
 
 .heading-text h1 {
-    font-size: clamp(27px,4vw,39px);
-    line-height: 1.25;
+    color: #173b25;
 
-    color: #14532d;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.2;
+
+    margin-bottom: 3px;
 }
 
 .heading-text p {
-    color: #64748b;
+    color: #66736a;
     font-size: 14px;
 }
 
 
-/* ================= BACK HOME ================= */
+/* =====================================================
+   BACK TO HOME
+===================================================== */
 
 .top-back {
     width: min(1100px, 94%);
 
-    margin: 0 auto;
-
-    padding: 3px 0 13px;
+    margin: 8px auto 14px;
 
     display: flex;
     justify-content: flex-start;
@@ -167,9 +190,9 @@ body {
     font-size: 13px;
     font-weight: 700;
 
-    box-shadow: 0 4px 10px rgba(20,83,45,.18);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
 .home-btn:hover {
@@ -178,427 +201,76 @@ body {
 }
 
 
-/* ================= INTRO ================= */
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro {
-    width: min(900px,92%);
+    width: min(1100px, 94%);
 
-    margin: 5px auto 27px;
+    margin: 0 auto 20px;
 
     padding: 17px 20px;
 
     text-align: center;
 
-    background: #fff;
+    background: #ecfdf5;
 
-    border-radius: 14px;
-
-    box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
 }
 
 .intro h2 {
     color: #166534;
-    font-size: 22px;
-    margin-bottom: 4px;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
 }
 
 .intro p {
-    color: #64748b;
+    color: #526158;
+
     font-size: 14px;
 }
 
 
-/* ================= GRID ================= */
+/* =====================================================
+   COMMITTEE GRID
+===================================================== */
 
 .committee-grid {
-    width: min(1150px,94%);
+    width: min(1100px, 94%);
 
-    margin: 0 auto;
+    margin: 0 auto 28px;
 
     display: grid;
 
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 }
 
 
-/* ================= CARD ================= */
+/* =====================================================
+   MEMBER CARD
+===================================================== */
 
 .member-card {
     position: relative;
 
-    padding: 22px 18px 20px;
+    padding: 18px 16px 17px;
 
     text-align: center;
 
-    background: #fff;
+    background: #ffffff;
 
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
+    border: 1px solid #e3ebe5;
 
-    box-shadow: 0 5px 18px rgba(0,0,0,.07);
+    border-radius: 14px;
 
-    overflow: hidden;
-
-    transition: .25s;
-}
-
-.member-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background: linear-gradient(90deg,#16a34a,#22c55e);
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #bbf7d0;
-
-    box-shadow: 0 12px 28px rgba(0,0,0,.11);
-}
-
-.member-card.president {
-    background: linear-gradient(180deg,#f0fdf4,#fff 45%);
-    border-color: #bbf7d0;
-}
-
-
-/* ================= PHOTO ================= */
-
-.member-photo {
-    width: 105px;
-    height: 105px;
-
-    margin: 3px auto 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 
     overflow: hidden;
 
-    border-radius: 50%;
-
-    background: #ecfdf5;
-
-    border: 4px solid #dcfce7;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-}
-
-.member-photo img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-}
-
-
-/* ================= ROLE ================= */
-
-.role-badge {
-    display: inline-block;
-
-    padding: 4px 13px;
-
-    background: #dcfce7;
-    color: #166534;
-
-    border-radius: 30px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    margin-bottom: 7px;
-}
-
-.member-card h2 {
-    font-size: 20px;
-    color: #1e293b;
-
-    line-height: 1.35;
-}
-
-.member-card .role {
-    color: #15803d;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    margin: 2px 0 8px;
-}
-
-.member-info {
-    padding: 7px 5px;
-    margin: 8px 0 12px;
-
-    background: #f8fafc;
-
-    border-radius: 8px;
-
-    color: #475569;
-
-    font-size: 14px;
-}
-
-
-/* ================= BUTTONS ================= */
-
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.call-btn,
-.whatsapp-btn {
-    flex: 1;
-
-    max-width: 130px;
-    min-height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 7px 10px;
-
-    border-radius: 9px;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    transition: .25s;
-}
-
-.call-btn {
-    background: #166534;
-    color: #fff;
-}
-
-.call-btn:hover {
-    background: #14532d;
-    transform: translateY(-2px);
-}
-
-.whatsapp-btn {
-    background: #22c55e;
-    color: #fff;
-}
-
-.whatsapp-btn:hover {
-    background: #16a34a;
-    transform: translateY(-2px);
-}
-
-
-/* ================= FOOTER ================= */
-
-.footer {
-    width: 100%;
-
-    margin-top: 35px;
-
-    padding: 22px 15px;
-
-    text-align: center;
-
-    background: #123524;
-    color: #d1fae5;
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-.footer p {
-    margin: 2px 0;
-}
-
-.footer .developer {
-    color: #a7f3d0;
-    font-size: 12px;
-}
-
-.footer strong {
-    color: #fff;
-}
-
-
-/* ================= TABLET ================= */
-
-@media (max-width:900px) {
-
-    .committee-grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-        gap: 16px;
-    }
-
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width:600px) {
-
-    .topbar {
-        min-height: 52px;
-        padding: 7px 11px;
-    }
-
-    .live {
-        font-size: 12px;
-        gap: 6px;
-    }
-
-    #clock {
-        padding-left: 6px;
-    }
-
-    .social {
-        gap: 5px;
-    }
-
-    .social a {
-        width: 30px;
-        height: 30px;
-    }
-
-    .social img {
-        width: 18px;
-        height: 18px;
-    }
-
-
-    .committee-heading {
-        width: 94%;
-
-        margin-top: 16px;
-
-        padding: 17px 15px;
-
-        gap: 12px;
-
-        border-left-width: 4px;
-        border-radius: 13px;
-    }
-
-    .heading-icon {
-        width: 50px;
-        height: 50px;
-
-        border-radius: 12px;
-
-        font-size: 26px;
-    }
-
-    .heading-small {
-        font-size: 16px;
-    }
-
-    .heading-text h1 {
-        font-size: 25px;
-    }
-
-    .heading-text p {
-        font-size: 12px;
-    }
-
-
-    .top-back {
-        width: 94%;
-        padding: 2px 0 11px;
-    }
-
-    .home-btn {
-        font-size: 12px;
-        padding: 7px 13px;
-    }
-
-
-    .intro {
-        width: 94%;
-
-        padding: 14px 12px;
-
-        margin: 4px auto 20px;
-    }
-
-    .intro h2 {
-        font-size: 19px;
-    }
-
-    .intro p {
-        font-size: 12px;
-    }
-
-
-    .committee-grid {
-        width: 94%;
-
-        grid-template-columns: 1fr;
-
-        gap: 14px;
-    }
-
-
-    .member-card {
-        padding: 18px 15px;
-        border-radius: 15px;
-    }
-
-    .member-photo {
-        width: 92px;
-        height: 92px;
-    }
-
-    .member-card h2 {
-        font-size: 18px;
-    }
-
-    .member-info {
-        font-size: 13px;
-    }
-
-    .call-btn,
-    .whatsapp-btn {
-        font-size: 12px;
-        min-height: 36px;
-    }
-
-
-    .footer {
-        margin-top: 28px;
-        padding: 18px 10px;
-        font-size: 12px;
-    }
-
-}
-
-
-/* ================= SMALL MOBILE ================= */
-
-@media (max-width:360px) {
-
-    .heading-small {
-        font-size: 14px;
-    }
-
-    .heading-text h1 {
-        font-size: 22px;
-    }
-
-    .member-photo {
-        width: 85px;
-        height: 85px;
-    }
-
-   }
+   
