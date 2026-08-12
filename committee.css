@@ -1,6 +1,7 @@
-/* =====================================================
-   COMMITTEE PAGE - চকমনসুর বানীশ্রী সংঘ
-===================================================== */
+/* =========================================================
+   COMMITTEE PAGE
+   চকমনসুর বানীশ্রী সংঘ
+========================================================= */
 
 * {
     margin: 0;
@@ -13,42 +14,30 @@ html {
 }
 
 body {
-    font-family:
-        "Noto Sans Bengali",
-        "Nirmala UI",
-        Arial,
-        sans-serif;
-
-    background: #f5f8f6;
+    font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
+    background: #f4f8f6;
     color: #222;
-
     line-height: 1.5;
 }
 
 
-/* =====================================================
+/* =========================================================
    TOP BAR
-===================================================== */
+========================================================= */
 
 .topbar {
     width: 100%;
-    min-height: 55px;
-
+    min-height: 54px;
     padding: 7px 14px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: linear-gradient(
-        135deg,
-        #075e54,
-        #087f5b
-    );
+    background: linear-gradient(135deg, #075e54, #087f5b);
+    color: #fff;
 
-    color: white;
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .live {
@@ -57,15 +46,13 @@ body {
     gap: 8px;
 
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #clock {
     padding: 3px 8px;
-
-    background: rgba(255,255,255,0.15);
-
     border-radius: 7px;
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .social {
@@ -81,10 +68,8 @@ body {
 .social img {
     width: 29px;
     height: 29px;
-
     object-fit: contain;
-
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .social img:hover {
@@ -92,19 +77,18 @@ body {
 }
 
 
-/* =====================================================
+/* =========================================================
    PAGE HEADING
-===================================================== */
+========================================================= */
 
 .committee-heading {
     width: 100%;
 
-    padding: 22px 15px 20px;
+    padding: 20px 12px 18px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 13px;
 
     text-align: center;
@@ -112,15 +96,15 @@ body {
     background: linear-gradient(
         135deg,
         #ffffff,
-        #edf8f3
+        #eaf7f1
     );
 
-    border-bottom: 1px solid #dce9e3;
+    border-bottom: 1px solid #d9e8e1;
 }
 
 .heading-icon {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
 
     flex-shrink: 0;
 
@@ -128,14 +112,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 29px;
+    font-size: 30px;
 
-    background: #dff3e9;
+    background: #dff2e9;
+    border-radius: 16px;
 
-    border-radius: 15px;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .heading-text {
@@ -145,19 +127,21 @@ body {
 }
 
 .heading-small {
-    font-size: 19px;
-    font-weight: 800;
-
     color: #087f5b;
+
+    font-size: 21px;
+    font-weight: 900;
+
+    line-height: 1.3;
 }
 
 .heading-text h1 {
-    margin-top: 1px;
-
-    font-size: 30px;
-    font-weight: 900;
+    margin-top: 2px;
 
     color: #075e54;
+
+    font-size: 31px;
+    font-weight: 900;
 
     line-height: 1.25;
 }
@@ -165,78 +149,112 @@ body {
 .heading-text p {
     margin-top: 2px;
 
-    font-size: 13px;
-
     color: #6b7773;
+
+    font-size: 13px;
 }
 
 
-/* =====================================================
+/* =========================================================
+   BACK TO HOME
+   Header-এর মাঝখানে
+========================================================= */
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 9px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    background: #075e54;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow: 0 3px 9px rgba(7, 94, 84, 0.20);
+
+    transition: 0.2s ease;
+}
+
+.back-home:hover {
+    background: #054c44;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
    INTRO
-===================================================== */
+========================================================= */
 
 .intro {
     width: 94%;
     max-width: 900px;
 
-    margin: 15px auto 10px;
+    margin: 14px auto 10px;
 
     text-align: center;
 }
 
 .intro h2 {
-    font-size: 20px;
-
     color: #075e54;
+
+    font-size: 20px;
+    font-weight: 900;
 
     margin-bottom: 3px;
 }
 
 .intro p {
-    font-size: 13px;
+    color: #687570;
 
-    color: #6c7773;
+    font-size: 13px;
 }
 
 
-/* =====================================================
+/* =========================================================
    COMMITTEE GRID
-   IMPORTANT: 2 COLUMN
-===================================================== */
+   DESKTOP = 2 COLUMNS
+========================================================= */
 
 .committee-grid {
     width: 94%;
     max-width: 900px;
 
-    margin: 16px auto 24px;
+    margin: 15px auto 25px;
 
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 14px;
+    gap: 15px;
 }
 
 
-/* =====================================================
+/* =========================================================
    MEMBER CARD
-===================================================== */
+========================================================= */
 
 .member-card {
     position: relative;
 
-    background: #ffffff;
+    padding: 15px 11px 13px;
 
-    padding: 14px 10px 13px;
+    background: #fff;
+
+    border: 1px solid #dce9e3;
+    border-radius: 17px;
 
     text-align: center;
 
-    border: 1px solid #dfeae5;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
 
     overflow: hidden;
 
@@ -264,8 +282,7 @@ body {
 .member-card:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.11);
 }
 
 
@@ -278,30 +295,28 @@ body {
         #ffffff
     );
 
-    border: 1px solid #b9dfd0;
+    border-color: #b8dfd0;
 }
 
 
-/* =====================================================
+/* =========================================================
    MEMBER PHOTO
-===================================================== */
+========================================================= */
 
 .member-photo {
-    width: 92px;
-    height: 92px;
+    width: 96px;
+    height: 96px;
 
-    margin: 3px auto 8px;
+    margin: 2px auto 9px;
 
     border-radius: 50%;
-
     overflow: hidden;
 
     background: #edf4f1;
 
-    border: 3px solid #d6eee4;
+    border: 3px solid #d2ebe0;
 
-    box-shadow:
-        0 3px 10px rgba(0,0,0,0.10);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
 .member-photo img {
@@ -314,78 +329,75 @@ body {
 }
 
 
-/* =====================================================
+/* =========================================================
    ROLE BADGE
-===================================================== */
+========================================================= */
 
 .role-badge {
     display: inline-block;
 
-    padding: 3px 10px;
+    padding: 3px 11px;
 
     margin-bottom: 4px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background: #e1f5ec;
-
+    background: #e0f4eb;
     color: #075e54;
 
     font-size: 11px;
-
-    font-weight: 800;
+    font-weight: 900;
 }
 
 
-/* =====================================================
-   MEMBER NAME
-===================================================== */
+/* =========================================================
+   NAME
+========================================================= */
 
 .member-card h2 {
-    font-size: 17px;
-
     color: #222;
 
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 900;
 
     line-height: 1.3;
 }
 
 .member-card .role {
-    font-size: 12px;
-
-    color: #75817d;
-
     margin-top: 1px;
+
+    color: #73807b;
+
+    font-size: 12px;
 }
 
 
-/* =====================================================
+/* =========================================================
    PHONE
-===================================================== */
+========================================================= */
 
 .member-info {
     margin-top: 7px;
 
     padding: 5px 3px;
 
-    background: #f3f7f5;
+    background: #f2f7f5;
 
     border-radius: 7px;
 
-    color: #46544f;
+    color: #46534f;
 
     font-size: 11px;
 }
 
 
-/* =====================================================
-   CALL + WHATSAPP
-===================================================== */
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
 
 .action-buttons {
     display: flex;
-
+    align-items: center;
     justify-content: center;
 
     gap: 6px;
@@ -397,25 +409,23 @@ body {
 .whatsapp-btn {
     flex: 1;
 
-    max-width: 115px;
+    max-width: 125px;
 
-    padding: 6px 4px;
+    padding: 6px 5px;
 
     border-radius: 8px;
 
     text-decoration: none;
 
     font-size: 11px;
+    font-weight: 800;
 
-    font-weight: 700;
-
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .call-btn {
     background: #075e54;
-
-    color: white;
+    color: #fff;
 }
 
 .call-btn:hover {
@@ -424,8 +434,7 @@ body {
 
 .whatsapp-btn {
     background: #25d366;
-
-    color: white;
+    color: #fff;
 }
 
 .whatsapp-btn:hover {
@@ -433,66 +442,20 @@ body {
 }
 
 
-/* =====================================================
-   BACK TO HOME
-===================================================== */
-
-.back-home {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
-    margin: 4px 0 24px;
-}
-
-.back-home a {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 7px 15px;
-
-    background: #075e54;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 3px 9px rgba(7,94,84,0.20);
-
-    transition: 0.2s;
-}
-
-.back-home a:hover {
-    background: #054c44;
-
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 .footer {
     width: 100%;
 
+    margin-top: 5px;
     padding: 16px 10px;
 
     text-align: center;
 
     background: #075e54;
-
-    color: white;
+    color: #fff;
 
     font-size: 12px;
 }
@@ -502,51 +465,56 @@ body {
 }
 
 .footer strong {
-    font-weight: 800;
+    font-weight: 900;
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
 @media (max-width: 700px) {
+
+    .committee-heading {
+        padding: 18px 10px 16px;
+    }
+
+    .heading-small {
+        font-size: 18px;
+    }
+
+    .heading-text h1 {
+        font-size: 27px;
+    }
 
     .committee-grid {
         width: 94%;
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 11px;
     }
 
-    .heading-small {
-        font-size: 17px;
+    .member-photo {
+        width: 84px;
+        height: 84px;
     }
-
-    .heading-text h1 {
-        font-size: 26px;
-    }
-
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
 @media (max-width: 500px) {
 
     .topbar {
         min-height: 50px;
-
         padding: 6px 10px;
     }
 
     .live {
         font-size: 11px;
-
         gap: 5px;
     }
 
@@ -564,17 +532,17 @@ body {
     }
 
 
-    /* Heading */
+    /* HEADING */
 
     .committee-heading {
-        padding: 18px 10px 16px;
+        padding: 16px 8px 15px;
 
-        gap: 9px;
+        gap: 8px;
     }
 
     .heading-icon {
-        width: 44px;
-        height: 44px;
+        width: 45px;
+        height: 45px;
 
         border-radius: 12px;
 
@@ -582,22 +550,33 @@ body {
     }
 
     .heading-small {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .heading-text h1 {
-        font-size: 22px;
+        font-size: 23px;
     }
 
     .heading-text p {
-        font-size: 11px;
+        font-size: 10px;
     }
 
 
-    /* Intro */
+    /* HOME */
+
+    .back-home {
+        margin-top: 7px;
+
+        padding: 5px 12px;
+
+        font-size: 10px;
+    }
+
+
+    /* INTRO */
 
     .intro {
-        margin-top: 13px;
+        margin-top: 12px;
         margin-bottom: 7px;
     }
 
@@ -606,22 +585,24 @@ body {
     }
 
     .intro p {
-        font-size: 11px;
+        font-size: 10px;
     }
 
 
-    /* Cards */
+    /* GRID */
 
     .committee-grid {
         width: 94%;
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 9px;
 
         margin-top: 12px;
     }
+
+
+    /* CARD */
 
     .member-card {
         padding: 11px 6px 10px;
@@ -630,52 +611,50 @@ body {
     }
 
 
-    /* Photo */
+    /* PHOTO */
 
     .member-photo {
-        width: 72px;
-        height: 72px;
-
-        border-width: 3px;
+        width: 70px;
+        height: 70px;
 
         margin-bottom: 6px;
     }
 
 
-    /* Badge */
+    /* BADGE */
 
     .role-badge {
-        font-size: 9px;
-
         padding: 3px 6px;
 
-        margin-bottom: 4px;
+        font-size: 8px;
+
+        margin-bottom: 3px;
     }
 
 
-    /* Name */
+    /* NAME */
 
     .member-card h2 {
         font-size: 13px;
     }
 
     .member-card .role {
-        font-size: 10px;
+        font-size: 9px;
     }
 
 
-    /* Phone */
+    /* PHONE */
 
     .member-info {
-        font-size: 9px;
+        margin-top: 5px;
 
         padding: 4px 2px;
 
-        margin-top: 5px;
+        font-size: 8px;
     }
 
 
-    /* Buttons */
+    /* BUTTONS */
 
     .action-buttons {
         gap: 4px;
@@ -687,69 +666,70 @@ body {
     .whatsapp-btn {
         padding: 5px 2px;
 
-        font-size: 9px;
+        font-size: 8px;
 
         border-radius: 7px;
     }
 
 
-    /* Home */
-
-    .back-home {
-        margin-top: 2px;
-
-        margin-bottom: 18px;
-    }
-
-    .back-home a {
-        padding: 6px 13px;
-
-        font-size: 11px;
-    }
-
-
-    /* Footer */
+    /* FOOTER */
 
     .footer {
         padding: 13px 8px;
 
         font-size: 10px;
     }
-
 }
 
 
-/* =====================================================
+/* =========================================================
    VERY SMALL PHONE
-===================================================== */
+========================================================= */
 
 @media (max-width: 360px) {
+
+    .heading-small {
+        font-size: 13px;
+    }
+
+    .heading-text h1 {
+        font-size: 20px;
+    }
+
+    .heading-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 20px;
+    }
 
     .committee-grid {
         gap: 7px;
     }
 
     .member-card {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 9px 4px;
     }
 
     .member-photo {
-        width: 64px;
-        height: 64px;
+        width: 62px;
+        height: 62px;
     }
 
     .member-card h2 {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .member-card .role {
+        font-size: 8px;
     }
 
     .member-info {
-        font-size: 8px;
+        font-size: 7px;
     }
 
     .call-btn,
     .whatsapp-btn {
-        font-size: 8px;
+        font-size: 7px;
     }
-
 }
