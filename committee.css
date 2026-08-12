@@ -1,7 +1,7 @@
-/* =====================================================
+/* =================================================
    COMMITTEE PAGE
    চকমনসুর বানীশ্রী সংঘ
-===================================================== */
+================================================= */
 
 * {
     margin: 0;
@@ -14,16 +14,21 @@ html {
 }
 
 body {
-    font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
-    background: #f5f8f5;
-    color: #26332a;
+    font-family:
+        "Noto Sans Bengali",
+        "Nirmala UI",
+        Arial,
+        sans-serif;
+
+    background: #f5f7f6;
+    color: #222;
     line-height: 1.6;
 }
 
 
-/* =====================================================
+/* =================================================
    TOP BAR
-===================================================== */
+================================================= */
 
 .topbar {
     width: 100%;
@@ -35,10 +40,11 @@ body {
 
     padding: 8px 18px;
 
-    background: #14532d;
-    color: #fff;
+    background: linear-gradient(135deg, #075e54, #087f5b);
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    color: white;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
 .live {
@@ -50,13 +56,12 @@ body {
     font-weight: 600;
 }
 
-#wish {
-    white-space: nowrap;
-}
-
 #clock {
-    white-space: nowrap;
-    font-weight: 700;
+    background: rgba(255,255,255,0.15);
+
+    padding: 4px 9px;
+
+    border-radius: 8px;
 }
 
 .social {
@@ -66,211 +71,91 @@ body {
 }
 
 .social a {
-    width: 34px;
-    height: 34px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
-
-    transition: 0.25s ease;
-}
-
-.social a:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
 }
 
 .social img {
-    width: 21px;
-    height: 21px;
+    width: 30px;
+    height: 30px;
+
     object-fit: contain;
+
+    transition: 0.2s;
+}
+
+.social img:hover {
+    transform: scale(1.12);
 }
 
 
-/* =====================================================
+/* =================================================
    PAGE HEADING
-===================================================== */
+================================================= */
 
 .committee-heading {
-    width: min(1100px, 94%);
+    width: 100%;
 
-    margin: 20px auto 0;
-
-    padding: 18px 20px;
+    padding: 28px 18px 24px;
 
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
 
-    background: #ffffff;
+    gap: 15px;
 
-    border-left: 5px solid #15803d;
-    border-radius: 12px;
+    text-align: center;
 
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eefaf4
+        );
+
+    border-bottom: 1px solid #dce9e3;
 }
 
 .heading-icon {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 31px;
 
-    background: #dcfce7;
-    border-radius: 12px;
+    background: #e1f5ec;
 
-    font-size: 28px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
 }
 
 .heading-text {
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heading-small {
-    display: block;
+    font-size: 17px;
+    font-weight: 700;
 
-    margin-bottom: 3px;
+    color: #087f5b;
 
-    color: #166534;
-
-    font-size: 20px;
-    font-weight: 800;
+    margin-bottom: 2px;
 }
 
 .heading-text h1 {
-    color: #173b25;
+    font-size: 30px;
+    font-weight: 800;
 
-    font-size: clamp(25px, 4vw, 34px);
-    line-height: 1.2;
+    color: #075e54;
 
-    margin-bottom: 3px;
-}
-
-.heading-text p {
-    color: #66736a;
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   BACK TO HOME
-===================================================== */
-
-.top-back {
-    width: min(1100px, 94%);
-
-    margin: 8px auto 14px;
-
-    display: flex;
-    justify-content: flex-start;
-}
-
-.home-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 7px 15px;
-
-    background: #14532d;
-    color: #fff;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-
-    transition: 0.25s ease;
-}
-
-.home-btn:hover {
-    background: #166534;
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.intro {
-    width: min(1100px, 94%);
-
-    margin: 0 auto 20px;
-
-    padding: 17px 20px;
-
-    text-align: center;
-
-    background: #ecfdf5;
-
-    border: 1px solid #bbf7d0;
-    border-radius: 12px;
-}
-
-.intro h2 {
-    color: #166534;
-
-    font-size: 21px;
-
-    margin-bottom: 5px;
-}
-
-.intro p {
-    color: #526158;
-
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   COMMITTEE GRID
-===================================================== */
-
-.committee-grid {
-    width: min(1100px, 94%);
-
-    margin: 0 auto 28px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 18px;
-}
-
-
-/* =====================================================
-   MEMBER CARD
-===================================================== */
-
-.member-card {
-    position: relative;
-
-    padding: 18px 16px 17px;
-
-    text-align: center;
-
-    background: #ffffff;
-
-    border: 1px solid #e3ebe5;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-
-    overflow: hidden;
-
-   
+    line-height: 1.
