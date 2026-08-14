@@ -1,119 +1,159 @@
-/* =========================
-HERO SLIDER
-AUTO IMAGE DETECTION
-========================= */
-
-const heroSlide = document.getElementById("heroSlide");
-const nextButton = document.querySelector(".next");
-const prevButton = document.querySelector(".prev");
-const dotsContainer = document.getElementById("heroDots");
-
-let heroImages = [];
-let current = 0;
-let slideTimer;
+/* =========================================================
+   CHAKMANSUR BANISHRI SANGHA
+   FINAL SCRIPT.JS
+========================================================= */
 
 
-/* =========================
-CHECK 1-50 IMAGES
-========================= */
+/* =========================================================
+   MENU
+========================================================= */
 
-function findSliderImages(){
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
 
-    const images = [];
+if (menuBtn && sideMenu) {
 
-    for(let i = 1; i <= 50; i++){
+    menuBtn.addEventListener("click", function (e) {
 
-        images.push(
-            "images/image slider/slider" + i + ".jpg"
-        );
+        e.stopPropagation();
 
-    }
+        sideMenu.classList.toggle("active");
 
-    return images;
-
-}
+    });
 
 
-const possibleImages = findSliderImages();
+    sideMenu.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+    });
 
 
-/* =========================
-CHECK IMAGE EXISTS
-========================= */
+    document.addEventListener("click", function () {
 
-function checkImage(src){
-
-    return new Promise(function(resolve){
-
-        const img = new Image();
-
-        img.onload = function(){
-
-            resolve(src);
-
-        };
-
-        img.onerror = function(){
-
-            resolve(null);
-
-        };
-
-        img.src = src;
+        sideMenu.classList.remove("active");
 
     });
 
 }
 
 
-/* =========================
-LOAD ALL AVAILABLE IMAGES
-========================= */
+/* =========================================================
+   LIVE TIME
+========================================================= */
 
-Promise.all(
-    possibleImages.map(checkImage)
-).then(function(results){
+function updateClock() {
 
-    heroImages = results.filter(Boolean);
+    const now = new Date();
 
-    console.log(
-        "Slider images found:",
-        heroImages.length
+    let hour = now.getHours();
+
+    const minute =
+        String(now.getMinutes()).padStart(2, "0");
+
+    const second =
+        String(now.getSeconds()).padStart(2, "0");
+
+
+    let wish = "🌅 শুভ সকাল";
+
+
+    if (hour >= 12 && hour < 16) {
+
+        wish = "☀️ শুভ দুপুর";
+
+    }
+
+    else if (hour >= 16 && hour < 19) {
+
+        wish = "🌇 শুভ সন্ধ্যা";
+
+    }
+
+    else if (hour >= 19) {
+
+        wish = "🌙 শুভ রাত্রি";
+
+    }
+
+
+    const ampm = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+
+
+    const wishElement =
+        document.getElementById("wish");
+
+    const clockElement =
+        document.getElementById("clock");
+
+
+    if (wishElement) {
+
+        wishElement.textContent = wish;
+
+    }
+
+
+    if (clockElement) {
+
+        clockElement.textContent =
+            `${hour}:${minute}:${second} ${ampm}`;
+
+    }
+
+}
+
+
+updateClock();
+
+setInterval(updateClock, 1000);
+
+
+/* =========================================================
+   HERO IMAGE SLIDER
+   slider1.jpg TO slider60.jpg
+========================================================= */
+
+const heroImages = [];
+
+for (let i = 1; i <= 60; i++) {
+
+    heroImages.push(
+        `images/image slider/slider${i}.jpg`
     );
 
-
-    if(heroImages.length === 0){
-
-        return;
-
-    }
+}
 
 
-    createDots();
+const heroSlide =
+    document.getElementById("heroSlide");
 
-    showSlide(0);
+const nextButton =
+    document.querySelector(".next");
 
-    startSlider();
+const prevButton =
+    document.querySelector(".prev");
 
-});
-
-
-/* =========================
-CREATE DOTS
-========================= */
-
-function createDots(){
-
-    if(!dotsContainer){
-
-        return;
-
-    }
-
-    dotsContainer.innerHTML = "";
+const dotsContainer =
+    document.getElementById("heroDots");
 
 
-    heroImages.forEach(function(_, index){
+let current = 0;
+
+let slideTimer = null;
+
+let slideChanging = false;
+
+
+/* =========================================================
+   CREATE DOTS
+========================================================= */
+
+if (dotsContainer) {
+
+    heroImages.forEach(function (_, index) {
 
         const dot =
             document.createElement("span");
@@ -121,20 +161,22 @@ function createDots(){
         dot.className = "dot";
 
 
-        if(index === 0){
+        if (index === 0) {
 
             dot.classList.add("active");
 
         }
 
 
-        dot.onclick = function(){
+        dot.addEventListener("click", function (e) {
+
+            e.stopPropagation();
 
             showSlide(index);
 
             restartSlider();
 
-        };
+        });
 
 
         dotsContainer.appendChild(dot);
@@ -144,32 +186,55 @@ function createDots(){
 }
 
 
-/* =========================
-SHOW SLIDE
-========================= */
+/* =========================================================
+   GET DOTS
+========================================================= */
 
-function showSlide(index){
+function getDots() {
 
-    if(!heroSlide || heroImages.length === 0){
+    return document.querySelectorAll(
+        "#heroDots .dot"
+    );
+
+}
+
+
+/* =========================================================
+   SHOW SLIDE
+========================================================= */
+
+function showSlide(index) {
+
+    if (!heroSlide) {
 
         return;
 
     }
 
 
-    if(index >= heroImages.length){
+    if (slideChanging) {
+
+        return;
+
+    }
+
+
+    slideChanging = true;
+
+
+    if (index >= heroImages.length) {
 
         current = 0;
 
     }
 
-    else if(index < 0){
+    else if (index < 0) {
 
         current = heroImages.length - 1;
 
     }
 
-    else{
+    else {
 
         current = index;
 
@@ -179,126 +244,144 @@ function showSlide(index){
     heroSlide.style.opacity = "0";
 
 
-    setTimeout(function(){
+    setTimeout(function () {
 
-        heroSlide.src = heroImages[current];
+        heroSlide.src =
+            heroImages[current];
+
 
         heroSlide.style.opacity = "1";
 
 
-        const dots =
-            document.querySelectorAll(
-                "#heroDots .dot"
-            );
+        const dots = getDots();
 
 
-        dots.forEach(function(dot){
+        dots.forEach(function (dot) {
 
             dot.classList.remove("active");
 
         });
 
 
-        if(dots[current]){
+        if (dots[current]) {
 
             dots[current].classList.add("active");
 
         }
 
-    },200);
+
+        slideChanging = false;
+
+    }, 200);
 
 }
 
 
-/* =========================
-NEXT
-========================= */
+/* =========================================================
+   NEXT BUTTON
+========================================================= */
 
-if(nextButton){
+if (nextButton) {
 
-    nextButton.onclick = function(){
+    nextButton.addEventListener("click", function (e) {
+
+        e.stopPropagation();
 
         showSlide(current + 1);
 
         restartSlider();
 
-    };
+    });
 
 }
 
 
-/* =========================
-PREVIOUS
-========================= */
+/* =========================================================
+   PREVIOUS BUTTON
+========================================================= */
 
-if(prevButton){
+if (prevButton) {
 
-    prevButton.onclick = function(){
+    prevButton.addEventListener("click", function (e) {
+
+        e.stopPropagation();
 
         showSlide(current - 1);
 
         restartSlider();
 
-    };
+    });
 
 }
 
 
-/* =========================
-AUTO SLIDE
-========================= */
+/* =========================================================
+   AUTO SLIDER
+   5 SECOND
+========================================================= */
 
-function startSlider(){
+function startSlider() {
 
     clearInterval(slideTimer);
 
 
-    slideTimer = setInterval(function(){
+    slideTimer = setInterval(function () {
 
         showSlide(current + 1);
 
-    },5000);
+    }, 5000);
 
 }
 
 
-function restartSlider(){
+function restartSlider() {
+
+    clearInterval(slideTimer);
 
     startSlider();
 
 }
 
 
-/* =========================
-MOBILE SWIPE
-========================= */
+if (heroSlide && heroImages.length > 1) {
+
+    startSlider();
+
+}
+
+
+/* =========================================================
+   MOBILE SWIPE
+========================================================= */
 
 let startX = 0;
 
+let endX = 0;
 
-if(heroSlide){
+
+if (heroSlide) {
 
     heroSlide.addEventListener(
         "touchstart",
-        function(e){
+        function (e) {
 
             startX =
                 e.touches[0].clientX;
 
         },
-        {passive:true}
+        { passive: true }
     );
 
 
     heroSlide.addEventListener(
         "touchend",
-        function(e){
+        function (e) {
 
-            const endX =
+            endX =
                 e.changedTouches[0].clientX;
 
 
-            if(startX - endX > 50){
+            if (startX - endX > 50) {
 
                 showSlide(current + 1);
 
@@ -307,7 +390,7 @@ if(heroSlide){
             }
 
 
-            if(endX - startX > 50){
+            else if (endX - startX > 50) {
 
                 showSlide(current - 1);
 
@@ -316,7 +399,149 @@ if(heroSlide){
             }
 
         },
-        {passive:true}
+        { passive: true }
     );
 
 }
+
+
+/* =========================================================
+   PRELOAD SLIDER IMAGES
+========================================================= */
+
+heroImages.forEach(function (src) {
+
+    const image =
+        new Image();
+
+    image.src = src;
+
+});
+
+
+/* =========================================================
+   ADVERTISEMENT
+   ad1.png TO ad20.png
+========================================================= */
+
+const adSlide =
+    document.getElementById("adSlide");
+
+
+const ads = [];
+
+for (let i = 1; i <= 20; i++) {
+
+    ads.push(
+        `images/advertisement/ad${i}.png`
+    );
+
+}
+
+
+let adIndex = 0;
+
+let adTimer = null;
+
+
+/* =========================================================
+   ADVERTISEMENT ELEMENT
+========================================================= */
+
+if (adSlide) {
+
+    /*
+       প্রথম Advertisement
+    */
+
+    adSlide.src = ads[0];
+
+
+    /*
+       প্রতি 5 second পর পর Advertisement change
+    */
+
+    adTimer = setInterval(function () {
+
+        adIndex++;
+
+        if (adIndex >= ads.length) {
+
+            adIndex = 0;
+
+        }
+
+
+        adSlide.style.opacity = "0";
+
+
+        setTimeout(function () {
+
+            adSlide.src =
+                ads[adIndex];
+
+            adSlide.style.opacity = "1";
+
+        }, 250);
+
+
+    }, 5000);
+
+}
+
+
+/* =========================================================
+   VISITOR COUNTER
+========================================================= */
+
+const visitorCount =
+    document.getElementById("visitorCount");
+
+
+if (visitorCount) {
+
+    let total =
+        localStorage.getItem("CBS_VISITOR");
+
+
+    if (total === null) {
+
+        total = 1;
+
+    }
+
+    else {
+
+        total =
+            parseInt(total) + 1;
+
+    }
+
+
+    localStorage.setItem(
+        "CBS_VISITOR",
+        total
+    );
+
+
+    visitorCount.textContent =
+        total;
+
+}
+
+
+/* =========================================================
+   DEBUG MESSAGE
+========================================================= */
+
+console.log(
+    "CBS Website Script Loaded Successfully"
+);
+
+console.log(
+    "Slider: slider1.jpg - slider60.jpg"
+);
+
+console.log(
+    "Advertisement: ad1.png - ad20.png"
+);
