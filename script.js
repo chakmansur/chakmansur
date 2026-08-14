@@ -118,7 +118,7 @@ setInterval(updateClock, 1000);
 
 const heroImages = [];
 
-for (let i = 1; i <= 60; i++) {
+for (let i = 1; i <= 16; i++) {
 
     heroImages.push(
         `images/image slider/slider${i}.jpg`
@@ -430,7 +430,7 @@ const adSlide =
 
 const ads = [];
 
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 2; i++) {
 
     ads.push(
         `images/advertisement/ad${i}.png`
