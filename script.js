@@ -13,7 +13,7 @@ const sideMenu = document.getElementById("sideMenu");
 
 if (menuBtn && sideMenu) {
 
-    menuBtn.addEventListener("click", function (e) {
+    menuBtn.addEventListener("click", function(e) {
 
         e.stopPropagation();
 
@@ -22,14 +22,14 @@ if (menuBtn && sideMenu) {
     });
 
 
-    sideMenu.addEventListener("click", function (e) {
+    sideMenu.addEventListener("click", function(e) {
 
         e.stopPropagation();
 
     });
 
 
-    document.addEventListener("click", function () {
+    document.addEventListener("click", function() {
 
         sideMenu.classList.remove("active");
 
@@ -111,21 +111,11 @@ updateClock();
 setInterval(updateClock, 1000);
 
 
+
 /* =========================================================
-   HERO IMAGE SLIDER
-   slider1.jpg TO slider60.jpg
+   HERO SLIDER
+   SUPPORT: slider1.jpg - slider100.jpg
 ========================================================= */
-
-const heroImages = [];
-
-for (let i = 1; i <= 16; i++) {
-
-    heroImages.push(
-        `images/image slider/slider${i}.jpg`
-    );
-
-}
-
 
 const heroSlide =
     document.getElementById("heroSlide");
@@ -140,6 +130,16 @@ const dotsContainer =
     document.getElementById("heroDots");
 
 
+/*
+   এখানে maximum 100 রাখা হয়েছে।
+   যে ছবিগুলো সত্যিই আছে শুধু সেগুলোই
+   slider-এ automatically আসবে।
+*/
+
+const MAX_SLIDERS = 100;
+
+let heroImages = [];
+
 let current = 0;
 
 let slideTimer = null;
@@ -147,16 +147,119 @@ let slideTimer = null;
 let slideChanging = false;
 
 
+
+/* =========================================================
+   CHECK IMAGE EXISTS
+========================================================= */
+
+function checkImageExists(src) {
+
+    return new Promise(function(resolve) {
+
+        const img = new Image();
+
+
+        img.onload = function() {
+
+            resolve(true);
+
+        };
+
+
+        img.onerror = function() {
+
+            resolve(false);
+
+        };
+
+
+        img.src = src;
+
+    });
+
+}
+
+
+
+/* =========================================================
+   FIND AVAILABLE SLIDER IMAGES
+========================================================= */
+
+async function loadHeroImages() {
+
+    const foundImages = [];
+
+
+    for (let i = 1; i <= MAX_SLIDERS; i++) {
+
+        const src =
+            `images/image slider/slider${i}.jpg`;
+
+
+        const exists =
+            await checkImageExists(src);
+
+
+        if (exists) {
+
+            foundImages.push(src);
+
+        }
+
+    }
+
+
+    heroImages = foundImages;
+
+
+    if (heroImages.length === 0) {
+
+        console.warn("No slider images found.");
+
+        return;
+
+    }
+
+
+    current = 0;
+
+
+    createDots();
+
+    showSlide(0, true);
+
+
+    if (heroImages.length > 1) {
+
+        startSlider();
+
+    }
+
+}
+
+
+
 /* =========================================================
    CREATE DOTS
 ========================================================= */
 
-if (dotsContainer) {
+function createDots() {
 
-    heroImages.forEach(function (_, index) {
+    if (!dotsContainer) {
+
+        return;
+
+    }
+
+
+    dotsContainer.innerHTML = "";
+
+
+    heroImages.forEach(function(_, index) {
 
         const dot =
             document.createElement("span");
+
 
         dot.className = "dot";
 
@@ -168,7 +271,7 @@ if (dotsContainer) {
         }
 
 
-        dot.addEventListener("click", function (e) {
+        dot.addEventListener("click", function(e) {
 
             e.stopPropagation();
 
@@ -186,6 +289,7 @@ if (dotsContainer) {
 }
 
 
+
 /* =========================================================
    GET DOTS
 ========================================================= */
@@ -199,27 +303,25 @@ function getDots() {
 }
 
 
+
 /* =========================================================
    SHOW SLIDE
 ========================================================= */
 
-function showSlide(index) {
+function showSlide(index, instant = false) {
 
-    if (!heroSlide) {
-
-        return;
-
-    }
-
-
-    if (slideChanging) {
+    if (!heroSlide || heroImages.length === 0) {
 
         return;
 
     }
 
 
-    slideChanging = true;
+    if (slideChanging && !instant) {
+
+        return;
+
+    }
 
 
     if (index >= heroImages.length) {
@@ -241,78 +343,116 @@ function showSlide(index) {
     }
 
 
-    heroSlide.style.opacity = "0";
+    const newSrc =
+        heroImages[current];
 
 
-    setTimeout(function () {
+    if (instant) {
 
-        heroSlide.src =
-            heroImages[current];
-
+        heroSlide.src = newSrc;
 
         heroSlide.style.opacity = "1";
 
+        updateDots();
 
-        const dots = getDots();
+        return;
 
-
-        dots.forEach(function (dot) {
-
-            dot.classList.remove("active");
-
-        });
+    }
 
 
-        if (dots[current]) {
+    slideChanging = true;
 
-            dots[current].classList.add("active");
+    heroSlide.style.opacity = "0";
 
-        }
 
+    setTimeout(function() {
+
+        heroSlide.src = newSrc;
+
+        heroSlide.style.opacity = "1";
+
+        updateDots();
 
         slideChanging = false;
 
-    }, 200);
+    }, 250);
 
 }
 
 
+
 /* =========================================================
-   NEXT BUTTON
+   UPDATE DOTS
+========================================================= */
+
+function updateDots() {
+
+    const dots = getDots();
+
+
+    dots.forEach(function(dot) {
+
+        dot.classList.remove("active");
+
+    });
+
+
+    if (dots[current]) {
+
+        dots[current].classList.add("active");
+
+    }
+
+}
+
+
+
+/* =========================================================
+   NEXT
 ========================================================= */
 
 if (nextButton) {
 
-    nextButton.addEventListener("click", function (e) {
+    nextButton.addEventListener("click", function(e) {
 
         e.stopPropagation();
 
-        showSlide(current + 1);
+        if (heroImages.length > 1) {
 
-        restartSlider();
+            showSlide(current + 1);
+
+            restartSlider();
+
+        }
 
     });
 
 }
 
 
+
 /* =========================================================
-   PREVIOUS BUTTON
+   PREVIOUS
 ========================================================= */
 
 if (prevButton) {
 
-    prevButton.addEventListener("click", function (e) {
+    prevButton.addEventListener("click", function(e) {
 
         e.stopPropagation();
 
-        showSlide(current - 1);
+        if (heroImages.length > 1) {
 
-        restartSlider();
+            showSlide(current - 1);
+
+            restartSlider();
+
+        }
 
     });
 
 }
+
 
 
 /* =========================================================
@@ -325,11 +465,19 @@ function startSlider() {
     clearInterval(slideTimer);
 
 
-    slideTimer = setInterval(function () {
+    if (heroImages.length <= 1) {
 
-        showSlide(current + 1);
+        return;
 
-    }, 5000);
+    }
+
+
+    slideTimer =
+        setInterval(function() {
+
+            showSlide(current + 1);
+
+        }, 5000);
 
 }
 
@@ -342,12 +490,6 @@ function restartSlider() {
 
 }
 
-
-if (heroSlide && heroImages.length > 1) {
-
-    startSlider();
-
-}
 
 
 /* =========================================================
@@ -363,7 +505,7 @@ if (heroSlide) {
 
     heroSlide.addEventListener(
         "touchstart",
-        function (e) {
+        function(e) {
 
             startX =
                 e.touches[0].clientX;
@@ -375,7 +517,7 @@ if (heroSlide) {
 
     heroSlide.addEventListener(
         "touchend",
-        function (e) {
+        function(e) {
 
             endX =
                 e.changedTouches[0].clientX;
@@ -388,7 +530,6 @@ if (heroSlide) {
                 restartSlider();
 
             }
-
 
             else if (endX - startX > 50) {
 
@@ -405,89 +546,138 @@ if (heroSlide) {
 }
 
 
-/* =========================================================
-   PRELOAD SLIDER IMAGES
-========================================================= */
-
-heroImages.forEach(function (src) {
-
-    const image =
-        new Image();
-
-    image.src = src;
-
-});
-
 
 /* =========================================================
    ADVERTISEMENT
-   ad1.png TO ad20.png
+   SUPPORT: ad1.png - ad50.png
 ========================================================= */
 
 const adSlide =
     document.getElementById("adSlide");
 
 
-const ads = [];
+const MAX_ADS = 50;
 
-for (let i = 1; i <= 2; i++) {
-
-    ads.push(
-        `images/advertisement/ad${i}.png`
-    );
-
-}
-
+let ads = [];
 
 let adIndex = 0;
 
 let adTimer = null;
 
 
+
 /* =========================================================
-   ADVERTISEMENT ELEMENT
+   FIND AVAILABLE ADS
 ========================================================= */
 
-if (adSlide) {
+async function loadAdvertisements() {
 
-    /*
-       প্রথম Advertisement
-    */
-
-    adSlide.src = ads[0];
+    const foundAds = [];
 
 
-    /*
-       প্রতি 5 second পর পর Advertisement change
-    */
+    for (let i = 1; i <= MAX_ADS; i++) {
 
-    adTimer = setInterval(function () {
+        const src =
+            `images/advertisement/ad${i}.png`;
 
-        adIndex++;
 
-        if (adIndex >= ads.length) {
+        const exists =
+            await checkImageExists(src);
 
-            adIndex = 0;
+
+        if (exists) {
+
+            foundAds.push(src);
 
         }
 
-
-        adSlide.style.opacity = "0";
-
-
-        setTimeout(function () {
-
-            adSlide.src =
-                ads[adIndex];
-
-            adSlide.style.opacity = "1";
-
-        }, 250);
+    }
 
 
-    }, 5000);
+    ads = foundAds;
+
+
+    if (!adSlide || ads.length === 0) {
+
+        console.warn("No advertisement images found.");
+
+        return;
+
+    }
+
+
+    adIndex = 0;
+
+
+    adSlide.src = ads[0];
+
+    adSlide.style.opacity = "1";
+
+
+    if (ads.length > 1) {
+
+        startAdvertisement();
+
+    }
 
 }
+
+
+
+/* =========================================================
+   AUTO ADVERTISEMENT
+   5 SECOND
+========================================================= */
+
+function startAdvertisement() {
+
+    clearInterval(adTimer);
+
+
+    if (ads.length <= 1) {
+
+        return;
+
+    }
+
+
+    adTimer =
+        setInterval(function() {
+
+            adIndex++;
+
+
+            if (adIndex >= ads.length) {
+
+                adIndex = 0;
+
+            }
+
+
+            if (!adSlide) {
+
+                return;
+
+            }
+
+
+            adSlide.style.opacity = "0";
+
+
+            setTimeout(function() {
+
+                adSlide.src =
+                    ads[adIndex];
+
+                adSlide.style.opacity = "1";
+
+            }, 250);
+
+
+        }, 5000);
+
+}
+
 
 
 /* =========================================================
@@ -530,8 +720,19 @@ if (visitorCount) {
 }
 
 
+
 /* =========================================================
-   DEBUG MESSAGE
+   START EVERYTHING
+========================================================= */
+
+loadHeroImages();
+
+loadAdvertisements();
+
+
+
+/* =========================================================
+   DEBUG
 ========================================================= */
 
 console.log(
@@ -539,9 +740,9 @@ console.log(
 );
 
 console.log(
-    "Slider: slider1.jpg - slider60.jpg"
+    "Slider capacity: 1 - 100"
 );
 
 console.log(
-    "Advertisement: ad1.png - ad20.png"
+    "Advertisement capacity: 1 - 50"
 );
